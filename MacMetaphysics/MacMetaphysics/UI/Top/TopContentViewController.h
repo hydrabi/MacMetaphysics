@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TopContentViewController : NSViewController
+@interface TopContentViewController : NSViewController<NSTextFieldDelegate>
 
 @property (nonatomic,weak)IBOutlet NSButton *hideButton;
 @property (nonatomic,weak)IBOutlet NSTextField *firstTextField;

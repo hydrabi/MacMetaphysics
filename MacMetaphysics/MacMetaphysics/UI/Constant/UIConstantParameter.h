@@ -82,8 +82,8 @@ static const CGFloat textViewTitleHeight = 40.0f;
 static const CGFloat topViewHeight = 110.0f;
 
 //左边菜单
-static const CGFloat leftSideTableViewWidth = 110.0f;
-static const CGFloat leftSideTableViewItemHeight = 35.0f;
+static const CGFloat leftSideTableViewWidth = 125.0f;
+static const CGFloat leftSideTableViewItemHeight = 45.0f;
 static const NSString *leftSideTableViewWidth_key = @"leftSideTableViewWidth_key";
 static const NSString *leftVerLineOffset_key = @"leftVerLineOffset_key";
 static const CGFloat leftVerLineWidth = 2.0f;
@@ -155,7 +155,7 @@ static const CGFloat titleFontSize_50 =  50.0f;
 static const CGFloat titleFontSize_40 =  40.0f;
 static const CGFloat titleFontSize_30 =  30.0f;
 static const CGFloat titleFontSize_26 =  26.0f;
-static const CGFloat titleFontSize_24 =  18.0f;
+static const CGFloat titleFontSize_24 =  24.0f;
 static const CGFloat titleFontSize_21 =  21.0f;
 static const CGFloat titleFontSize_20 =  20.0f;
 static const CGFloat titleFontSize_18 =  18.0f;
