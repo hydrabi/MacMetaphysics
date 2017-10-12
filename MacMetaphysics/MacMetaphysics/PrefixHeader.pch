@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  MacMetaphysics
+//
+//  Created by Hydra on 2017/10/5.
+//  Copyright © 2017年 毕志锋. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#endif /* PrefixHeader_pch */

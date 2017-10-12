@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :osx, '10.10'
+use_frameworks!
+def shared_pods
+    pod 'Masonry', '1.0.2'
+    pod 'ReactiveCocoa', '2.5'
+end
+
+target 'MacMetaphysics' do
+    shared_pods
+end
+
