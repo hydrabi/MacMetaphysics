@@ -10,5 +10,4 @@
 
 @interface LeftCollectionViewCell : NSCollectionViewItem
 @property (weak) IBOutlet NSTextField *titleLabel;
-
 @end

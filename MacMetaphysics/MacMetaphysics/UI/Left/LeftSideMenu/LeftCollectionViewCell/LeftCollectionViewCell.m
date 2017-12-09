@@ -23,7 +23,6 @@
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor clearColor].CGColor;
-
 }
 
 @end

@@ -26,6 +26,15 @@
 		80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B084151F86817200449443 /* LeftCollectionViewCell.m */; };
 		80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B084161F86817200449443 /* LeftCollectionViewCell.xib */; };
 		80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */; };
+		925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F01FDB9E1200B319DB /* MiddleContentView.m */; };
+		925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */; };
+		925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F51FDB9E5500B319DB /* MiddleSubView.m */; };
+		925CE6F81FDB9E5500B319DB /* MiddleSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE6F61FDB9E5500B319DB /* MiddleSubView.xib */; };
+		925CE6FF1FDBCF5500B319DB /* VerticalCenterTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6FE1FDBCF5500B319DB /* VerticalCenterTextFieldCell.m */; };
+		925CE7031FDBD86B00B319DB /* MiddleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE7011FDBD86B00B319DB /* MiddleTableViewCell.m */; };
+		925CE7041FDBD86B00B319DB /* MiddleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE7021FDBD86B00B319DB /* MiddleTableViewCell.xib */; };
+		925CE7091FDBDA6500B319DB /* NSView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE7081FDBDA6500B319DB /* NSView+Addition.m */; };
+		925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE70B1FDBDC5C00B319DB /* MiddleTableViewDataSource.m */; };
 		9279BFEA1F8F8F8000FA8DA9 /* lunar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFE71F8F8F8000FA8DA9 /* lunar.mm */; };
 		9279BFEB1F8F8F8000FA8DA9 /* TTLunarCalendar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFE91F8F8F8000FA8DA9 /* TTLunarCalendar.mm */; };
 		9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFEE1F8F8FC400FA8DA9 /* AnalysisSolarTerm.m */; };
@@ -100,6 +109,21 @@
 		80B084161F86817200449443 /* LeftCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftCollectionViewCell.xib; sourceTree = "<group>"; };
 		80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+LeftMenu.h"; sourceTree = "<group>"; };
 		80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainViewModel+LeftMenu.m"; sourceTree = "<group>"; };
+		925CE6EF1FDB9E1200B319DB /* MiddleContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleContentView.h; sourceTree = "<group>"; };
+		925CE6F01FDB9E1200B319DB /* MiddleContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleContentView.m; sourceTree = "<group>"; };
+		925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleContentView.xib; sourceTree = "<group>"; };
+		925CE6F41FDB9E5500B319DB /* MiddleSubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleSubView.h; sourceTree = "<group>"; };
+		925CE6F51FDB9E5500B319DB /* MiddleSubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleSubView.m; sourceTree = "<group>"; };
+		925CE6F61FDB9E5500B319DB /* MiddleSubView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleSubView.xib; sourceTree = "<group>"; };
+		925CE6FD1FDBCF5500B319DB /* VerticalCenterTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerticalCenterTextFieldCell.h; sourceTree = "<group>"; };
+		925CE6FE1FDBCF5500B319DB /* VerticalCenterTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerticalCenterTextFieldCell.m; sourceTree = "<group>"; };
+		925CE7001FDBD86B00B319DB /* MiddleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleTableViewCell.h; sourceTree = "<group>"; };
+		925CE7011FDBD86B00B319DB /* MiddleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleTableViewCell.m; sourceTree = "<group>"; };
+		925CE7021FDBD86B00B319DB /* MiddleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleTableViewCell.xib; sourceTree = "<group>"; };
+		925CE7071FDBDA6500B319DB /* NSView+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+Addition.h"; sourceTree = "<group>"; };
+		925CE7081FDBDA6500B319DB /* NSView+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+Addition.m"; sourceTree = "<group>"; };
+		925CE70A1FDBDC5C00B319DB /* MiddleTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleTableViewDataSource.h; sourceTree = "<group>"; };
+		925CE70B1FDBDC5C00B319DB /* MiddleTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleTableViewDataSource.m; sourceTree = "<group>"; };
 		9279BFE61F8F8F8000FA8DA9 /* lunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lunar.h; sourceTree = "<group>"; };
 		9279BFE71F8F8F8000FA8DA9 /* lunar.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = lunar.mm; sourceTree = "<group>"; };
 		9279BFE81F8F8F8000FA8DA9 /* TTLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLunarCalendar.h; sourceTree = "<group>"; };
@@ -303,6 +327,8 @@
 		809896AC1F852E50008ECA77 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				925CE7051FDBDA0200B319DB /* Category */,
+				925CE6EE1FDB9B5800B319DB /* Middle */,
 				803995301F88823400FABF46 /* Top */,
 				8007F46B1F85CA0300198017 /* Constant */,
 				8007F4581F85C01500198017 /* Left */,
@@ -347,6 +373,7 @@
 		809896BB1F853405008ECA77 /* UIBasic */ = {
 			isa = PBXGroup;
 			children = (
+				925CE6F91FDBCD2100B319DB /* VerticalCenterTextFieldCell */,
 				9279C01F1F8F91F400FA8DA9 /* Category */,
 				809896BD1F85342A008ECA77 /* BasicViewController */,
 				809896BC1F85342A008ECA77 /* BasicViewModel */,
@@ -380,6 +407,50 @@
 				80B084161F86817200449443 /* LeftCollectionViewCell.xib */,
 			);
 			path = LeftCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		925CE6EE1FDB9B5800B319DB /* Middle */ = {
+			isa = PBXGroup;
+			children = (
+				925CE6EF1FDB9E1200B319DB /* MiddleContentView.h */,
+				925CE6F01FDB9E1200B319DB /* MiddleContentView.m */,
+				925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */,
+				925CE6F41FDB9E5500B319DB /* MiddleSubView.h */,
+				925CE6F51FDB9E5500B319DB /* MiddleSubView.m */,
+				925CE6F61FDB9E5500B319DB /* MiddleSubView.xib */,
+				925CE7001FDBD86B00B319DB /* MiddleTableViewCell.h */,
+				925CE7011FDBD86B00B319DB /* MiddleTableViewCell.m */,
+				925CE7021FDBD86B00B319DB /* MiddleTableViewCell.xib */,
+				925CE70A1FDBDC5C00B319DB /* MiddleTableViewDataSource.h */,
+				925CE70B1FDBDC5C00B319DB /* MiddleTableViewDataSource.m */,
+			);
+			path = Middle;
+			sourceTree = "<group>";
+		};
+		925CE6F91FDBCD2100B319DB /* VerticalCenterTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				925CE6FD1FDBCF5500B319DB /* VerticalCenterTextFieldCell.h */,
+				925CE6FE1FDBCF5500B319DB /* VerticalCenterTextFieldCell.m */,
+			);
+			path = VerticalCenterTextFieldCell;
+			sourceTree = "<group>";
+		};
+		925CE7051FDBDA0200B319DB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				925CE7061FDBDA0B00B319DB /* NSView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		925CE7061FDBDA0B00B319DB /* NSView */ = {
+			isa = PBXGroup;
+			children = (
+				925CE7071FDBDA6500B319DB /* NSView+Addition.h */,
+				925CE7081FDBDA6500B319DB /* NSView+Addition.m */,
+			);
+			path = NSView;
 			sourceTree = "<group>";
 		};
 		9279BFE51F8F8F8000FA8DA9 /* Date */ = {
@@ -608,10 +679,13 @@
 			files = (
 				9279BFF11F8F8FC400FA8DA9 /* SolarTerm.csv in Resources */,
 				8057E8EF1F837AB6003DF83E /* Assets.xcassets in Resources */,
+				925CE7041FDBD86B00B319DB /* MiddleTableViewCell.xib in Resources */,
 				809896B51F852F37008ECA77 /* MainWindowViewController.xib in Resources */,
+				925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */,
 				80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */,
 				8057E8F21F837AB6003DF83E /* Main.storyboard in Resources */,
 				8090BF891F8E6D6F00F0EB80 /* TopContentViewController.xib in Resources */,
+				925CE6F81FDB9E5500B319DB /* MiddleSubView.xib in Resources */,
 				809896BA1F852F64008ECA77 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,8 +758,10 @@
 				809896B41F852F37008ECA77 /* MainWindowViewController.m in Sources */,
 				8007F4571F85BF2500198017 /* MainViewModel.mm in Sources */,
 				8057E8EA1F837AB6003DF83E /* main.m in Sources */,
+				925CE7031FDBD86B00B319DB /* MiddleTableViewCell.m in Sources */,
 				9279C0171F8F919800FA8DA9 /* CangGanData.m in Sources */,
 				9279C0131F8F919800FA8DA9 /* BottomViewData.m in Sources */,
+				925CE6FF1FDBCF5500B319DB /* VerticalCenterTextFieldCell.m in Sources */,
 				809896B91F852F64008ECA77 /* MainViewController.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
 				9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */,
@@ -697,11 +773,14 @@
 				9279C02E1F8F91F400FA8DA9 /* NSArray+Addition.m in Sources */,
 				9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */,
 				9279C0151F8F919800FA8DA9 /* FifteenYunData.m in Sources */,
+				925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */,
 				9279C01E1F8F919800FA8DA9 /* SubViewData.m in Sources */,
 				80B084121F8641D700449443 /* MainViewController+CollectionView.m in Sources */,
+				925CE7091FDBDA6500B319DB /* NSView+Addition.m in Sources */,
 				80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */,
 				9279C0371F8F937900FA8DA9 /* UIConstantParm.m in Sources */,
 				80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */,
+				925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */,
 				9279C01C1F8F919800FA8DA9 /* RiZhuData.mm in Sources */,
 				9279BFEB1F8F8F8000FA8DA9 /* TTLunarCalendar.mm in Sources */,
 				9279C0191F8F919800FA8DA9 /* MiddleViewData.m in Sources */,
@@ -709,6 +788,7 @@
 				809896B01F852E51008ECA77 /* AppDelegate.m in Sources */,
 				9279C01B1F8F919800FA8DA9 /* ShenShaData.m in Sources */,
 				809896C11F853474008ECA77 /* BasicViewController.m in Sources */,
+				925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */,
 				9279C0341F8F91F400FA8DA9 /* NSTextField+Addition.m in Sources */,
 				9279C0311F8F91F400FA8DA9 /* NSNumber+Addition.m in Sources */,
 				9279C01D1F8F919800FA8DA9 /* ShuangZaoData.m in Sources */,
