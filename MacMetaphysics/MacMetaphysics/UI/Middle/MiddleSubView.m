@@ -73,51 +73,51 @@
     switch (self.type) {
         case MiddleSubViewTypeYear:
         {
-            self.horLine1Label.text = @"";
-            self.horLine2Label.text = @"";
-            self.horLine3Label.text = @"";
-            self.verLineLabel.text = @"";
-            self.topLeftLabel.text = @"";
-            self.topRightLabel.text = @"";
-            self.bottomLeftLabel.text = @"";
-            self.bottomRightLabel.text = @"";
+            self.horLine1Label.stringValue = @"";
+            self.horLine2Label.stringValue = @"";
+            self.horLine3Label.stringValue = @"";
+            self.verLineLabel.stringValue = @"";
+            self.topLeftLabel.stringValue = @"";
+            self.topRightLabel.stringValue = @"";
+            self.bottomLeftLabel.stringValue = @"";
+            self.bottomRightLabel.stringValue = @"";
         }
             break;
         case MiddleSubViewTypeMonth:
         {
-            self.horLine1Label.text = @"";
-            self.horLine2Label.text = @"";
-            self.horLine3Label.text = @"";
-            self.verLineLabel.text = @"";
-            self.topLeftLabel.text = @"";
-            self.topRightLabel.text = @"";
-            self.bottomLeftLabel.text = @"";
-            self.bottomRightLabel.text = @"";
+            self.horLine1Label.stringValue = @"";
+            self.horLine2Label.stringValue = @"";
+            self.horLine3Label.stringValue = @"";
+            self.verLineLabel.stringValue = @"";
+            self.topLeftLabel.stringValue = @"";
+            self.topRightLabel.stringValue = @"";
+            self.bottomLeftLabel.stringValue = @"";
+            self.bottomRightLabel.stringValue = @"";
         }
             break;
         case MiddleSubViewTypeDay:
         {
-            self.horLine1Label.text = @"";
-            self.horLine2Label.text = @"";
-            self.horLine3Label.text = @"";
-            self.verLineLabel.text = @"";
-            self.topLeftLabel.text = @"";
-            self.topRightLabel.text = @"";
-            self.bottomLeftLabel.text = @"";
-            self.bottomRightLabel.text = @"";
+            self.horLine1Label.stringValue = @"";
+            self.horLine2Label.stringValue = @"";
+            self.horLine3Label.stringValue = @"";
+            self.verLineLabel.stringValue = @"";
+            self.topLeftLabel.stringValue = @"";
+            self.topRightLabel.stringValue = @"";
+            self.bottomLeftLabel.stringValue = @"";
+            self.bottomRightLabel.stringValue = @"";
             self.showFormButton.hidden = NO;
         }
             break;
         case MiddleSubViewTypeHour:
         {
-            self.horLine1Label.text = @"";
-            self.horLine2Label.text = @"";
-            self.horLine3Label.text = @"";
-            self.verLineLabel.text = @"";
-            self.topLeftLabel.text = @"";
-            self.topRightLabel.text = @"";
-            self.bottomLeftLabel.text = @"";
-            self.bottomRightLabel.text = @"";
+            self.horLine1Label.stringValue = @"";
+            self.horLine2Label.stringValue = @"";
+            self.horLine3Label.stringValue = @"";
+            self.verLineLabel.stringValue = @"";
+            self.topLeftLabel.stringValue = @"";
+            self.topRightLabel.stringValue = @"";
+            self.bottomLeftLabel.stringValue = @"";
+            self.bottomRightLabel.stringValue = @"";
         }
             break;
             
@@ -137,64 +137,64 @@
     switch (self.type) {
         case MiddleSubViewTypeYear:
         {
-            self.horLine1Label.text = current.ganZhiYear;
-            self.horLine2Label.text = cangGanData.yearCangGan;
-            self.horLine3Label.text = liuQinData.yearBottomLiuQin;
-            self.verLineLabel.text  = naYinData.yearNaYin;
-            self.topLeftLabel.text  = liuQinData.yearTopLiuQin;
+            self.horLine1Label.stringValue = current.ganZhiYear;
+            self.horLine2Label.stringValue = cangGanData.yearCangGan;
+            self.horLine3Label.stringValue = liuQinData.yearBottomLiuQin;
+            self.verLineLabel.stringValue  = naYinData.yearNaYin;
+            self.topLeftLabel.stringValue  = liuQinData.yearTopLiuQin;
         }
             break;
         case MiddleSubViewTypeMonth:
         {
-            self.horLine1Label.text = current.ganZhiMonth;
-            self.horLine2Label.text = cangGanData.monthCangGan;
-            self.horLine3Label.text = liuQinData.monthBottomLiuQin;
-            self.verLineLabel.text  = naYinData.monthNaYin;
-            self.topLeftLabel.text = liuQinData.monthTopLiuQin;
+            self.horLine1Label.stringValue = current.ganZhiMonth;
+            self.horLine2Label.stringValue = cangGanData.monthCangGan;
+            self.horLine3Label.stringValue = liuQinData.monthBottomLiuQin;
+            self.verLineLabel.stringValue  = naYinData.monthNaYin;
+            self.topLeftLabel.stringValue = liuQinData.monthTopLiuQin;
             
             if(shenShaData.bottomMonthShenShaArr.count>0){
-                self.bottomRightLabel.text = shenShaData.bottomMonthShenShaArr[0];
+                self.bottomRightLabel.stringValue = shenShaData.bottomMonthShenShaArr[0];
             }
             
             if(shenShaData.bottomMonthShenShaArr.count>1){
-                self.bottomLeftLabel.text = shenShaData.bottomMonthShenShaArr[1];
+                self.bottomLeftLabel.stringValue = shenShaData.bottomMonthShenShaArr[1];
             }
         }
             break;
         case MiddleSubViewTypeDay:
         {
-            self.horLine1Label.text = current.ganZhiDay;
-            self.horLine2Label.text = cangGanData.dayCangGan;
-            self.horLine3Label.text = liuQinData.dayBottomLiuQin;
-            self.verLineLabel.text  = naYinData.dayNaYin;
-            self.topLeftLabel.text = liuQinData.dayTopLiuQin;
+            self.horLine1Label.stringValue = current.ganZhiDay;
+            self.horLine2Label.stringValue = cangGanData.dayCangGan;
+            self.horLine3Label.stringValue = liuQinData.dayBottomLiuQin;
+            self.verLineLabel.stringValue  = naYinData.dayNaYin;
+            self.topLeftLabel.stringValue = liuQinData.dayTopLiuQin;
             
             if(shenShaData.bottomDayShenShaArr.count>0){
-                self.bottomRightLabel.text = shenShaData.bottomDayShenShaArr[0];
+                self.bottomRightLabel.stringValue = shenShaData.bottomDayShenShaArr[0];
             }
             
             if(shenShaData.bottomDayShenShaArr.count>1){
-                self.bottomLeftLabel.text = shenShaData.bottomDayShenShaArr[1];
+                self.bottomLeftLabel.stringValue = shenShaData.bottomDayShenShaArr[1];
             }
         }
             break;
         case MiddleSubViewTypeHour:
         {
-            self.horLine1Label.text = current.ganZhiHour;
-            self.horLine2Label.text = cangGanData.hourCangGan;
-            self.horLine3Label.text = liuQinData.hourBottomLiuQin;
-            self.verLineLabel.text  = naYinData.hourNaYin;
-            self.topLeftLabel.text = liuQinData.hourTopLiuQin;
+            self.horLine1Label.stringValue = current.ganZhiHour;
+            self.horLine2Label.stringValue = cangGanData.hourCangGan;
+            self.horLine3Label.stringValue = liuQinData.hourBottomLiuQin;
+            self.verLineLabel.stringValue  = naYinData.hourNaYin;
+            self.topLeftLabel.stringValue = liuQinData.hourTopLiuQin;
             if(shenShaData.topHourShenShaArr.count>0){
-                self.topRightLabel.text = shenShaData.topHourShenShaArr[0];
+                self.topRightLabel.stringValue = shenShaData.topHourShenShaArr[0];
             }
             
             if(shenShaData.bottomHourShenShaArr.count>0){
-                self.bottomRightLabel.text = shenShaData.bottomHourShenShaArr[0];
+                self.bottomRightLabel.stringValue = shenShaData.bottomHourShenShaArr[0];
             }
             
             if(shenShaData.bottomHourShenShaArr.count>1){
-                self.bottomLeftLabel.text = shenShaData.bottomHourShenShaArr[1];
+                self.bottomLeftLabel.stringValue = shenShaData.bottomHourShenShaArr[1];
             }
         }
             break;
@@ -203,7 +203,7 @@
             break;
     }
     
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
 }
 
 @end

@@ -25,6 +25,7 @@
 		80B084121F8641D700449443 /* MainViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B084111F8641D700449443 /* MainViewController+CollectionView.m */; };
 		80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B084151F86817200449443 /* LeftCollectionViewCell.m */; };
 		80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B084161F86817200449443 /* LeftCollectionViewCell.xib */; };
+		80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */; };
 		80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */; };
 		925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F01FDB9E1200B319DB /* MiddleContentView.m */; };
 		925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */; };
@@ -107,6 +108,8 @@
 		80B084141F86817200449443 /* LeftCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftCollectionViewCell.h; sourceTree = "<group>"; };
 		80B084151F86817200449443 /* LeftCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftCollectionViewCell.m; sourceTree = "<group>"; };
 		80B084161F86817200449443 /* LeftCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftCollectionViewCell.xib; sourceTree = "<group>"; };
+		80F470CD1FDCE1F500A71D77 /* CustomColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomColorLabel.h; sourceTree = "<group>"; };
+		80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomColorLabel.m; sourceTree = "<group>"; };
 		80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+LeftMenu.h"; sourceTree = "<group>"; };
 		80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainViewModel+LeftMenu.m"; sourceTree = "<group>"; };
 		925CE6EF1FDB9E1200B319DB /* MiddleContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleContentView.h; sourceTree = "<group>"; };
@@ -373,6 +376,7 @@
 		809896BB1F853405008ECA77 /* UIBasic */ = {
 			isa = PBXGroup;
 			children = (
+				80F470CC1FDCE16700A71D77 /* CustomColorLabel */,
 				925CE6F91FDBCD2100B319DB /* VerticalCenterTextFieldCell */,
 				9279C01F1F8F91F400FA8DA9 /* Category */,
 				809896BD1F85342A008ECA77 /* BasicViewController */,
@@ -407,6 +411,15 @@
 				80B084161F86817200449443 /* LeftCollectionViewCell.xib */,
 			);
 			path = LeftCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		80F470CC1FDCE16700A71D77 /* CustomColorLabel */ = {
+			isa = PBXGroup;
+			children = (
+				80F470CD1FDCE1F500A71D77 /* CustomColorLabel.h */,
+				80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */,
+			);
+			path = CustomColorLabel;
 			sourceTree = "<group>";
 		};
 		925CE6EE1FDB9B5800B319DB /* Middle */ = {
@@ -777,6 +790,7 @@
 				9279C01E1F8F919800FA8DA9 /* SubViewData.m in Sources */,
 				80B084121F8641D700449443 /* MainViewController+CollectionView.m in Sources */,
 				925CE7091FDBDA6500B319DB /* NSView+Addition.m in Sources */,
+				80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */,
 				80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */,
 				9279C0371F8F937900FA8DA9 /* UIConstantParm.m in Sources */,
 				80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */,
