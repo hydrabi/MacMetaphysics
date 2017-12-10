@@ -43,70 +43,7 @@
     self.topContentView = [[TopContentViewController alloc] initWithNibName:NSStringFromClass([TopContentViewController class]) bundle:nil];
     [self addChildViewController:self.topContentView];
     [self.view addSubview:self.topContentView.view];
-    
-//    self.firstVerLine = [[UIView alloc] init];
-//    self.firstVerLine.backgroundColor = [UIColor blackColor];
-//    [self.view addSubview:self.firstVerLine];
-//    
-//    self.secondVerLine = [[UIView alloc] init];
-//    self.secondVerLine.backgroundColor = [UIColor blackColor];
-//    [self.view addSubview:self.secondVerLine];
-//    
-//    self.topContentView = [TopContentView instanceTopContentView];
-//    [self.view addSubview:self.topContentView];
-//    [self.topContentView bindViewModel];
-//    
-//    self.middleContentView = [[MiddleContentView alloc] init];
-//    [self.view addSubview:self.middleContentView];
-//    
-//    self.bottomContentView = [[BottomContentView alloc] init];
-//    [self.view addSubview:self.bottomContentView];
-//    
-//    self.liuNianTextView = [LiuNianTextView instanceLiuNianTextView];
-//    self.liuNianTextView.layer.borderColor = [UIColor blackColor].CGColor;
-//    self.liuNianTextView.layer.borderWidth = 1.0f;
-//    self.liuNianTextView.hidden = YES;
-//    [self.view addSubview:self.liuNianTextView];
-//    
-//    self.dateLabel = [[UILabel alloc] init];
-//    self.dateLabel.font = [UIFont systemFontOfSize:titleFontSize_20];
-//    self.dateLabel.textColor = [UIColor blackColor];
-//    [self.view addSubview:self.dateLabel];
-//    
-//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1
-//                                                  target:self
-//                                                selector:@selector(resetDate)
-//                                                userInfo:nil
-//                                                 repeats:YES];
-//    
-//    self.currentTextView = nil;
-//    
-//    self.daYunTextView = [[DaYunTextView alloc] init];
-//    self.daYunTextView.hidden = YES;
-//    [self.view addSubview:self.daYunTextView];
-//    
-//    self.fifteenYunTextView = [[FifteenYunTextView alloc] init];
-//    self.fifteenYunTextView.hidden = YES;
-//    [self.view addSubview:self.fifteenYunTextView];
-//    
-//    self.normalTextView = [NormalTextView instanceNormalTextView];
-//    self.normalTextView.hidden = YES;
-//    [self.view addSubview:self.normalTextView];
-//    
-//    self.shuangZaoTextView = [ShuangZaoTextView instanceShuangZaoTextView];
-//    self.shuangZaoTextView.hidden = YES;
-//    [self.view addSubview:self.shuangZaoTextView];
-//    [self.shuangZaoTextView resetValue];
-//    
-//    self.solarTermsView  = [SolarTermsCollectionView createSolarTermsCollectionView];
-//    self.solarTermsView.hidden = YES;
-//    [self.view addSubview:self.solarTermsView];
-//    
-//    self.bottomNoteTextView = [LiuNianTextView instanceLiuNianTextView];
-//    self.bottomNoteTextView.layer.borderColor = [UIColor blackColor].CGColor;
-//    self.bottomNoteTextView.layer.borderWidth = 1.0f;
-//    self.bottomNoteTextView.hidden = YES;
-//    [self.view addSubview:self.bottomNoteTextView];
+       
     
 }
 
