@@ -49,8 +49,7 @@
 
 -(void)makeConstraints{
     @weakify(self)
-    
-    
+
     [self.firstVerLine makeConstraints:^(MASConstraintMaker *make){
         @strongify(self)
         make.leading.equalTo(self.leftSideMenuCollectionView.trailing).offset(0);
