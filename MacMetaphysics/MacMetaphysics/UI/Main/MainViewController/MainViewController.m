@@ -40,11 +40,14 @@
     self.secondVerLine.layer.backgroundColor = [NSColor blackColor].CGColor;
     [self.view addSubview:self.secondVerLine];
     
+
     self.topContentView = [[TopContentViewController alloc] initWithNibName:NSStringFromClass([TopContentViewController class]) bundle:nil];
     [self addChildViewController:self.topContentView];
     [self.view addSubview:self.topContentView.view];
        
-    
+    self.middleContentView = [[MiddleContentView alloc] init];
+    [self addChildViewController:self.middleContentView];
+    [self.view addSubview:self.middleContentView.view];
 }
 
 -(void)makeConstraints{
@@ -73,23 +76,15 @@
         make.trailing.equalTo(self.view.trailing).offset(0);
         make.height.equalTo(topViewHeight);
     }];
+ 
+    [self.middleContentView.view makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(0);
+        make.top.equalTo(self.topContentView.view.bottom).offset(contentViewOffset);
+        make.trailing.equalTo(self.view.trailing).offset(0);
+        make.height.equalTo(middleViewHeight);
+    }];
 //
-//    [self.topContentView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(0);
-//        make.top.equalTo(self.view.top).offset(0);
-//        make.trailing.equalTo(self.view.trailing).offset(0);
-//        make.height.equalTo(topViewHeight);
-//    }];
-//    
-//    [self.middleContentView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(0);
-//        make.top.equalTo(self.topContentView.bottom).offset(contentViewOffset);
-//        make.trailing.equalTo(self.view.trailing).offset(0);
-//        make.height.equalTo(middleViewHeight);
-//    }];
-//    
 //    [self.bottomContentView makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)
 //        make.leading.equalTo(self.secondVerLine.trailing).offset(0);

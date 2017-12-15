@@ -32,7 +32,7 @@
                                                            object:nil]
      subscribeNext:^(id _){
          @strongify(self)
-         [self drawColorWithText:self.stringValue];
+         [self drawColorWithText:self.text];
      }];
 }
 
@@ -45,7 +45,7 @@
     if([[MainViewModel sharedInstance].currentSelectTopSectionMenuTypeArr containsObject:@(LeftSideMenuTypeYanSe)]
        && text.length>0){
         if(self.useTheSameColor){
-            self.textColor = [NSColor getColorWithString:self.stringValue];
+            self.textColor = [NSColor getColorWithString:self.text];
         }
         else{
             NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text];

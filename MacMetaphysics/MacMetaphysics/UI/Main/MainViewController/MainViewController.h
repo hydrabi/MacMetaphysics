@@ -10,7 +10,7 @@
 #import "BasicViewController.h"
 #import "MainViewModel.h"
 #import "TopContentViewController.h"
-
+#import "MiddleContentView.h"
 @interface MainViewController : BasicViewController
 
 /**
@@ -28,6 +28,11 @@
  */
 @property (nonatomic,strong)NSView *firstVerLine;
 @property (nonatomic,strong)NSView *secondVerLine;
+
+/**
+ 中间的四个命柱
+ */
+@property (nonatomic,strong)MiddleContentView *middleContentView;
 
 /**
  顶部输入视图控制器

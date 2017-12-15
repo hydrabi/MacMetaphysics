@@ -13,5 +13,5 @@
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
-
+#import "NSTextField+Addition.h"
 #endif /* PrefixHeader_pch */

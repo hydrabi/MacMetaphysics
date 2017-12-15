@@ -25,6 +25,8 @@
 @property (nonatomic,weak)IBOutlet NSCollectionView *collectionView;
 @property (nonatomic,weak)IBOutlet NSView *innerView;
 
+-(instancetype)initWithType:(MiddleSubViewType)type;
+
 /**
  重新加载数据
  */

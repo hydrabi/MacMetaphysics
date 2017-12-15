@@ -29,10 +29,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="agR-Kd-kRD">
-                    <rect key="frame" x="0.0" y="189" width="40" height="31"/>
+                    <rect key="frame" x="0.0" y="188" width="40" height="32"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xzT-K8-d7H" customClass="CustomColorLabel">
-                            <rect key="frame" x="-2" y="0.0" width="44" height="31"/>
+                            <rect key="frame" x="-2" y="0.0" width="44" height="32"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="ePO-EP-b2H">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -43,7 +43,7 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="xzT-K8-d7H" secondAttribute="bottom" id="HRh-Q6-PFC"/>
                         <constraint firstItem="xzT-K8-d7H" firstAttribute="top" secondItem="agR-Kd-kRD" secondAttribute="top" id="Trx-xx-QMa"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="cjr-k4-MWo"/>
+                        <constraint firstAttribute="width" constant="40" id="cjr-k4-MWo"/>
                         <constraint firstAttribute="height" constant="31.5" id="nDE-Xw-YJe"/>
                         <constraint firstItem="xzT-K8-d7H" firstAttribute="leading" secondItem="agR-Kd-kRD" secondAttribute="leading" id="wGg-83-ynx"/>
                         <constraint firstAttribute="trailing" secondItem="xzT-K8-d7H" secondAttribute="trailing" id="xb7-Is-3h2"/>
@@ -65,7 +65,7 @@
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YO2-pc-gHO" customClass="CustomColorLabel">
-                    <rect key="frame" x="126" y="189" width="86" height="24"/>
+                    <rect key="frame" x="126" y="188" width="86" height="25"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="三奇贵人" id="buw-cW-n20">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -73,8 +73,14 @@
                     </textFieldCell>
                 </textField>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="smi-3y-VGy">
-                    <rect key="frame" x="0.0" y="29" width="210" height="160"/>
+                    <rect key="frame" x="0.0" y="28" width="210" height="160"/>
                     <subviews>
+                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-WB-B3g">
+                            <rect key="frame" x="0.0" y="157" width="156" height="5"/>
+                        </box>
+                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="wvd-To-0Fd">
+                            <rect key="frame" x="0.0" y="-2" width="156" height="5"/>
+                        </box>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-5l-HHL" userLabel="firstHorline">
                             <rect key="frame" x="0.0" y="87" width="156" height="5"/>
                             <constraints>
@@ -168,6 +174,7 @@
                         <constraint firstItem="0IH-x8-MNf" firstAttribute="leading" secondItem="Vrt-8Q-nbS" secondAttribute="trailing" id="IpX-KG-tnV"/>
                         <constraint firstItem="iUM-3x-fm9" firstAttribute="leading" secondItem="aZW-Da-iJT" secondAttribute="trailing" id="JvB-qE-HnA"/>
                         <constraint firstItem="hzs-rQ-eQA" firstAttribute="top" secondItem="iUM-3x-fm9" secondAttribute="bottom" id="K80-pQ-BJp"/>
+                        <constraint firstAttribute="bottom" secondItem="wvd-To-0Fd" secondAttribute="bottom" id="MDO-F3-eyJ"/>
                         <constraint firstAttribute="bottom" secondItem="aZW-Da-iJT" secondAttribute="bottom" id="MNl-fe-MBf"/>
                         <constraint firstItem="pNR-nJ-jSW" firstAttribute="top" secondItem="jEE-5l-HHL" secondAttribute="bottom" id="N14-0f-9Yr"/>
                         <constraint firstAttribute="trailing" secondItem="0IH-x8-MNf" secondAttribute="trailing" constant="53" id="OFt-yr-bWK"/>
@@ -181,21 +188,26 @@
                         <constraint firstItem="NRL-gh-Xx7" firstAttribute="leading" secondItem="0IH-x8-MNf" secondAttribute="trailing" id="YyI-GS-Dye"/>
                         <constraint firstItem="hZW-vb-Ekm" firstAttribute="top" secondItem="jEE-5l-HHL" secondAttribute="bottom" constant="8" id="Z5N-OH-rfF"/>
                         <constraint firstAttribute="bottom" secondItem="0IH-x8-MNf" secondAttribute="bottom" id="Z66-iR-rZn"/>
+                        <constraint firstItem="MTy-WB-B3g" firstAttribute="top" secondItem="smi-3y-VGy" secondAttribute="top" id="b8f-7l-5gp"/>
                         <constraint firstItem="aZW-Da-iJT" firstAttribute="leading" secondItem="smi-3y-VGy" secondAttribute="leading" constant="53" id="cQu-QL-zCX"/>
+                        <constraint firstItem="wvd-To-0Fd" firstAttribute="leading" secondItem="smi-3y-VGy" secondAttribute="leading" id="cby-Hc-xQF"/>
                         <constraint firstItem="jEE-5l-HHL" firstAttribute="leading" secondItem="smi-3y-VGy" secondAttribute="leading" id="dI4-WW-TjB"/>
                         <constraint firstItem="0IH-x8-MNf" firstAttribute="leading" secondItem="pNR-nJ-jSW" secondAttribute="trailing" id="ddo-er-csG"/>
                         <constraint firstItem="0IH-x8-MNf" firstAttribute="top" secondItem="smi-3y-VGy" secondAttribute="top" id="eHF-Ep-apy"/>
                         <constraint firstItem="Vrt-8Q-nbS" firstAttribute="leading" secondItem="smi-3y-VGy" secondAttribute="leading" id="gJp-4X-dbv"/>
                         <constraint firstItem="hzs-rQ-eQA" firstAttribute="leading" secondItem="aZW-Da-iJT" secondAttribute="trailing" id="h5f-Ot-XNb"/>
+                        <constraint firstItem="MTy-WB-B3g" firstAttribute="width" secondItem="jEE-5l-HHL" secondAttribute="width" id="hu9-Tp-MMf"/>
+                        <constraint firstItem="wvd-To-0Fd" firstAttribute="width" secondItem="MTy-WB-B3g" secondAttribute="width" id="idq-91-fbb"/>
                         <constraint firstAttribute="bottom" secondItem="hZW-vb-Ekm" secondAttribute="bottom" id="jXB-5s-p0d"/>
                         <constraint firstItem="0IH-x8-MNf" firstAttribute="leading" secondItem="hzs-rQ-eQA" secondAttribute="trailing" id="kQ4-WH-cPT"/>
+                        <constraint firstItem="MTy-WB-B3g" firstAttribute="leading" secondItem="smi-3y-VGy" secondAttribute="leading" id="kzl-ft-Aub"/>
                         <constraint firstItem="iUM-3x-fm9" firstAttribute="top" secondItem="jEE-5l-HHL" secondAttribute="bottom" constant="50" id="uXX-ky-CWQ"/>
                         <constraint firstItem="aZW-Da-iJT" firstAttribute="top" secondItem="jEE-5l-HHL" secondAttribute="bottom" id="v3b-n6-PlB"/>
                         <constraint firstItem="iUM-3x-fm9" firstAttribute="top" secondItem="pNR-nJ-jSW" secondAttribute="bottom" id="zhP-Hx-2NT"/>
                     </constraints>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="50h-9x-ysy" customClass="CustomColorLabel">
-                    <rect key="frame" x="-2" y="4" width="86" height="24"/>
+                    <rect key="frame" x="-2" y="3" width="86" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="三奇贵人" id="qoF-8F-uq4">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -203,7 +215,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fse-76-gV4" customClass="CustomColorLabel">
-                    <rect key="frame" x="126" y="4" width="86" height="24"/>
+                    <rect key="frame" x="126" y="3" width="86" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="三奇贵人" id="VGA-YA-7fc">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

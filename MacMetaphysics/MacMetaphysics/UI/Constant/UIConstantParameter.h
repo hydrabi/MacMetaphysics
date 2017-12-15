@@ -149,7 +149,7 @@ static const CGFloat datePickerWidth = 300.0f;
 static const CGFloat datePickerHeight = 300.0f;
 
 #pragma mark - 字体
-static const CGFloat titleFontSize_90 =  90.0f;
+static const CGFloat titleFontSize_80 =  80.0f;
 static const CGFloat titleFontSize_55 =  55.0f;
 static const CGFloat titleFontSize_50 =  50.0f;
 static const CGFloat titleFontSize_40 =  40.0f;

@@ -8,12 +8,30 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TopContentViewController">
             <connections>
+                <outlet property="firstTextField" destination="eZG-ua-7kQ" id="fXC-9d-yGN"/>
+                <outlet property="gregorianCalendarSelectedButton" destination="wsz-nk-KCE" id="7kF-rY-ypb"/>
+                <outlet property="gregorianDayTxt" destination="hrP-k3-eKf" id="c6P-nX-2Ld"/>
+                <outlet property="gregorianHourTxt" destination="i0q-O3-X1i" id="2eU-Af-hrv"/>
+                <outlet property="gregorianMonthTxt" destination="Voo-xo-cDE" id="kLQ-wQ-8FT"/>
+                <outlet property="gregorianYearTxt" destination="7yB-EC-XcR" id="hho-zl-whx"/>
+                <outlet property="hideButton" destination="g5k-2z-Lhb" id="9ln-eo-fAa"/>
+                <outlet property="leapMonthLabel" destination="c1t-EH-5S3" id="BvB-Lp-HHv"/>
+                <outlet property="lunarCalendarSelectedButton" destination="gj7-Qd-c2s" id="lV9-HB-wOK"/>
+                <outlet property="lunarDayTxt" destination="mbT-gv-8Zt" id="TLm-r2-ySX"/>
+                <outlet property="lunarHourTxt" destination="lnC-Vz-lpQ" id="wzQ-sg-eGQ"/>
+                <outlet property="lunarMonthTxt" destination="jLK-5N-59G" id="kxv-BQ-AnX"/>
+                <outlet property="lunarYearTxt" destination="taY-Hf-DaW" id="cQU-f0-YLj"/>
+                <outlet property="mingGongLabel" destination="k9h-JR-tos" id="NVf-ew-mtD"/>
+                <outlet property="secondTextField" destination="NDK-YQ-DY1" id="cav-Or-n4W"/>
+                <outlet property="solarTermsLabel" destination="6lq-HE-f5I" id="Uzs-IK-pFY"/>
+                <outlet property="taiYuanLabel" destination="bQ5-yU-HkT" id="fdL-Mi-DvU"/>
+                <outlet property="thirdTextField" destination="emO-nt-rqk" id="v49-S4-ucW"/>
                 <outlet property="view" destination="h1c-ED-sMB" id="4CZ-oY-Mwh"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView focusRingType="none" id="h1c-ED-sMB" customClass="TopContentView">
+        <customView focusRingType="none" id="h1c-ED-sMB">
             <rect key="frame" x="0.0" y="0.0" width="1266" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -375,26 +393,6 @@
                 <constraint firstItem="oEl-7O-sTx" firstAttribute="centerY" secondItem="myp-lM-vl9" secondAttribute="centerY" id="yCC-JH-Jog"/>
                 <constraint firstAttribute="trailing" secondItem="bQ5-yU-HkT" secondAttribute="trailing" constant="16" id="yHZ-JQ-TEf"/>
             </constraints>
-            <connections>
-                <outlet property="firstTextField" destination="eZG-ua-7kQ" id="Wr4-by-7Jk"/>
-                <outlet property="gregorianCalendarSelectedButton" destination="wsz-nk-KCE" id="Ati-oX-1HQ"/>
-                <outlet property="gregorianDayTxt" destination="i0q-O3-X1i" id="RGz-IS-ORX"/>
-                <outlet property="gregorianHourTxt" destination="hrP-k3-eKf" id="SNM-yI-LZl"/>
-                <outlet property="gregorianMonthTxt" destination="Voo-xo-cDE" id="Nqz-rz-8Ho"/>
-                <outlet property="gregorianYearTxt" destination="7yB-EC-XcR" id="36f-lq-nvR"/>
-                <outlet property="hideButton" destination="g5k-2z-Lhb" id="UG1-Ub-cRC"/>
-                <outlet property="leapMonthLabel" destination="c1t-EH-5S3" id="Dob-2p-x73"/>
-                <outlet property="lunarCalendarSelectedButton" destination="gj7-Qd-c2s" id="gjJ-A7-3I6"/>
-                <outlet property="lunarDayTxt" destination="lnC-Vz-lpQ" id="Ajc-EY-5hb"/>
-                <outlet property="lunarHourTxt" destination="mbT-gv-8Zt" id="vwf-wj-OWw"/>
-                <outlet property="lunarMonthTxt" destination="jLK-5N-59G" id="nwC-du-MUX"/>
-                <outlet property="lunarYearTxt" destination="taY-Hf-DaW" id="5S0-ga-L4R"/>
-                <outlet property="mingGongLabel" destination="k9h-JR-tos" id="6WQ-EJ-Jff"/>
-                <outlet property="secondTextField" destination="NDK-YQ-DY1" id="YOI-fc-Io3"/>
-                <outlet property="solarTermsLabel" destination="6lq-HE-f5I" id="qyK-yZ-fDM"/>
-                <outlet property="taiYuanLabel" destination="bQ5-yU-HkT" id="c1o-v7-b4F"/>
-                <outlet property="thirdTextField" destination="emO-nt-rqk" id="T3L-IC-sun"/>
-            </connections>
         </customView>
     </objects>
 </document>

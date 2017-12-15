@@ -63,7 +63,7 @@ static CGFloat collectionHeight = 26.0f;
     MiddleViewData *middle = [MainViewModel sharedInstance].middleData;
     NSMutableArray *shenShaArr = middle.shenShaData.totalShenShaArr[self.subViewType];
     if(shenShaArr.count>indexPath.item){
-        cell.shenShaLabel.stringValue = shenShaArr[indexPath.item];
+        cell.shenShaLabel.text = shenShaArr[indexPath.item];
     }
     return cell;
 }

@@ -9,6 +9,7 @@
 #import "NSTextField+Addition.h"
 #import "objc/runtime.h"
 static void * const originalSizeKey = "originalSizeKey";
+static void * const textKey = @"textKey";
 
 @implementation NSTextField (Addition)
 
@@ -27,6 +28,15 @@ static void * const originalSizeKey = "originalSizeKey";
 
 -(void)setOriginalFont{
     self.font = [NSFont systemFontOfSize:self.font.pointSize];
+}
+
+-(void)setText:(NSString*)text{
+    objc_setAssociatedObject(self, textKey, text, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.stringValue = text?:@"";
+}
+
+-(NSString*)text{
+    return  objc_getAssociatedObject(self, textKey);
 }
 
 @end

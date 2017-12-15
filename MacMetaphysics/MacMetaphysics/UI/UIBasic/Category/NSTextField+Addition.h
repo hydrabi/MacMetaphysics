@@ -10,7 +10,9 @@
 
 @interface NSTextField (Addition)
 @property (nonatomic,assign)CGFloat originalSize;
+@property (nonatomic,strong)NSString *text;
 
 -(void)setBoldFont;
 -(void)setOriginalFont;
+-(void)setText:(NSString*)text;
 @end
