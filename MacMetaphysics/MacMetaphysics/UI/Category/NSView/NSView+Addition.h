@@ -10,11 +10,15 @@
 
 @interface NSView (Addition)
 
+@property (nonatomic,assign)NSInteger myTag;
+
 /**
  设置视图的颜色
 
  @param color 颜色
  */
 -(void)setBackgroundColor:(NSColor *)color;
+
+
 
 @end

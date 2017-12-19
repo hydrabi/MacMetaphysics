@@ -11,6 +11,7 @@
 #import "MainViewModel.h"
 #import "TopContentViewController.h"
 #import "MiddleContentView.h"
+#import "BottomContentView.h"
 @interface MainViewController : BasicViewController
 
 /**
@@ -38,5 +39,10 @@
  顶部输入视图控制器
  */
 @property (nonatomic,strong)TopContentViewController *topContentView;
+
+/**
+ 底部包含小运大运的视图控制器
+ */
+@property (nonatomic,strong)BottomContentView *bottomContentView;
 
 @end

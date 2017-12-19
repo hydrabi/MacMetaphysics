@@ -8,7 +8,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BottomTableViewCell">
             <connections>
-                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="liuNianLabel" destination="2mV-sl-hhC" id="XHA-O5-tUU"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="jsb-nT-UaN"/>
+                <outlet property="yearLabel" destination="XFZ-M0-xyV" id="fzm-14-yKN"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -25,7 +27,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-sl-hhC">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-sl-hhC" customClass="CustomColorLabel">
                     <rect key="frame" x="50" y="4" width="57" height="31"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="丁酉" id="T7C-UO-3Rk">
                         <font key="font" metaFont="system" size="26"/>
@@ -41,5 +43,12 @@
                 <constraint firstItem="XFZ-M0-xyV" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="X30-A2-6qX"/>
             </constraints>
         </customView>
+        <collectionViewItem id="jHd-tY-dIV" customClass="BottomTableViewCell">
+            <connections>
+                <outlet property="liuNianLabel" destination="2mV-sl-hhC" id="WW2-R0-rDm"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="1SX-M9-j0E"/>
+                <outlet property="yearLabel" destination="XFZ-M0-xyV" id="Guw-jI-wf3"/>
+            </connections>
+        </collectionViewItem>
     </objects>
 </document>

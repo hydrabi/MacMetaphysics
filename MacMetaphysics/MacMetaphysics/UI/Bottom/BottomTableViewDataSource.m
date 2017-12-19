@@ -15,7 +15,8 @@
 #import "BottomLocation.h"
 #import "NSString+Addition.h"
 #import "NSView+Addition.h"
-static NSString *cellReuseIdentifier = @"cellReuseIdentifier";
+#import "NSView+Addition.h"
+static NSString *myCellReuseIdentifier = @"myCellReuseIdentifier";
 static NSString *firstTableViewHeaderIdentifier = @"firstTableViewHeaderIdentifier";
 static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdentifier";
 
@@ -36,9 +37,16 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 
 -(void)UIConfig{
     for(NSCollectionView *collectionView in self.collectionViews){
+        
+        NSCollectionViewFlowLayout *flowLayout = [[NSCollectionViewFlowLayout alloc] init];
+        flowLayout.itemSize = NSMakeSize(tableViewWidth, tableViewCellHeight);
+        flowLayout.minimumLineSpacing = 0.0f;
+        flowLayout.minimumInteritemSpacing = 0.0f;
+        collectionView.collectionViewLayout = flowLayout;
+        
         [collectionView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([BottomTableViewCell class])
                                                              bundle:nil]
-              forItemWithIdentifier:cellReuseIdentifier];
+              forItemWithIdentifier:myCellReuseIdentifier];
         
         [collectionView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([BottomNormalTableViewHeader class])
                                                              bundle:nil]
@@ -52,12 +60,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
         
         collectionView.delegate = self;
         collectionView.dataSource = self;
-        
-        NSCollectionViewFlowLayout *flowLayout = [[NSCollectionViewFlowLayout alloc] init];
-        flowLayout.itemSize = NSMakeSize(tableViewWidth, tableViewCellHeight);
-        flowLayout.minimumLineSpacing = 0.0f;
-        flowLayout.minimumInteritemSpacing = 0.0f;
-        collectionView.collectionViewLayout = flowLayout;
+
     }
 }
 
@@ -70,11 +73,11 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 }
 
 -(NSCollectionViewItem*)collectionView:(NSCollectionView *)collectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)indexPath{
-    BottomTableViewCell *cell = [collectionView makeItemWithIdentifier:cellReuseIdentifier forIndexPath:indexPath];
+    BottomTableViewCell *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
 
     MainViewModel *main = [MainViewModel sharedInstance];
     if(main.hadHiddenBottomTableView){
-        if(collectionView.tag >= main.hiddenBottomTableViewTag){
+        if(collectionView.myTag >= main.hiddenBottomTableViewTag){
             [cell hideContent];
         }
         else{
@@ -86,7 +89,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
         [cell showContent];
     }
     
-    NSNumber *key = [BottomLocation createKeyNumberWithTag:collectionView.tag
+    NSNumber *key = [BottomLocation createKeyNumberWithTag:collectionView.myTag
                                                  indexPath:indexPath];
     if([main.liuNianData.bottomLocationDic objectForKey:key]){
         [cell selectCell:YES];
@@ -103,7 +106,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 
 -(NSView*)collectionView:(NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(NSCollectionViewSupplementaryElementKind)kind atIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
-        if(collectionView.tag == 0){
+        if(collectionView.myTag == 0){
             BottomFirstTableViewHeader *header = [BottomFirstTableViewHeader instanceBasicNibView];
             header.frame = CGRectMake(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
             return header;
@@ -111,7 +114,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
         else{
             BottomNormalTableViewHeader *header = [BottomNormalTableViewHeader instanceBasicNibView];
             header.frame = CGRectMake(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
-            header.tableViewTag = collectionView.tag;
+            header.tableViewTag = collectionView.myTag;
             [header reloadData];
             return header;
         }
@@ -132,14 +135,14 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
             MainViewModel *main = [MainViewModel sharedInstance];
             //隐藏的时候不能点击
             if(main.hadHiddenBottomTableView){
-                if(collectionView.tag < main.hiddenBottomTableViewTag){
-                    [[MainViewModel sharedInstance] selectTableViewTag:collectionView.tag
+                if(collectionView.myTag < main.hiddenBottomTableViewTag){
+                    [[MainViewModel sharedInstance] selectTableViewTag:collectionView.myTag
                                                              indexPath:indexPath];
                 }
             }
             //展示
             else{
-                [[MainViewModel sharedInstance] selectTableViewTag:collectionView.tag
+                [[MainViewModel sharedInstance] selectTableViewTag:collectionView.myTag
                                                          indexPath:indexPath];
             }
         }
@@ -155,7 +158,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     MainViewModel *mainViewModle = [MainViewModel sharedInstance];
     BottomViewData *bottomData = mainViewModle.bottomData;
     
-    [bottomData fillContentWithTableIndex:tableView.tag
+    [bottomData fillContentWithTableIndex:tableView.myTag
                              tableSection:indexPath.section
                                  tableRow:indexPath.item
                                     block:^(NSString *liuNian,NSString *xiaoYun,NSString *year){

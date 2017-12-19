@@ -9,6 +9,8 @@
 #import "BottomContentView.h"
 #import "UIConstantParameter.h"
 #import "MainViewModel.h"
+#import "NSView+Addition.h"
+
 @interface BottomContentView ()
 @property (nonatomic,strong)NSScrollView *scrollView;
 @property (nonatomic,strong)NSMutableArray *tableViewsArr;
@@ -26,38 +28,40 @@
 
 -(void)UIConfig{
     
+    NSView *documentView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, tableViewCount*tableViewWidth+(tableViewCount-1)*tableViewOffset, scrollViewHeight)];
+    [documentView setBackgroundColor:[NSColor redColor]];
     self.tableViewsArr = @[].mutableCopy;
     self.scrollView = [[NSScrollView alloc] init];
-    self.scrollView.size = NSMakeSize(tableViewCount*tableViewWidth+(tableViewCount-1)*tableViewOffset, scrollViewHeight);
-    self.scrollView.scrollEnabled = YES;
-    [self addSubview:self.scrollView];
+    [self.scrollView setBorderType:NSNoBorder];
+    [self.scrollView setHasHorizontalScroller:YES];
+    [self.scrollView setHasVerticalScroller:YES];
+    [self.view addSubview:self.scrollView];
     
     for(NSInteger i = 0;i<tableViewCount;i++){
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero
-                                                              style:UITableViewStylePlain];
-        tableView.tag = i;
-        tableView.backgroundColor = [UIColor whiteColor];
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        tableView.scrollEnabled = NO;
-        [self.tableViewsArr addObject:tableView];
-        [self.scrollView addSubview:tableView];
+        NSCollectionView *collectionView = [[NSCollectionView alloc] init];
+        collectionView.myTag = i;
+        [collectionView setBackgroundColor:[NSColor yellowColor]];
+        [documentView addSubview:collectionView];
+        [self.tableViewsArr addObject:collectionView];
     }
-    self.dataSorce = [[BottomTableViewDataSource alloc] initWithTableViews:self.tableViewsArr];
+    
+    self.scrollView.documentView = documentView;
+    self.dataSorce = [[BottomTableViewDataSource alloc] initWithCollectionViews:self.tableViewsArr];
 }
 
 -(void)makeConstraints{
     @weakify(self)
     [self.scrollView makeConstraints:^(MASConstraintMaker *make){
         @strongify(self)
-        make.leading.equalTo(self.leading).offset(0);
-        make.trailing.equalTo(self.trailing).offset(0);
-        make.top.equalTo(self.top).offset(0);
-        make.bottom.equalTo(self.bottom).offset(0);
+        make.leading.equalTo(self.view.leading).offset(0);
+        make.trailing.equalTo(self.view.trailing).offset(0);
+        make.top.equalTo(self.view.top).offset(0);
+        make.bottom.equalTo(self.view.bottom).offset(0);
     }];
     
     CGFloat offset = tableViewFirstVerOffset;
     for(NSInteger i = 0;i<tableViewCount;i++){
-        UITableView *tableView = self.tableViewsArr[i];
+        NSCollectionView *tableView = self.tableViewsArr[i];
         tableView.frame = CGRectMake(offset, 0, tableViewWidth, scrollViewHeight);
         tableView.delegate = self.dataSorce;
         tableView.dataSource = self.dataSorce;
@@ -94,8 +98,8 @@
 
 -(void)reloadAllTableView{
     for(NSInteger i = 0;i<self.tableViewsArr.count;i++){
-        UITableView *tableView = self.tableViewsArr[i];
-        [tableView reloadData];
+        NSCollectionView *collectionView = self.tableViewsArr[i];
+        [collectionView reloadData];
     }
 }
 

@@ -48,6 +48,10 @@
     self.middleContentView = [[MiddleContentView alloc] init];
     [self addChildViewController:self.middleContentView];
     [self.view addSubview:self.middleContentView.view];
+    
+    self.bottomContentView = [[BottomContentView alloc] init];
+    [self addChildViewController:self.bottomContentView];
+    [self.view addSubview:self.bottomContentView.view];
 }
 
 -(void)makeConstraints{
@@ -84,15 +88,15 @@
         make.trailing.equalTo(self.view.trailing).offset(0);
         make.height.equalTo(middleViewHeight);
     }];
+
+    [self.bottomContentView.view makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(0);
+        make.top.equalTo(self.middleContentView.view.bottom).offset(contentViewOffset);
+        make.trailing.equalTo(self.view.trailing).offset(0);
+        make.height.equalTo(bottomViewHeight);
+    }];
 //
-//    [self.bottomContentView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(0);
-//        make.top.equalTo(self.middleContentView.bottom).offset(contentViewOffset);
-//        make.trailing.equalTo(self.view.trailing).offset(0);
-//        make.height.equalTo(bottomViewHeight);
-//    }];
-//    
 //    [self.liuNianTextView makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)
 //        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
