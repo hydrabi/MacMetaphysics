@@ -60,7 +60,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
         
         collectionView.delegate = self;
         collectionView.dataSource = self;
-
+        [collectionView reloadData];
     }
 }
 
@@ -73,54 +73,71 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 }
 
 -(NSCollectionViewItem*)collectionView:(NSCollectionView *)collectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)indexPath{
-    BottomTableViewCell *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
 
-    MainViewModel *main = [MainViewModel sharedInstance];
-    if(main.hadHiddenBottomTableView){
-        if(collectionView.myTag >= main.hiddenBottomTableViewTag){
-            [cell hideContent];
+    BottomTableViewCell *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
+    cell.yearLabel.text = [NSString stringWithFormat:@"%d",indexPath.section];
+    cell.liuNianLabel.text = [NSString stringWithFormat:@"%d",indexPath.item];
+
+//    MainViewModel *main = [MainViewModel sharedInstance];
+//    if(main.hadHiddenBottomTableView){
+//        if(collectionView.myTag >= main.hiddenBottomTableViewTag){
+//            [cell hideContent];
+//        }
+//        else{
+//            [cell showContent];
+//        }
+//    }
+//    //展示
+//    else{
+//        [cell showContent];
+//    }
+//
+//    NSNumber *key = [BottomLocation createKeyNumberWithTag:collectionView.myTag
+//                                                 indexPath:indexPath];
+//    if([main.liuNianData.bottomLocationDic objectForKey:key]){
+//        [cell selectCell:YES];
+//    }
+//    else{
+//        [cell selectCell:NO];
+//    }
+//
+//    [self fillContentWithCell:cell
+//                    tableView:collectionView
+//                    indexPath:indexPath];
+    return cell;
+}
+
+- (NSSize)collectionView:(NSCollectionView *)collectionView layout:(NSCollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        if(collectionView.myTag == 0){
+            return NSMakeSize(tableViewWidth, tableViewHeaderHeight);
         }
         else{
-            [cell showContent];
+            return NSMakeSize(tableViewWidth, tableViewHeaderHeight);
         }
     }
-    //展示
     else{
-        [cell showContent];
+        return NSMakeSize(tableViewWidth, tableViewMiddleOffset);
     }
-    
-    NSNumber *key = [BottomLocation createKeyNumberWithTag:collectionView.myTag
-                                                 indexPath:indexPath];
-    if([main.liuNianData.bottomLocationDic objectForKey:key]){
-        [cell selectCell:YES];
-    }
-    else{
-        [cell selectCell:NO];
-    }
-    
-    [self fillContentWithCell:cell
-                    tableView:collectionView
-                    indexPath:indexPath];
-    return cell;
 }
 
 -(NSView*)collectionView:(NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(NSCollectionViewSupplementaryElementKind)kind atIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
         if(collectionView.myTag == 0){
             BottomFirstTableViewHeader *header = [BottomFirstTableViewHeader instanceBasicNibView];
-            header.frame = CGRectMake(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
+            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
             return header;
         }
         else{
             BottomNormalTableViewHeader *header = [BottomNormalTableViewHeader instanceBasicNibView];
-            header.frame = CGRectMake(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
+            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
             header.tableViewTag = collectionView.myTag;
             [header reloadData];
             return header;
         }
     }
     else{
-        NSView *clearView = [[NSView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(collectionView.frame), tableViewMiddleOffset)];
+        NSView *clearView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewMiddleOffset)];
         [clearView setBackgroundColor:[NSColor whiteColor]];
         return clearView;
     }
@@ -147,8 +164,6 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
             }
         }
     }
-    
-    
 }
 
 -(void)fillContentWithCell:(BottomTableViewCell*)cell

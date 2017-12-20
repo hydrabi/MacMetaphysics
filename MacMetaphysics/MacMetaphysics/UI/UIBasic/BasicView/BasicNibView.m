@@ -19,11 +19,14 @@
 +(instancetype)instanceBasicNibView{
     NSArray *nibViews = nil;
     [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil topLevelObjects:&nibViews];
-    if(nibViews.count>0){
-        BasicNibView *view = (BasicNibView*)nibViews[0];
-        [view initialize];
-        return nibViews[0];
+    for(id object in nibViews){
+        if([object isKindOfClass:[self class]]){
+            BasicNibView *view = (BasicNibView*)object;
+            [view initialize];
+            return view;
+        }
     }
+    
     return nil;
 }
 

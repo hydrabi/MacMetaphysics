@@ -29,6 +29,9 @@
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-sl-hhC" customClass="CustomColorLabel">
                     <rect key="frame" x="50" y="4" width="57" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="53" id="x7W-cY-I4C"/>
+                    </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="丁酉" id="T7C-UO-3Rk">
                         <font key="font" metaFont="system" size="26"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -37,10 +40,10 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="XFZ-M0-xyV" firstAttribute="bottom" secondItem="2mV-sl-hhC" secondAttribute="bottom" id="5Ff-No-mKp"/>
                 <constraint firstAttribute="trailing" secondItem="2mV-sl-hhC" secondAttribute="trailing" id="HuB-uM-x4A"/>
-                <constraint firstItem="2mV-sl-hhC" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="RjO-4s-xg8"/>
+                <constraint firstAttribute="bottom" secondItem="2mV-sl-hhC" secondAttribute="bottom" constant="4" id="IcA-LX-F5v"/>
                 <constraint firstItem="XFZ-M0-xyV" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="X30-A2-6qX"/>
+                <constraint firstItem="XFZ-M0-xyV" firstAttribute="bottom" secondItem="2mV-sl-hhC" secondAttribute="bottom" id="xaJ-Oc-hJQ"/>
             </constraints>
         </customView>
         <collectionViewItem id="jHd-tY-dIV" customClass="BottomTableViewCell">
