@@ -19,6 +19,7 @@
 
 -(void)initialize{
     self.recoverButton.editable = NO;
+    self.translatesAutoresizingMaskIntoConstraints = YES;
 }
 
 //恢复操作

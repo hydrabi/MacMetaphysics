@@ -46,6 +46,12 @@
 		92714F7F1FE2803F0078C41B /* VerticalCenterTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92714F7D1FE2803E0078C41B /* VerticalCenterTextFieldCell.m */; };
 		92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92714F821FE2BBDD0078C41B /* BottomContentView.m */; };
 		92714F851FE2BBDD0078C41B /* BottomContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92714F831FE2BBDD0078C41B /* BottomContentView.xib */; };
+		927170AC1FEB658100FDAB46 /* GALFlippedClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927170AB1FEB658100FDAB46 /* GALFlippedClipView.m */; };
+		927170AF1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 927170AE1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.m */; };
+		927170B21FEBCB4900FDAB46 /* BottomTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927170B11FEBCB4900FDAB46 /* BottomTableCellView.m */; };
+		927170B41FEBCB5E00FDAB46 /* BottomTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927170B31FEBCB5E00FDAB46 /* BottomTableCellView.xib */; };
+		927170B71FEBD41400FDAB46 /* CustomBottomTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 927170B61FEBD41400FDAB46 /* CustomBottomTableHeader.m */; };
+		927170B91FEBD42700FDAB46 /* CustomBottomTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927170B81FEBD42700FDAB46 /* CustomBottomTableHeader.xib */; };
 		9279BFEA1F8F8F8000FA8DA9 /* lunar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFE71F8F8F8000FA8DA9 /* lunar.mm */; };
 		9279BFEB1F8F8F8000FA8DA9 /* TTLunarCalendar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFE91F8F8F8000FA8DA9 /* TTLunarCalendar.mm */; };
 		9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFEE1F8F8FC400FA8DA9 /* AnalysisSolarTerm.m */; };
@@ -153,6 +159,16 @@
 		92714F811FE2BBDD0078C41B /* BottomContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomContentView.h; sourceTree = "<group>"; };
 		92714F821FE2BBDD0078C41B /* BottomContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomContentView.m; sourceTree = "<group>"; };
 		92714F831FE2BBDD0078C41B /* BottomContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomContentView.xib; sourceTree = "<group>"; };
+		927170AA1FEB658100FDAB46 /* GALFlippedClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GALFlippedClipView.h; sourceTree = "<group>"; };
+		927170AB1FEB658100FDAB46 /* GALFlippedClipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GALFlippedClipView.m; sourceTree = "<group>"; };
+		927170AD1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomNSTableViewDataSource.h; sourceTree = "<group>"; };
+		927170AE1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomNSTableViewDataSource.m; sourceTree = "<group>"; };
+		927170B01FEBCB4900FDAB46 /* BottomTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomTableCellView.h; sourceTree = "<group>"; };
+		927170B11FEBCB4900FDAB46 /* BottomTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomTableCellView.m; sourceTree = "<group>"; };
+		927170B31FEBCB5E00FDAB46 /* BottomTableCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomTableCellView.xib; sourceTree = "<group>"; };
+		927170B51FEBD41400FDAB46 /* CustomBottomTableHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomBottomTableHeader.h; sourceTree = "<group>"; };
+		927170B61FEBD41400FDAB46 /* CustomBottomTableHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomBottomTableHeader.m; sourceTree = "<group>"; };
+		927170B81FEBD42700FDAB46 /* CustomBottomTableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBottomTableHeader.xib; sourceTree = "<group>"; };
 		9279BFE61F8F8F8000FA8DA9 /* lunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lunar.h; sourceTree = "<group>"; };
 		9279BFE71F8F8F8000FA8DA9 /* lunar.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = lunar.mm; sourceTree = "<group>"; };
 		9279BFE81F8F8F8000FA8DA9 /* TTLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLunarCalendar.h; sourceTree = "<group>"; };
@@ -453,8 +469,8 @@
 		923165DB1FE3694A007C6B27 /* BasicView */ = {
 			isa = PBXGroup;
 			children = (
-				923165DC1FE36962007C6B27 /* BasicNibView.h */,
-				923165DD1FE36962007C6B27 /* BasicNibView.m */,
+				927170A91FEB656600FDAB46 /* ClipView */,
+				927170A81FEB655300FDAB46 /* NibView */,
 			);
 			path = BasicView;
 			sourceTree = "<group>";
@@ -520,8 +536,34 @@
 				923165E61FE3A0F6007C6B27 /* BottomTableViewCell.xib */,
 				923165E91FE3B66C007C6B27 /* BottomTableViewDataSource.h */,
 				923165EA1FE3B66C007C6B27 /* BottomTableViewDataSource.m */,
+				927170AD1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.h */,
+				927170AE1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.m */,
+				927170B01FEBCB4900FDAB46 /* BottomTableCellView.h */,
+				927170B11FEBCB4900FDAB46 /* BottomTableCellView.m */,
+				927170B31FEBCB5E00FDAB46 /* BottomTableCellView.xib */,
+				927170B51FEBD41400FDAB46 /* CustomBottomTableHeader.h */,
+				927170B61FEBD41400FDAB46 /* CustomBottomTableHeader.m */,
+				927170B81FEBD42700FDAB46 /* CustomBottomTableHeader.xib */,
 			);
 			path = Bottom;
+			sourceTree = "<group>";
+		};
+		927170A81FEB655300FDAB46 /* NibView */ = {
+			isa = PBXGroup;
+			children = (
+				923165DC1FE36962007C6B27 /* BasicNibView.h */,
+				923165DD1FE36962007C6B27 /* BasicNibView.m */,
+			);
+			path = NibView;
+			sourceTree = "<group>";
+		};
+		927170A91FEB656600FDAB46 /* ClipView */ = {
+			isa = PBXGroup;
+			children = (
+				927170AA1FEB658100FDAB46 /* GALFlippedClipView.h */,
+				927170AB1FEB658100FDAB46 /* GALFlippedClipView.m */,
+			);
+			path = ClipView;
 			sourceTree = "<group>";
 		};
 		9279BFE51F8F8F8000FA8DA9 /* Date */ = {
@@ -757,9 +799,11 @@
 				925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */,
 				80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */,
 				923165E81FE3A0F6007C6B27 /* BottomTableViewCell.xib in Resources */,
+				927170B41FEBCB5E00FDAB46 /* BottomTableCellView.xib in Resources */,
 				8057E8F21F837AB6003DF83E /* Main.storyboard in Resources */,
 				923165DA1FE360D5007C6B27 /* BottomFirstTableViewHeader.xib in Resources */,
 				8090BF891F8E6D6F00F0EB80 /* TopContentViewController.xib in Resources */,
+				927170B91FEBD42700FDAB46 /* CustomBottomTableHeader.xib in Resources */,
 				925CE6F81FDB9E5500B319DB /* MiddleSubView.xib in Resources */,
 				809896BA1F852F64008ECA77 /* MainViewController.xib in Resources */,
 			);
@@ -832,6 +876,7 @@
 				809896C51F853495008ECA77 /* BasicViewModel.m in Sources */,
 				809896B41F852F37008ECA77 /* MainWindowViewController.m in Sources */,
 				8007F4571F85BF2500198017 /* MainViewModel.mm in Sources */,
+				927170B71FEBD41400FDAB46 /* CustomBottomTableHeader.m in Sources */,
 				8057E8EA1F837AB6003DF83E /* main.m in Sources */,
 				925CE7031FDBD86B00B319DB /* MiddleTableViewCell.m in Sources */,
 				9279C0171F8F919800FA8DA9 /* CangGanData.m in Sources */,
@@ -841,6 +886,7 @@
 				923165E11FE37B55007C6B27 /* BottomNormalTableViewHeader.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
 				9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */,
+				927170AF1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.m in Sources */,
 				92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */,
 				8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */,
 				9279C0301F8F91F400FA8DA9 /* NSLayoutConstraint+NUI.m in Sources */,
@@ -850,6 +896,7 @@
 				923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */,
 				9279C02E1F8F91F400FA8DA9 /* NSArray+Addition.m in Sources */,
 				9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */,
+				927170B21FEBCB4900FDAB46 /* BottomTableCellView.m in Sources */,
 				9279C0151F8F919800FA8DA9 /* FifteenYunData.m in Sources */,
 				925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */,
 				9279C01E1F8F919800FA8DA9 /* SubViewData.m in Sources */,
@@ -868,6 +915,7 @@
 				809896B01F852E51008ECA77 /* AppDelegate.m in Sources */,
 				923165D81FE3608F007C6B27 /* BottomFirstTableViewHeader.m in Sources */,
 				9279C01B1F8F919800FA8DA9 /* ShenShaData.m in Sources */,
+				927170AC1FEB658100FDAB46 /* GALFlippedClipView.m in Sources */,
 				923165EB1FE3B66C007C6B27 /* BottomTableViewDataSource.m in Sources */,
 				809896C11F853474008ECA77 /* BasicViewController.m in Sources */,
 				925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */,

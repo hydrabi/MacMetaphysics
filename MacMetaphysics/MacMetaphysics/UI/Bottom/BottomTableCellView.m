@@ -1,34 +1,25 @@
 //
-//  BottomTableViewCell.m
+//  BottomTableCellView.m
 //  MacMetaphysics
 //
-//  Created by zhihuihl on 2017/12/15.
+//  Created by zhihuihl on 2017/12/21.
 //  Copyright © 2017年 毕志锋. All rights reserved.
 //
 
-#import "BottomTableViewCell.h"
-#import "NSTextField+Addition.h"
+#import "BottomTableCellView.h"
 #import "UIConstantParameter.h"
-
 static CGFloat alphaNumber = 0.3;
 
-@interface BottomTableViewCell ()
+@implementation BottomTableCellView
 
-@end
-
-@implementation BottomTableViewCell
-
--(void)viewDidLoad{
+-(void)initialize{
     self.yearLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
     self.liuNianLabel.font = [NSFont systemFontOfSize:titleFontSize_26];
-    
-    self.view.translatesAutoresizingMaskIntoConstraints = YES;
 }
 
 -(void)hideContent{
     self.yearLabel.alphaValue = alphaNumber;
     self.liuNianLabel.alphaValue = alphaNumber;
-    
 }
 
 -(void)showContent{

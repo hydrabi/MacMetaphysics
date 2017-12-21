@@ -121,50 +121,50 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     }
 }
 
--(NSView*)collectionView:(NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(NSCollectionViewSupplementaryElementKind)kind atIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == 0){
-        if(collectionView.myTag == 0){
-            BottomFirstTableViewHeader *header = [BottomFirstTableViewHeader instanceBasicNibView];
-            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
-            return header;
-        }
-        else{
-            BottomNormalTableViewHeader *header = [BottomNormalTableViewHeader instanceBasicNibView];
-            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
-            header.tableViewTag = collectionView.myTag;
-            [header reloadData];
-            return header;
-        }
-    }
-    else{
-        NSView *clearView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewMiddleOffset)];
-        [clearView setBackgroundColor:[NSColor whiteColor]];
-        return clearView;
-    }
-}
-
--(void)collectionView:(NSCollectionView *)collectionView didSelectItemsAtIndexPaths:(NSSet<NSIndexPath *> *)indexPaths{
-    
-    for(NSIndexPath *indexPath in indexPaths){
-        BottomTableViewCell *cell = (BottomTableViewCell*)[collectionView itemAtIndexPath:indexPath];
-        
-        if(cell.liuNianLabel.text.length>0){
-            MainViewModel *main = [MainViewModel sharedInstance];
-            //隐藏的时候不能点击
-            if(main.hadHiddenBottomTableView){
-                if(collectionView.myTag < main.hiddenBottomTableViewTag){
-                    [[MainViewModel sharedInstance] selectTableViewTag:collectionView.myTag
-                                                             indexPath:indexPath];
-                }
-            }
-            //展示
-            else{
-                [[MainViewModel sharedInstance] selectTableViewTag:collectionView.myTag
-                                                         indexPath:indexPath];
-            }
-        }
-    }
-}
+//-(NSView*)collectionView:(NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(NSCollectionViewSupplementaryElementKind)kind atIndexPath:(NSIndexPath *)indexPath{
+//    if(indexPath.section == 0){
+//        if(collectionView.myTag == 0){
+//            BottomFirstTableViewHeader *header = [BottomFirstTableViewHeader instanceBasicNibView];
+//            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
+//            return header;
+//        }
+//        else{
+//            BottomNormalTableViewHeader *header = [BottomNormalTableViewHeader instanceBasicNibView];
+//            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
+//            header.tableViewTag = collectionView.myTag;
+//            [header reloadData];
+//            return header;
+//        }
+//    }
+//    else{
+//        NSView *clearView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewMiddleOffset)];
+//        [clearView setBackgroundColor:[NSColor whiteColor]];
+//        return clearView;
+//    }
+//}
+//
+//-(void)collectionView:(NSCollectionView *)collectionView didSelectItemsAtIndexPaths:(NSSet<NSIndexPath *> *)indexPaths{
+//    
+//    for(NSIndexPath *indexPath in indexPaths){
+//        BottomTableViewCell *cell = (BottomTableViewCell*)[collectionView itemAtIndexPath:indexPath];
+//        
+//        if(cell.liuNianLabel.text.length>0){
+//            MainViewModel *main = [MainViewModel sharedInstance];
+//            //隐藏的时候不能点击
+//            if(main.hadHiddenBottomTableView){
+//                if(collectionView.myTag < main.hiddenBottomTableViewTag){
+//                    [[MainViewModel sharedInstance] selectTableViewTag:collectionView.myTag
+//                                                             indexPath:indexPath];
+//                }
+//            }
+//            //展示
+//            else{
+//                [[MainViewModel sharedInstance] selectTableViewTag:collectionView.myTag
+//                                                         indexPath:indexPath];
+//            }
+//        }
+//    }
+//}
 
 -(void)fillContentWithCell:(BottomTableViewCell*)cell
                  tableView:(NSCollectionView*)tableView

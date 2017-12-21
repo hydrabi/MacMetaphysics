@@ -96,6 +96,11 @@
         make.trailing.equalTo(self.view.trailing).offset(0);
         make.height.equalTo(bottomViewHeight);
     }];
+    
+    [self.bottomContentView.view updateConstraints];
+    [self.bottomContentView.view layoutSubtreeIfNeeded];
+    [self.bottomContentView.view setNeedsLayout:YES];
+    [self.bottomContentView.view setNeedsDisplay:YES];
 //
 //    [self.liuNianTextView makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)
