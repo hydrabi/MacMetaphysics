@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BottomTableViewDataSource.h"
-@interface BottomContentView : NSViewController
+@interface BottomContentView : NSViewController<NSTableViewDelegate,NSTableViewDataSource>
 @property (nonatomic,strong)BottomTableViewDataSource *dataSorce;
 @end

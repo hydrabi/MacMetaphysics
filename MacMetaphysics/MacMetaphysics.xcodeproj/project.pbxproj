@@ -35,6 +35,9 @@
 		923165E71FE3A0F6007C6B27 /* BottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165E51FE3A0F6007C6B27 /* BottomTableViewCell.m */; };
 		923165E81FE3A0F6007C6B27 /* BottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923165E61FE3A0F6007C6B27 /* BottomTableViewCell.xib */; };
 		923165EB1FE3B66C007C6B27 /* BottomTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165EA1FE3B66C007C6B27 /* BottomTableViewDataSource.m */; };
+		9247E4541FECEB5C00524A50 /* BottomCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9247E4531FECEB5C00524A50 /* BottomCollectionViewDataSource.m */; };
+		9247E4581FED015800524A50 /* BottomCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9247E4561FED015800524A50 /* BottomCollectionViewItem.m */; };
+		9247E4591FED015800524A50 /* BottomCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9247E4571FED015800524A50 /* BottomCollectionViewItem.xib */; };
 		925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F01FDB9E1200B319DB /* MiddleContentView.m */; };
 		925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */; };
 		925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F51FDB9E5500B319DB /* MiddleSubView.m */; };
@@ -141,6 +144,11 @@
 		923165E61FE3A0F6007C6B27 /* BottomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomTableViewCell.xib; sourceTree = "<group>"; };
 		923165E91FE3B66C007C6B27 /* BottomTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomTableViewDataSource.h; sourceTree = "<group>"; };
 		923165EA1FE3B66C007C6B27 /* BottomTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomTableViewDataSource.m; sourceTree = "<group>"; };
+		9247E4521FECEB5C00524A50 /* BottomCollectionViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomCollectionViewDataSource.h; sourceTree = "<group>"; };
+		9247E4531FECEB5C00524A50 /* BottomCollectionViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewDataSource.m; sourceTree = "<group>"; };
+		9247E4551FED015800524A50 /* BottomCollectionViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomCollectionViewItem.h; sourceTree = "<group>"; };
+		9247E4561FED015800524A50 /* BottomCollectionViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewItem.m; sourceTree = "<group>"; };
+		9247E4571FED015800524A50 /* BottomCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCollectionViewItem.xib; sourceTree = "<group>"; };
 		925CE6EF1FDB9E1200B319DB /* MiddleContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleContentView.h; sourceTree = "<group>"; };
 		925CE6F01FDB9E1200B319DB /* MiddleContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleContentView.m; sourceTree = "<group>"; };
 		925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleContentView.xib; sourceTree = "<group>"; };
@@ -538,12 +546,17 @@
 				923165EA1FE3B66C007C6B27 /* BottomTableViewDataSource.m */,
 				927170AD1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.h */,
 				927170AE1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.m */,
+				9247E4521FECEB5C00524A50 /* BottomCollectionViewDataSource.h */,
+				9247E4531FECEB5C00524A50 /* BottomCollectionViewDataSource.m */,
 				927170B01FEBCB4900FDAB46 /* BottomTableCellView.h */,
 				927170B11FEBCB4900FDAB46 /* BottomTableCellView.m */,
 				927170B31FEBCB5E00FDAB46 /* BottomTableCellView.xib */,
 				927170B51FEBD41400FDAB46 /* CustomBottomTableHeader.h */,
 				927170B61FEBD41400FDAB46 /* CustomBottomTableHeader.m */,
 				927170B81FEBD42700FDAB46 /* CustomBottomTableHeader.xib */,
+				9247E4551FED015800524A50 /* BottomCollectionViewItem.h */,
+				9247E4561FED015800524A50 /* BottomCollectionViewItem.m */,
+				9247E4571FED015800524A50 /* BottomCollectionViewItem.xib */,
 			);
 			path = Bottom;
 			sourceTree = "<group>";
@@ -795,6 +808,7 @@
 				9279BFF11F8F8FC400FA8DA9 /* SolarTerm.csv in Resources */,
 				8057E8EF1F837AB6003DF83E /* Assets.xcassets in Resources */,
 				925CE7041FDBD86B00B319DB /* MiddleTableViewCell.xib in Resources */,
+				9247E4591FED015800524A50 /* BottomCollectionViewItem.xib in Resources */,
 				809896B51F852F37008ECA77 /* MainWindowViewController.xib in Resources */,
 				925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */,
 				80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */,
@@ -881,9 +895,11 @@
 				925CE7031FDBD86B00B319DB /* MiddleTableViewCell.m in Sources */,
 				9279C0171F8F919800FA8DA9 /* CangGanData.m in Sources */,
 				923165E71FE3A0F6007C6B27 /* BottomTableViewCell.m in Sources */,
+				9247E4541FECEB5C00524A50 /* BottomCollectionViewDataSource.m in Sources */,
 				9279C0131F8F919800FA8DA9 /* BottomViewData.m in Sources */,
 				809896B91F852F64008ECA77 /* MainViewController.m in Sources */,
 				923165E11FE37B55007C6B27 /* BottomNormalTableViewHeader.m in Sources */,
+				9247E4581FED015800524A50 /* BottomCollectionViewItem.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
 				9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */,
 				927170AF1FEBBB1300FDAB46 /* BottomNSTableViewDataSource.m in Sources */,
