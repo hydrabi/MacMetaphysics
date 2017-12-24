@@ -9,7 +9,7 @@
 #import "BottomTableViewCell.h"
 #import "NSTextField+Addition.h"
 #import "UIConstantParameter.h"
-
+#import "NSView+Addition.h"
 static CGFloat alphaNumber = 0.3;
 
 @interface BottomTableViewCell ()
@@ -19,6 +19,14 @@ static CGFloat alphaNumber = 0.3;
 @implementation BottomTableViewCell
 
 -(void)viewDidLoad{
+    self.yearLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
+    self.liuNianLabel.font = [NSFont systemFontOfSize:titleFontSize_26];
+    
+    self.view.translatesAutoresizingMaskIntoConstraints = YES;
+}
+
+-(void)awakeFromNib{
+    
     self.yearLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
     self.liuNianLabel.font = [NSFont systemFontOfSize:titleFontSize_26];
     

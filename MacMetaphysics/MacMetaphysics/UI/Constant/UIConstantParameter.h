@@ -160,6 +160,7 @@ static const CGFloat titleFontSize_21 =  21.0f;
 static const CGFloat titleFontSize_20 =  20.0f;
 static const CGFloat titleFontSize_18 =  18.0f;
 static const CGFloat titleFontSize_16 =  16.0f;
+static const CGFloat titleFontSize_14 =  14.0f;
 
 //改变颜色key
 static NSString *notificationKey_changeColor = @"notificationKey_changeColor";

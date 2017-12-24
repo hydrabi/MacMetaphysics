@@ -7,7 +7,6 @@
 //
 
 #import "BottomCollectionViewItem.h"
-#import "BottomTableViewCell.h"
 #import "BottomFirstTableViewHeader.h"
 #import "BottomNormalTableViewHeader.h"
 #import "UIConstantParameter.h"
@@ -15,13 +14,18 @@
 #import "BottomLocation.h"
 #import "NSString+Addition.h"
 #import "NSView+Addition.h"
-
+#import "BottomTableViewCell.h"
 static NSString *myCellReuseIdentifier = @"myCellReuseIdentifier";
 static NSString *firstTableViewHeaderIdentifier = @"firstTableViewHeaderIdentifier";
 static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdentifier";
 
 @interface BottomCollectionViewItem ()<NSCollectionViewDelegate,NSCollectionViewDataSource>
 @property (nonatomic,strong)NSCollectionView *myCollectionView;
+
+/**
+ 用来标识大运小运是第几行 现在collectionView搬来cell里面了
+ */
+@property (nonatomic,assign)NSInteger myTag;
 @end
 
 @implementation BottomCollectionViewItem
@@ -34,27 +38,25 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
 -(void)collectionViewConfig{
-    self.myCollectionView = [[NSCollectionView alloc] init];
+    self.myCollectionView = [[NSCollectionView alloc] initWithFrame:NSMakeRect(0, 0, tableViewWidth, scrollViewHeight)];
     self.myCollectionView.delegate = self;
     self.myCollectionView.dataSource = self;
+    self.myCollectionView.backgroundViewScrollsWithContent = NO;
     
     NSCollectionViewFlowLayout *flowLayout = [[NSCollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = NSMakeSize(tableViewWidth, tableViewCellHeight);
     flowLayout.minimumLineSpacing = 0.0f;
     flowLayout.minimumInteritemSpacing = 0.0f;
+    flowLayout.sectionInset = NSEdgeInsetsZero;
     self.myCollectionView.collectionViewLayout = flowLayout;
     
     [self.myCollectionView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([BottomTableViewCell class])
                                                          bundle:nil]
           forItemWithIdentifier:myCellReuseIdentifier];
     
-    [self.myCollectionView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([BottomNormalTableViewHeader class])
+    
+    [self.myCollectionView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass([BottomFirstTableViewHeader class])
                                                          bundle:nil]
      forSupplementaryViewOfKind:NSCollectionElementKindSectionHeader
                  withIdentifier:firstTableViewHeaderIdentifier];
@@ -69,7 +71,19 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     [self.myCollectionView makeConstraints:^(MASConstraintMaker *make){
         make.edges.equalTo(self.view);
     }];
+    
 }
+
+-(void)reloadDataWithTag:(NSInteger)myTag{
+    self.myTag = myTag;
+    self.myCollectionView.myTag = myTag;
+    [self.myCollectionView updateConstraints];
+    [self.myCollectionView setNeedsDisplay:YES];
+    [self.myCollectionView layoutSubtreeIfNeeded];
+    [self.myCollectionView reloadData];
+}
+
+#pragma mark - delegate
 
 -(NSInteger)numberOfSectionsInCollectionView:(NSCollectionView *)collectionView{
     return tableViewSection;
@@ -84,7 +98,6 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     BottomTableViewCell *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
     cell.yearLabel.text = [NSString stringWithFormat:@"%d",indexPath.section];
     cell.liuNianLabel.text = [NSString stringWithFormat:@"%d",indexPath.item];
-    
     //    MainViewModel *main = [MainViewModel sharedInstance];
     //    if(main.hadHiddenBottomTableView){
     //        if(collectionView.myTag >= main.hiddenBottomTableViewTag){
@@ -131,13 +144,13 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 -(NSView*)collectionView:(NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(NSCollectionViewSupplementaryElementKind)kind atIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
         if(collectionView.myTag == 0){
-            BottomFirstTableViewHeader *header = [BottomFirstTableViewHeader instanceBasicNibView];
-            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
+            BottomFirstTableViewHeader *header = [collectionView makeSupplementaryViewOfKind:NSCollectionElementKindSectionHeader withIdentifier:firstTableViewHeaderIdentifier forIndexPath:indexPath];
+//            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
             return header;
         }
         else{
-            BottomNormalTableViewHeader *header = [BottomNormalTableViewHeader instanceBasicNibView];
-            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
+            BottomNormalTableViewHeader *header = [collectionView makeSupplementaryViewOfKind:NSCollectionElementKindSectionHeader withIdentifier:normalTableViewHeaderIdentifier forIndexPath:indexPath];
+//            header.frame = NSMakeRect(0, 0, CGRectGetWidth(collectionView.frame), tableViewHeaderHeight);
             header.tableViewTag = collectionView.myTag;
             [header reloadData];
             return header;
@@ -148,6 +161,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
         [clearView setBackgroundColor:[NSColor whiteColor]];
         return clearView;
     }
+
 }
 
 -(void)collectionView:(NSCollectionView *)collectionView didSelectItemsAtIndexPaths:(NSSet<NSIndexPath *> *)indexPaths{

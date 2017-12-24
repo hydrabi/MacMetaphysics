@@ -22,17 +22,19 @@ static CGFloat alphaNumber = 0.3;
     // Drawing code here.
 }
 
--(void)initialize{
+-(void)awakeFromNib{
+    [super awakeFromNib];
     self.mainTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_40];
     self.topTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_24];
     self.bottomNumberTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
     
     self.hideTableViewButton.textColor = [NSColor blackColor];
-    self.hideTableViewButton.font = [NSFont systemFontOfSize:titleFontSize_16];
+    self.hideTableViewButton.font = [NSFont systemFontOfSize:titleFontSize_14];
     self.hideTableViewButton.text = @"●";
     
-    self.translatesAutoresizingMaskIntoConstraints = YES;
-
+    
+    self.topTitleLabel.hidden = YES;
+    self.translatesAutoresizingMaskIntoConstraints = NO;
 }
 
 -(IBAction)hiddenAction:(id)sender{

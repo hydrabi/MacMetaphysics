@@ -10,4 +10,6 @@
 
 @interface BottomCollectionViewItem : NSCollectionViewItem
 
+-(void)reloadDataWithTag:(NSInteger)myTag;
+
 @end

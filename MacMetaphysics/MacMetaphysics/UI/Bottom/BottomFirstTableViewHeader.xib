@@ -19,8 +19,8 @@
                         <constraint firstAttribute="width" constant="50" id="AOt-g8-QLQ"/>
                         <constraint firstAttribute="height" constant="25" id="SaD-g4-dx8"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="●" id="sHA-xS-NfR">
-                        <font key="font" metaFont="system" size="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="●" id="sHA-xS-NfR" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

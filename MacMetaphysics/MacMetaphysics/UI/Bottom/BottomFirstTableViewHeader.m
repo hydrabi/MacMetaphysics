@@ -17,9 +17,9 @@
     // Drawing code here.
 }
 
--(void)initialize{
+-(void)awakeFromNib{
+    [super awakeFromNib];
     self.recoverButton.editable = NO;
-    self.translatesAutoresizingMaskIntoConstraints = YES;
 }
 
 //恢复操作
