@@ -66,7 +66,6 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     
     BottomCollectionViewItem *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
     [cell reloadDataWithTag:indexPath.item];
-    NSLog(@"%d",indexPath.item);
     return cell;
 }
 

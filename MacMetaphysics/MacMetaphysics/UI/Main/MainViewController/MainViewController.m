@@ -52,6 +52,24 @@
     self.bottomContentView = [[BottomContentView alloc] init];
     [self addChildViewController:self.bottomContentView];
     [self.view addSubview:self.bottomContentView.view];
+    
+    self.bottomNoteTextView = [[NSTextView alloc] init];
+    [self.bottomNoteTextView setBackgroundColor:[NSColor yellowColor]];
+    [self.view addSubview:self.bottomNoteTextView];
+    
+    self.dateLabel = [[NSTextField alloc] init];
+    self.dateLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.dateLabel.bordered = NO;
+    self.dateLabel.textColor = [NSColor blackColor];
+    self.dateLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.dateLabel.alignment = NSTextAlignmentRight;
+    [self.view addSubview:self.dateLabel];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                  target:self
+                                                selector:@selector(resetDate)
+                                                userInfo:nil
+                                                 repeats:YES];
 }
 
 -(void)makeConstraints{
@@ -97,10 +115,20 @@
         make.height.equalTo(bottomViewHeight);
     }];
     
-    [self.bottomContentView.view updateConstraints];
-    [self.bottomContentView.view layoutSubtreeIfNeeded];
-    [self.bottomContentView.view setNeedsLayout:YES];
-    [self.bottomContentView.view setNeedsDisplay:YES];
+    [self.bottomNoteTextView makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
+        make.top.equalTo(self.bottomContentView.view.bottom).offset(leftVerLineOffset);
+        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
+        make.height.equalTo(300);
+    }];
+    
+    [self.dateLabel makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.trailing.equalTo(self.view.trailing).offset(@(-offset_16));
+        make.bottom.equalTo(self.view.bottom).offset(0);
+        make.width.equalTo(300);
+    }];
 //
 //    [self.liuNianTextView makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)
@@ -163,6 +191,12 @@
 //        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
 //        make.height.equalTo(bottomTextViewHeight);
 //    }];
+}
+
+-(void)resetDate{
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    self.dateLabel.text = [format stringFromDate:[NSDate date]];
 }
 
 @end

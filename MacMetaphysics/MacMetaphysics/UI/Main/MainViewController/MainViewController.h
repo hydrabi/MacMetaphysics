@@ -45,4 +45,19 @@
  */
 @property (nonatomic,strong)BottomContentView *bottomContentView;
 
+/**
+ 在双造中出现的底部空白textView,笔记的作用
+ */
+@property (nonatomic,strong)NSTextView *bottomNoteTextView;
+
+/**
+ 日期时间
+ */
+@property (nonatomic,strong)NSTextField *dateLabel;
+
+/**
+ 日期计时器
+ */
+@property (nonatomic,strong)NSTimer *timer;
+
 @end
