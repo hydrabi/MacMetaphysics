@@ -54,7 +54,7 @@
     [self.view addSubview:self.bottomContentView.view];
     
     self.bottomNoteTextView = [[NSTextView alloc] init];
-    [self.bottomNoteTextView setBackgroundColor:[NSColor yellowColor]];
+    [self.bottomNoteTextView setMinSize:NSMakeSize(1000, bottomTextViewHeight)];
     [self.view addSubview:self.bottomNoteTextView];
     
     self.dateLabel = [[NSTextField alloc] init];
@@ -120,7 +120,7 @@
         make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
         make.top.equalTo(self.bottomContentView.view.bottom).offset(leftVerLineOffset);
         make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-        make.height.equalTo(300);
+        make.height.equalTo(bottomTextViewHeight);
     }];
     
     [self.dateLabel makeConstraints:^(MASConstraintMaker *make){
