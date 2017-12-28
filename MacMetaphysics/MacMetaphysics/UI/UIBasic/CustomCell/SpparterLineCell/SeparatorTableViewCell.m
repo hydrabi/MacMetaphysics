@@ -28,6 +28,35 @@
             make.width.equalTo(@1);
         }];
     }
+    
+    if(!self.floorLineView){
+        self.floorLineView = [[NSBox alloc] init];
+        [self.floorLineView setBoxType:NSBoxSeparator];
+        [self.floorLineView setBackgroundColor:[NSColor blackColor]];
+        [self.view addSubview:self.floorLineView];
+        [self.floorLineView makeConstraints:^(MASConstraintMaker *make){
+            make.bottom.equalTo(self.view.bottom).offset(0);
+            make.leading.equalTo(self.view.leading).offset(0);
+            make.trailing.equalTo(self.view.trailing).offset(0);
+            make.height.equalTo(@1);
+        }];
+    }
+}
+
+-(void)showFloorLine{
+    self.floorLineView.hidden = NO;
+}
+
+-(void)hideFloorLine{
+    self.floorLineView.hidden = YES;
+}
+
+-(void)showTailLine{
+    self.tailLineView.hidden = NO;
+}
+
+-(void)hideTailLine{
+    self.tailLineView.hidden = YES;
 }
 
 @end
