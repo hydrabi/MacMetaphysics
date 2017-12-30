@@ -35,6 +35,7 @@
         <collectionViewItem id="Pgq-4c-hwJ" customClass="SolarTermsMonthCell">
             <connections>
                 <outlet property="leadingConstraint" destination="054-mI-AVP" id="z9R-h6-CpJ"/>
+                <outlet property="titleLabel" destination="far-dk-xLI" id="KSn-2N-T1d"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="Og3-VB-9ol"/>
             </connections>
         </collectionViewItem>

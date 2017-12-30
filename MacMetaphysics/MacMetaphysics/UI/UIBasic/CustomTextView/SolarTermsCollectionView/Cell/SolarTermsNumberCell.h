@@ -9,5 +9,6 @@
 #import "SeparatorTableViewCell.h"
 
 @interface SolarTermsNumberCell : SeparatorTableViewCell
-
+@property (weak) IBOutlet NSTextField *titleLabel;
+-(void)isCurrentSelectedDay:(BOOL)isSelected;
 @end

@@ -96,34 +96,32 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 -(NSCollectionViewItem*)collectionView:(NSCollectionView *)collectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)indexPath{
     
     BottomTableViewCell *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
-    cell.yearLabel.text = [NSString stringWithFormat:@"%d",indexPath.section];
-    cell.liuNianLabel.text = [NSString stringWithFormat:@"%d",indexPath.item];
-    //    MainViewModel *main = [MainViewModel sharedInstance];
-    //    if(main.hadHiddenBottomTableView){
-    //        if(collectionView.myTag >= main.hiddenBottomTableViewTag){
-    //            [cell hideContent];
-    //        }
-    //        else{
-    //            [cell showContent];
-    //        }
-    //    }
-    //    //展示
-    //    else{
-    //        [cell showContent];
-    //    }
-    //
-    //    NSNumber *key = [BottomLocation createKeyNumberWithTag:collectionView.myTag
-    //                                                 indexPath:indexPath];
-    //    if([main.liuNianData.bottomLocationDic objectForKey:key]){
-    //        [cell selectCell:YES];
-    //    }
-    //    else{
-    //        [cell selectCell:NO];
-    //    }
-    //
-    //    [self fillContentWithCell:cell
-    //                    tableView:collectionView
-    //                    indexPath:indexPath];
+        MainViewModel *main = [MainViewModel sharedInstance];
+        if(main.hadHiddenBottomTableView){
+            if(collectionView.myTag >= main.hiddenBottomTableViewTag){
+                [cell hideContent];
+            }
+            else{
+                [cell showContent];
+            }
+        }
+        //展示
+        else{
+            [cell showContent];
+        }
+    
+        NSNumber *key = [BottomLocation createKeyNumberWithTag:collectionView.myTag
+                                                     indexPath:indexPath];
+        if([main.liuNianData.bottomLocationDic objectForKey:key]){
+            [cell selectCell:YES];
+        }
+        else{
+            [cell selectCell:NO];
+        }
+    
+        [self fillContentWithCell:cell
+                        tableView:collectionView
+                        indexPath:indexPath];
     return cell;
 }
 

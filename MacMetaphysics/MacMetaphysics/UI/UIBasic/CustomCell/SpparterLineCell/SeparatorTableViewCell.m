@@ -18,7 +18,7 @@
     [super awakeFromNib];
     if(!self.tailLineView){
         self.tailLineView = [[NSBox alloc] init];
-        [self.tailLineView setBoxType:NSBoxSeparator];
+        [self.tailLineView setBoxType:NSBoxOldStyle];
         [self.tailLineView setBackgroundColor:[NSColor blackColor]];
         [self.view addSubview:self.tailLineView];
         [self.tailLineView makeConstraints:^(MASConstraintMaker *make){
@@ -31,7 +31,7 @@
     
     if(!self.floorLineView){
         self.floorLineView = [[NSBox alloc] init];
-        [self.floorLineView setBoxType:NSBoxSeparator];
+        [self.floorLineView setBoxType:NSBoxOldStyle];
         [self.floorLineView setBackgroundColor:[NSColor blackColor]];
         [self.view addSubview:self.floorLineView];
         [self.floorLineView makeConstraints:^(MASConstraintMaker *make){

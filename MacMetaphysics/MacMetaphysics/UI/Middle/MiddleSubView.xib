@@ -8,18 +8,18 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MiddleSubView">
             <connections>
-                <outlet property="bottomLeftLabel" destination="50h-9x-ysy" id="0fq-4z-Vcl"/>
-                <outlet property="bottomRightLabel" destination="fse-76-gV4" id="xiE-l5-NkJ"/>
-                <outlet property="collectionView" destination="GTm-VA-ljV" id="yVK-PU-BTN"/>
+                <outlet property="bottomLeftLabel" destination="50h-9x-ysy" id="2DS-Di-P9K"/>
+                <outlet property="bottomRightLabel" destination="fse-76-gV4" id="bIF-gs-V8U"/>
+                <outlet property="collectionView" destination="GTm-VA-ljV" id="V5W-9V-M0m"/>
                 <outlet property="horLine1Label" destination="Vrt-8Q-nbS" id="aIp-MP-TC6"/>
                 <outlet property="horLine2Label" destination="pNR-nJ-jSW" id="bFZ-OQ-aii"/>
                 <outlet property="horLine3Label" destination="hzs-rQ-eQA" id="50R-kJ-3E8"/>
                 <outlet property="innerView" destination="agR-Kd-kRD" id="xbr-52-Zwt"/>
-                <outlet property="showFormButton" destination="do7-yy-kXc" id="F24-as-0w8"/>
+                <outlet property="showFormButton" destination="do7-yy-kXc" id="IF6-Kc-j1r"/>
                 <outlet property="topLeftLabel" destination="xzT-K8-d7H" id="BHd-ce-DFq"/>
                 <outlet property="topRightLabel" destination="YO2-pc-gHO" id="Dm1-Xd-lfF"/>
                 <outlet property="verLineLabel" destination="hZW-vb-Ekm" id="vUq-2X-ost"/>
-                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="fkn-D2-hGo"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -29,10 +29,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="agR-Kd-kRD">
-                    <rect key="frame" x="0.0" y="188" width="40" height="32"/>
+                    <rect key="frame" x="0.0" y="189" width="40" height="31"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xzT-K8-d7H" customClass="CustomColorLabel">
-                            <rect key="frame" x="-2" y="0.0" width="44" height="32"/>
+                            <rect key="frame" x="-2" y="0.0" width="44" height="31"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="ePO-EP-b2H">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -60,12 +60,9 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="showFormButtonAction:" target="-2" id="cIw-Fj-uD8"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YO2-pc-gHO" customClass="CustomColorLabel">
-                    <rect key="frame" x="126" y="188" width="86" height="25"/>
+                    <rect key="frame" x="126" y="189" width="86" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="三奇贵人" id="buw-cW-n20">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -73,7 +70,7 @@
                     </textFieldCell>
                 </textField>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="smi-3y-VGy">
-                    <rect key="frame" x="0.0" y="28" width="210" height="160"/>
+                    <rect key="frame" x="0.0" y="29" width="210" height="160"/>
                     <subviews>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-WB-B3g">
                             <rect key="frame" x="0.0" y="157" width="156" height="5"/>
@@ -207,7 +204,7 @@
                     </constraints>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="50h-9x-ysy" customClass="CustomColorLabel">
-                    <rect key="frame" x="-2" y="3" width="86" height="24"/>
+                    <rect key="frame" x="-2" y="4" width="86" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="三奇贵人" id="qoF-8F-uq4">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -215,7 +212,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fse-76-gV4" customClass="CustomColorLabel">
-                    <rect key="frame" x="126" y="3" width="86" height="24"/>
+                    <rect key="frame" x="126" y="4" width="86" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="三奇贵人" id="VGA-YA-7fc">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

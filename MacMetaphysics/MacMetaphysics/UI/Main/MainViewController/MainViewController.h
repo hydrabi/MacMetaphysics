@@ -12,6 +12,7 @@
 #import "TopContentViewController.h"
 #import "MiddleContentView.h"
 #import "BottomContentView.h"
+#import "SolarTermsCollectionView.h"
 @interface MainViewController : BasicViewController
 
 /**
@@ -60,4 +61,6 @@
  */
 @property (nonatomic,strong)NSTimer *timer;
 
+@property (nonatomic,weak)NSView *currentTextView;
+@property (nonatomic,strong)SolarTermsCollectionView *solarTermsView;
 @end

@@ -19,18 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self attributeConfig];
+    [self UIConfig];
+    
+    _tableViewDataSource = [[MiddleTableViewDataSource alloc] initWithCollectionView:self.collectionView
+                                                                         subViewType:self.type];
     // Do view setup here.
 }
 
 -(instancetype)initWithType:(MiddleSubViewType)type{
-    self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
+    self = [super initWithNibName:NSStringFromClass([MiddleSubView class]) bundle:nil];
     if(self){
         _type = type;
-        [self attributeConfig];
-        [self UIConfig];
         
-        _tableViewDataSource = [[MiddleTableViewDataSource alloc] initWithCollectionView:self.collectionView
-                                                                             subViewType:self.type];
     }
     return self;
 }
@@ -62,6 +64,14 @@
     self.showFormButton.text = @"●";
     self.showFormButton.hidden = YES;
     
+    @weakify(self)
+    [[self.showFormButton
+      rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self showFormButtonAction];
+     }];
+    
     self.view.wantsLayer = YES;
     self.view.layer.borderWidth = 1.0f;
     self.view.layer.borderColor = [NSColor blackColor].CGColor;
@@ -71,7 +81,7 @@
     [self clearData];
 }
 
--(IBAction)showFormButtonAction:(id)sender{
+-(void)showFormButtonAction{
     [MainViewModel sharedInstance].hadShowSolarTermsCollectionView = ![MainViewModel sharedInstance].hadShowSolarTermsCollectionView;
 }
 
@@ -126,7 +136,7 @@
             self.bottomRightLabel.text = @"";
         }
             break;
-            
+
         default:
             break;
     }

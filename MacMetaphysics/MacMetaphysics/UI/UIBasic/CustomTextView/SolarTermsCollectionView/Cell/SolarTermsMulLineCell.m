@@ -7,16 +7,27 @@
 //
 
 #import "SolarTermsMulLineCell.h"
-
+#import "UIConstantParameter.h"
+#import "NSView+Addition.h"
 @interface SolarTermsMulLineCell ()
 
 @end
 
 @implementation SolarTermsMulLineCell
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.titleLabel.font = [NSFont systemFontOfSize:titleFontSize_30];
+
+}
+
+-(void)isCurrentSelectedDay:(BOOL)isSelected{
+    if(isSelected){
+        [self.view setBackgroundColor:[NSColor lightGrayColor]];
+    }
+    else{
+        [self.view setBackgroundColor:[NSColor whiteColor]];
+    }
 }
 
 @end

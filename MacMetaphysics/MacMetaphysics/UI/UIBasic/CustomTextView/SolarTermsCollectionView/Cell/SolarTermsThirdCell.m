@@ -7,16 +7,18 @@
 //
 
 #import "SolarTermsThirdCell.h"
-
+#import "UIConstantParameter.h"
+#import "NSView+Addition.h"
 @interface SolarTermsThirdCell ()
 
 @end
 
 @implementation SolarTermsThirdCell
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.titleLabel.font = [NSFont systemFontOfSize:titleFontSize_30];
+    
 }
 
 @end

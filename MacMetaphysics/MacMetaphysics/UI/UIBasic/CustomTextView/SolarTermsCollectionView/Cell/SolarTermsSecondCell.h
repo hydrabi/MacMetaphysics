@@ -9,5 +9,5 @@
 #import "SeparatorTableViewCell.h"
 
 @interface SolarTermsSecondCell : SeparatorTableViewCell
-
+@property (weak) IBOutlet NSTextField *titleLabel;
 @end

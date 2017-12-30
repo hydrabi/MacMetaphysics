@@ -22,6 +22,7 @@
     [super viewDidLoad];
     [self UIConfig];
     [self makeConstraints];
+    [self bindViewModel];
 }
 
 #pragma mark - UI
@@ -70,6 +71,12 @@
                                                 selector:@selector(resetDate)
                                                 userInfo:nil
                                                  repeats:YES];
+    
+    self.currentTextView = nil;
+    
+    self.solarTermsView  = [SolarTermsCollectionView createSolarTermsCollectionView];
+    self.solarTermsView.hidden = YES;
+    [self.view addSubview:self.solarTermsView];
 }
 
 -(void)makeConstraints{
@@ -176,14 +183,14 @@
 //        make.height.equalTo(topViewHeight);
 //    }];
 //    
-//    [self.solarTermsView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset-1);
-//        make.top.equalTo(self.bottomContentView.top).offset(0);
-//        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset+1));
-//        make.height.equalTo(bottomViewHeight);
-//    }];
-//    
+    [self.solarTermsView makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset-1);
+        make.top.equalTo(self.bottomContentView.view.top).offset(0);
+        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset+1));
+        make.height.equalTo(bottomViewHeight);
+    }];
+//
 //    [self.bottomNoteTextView makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)
 //        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
@@ -193,10 +200,116 @@
 //    }];
 }
 
+-(void)resetCurrentTextView:(NSView*)view{
+    self.currentTextView.hidden = YES;
+    if(view != nil){
+        self.currentTextView = view;
+        self.currentTextView.hidden = NO;
+    }
+}
+
 -(void)resetDate{
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     self.dateLabel.text = [format stringFromDate:[NSDate date]];
+}
+
+-(void)bindViewModel{
+    @weakify(self)
+    MainViewModel *mainViewModel = [MainViewModel sharedInstance];
+    //流年底部textView操作
+    [[mainViewModel.LiuNianTextViewOperationSig
+      deliverOnMainThread]
+     subscribeNext:^(id _){
+         @strongify(self)
+//         if([MainViewModel sharedInstance].hadShowLiuNianTextView){
+//             self.liuNianTextView.hidden = NO;
+//         }
+//         else{
+//             self.liuNianTextView.hidden = YES;
+//         }
+     }];
+    
+    //左边菜单底部选项选中操作
+    [[[RACObserve(mainViewModel, currentBottomSectionMenuType)
+       distinctUntilChanged]
+      deliverOnMainThread]
+     subscribeNext:^(id _){
+         @strongify(self)
+         if(mainViewModel.currentBottomSectionMenuType == LeftSideMenuTypeEmpty){
+             [self resetCurrentTextView:nil];
+         }
+         else{
+             
+             switch (mainViewModel.currentBottomSectionMenuType) {
+                     //                 case LeftSideMenuTypeDaYun:
+                     //                 {
+                     //                     [self resetCurrentTextView:self.daYunTextView];
+                     //                     [self.daYunTextView reloadData];
+                     //                 }
+                     //                     break;
+                     //
+                 default:
+                 {
+//                     [self resetCurrentTextView:self.normalTextView];
+//                     [self.normalTextView reloadData];
+                 }
+                     break;
+             }
+         }
+     }];
+    
+    //左边菜单上边部分选中
+    [[mainViewModel.leftMenuTopSelectedOperationSig
+      deliverOnMainThread]
+     subscribeNext:^(id _){
+         @strongify(self)
+//         if([mainViewModel.currentSelectTopSectionMenuTypeArr containsObject:@(LeftSideMenuTypeShuangZao)]){
+//             self.shuangZaoTextView.hidden = NO;
+//         }
+//         else{
+//             self.shuangZaoTextView.hidden = YES;
+//         }
+     }];
+    
+    //15运选中操作
+    [[mainViewModel.fifteenYunTextViewOperationSig
+      deliverOnMainThread]
+     subscribeNext:^(id _){
+         @strongify(self)
+//         if(mainViewModel.fifteenYunData.fifteenYunSelectedNumber != -1){
+//             [self resetCurrentTextView:self.fifteenYunTextView];
+//         }
+//         else{
+//             [self resetCurrentTextView:nil];
+//         }
+     }];
+    
+    //节气表选中操作
+    [[RACObserve(mainViewModel, hadShowSolarTermsCollectionView)
+      deliverOnMainThread]
+     subscribeNext:^(id _){
+         if(mainViewModel.hadShowSolarTermsCollectionView){
+             [self resetCurrentTextView:self.solarTermsView];
+         }
+         else{
+             [self resetCurrentTextView:nil];
+         }
+     }];
+    
+    //左边的菜单tableview刷新数据
+    [[mainViewModel.reloadLeftTableSig
+      deliverOnMainThread]
+     subscribeNext:^(id _){
+         @strongify(self)
+//         [self.leftSideMenuTabelView reloadData];
+     }];
+    
+    //在双造中出现的底部空白textView
+    [mainViewModel.bottomNoteTextViewOperationSig subscribeNext:^(id _){
+        @strongify(self)
+        self.bottomNoteTextView.hidden = !self.bottomNoteTextView.hidden;
+    }];
 }
 
 @end

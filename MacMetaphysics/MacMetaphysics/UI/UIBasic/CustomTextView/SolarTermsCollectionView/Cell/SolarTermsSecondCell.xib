@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SolarTermsSecondCell">
@@ -12,8 +14,31 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="364" height="29"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WUf-55-LIT">
+                    <rect key="frame" x="-2" y="0.0" width="368" height="29"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="立春：2017年02月03日23时49分" id="g0r-Xl-tM7">
+                        <font key="font" metaFont="system" size="24"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="WUf-55-LIT" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="2L5-rI-8cv"/>
+                <constraint firstAttribute="trailing" secondItem="WUf-55-LIT" secondAttribute="trailing" id="cbQ-cj-6dy"/>
+                <constraint firstAttribute="bottom" secondItem="WUf-55-LIT" secondAttribute="bottom" id="fQ6-UZ-t4S"/>
+                <constraint firstItem="WUf-55-LIT" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="zUb-ix-mJp"/>
+            </constraints>
+            <point key="canvasLocation" x="-10" y="152.5"/>
         </customView>
+        <collectionViewItem id="72K-vK-woN" customClass="SolarTermsSecondCell">
+            <connections>
+                <outlet property="titleLabel" destination="WUf-55-LIT" id="qij-Hb-qOp"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="KGc-nu-LbV"/>
+            </connections>
+        </collectionViewItem>
     </objects>
 </document>

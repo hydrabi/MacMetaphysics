@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7AC23816EE203C5F78A6E96C /* Pods_MacMetaphysics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194C5CC55A9F50F1DE051178 /* Pods_MacMetaphysics.framework */; };
 		8007F4571F85BF2500198017 /* MainViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8007F4561F85BF2500198017 /* MainViewModel.mm */; };
+		801D9AED1FF735A3007F5EBC /* SolarTermsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D9AEC1FF735A3007F5EBC /* SolarTermsCollectionView.m */; };
+		801D9AF51FF7D5D6007F5EBC /* DatePickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D9AF31FF7D5D6007F5EBC /* DatePickViewController.m */; };
+		801D9AF61FF7D5D6007F5EBC /* DatePickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801D9AF41FF7D5D6007F5EBC /* DatePickViewController.xib */; };
+		801D9AF91FF7DE0F007F5EBC /* DatePickViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D9AF81FF7DE0F007F5EBC /* DatePickViewModel.m */; };
 		803A062C1FF3DAC10023C892 /* SeparatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 803A062B1FF3DAC10023C892 /* SeparatorTableViewCell.m */; };
 		8057E8EA1F837AB6003DF83E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8057E8E91F837AB6003DF83E /* main.m */; };
 		8057E8EF1F837AB6003DF83E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8057E8EE1F837AB6003DF83E /* Assets.xcassets */; };
@@ -106,6 +110,13 @@
 		8007F4561F85BF2500198017 /* MainViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewModel.mm; sourceTree = "<group>"; };
 		8007F46C1F85CA1300198017 /* UIConstantParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstantParameter.h; sourceTree = "<group>"; };
 		8007F46D1F85D1DF00198017 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		801D9AEB1FF735A3007F5EBC /* SolarTermsCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolarTermsCollectionView.h; sourceTree = "<group>"; };
+		801D9AEC1FF735A3007F5EBC /* SolarTermsCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SolarTermsCollectionView.m; sourceTree = "<group>"; };
+		801D9AF21FF7D5D6007F5EBC /* DatePickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickViewController.h; sourceTree = "<group>"; };
+		801D9AF31FF7D5D6007F5EBC /* DatePickViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickViewController.m; sourceTree = "<group>"; };
+		801D9AF41FF7D5D6007F5EBC /* DatePickViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickViewController.xib; sourceTree = "<group>"; };
+		801D9AF71FF7DE0F007F5EBC /* DatePickViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickViewModel.h; sourceTree = "<group>"; };
+		801D9AF81FF7DE0F007F5EBC /* DatePickViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickViewModel.m; sourceTree = "<group>"; };
 		803A062A1FF3DAC10023C892 /* SeparatorTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeparatorTableViewCell.h; sourceTree = "<group>"; };
 		803A062B1FF3DAC10023C892 /* SeparatorTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeparatorTableViewCell.m; sourceTree = "<group>"; };
 		8057E8E21F837AB6003DF83E /* MacMetaphysics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacMetaphysics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,6 +332,18 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		801D9AF11FF7D5BA007F5EBC /* DatePickView */ = {
+			isa = PBXGroup;
+			children = (
+				801D9AF21FF7D5D6007F5EBC /* DatePickViewController.h */,
+				801D9AF31FF7D5D6007F5EBC /* DatePickViewController.m */,
+				801D9AF41FF7D5D6007F5EBC /* DatePickViewController.xib */,
+				801D9AF71FF7DE0F007F5EBC /* DatePickViewModel.h */,
+				801D9AF81FF7DE0F007F5EBC /* DatePickViewModel.m */,
+			);
+			path = DatePickView;
+			sourceTree = "<group>";
+		};
 		803995301F88823400FABF46 /* Top */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +357,7 @@
 		803A06241FF3D9E30023C892 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
+				801D9AF11FF7D5BA007F5EBC /* DatePickView */,
 				803A06251FF3DA4E0023C892 /* SolarTermsCollectionView */,
 			);
 			path = CustomTextView;
@@ -376,6 +400,8 @@
 		803A06271FF3DA5A0023C892 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				801D9AEB1FF735A3007F5EBC /* SolarTermsCollectionView.h */,
+				801D9AEC1FF735A3007F5EBC /* SolarTermsCollectionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -899,6 +925,7 @@
 				80941EB81FEF934B00735E10 /* BottomTableViewCell.xib in Resources */,
 				925CE6F81FDB9E5500B319DB /* MiddleSubView.xib in Resources */,
 				809896BA1F852F64008ECA77 /* MainViewController.xib in Resources */,
+				801D9AF61FF7D5D6007F5EBC /* DatePickViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,10 +995,12 @@
 				9279C0331F8F91F400FA8DA9 /* NSColor+Addition.m in Sources */,
 				809896C51F853495008ECA77 /* BasicViewModel.m in Sources */,
 				809896B41F852F37008ECA77 /* MainWindowViewController.m in Sources */,
+				801D9AF51FF7D5D6007F5EBC /* DatePickViewController.m in Sources */,
 				8007F4571F85BF2500198017 /* MainViewModel.mm in Sources */,
 				8057E8EA1F837AB6003DF83E /* main.m in Sources */,
 				925CE7031FDBD86B00B319DB /* MiddleTableViewCell.m in Sources */,
 				9279C0171F8F919800FA8DA9 /* CangGanData.m in Sources */,
+				801D9AED1FF735A3007F5EBC /* SolarTermsCollectionView.m in Sources */,
 				806C31031FF535EA00432737 /* SolarTermsMulLineCell.m in Sources */,
 				9247E4541FECEB5C00524A50 /* BottomCollectionViewDataSource.m in Sources */,
 				803A062C1FF3DAC10023C892 /* SeparatorTableViewCell.m in Sources */,
@@ -981,6 +1010,7 @@
 				9247E4581FED015800524A50 /* BottomCollectionViewItem.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
 				9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */,
+				801D9AF91FF7DE0F007F5EBC /* DatePickViewModel.m in Sources */,
 				92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */,
 				8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */,
 				9279C0301F8F91F400FA8DA9 /* NSLayoutConstraint+NUI.m in Sources */,
