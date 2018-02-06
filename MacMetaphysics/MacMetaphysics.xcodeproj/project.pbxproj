@@ -51,6 +51,7 @@
 		80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B084161F86817200449443 /* LeftCollectionViewCell.xib */; };
 		80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */; };
 		80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */; };
+		9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9221E22B2029B993002CA146 /* NSPopover+Addition.m */; };
 		923165D81FE3608F007C6B27 /* BottomFirstTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165D71FE3608F007C6B27 /* BottomFirstTableViewHeader.m */; };
 		923165DA1FE360D5007C6B27 /* BottomFirstTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923165D91FE360D5007C6B27 /* BottomFirstTableViewHeader.xib */; };
 		923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165DD1FE36962007C6B27 /* BasicNibView.m */; };
@@ -185,6 +186,8 @@
 		80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomColorLabel.m; sourceTree = "<group>"; };
 		80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+LeftMenu.h"; sourceTree = "<group>"; };
 		80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainViewModel+LeftMenu.m"; sourceTree = "<group>"; };
+		9221E22A2029B993002CA146 /* NSPopover+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPopover+Addition.h"; sourceTree = "<group>"; };
+		9221E22B2029B993002CA146 /* NSPopover+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSPopover+Addition.m"; sourceTree = "<group>"; };
 		923165D61FE3608F007C6B27 /* BottomFirstTableViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomFirstTableViewHeader.h; sourceTree = "<group>"; };
 		923165D71FE3608F007C6B27 /* BottomFirstTableViewHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomFirstTableViewHeader.m; sourceTree = "<group>"; };
 		923165D91FE360D5007C6B27 /* BottomFirstTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomFirstTableViewHeader.xib; sourceTree = "<group>"; };
@@ -453,6 +456,7 @@
 		8057E8D91F837AB6003DF83E = {
 			isa = PBXGroup;
 			children = (
+				9221E2262029A865002CA146 /* 注意 */,
 				8057E8E41F837AB6003DF83E /* MacMetaphysics */,
 				8057E8FB1F837AB6003DF83E /* MacMetaphysicsTests */,
 				8057E8E31F837AB6003DF83E /* Products */,
@@ -622,6 +626,22 @@
 			path = CustomColorLabel;
 			sourceTree = "<group>";
 		};
+		9221E2262029A865002CA146 /* 注意 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "注意";
+			sourceTree = "<group>";
+		};
+		9221E2292029B970002CA146 /* NSPopover */ = {
+			isa = PBXGroup;
+			children = (
+				9221E22A2029B993002CA146 /* NSPopover+Addition.h */,
+				9221E22B2029B993002CA146 /* NSPopover+Addition.m */,
+			);
+			path = NSPopover;
+			sourceTree = "<group>";
+		};
 		923165DB1FE3694A007C6B27 /* BasicView */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +681,7 @@
 		925CE7051FDBDA0200B319DB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9221E2292029B970002CA146 /* NSPopover */,
 				925CE7061FDBDA0B00B319DB /* NSView */,
 			);
 			path = Category;
@@ -1048,6 +1069,7 @@
 				809896B91F852F64008ECA77 /* MainViewController.m in Sources */,
 				923165E11FE37B55007C6B27 /* BottomNormalTableViewHeader.m in Sources */,
 				9247E4581FED015800524A50 /* BottomCollectionViewItem.m in Sources */,
+				9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
 				9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */,
 				801D9AF91FF7DE0F007F5EBC /* DatePickViewModel.m in Sources */,

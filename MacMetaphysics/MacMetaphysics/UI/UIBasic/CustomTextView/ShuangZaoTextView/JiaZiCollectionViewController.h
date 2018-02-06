@@ -7,7 +7,11 @@
 //
 
 #import "BasicViewController.h"
-
-@interface JiaZiCollectionViewController : BasicViewController
+#import "MainViewModel.h"
+@interface JiaZiCollectionViewController : BasicViewController<NSCollectionViewDelegate,NSCollectionViewDataSource>
 @property (nonatomic,strong)NSCollectionView *collectionView;
+
+@property (nonatomic,assign)MiddleSubViewType type;
+
++(NSPopover*)presentViewControllerWithRect:(NSRect)rect view:(NSViewController<NSPopoverDelegate>*)viewController type:(MiddleSubViewType)type;
 @end
