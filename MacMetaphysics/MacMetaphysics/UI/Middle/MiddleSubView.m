@@ -23,8 +23,6 @@
     [self attributeConfig];
     [self UIConfig];
     
-    _tableViewDataSource = [[MiddleTableViewDataSource alloc] initWithCollectionView:self.collectionView
-                                                                         subViewType:self.type];
     // Do view setup here.
 }
 

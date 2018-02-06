@@ -8,18 +8,18 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DatePickViewController">
             <connections>
+                <outlet property="pickView" destination="2vZ-eY-Wkp" id="QL2-KM-IOR"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="205" height="23"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vZ-eY-Wkp">
-                    <rect key="frame" x="180" y="119" width="97" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2vZ-eY-Wkp">
+                    <rect key="frame" x="0.0" y="0.0" width="208" height="27"/>
                     <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="jAx-ry-Tgf">
                         <font key="font" metaFont="system"/>
                         <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -27,9 +27,17 @@
                         </date>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES"/>
                     </datePickerCell>
                 </datePicker>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2vZ-eY-Wkp" secondAttribute="trailing" id="8Kf-9x-gnw"/>
+                <constraint firstAttribute="bottom" secondItem="2vZ-eY-Wkp" secondAttribute="bottom" id="I4Y-GS-CEx"/>
+                <constraint firstItem="2vZ-eY-Wkp" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="K3P-Mt-Xsl"/>
+                <constraint firstItem="2vZ-eY-Wkp" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="xAU-vm-yCh"/>
+            </constraints>
+            <point key="canvasLocation" x="-96.5" y="152.5"/>
         </customView>
     </objects>
 </document>

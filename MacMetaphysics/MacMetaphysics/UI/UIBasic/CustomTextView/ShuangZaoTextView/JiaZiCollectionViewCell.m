@@ -7,12 +7,22 @@
 //
 
 #import "JiaZiCollectionViewCell.h"
-
+#import "UIConstantParameter.h"
 @interface JiaZiCollectionViewCell ()
 
 @end
 
 @implementation JiaZiCollectionViewCell
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.titleLabel.font = [NSFont systemFontOfSize:titleFontSize_24];
+    
+    self.view.wantsLayer = YES;
+    self.view.layer.borderWidth = 1.0f;
+    self.view.layer.borderColor = [NSColor blackColor].CGColor;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

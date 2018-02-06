@@ -49,7 +49,7 @@
                         <constraint firstAttribute="height" constant="40" id="6Ve-g9-EUW"/>
                         <constraint firstAttribute="width" constant="90" id="XQ3-SW-pZn"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="mTM-zN-tRw">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="mTM-zN-tRw" customClass="VerticalCenterTextFieldCell">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -69,8 +69,8 @@
                         <constraint firstAttribute="height" constant="40" id="4ft-Jv-lLO"/>
                         <constraint firstAttribute="width" constant="60" id="s51-x7-AgG"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="gXC-Qg-Odl">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="gXC-Qg-Odl" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -89,8 +89,8 @@
                         <constraint firstAttribute="height" constant="40" id="AVF-Ku-QJr"/>
                         <constraint firstAttribute="width" constant="60" id="s9O-nz-qXj"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="s29-tZ-Vgo">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="s29-tZ-Vgo" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -109,8 +109,8 @@
                         <constraint firstAttribute="height" constant="40" id="FW4-IF-Vwc"/>
                         <constraint firstAttribute="width" constant="60" id="r96-fr-wqN"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="uH1-GS-qDo">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="uH1-GS-qDo" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -140,6 +140,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="hideButtonClicked:" target="-2" id="CuF-hW-1Zn"/>
+                    </connections>
                 </button>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eZG-ua-7kQ">
                     <rect key="frame" x="733" y="60" width="180" height="40"/>
@@ -194,8 +197,8 @@
                         <constraint firstAttribute="height" constant="40" id="5N0-SH-XW4"/>
                         <constraint firstAttribute="width" constant="90" id="SqA-7h-lbD"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="B70-bn-szV">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="B70-bn-szV" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -214,8 +217,8 @@
                         <constraint firstAttribute="width" constant="60" id="ENy-uk-0Eg"/>
                         <constraint firstAttribute="height" constant="40" id="qbD-MS-FJN"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="2Ca-BA-RnV">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="2Ca-BA-RnV" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -234,8 +237,8 @@
                         <constraint firstAttribute="width" constant="60" id="9sv-iV-AP4"/>
                         <constraint firstAttribute="height" constant="40" id="whS-oB-RsI"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="2Fd-Dg-Obq">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="2Fd-Dg-Obq" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -254,8 +257,8 @@
                         <constraint firstAttribute="height" constant="40" id="YXf-sc-BUE"/>
                         <constraint firstAttribute="width" constant="60" id="pxV-ep-9lF"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="BCv-oD-g4G">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="BCv-oD-g4G" customClass="VerticalCenterTextFieldCell">
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

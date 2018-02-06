@@ -9,5 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface JiaZiCollectionViewCell : NSCollectionViewItem
+@property (weak) IBOutlet NSTextField *titleLabel;
 
 @end

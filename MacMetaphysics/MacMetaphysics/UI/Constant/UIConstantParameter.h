@@ -70,6 +70,13 @@ typedef NS_ENUM(NSInteger,liuQinType) {
     liuQinType_Shang,   /**<伤*/
 };
 
+typedef NS_ENUM(NSInteger,TopViewFormatterType){
+    TopViewFormatterTypeYear,          /**<年柱*/
+    TopViewFormatterTypeMonth,         /**<月柱*/
+    TopViewFormatterTypeDay,           /**<日柱*/
+    TopViewFormatterTypeHour,          /**<时柱*/
+};
+
 //1366 1024
 static const CGFloat screenWidth = 1366.0f;
 static const CGFloat screenHeight = 1024.0f;
@@ -145,8 +152,8 @@ static const CGFloat monthComponentWidth = 50.0f;
 static const CGFloat dayComponentWidth = 50.0f;
 static const CGFloat hourComponentWidth = 50.0f;
 static const CGFloat datePickerRowHeight = 40.0f;
-static const CGFloat datePickerWidth = 300.0f;
-static const CGFloat datePickerHeight = 300.0f;
+static const CGFloat datePickerWidth = 100.0f;
+static const CGFloat datePickerHeight = 30.0f;
 
 #pragma mark - 字体
 static const CGFloat titleFontSize_80 =  80.0f;

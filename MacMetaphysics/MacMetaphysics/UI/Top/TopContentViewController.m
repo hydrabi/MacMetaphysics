@@ -12,8 +12,11 @@
 #import "MainViewModel.h"
 #import "DatePickViewModel.h"
 #import "NSString+Addition.h"
+#import "TopTextFieldFormatter.h"
 @interface TopContentViewController ()
 @property (nonatomic,weak)CurrentSelectDate *date;
+//弹出框
+@property (nonatomic,strong)NSPopover *popover;
 @end
 
 @implementation TopContentViewController
@@ -21,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self attributeConfig];
+    [self bindViewModel];
     // Do view setup here.
 }
 
@@ -29,18 +33,42 @@
     [self.hideButton setTitle:@"●"];
     [self.hideButton setFont:[NSFont systemFontOfSize:titleFontSize_16]];
     
+    TopTextFieldFormatter *formatterYear = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeYear];
     self.gregorianYearTxt.delegate = self;
+    [self.gregorianYearTxt setFormatter:formatterYear];
+    
+    TopTextFieldFormatter *formatterMonth = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeMonth];
     self.gregorianMonthTxt.delegate = self;
+    [self.gregorianMonthTxt setFormatter:formatterMonth];
+    
+    TopTextFieldFormatter *formatterDay = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeDay];
     self.gregorianDayTxt.delegate = self;
+    [self.gregorianDayTxt setFormatter:formatterDay];
+    
+    TopTextFieldFormatter *formatterHour = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeMonth];
     self.gregorianHourTxt.delegate = self;
+    [self.gregorianHourTxt setFormatter:formatterHour];
+    
     self.lunarYearTxt.delegate = self;
+    [self.lunarYearTxt setFormatter:formatterMonth];
+    
     self.lunarMonthTxt.delegate = self;
+    [self.lunarMonthTxt setFormatter:formatterYear];
+    
     self.lunarDayTxt.delegate = self;
+    [self.lunarDayTxt setFormatter:formatterDay];
+    
     self.lunarHourTxt.delegate = self;
+    [self.lunarHourTxt setFormatter:formatterHour];
+    
+    self.firstTextField.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.secondTextField.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.thirdTextField.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.date = [MainViewModel sharedInstance].selectedDate;
+    
 }
 
 -(id)awakeAfterUsingCoder:(NSCoder *)aDecoder{
-    self.date = [MainViewModel sharedInstance].selectedDate;
     return [super awakeAfterUsingCoder:aDecoder];
 }
 
@@ -171,13 +199,14 @@
          }
      }];
     
-    [[[self rac_signalForSelector:@selector(popoverControllerDidDismissPopover:)
-                     fromProtocol:@protocol(UIPopoverControllerDelegate)]
+    [[[self rac_signalForSelector:@selector(popoverWillClose:)
+                     fromProtocol:@protocol(NSPopoverDelegate)]
       deliverOnMainThread]
      subscribeNext:^(RACTuple *tuple){
          @strongify(self)
-         UIPopoverController *pop = (UIPopoverController*)tuple.first;
+         NSPopover *pop = self.popover;
          DatePickViewController *controller = (DatePickViewController*)(pop.contentViewController);
+         [controller getPickViewDate];
          DatePickViewModel *model = (DatePickViewModel*)controller.viewModel;
          //新历
          if(model.calendarType == CalendarTypeGregorian){
@@ -193,6 +222,20 @@
      subscribeNext:^(id _){
          @strongify(self)
          [self resetTaiYuanMingGong];
+     }];
+    
+    //新历时间选择
+    [[self.gregorianCalendarSelectedButton rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+        @strongify(self)
+         [self gregorianCalendarSelecteAction:self.gregorianCalendarSelectedButton];
+    }];
+    
+    //农历时间选择
+    [[self.lunarCalendarSelectedButton rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self lunarCalendarSelecteAction:self.lunarCalendarSelectedButton];
      }];
 }
 
@@ -256,16 +299,19 @@
 -(IBAction)hideButtonClickAction{
     self.firstTextField.hidden = !self.firstTextField.hidden;
 }
+- (IBAction)hideButtonClicked:(id)sender {
+    self.firstTextField.hidden = !self.firstTextField.hidden;
+}
 
 //农历选择
--(IBAction)lunarCalendarSelecteAction:(UIButton*)sender{
+-(IBAction)lunarCalendarSelecteAction:(NSButton*)sender{
     self.popover = [DatePickViewController presentViewControllerWithRect:sender.frame
                                                                     view:self
                                                                     type:CalendarTypeLunar];
 }
 
 //公历选择
--(IBAction)gregorianCalendarSelecteAction:(UIButton*)sender{
+-(IBAction)gregorianCalendarSelecteAction:(NSButton*)sender{
     self.popover = [DatePickViewController presentViewControllerWithRect:sender.frame
                                                                     view:self
                                                                     type:CalendarTypeGregorian];
@@ -273,99 +319,100 @@
 
 #pragma mark - UITextFieldDelegate
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    if(textField == self.gregorianYearTxt ||
-       textField == self.lunarYearTxt){
-        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-                                                                        withString:string];
-        if(completeStr.length>4){
-            return NO;
-        }
-        if(string.length>0){
-            unichar single = [string characterAtIndex:0];
-            if(single >= '0' && single <= '9'){
-                return YES;
-            }
-        }
-        else{
-            return YES;
-        }
-    }
-    else if(textField == self.gregorianMonthTxt ||
-            textField == self.lunarMonthTxt){
-        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-                                                                        withString:string];
-        if(completeStr.length>2){
-            return NO;
-        }
-        
-        if([completeStr integerValue]>12){
-            return NO;
-        }
-        
-        if(string.length>0){
-            unichar single = [string characterAtIndex:0];
-            if(single >= '0' && single <= '9'){
-                return YES;
-            }
-        }
-        else{
-            return YES;
-        }
-    }
-    else if(textField == self.gregorianDayTxt ||
-            textField == self.lunarDayTxt){
-        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-                                                                        withString:string];
-        if(completeStr.length>2){
-            return NO;
-        }
-        
-        if([completeStr integerValue]>31){
-            return NO;
-        }
-        
-        if(string.length>0){
-            unichar single = [string characterAtIndex:0];
-            if(single >= '0' && single <= '9'){
-                return YES;
-            }
-        }
-        else{
-            return YES;
-        }
-    }
-    else if(textField == self.gregorianHourTxt ||
-            textField == self.lunarHourTxt){
-        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-                                                                        withString:string];
-        if(completeStr.length>2){
-            return NO;
-        }
-        
-        if([completeStr integerValue]>=24){
-            return NO;
-        }
-        
-        if(string.length>0){
-            unichar single = [string characterAtIndex:0];
-            if(single >= '0' && single <= '9'){
-                return YES;
-            }
-        }
-        else{
-            return YES;
-        }
-    }
-    return NO;
-}
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    [textField performSelector:@selector(selectAll:)
-                    withObject:textField
-                    afterDelay:0];
-    [textField selectAll:self];
-}
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+//    if(textField == self.gregorianYearTxt ||
+//       textField == self.lunarYearTxt){
+//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
+//                                                                        withString:string];
+//        if(completeStr.length>4){
+//            return NO;
+//        }
+//        if(string.length>0){
+//            unichar single = [string characterAtIndex:0];
+//            if(single >= '0' && single <= '9'){
+//                return YES;
+//            }
+//        }
+//        else{
+//            return YES;
+//        }
+//    }
+//    else if(textField == self.gregorianMonthTxt ||
+//            textField == self.lunarMonthTxt){
+//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
+//                                                                        withString:string];
+//        if(completeStr.length>2){
+//            return NO;
+//        }
+//
+//        if([completeStr integerValue]>12){
+//            return NO;
+//        }
+//
+//        if(string.length>0){
+//            unichar single = [string characterAtIndex:0];
+//            if(single >= '0' && single <= '9'){
+//                return YES;
+//            }
+//        }
+//        else{
+//            return YES;
+//        }
+//    }
+//    else if(textField == self.gregorianDayTxt ||
+//            textField == self.lunarDayTxt){
+//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
+//                                                                        withString:string];
+//        if(completeStr.length>2){
+//            return NO;
+//        }
+//
+//        if([completeStr integerValue]>31){
+//            return NO;
+//        }
+//
+//        if(string.length>0){
+//            unichar single = [string characterAtIndex:0];
+//            if(single >= '0' && single <= '9'){
+//                return YES;
+//            }
+//        }
+//        else{
+//            return YES;
+//        }
+//    }
+//    else if(textField == self.gregorianHourTxt ||
+//            textField == self.lunarHourTxt){
+//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
+//                                                                        withString:string];
+//        if(completeStr.length>2){
+//            return NO;
+//        }
+//
+//        if([completeStr integerValue]>=24){
+//            return NO;
+//        }
+//
+//        if(string.length>0){
+//            unichar single = [string characterAtIndex:0];
+//            if(single >= '0' && single <= '9'){
+//                return YES;
+//            }
+//        }
+//        else{
+//            return YES;
+//        }
+//    }
+//    return NO;
+//}
+//
+//- (void)textFieldDidBeginEditing:(UITextField *)textField
+//{
+//    [textField performSelector:@selector(selectAll:)
+//                    withObject:textField
+//                    afterDelay:0];
+//    [textField selectAll:self];
+//}
 
 @end

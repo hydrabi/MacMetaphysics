@@ -7,7 +7,9 @@
 //
 
 #import "BasicViewController.h"
-
+#import "UIConstantParameter.h"
 @interface DatePickViewController : BasicViewController
-
++(NSPopover*)presentViewControllerWithRect:(NSRect)rect view:(NSViewController<NSPopoverDelegate>*)view type:(CalendarType)type;
+-(instancetype)initWithCalendarType:(CalendarType)type;
+-(void)getPickViewDate;
 @end

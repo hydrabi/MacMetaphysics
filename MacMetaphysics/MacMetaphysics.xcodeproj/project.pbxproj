@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7AC23816EE203C5F78A6E96C /* Pods_MacMetaphysics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194C5CC55A9F50F1DE051178 /* Pods_MacMetaphysics.framework */; };
 		8007F4571F85BF2500198017 /* MainViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8007F4561F85BF2500198017 /* MainViewModel.mm */; };
+		8015746C200B83C4006FE025 /* JiaZiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015746A200B83C4006FE025 /* JiaZiCollectionViewCell.m */; };
+		8015746D200B83C4006FE025 /* JiaZiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8015746B200B83C4006FE025 /* JiaZiCollectionViewCell.xib */; };
+		80157471200B8D10006FE025 /* JiaZiCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015746F200B8D10006FE025 /* JiaZiCollectionViewController.m */; };
+		80157472200B8D10006FE025 /* JiaZiCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80157470200B8D10006FE025 /* JiaZiCollectionViewController.xib */; };
 		801D9AED1FF735A3007F5EBC /* SolarTermsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D9AEC1FF735A3007F5EBC /* SolarTermsCollectionView.m */; };
 		801D9AF51FF7D5D6007F5EBC /* DatePickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D9AF31FF7D5D6007F5EBC /* DatePickViewController.m */; };
 		801D9AF61FF7D5D6007F5EBC /* DatePickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801D9AF41FF7D5D6007F5EBC /* DatePickViewController.xib */; };
@@ -30,6 +34,7 @@
 		806C310E1FF5361400432737 /* SolarTermsSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806C310C1FF5361400432737 /* SolarTermsSecondCell.xib */; };
 		806C31121FF5362300432737 /* SolarTermsThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 806C31101FF5362300432737 /* SolarTermsThirdCell.m */; };
 		806C31131FF5362300432737 /* SolarTermsThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806C31111FF5362300432737 /* SolarTermsThirdCell.xib */; };
+		806C8CEB1FFA27BD001DCE23 /* TopTextFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 806C8CEA1FFA27BD001DCE23 /* TopTextFieldFormatter.m */; };
 		8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8090BF861F8E6D6F00F0EB80 /* TopContentViewController.m */; };
 		8090BF891F8E6D6F00F0EB80 /* TopContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8090BF871F8E6D6F00F0EB80 /* TopContentViewController.xib */; };
 		80941EB71FEF934B00735E10 /* BottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80941EB41FEF934B00735E10 /* BottomTableViewCell.m */; };
@@ -110,6 +115,12 @@
 		8007F4561F85BF2500198017 /* MainViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewModel.mm; sourceTree = "<group>"; };
 		8007F46C1F85CA1300198017 /* UIConstantParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstantParameter.h; sourceTree = "<group>"; };
 		8007F46D1F85D1DF00198017 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		80157469200B83C4006FE025 /* JiaZiCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiaZiCollectionViewCell.h; sourceTree = "<group>"; };
+		8015746A200B83C4006FE025 /* JiaZiCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaZiCollectionViewCell.m; sourceTree = "<group>"; };
+		8015746B200B83C4006FE025 /* JiaZiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiaZiCollectionViewCell.xib; sourceTree = "<group>"; };
+		8015746E200B8D10006FE025 /* JiaZiCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiaZiCollectionViewController.h; sourceTree = "<group>"; };
+		8015746F200B8D10006FE025 /* JiaZiCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaZiCollectionViewController.m; sourceTree = "<group>"; };
+		80157470200B8D10006FE025 /* JiaZiCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiaZiCollectionViewController.xib; sourceTree = "<group>"; };
 		801D9AEB1FF735A3007F5EBC /* SolarTermsCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolarTermsCollectionView.h; sourceTree = "<group>"; };
 		801D9AEC1FF735A3007F5EBC /* SolarTermsCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SolarTermsCollectionView.m; sourceTree = "<group>"; };
 		801D9AF21FF7D5D6007F5EBC /* DatePickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickViewController.h; sourceTree = "<group>"; };
@@ -145,6 +156,8 @@
 		806C310F1FF5362300432737 /* SolarTermsThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolarTermsThirdCell.h; sourceTree = "<group>"; };
 		806C31101FF5362300432737 /* SolarTermsThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SolarTermsThirdCell.m; sourceTree = "<group>"; };
 		806C31111FF5362300432737 /* SolarTermsThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SolarTermsThirdCell.xib; sourceTree = "<group>"; };
+		806C8CE91FFA27BD001DCE23 /* TopTextFieldFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopTextFieldFormatter.h; sourceTree = "<group>"; };
+		806C8CEA1FFA27BD001DCE23 /* TopTextFieldFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopTextFieldFormatter.m; sourceTree = "<group>"; };
 		8090BF851F8E6D6F00F0EB80 /* TopContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopContentViewController.h; sourceTree = "<group>"; };
 		8090BF861F8E6D6F00F0EB80 /* TopContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopContentViewController.m; sourceTree = "<group>"; };
 		8090BF871F8E6D6F00F0EB80 /* TopContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopContentViewController.xib; sourceTree = "<group>"; };
@@ -332,6 +345,19 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		80157465200B82A3006FE025 /* ShuangZaoTextView */ = {
+			isa = PBXGroup;
+			children = (
+				80157469200B83C4006FE025 /* JiaZiCollectionViewCell.h */,
+				8015746A200B83C4006FE025 /* JiaZiCollectionViewCell.m */,
+				8015746B200B83C4006FE025 /* JiaZiCollectionViewCell.xib */,
+				8015746E200B8D10006FE025 /* JiaZiCollectionViewController.h */,
+				8015746F200B8D10006FE025 /* JiaZiCollectionViewController.m */,
+				80157470200B8D10006FE025 /* JiaZiCollectionViewController.xib */,
+			);
+			path = ShuangZaoTextView;
+			sourceTree = "<group>";
+		};
 		801D9AF11FF7D5BA007F5EBC /* DatePickView */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +383,7 @@
 		803A06241FF3D9E30023C892 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
+				80157465200B82A3006FE025 /* ShuangZaoTextView */,
 				801D9AF11FF7D5BA007F5EBC /* DatePickView */,
 				803A06251FF3DA4E0023C892 /* SolarTermsCollectionView */,
 			);
@@ -446,6 +473,7 @@
 		8057E8E41F837AB6003DF83E /* MacMetaphysics */ = {
 			isa = PBXGroup;
 			children = (
+				806C8CE81FFA276B001DCE23 /* Formatter */,
 				9279BFF21F8F919800FA8DA9 /* SubViewData */,
 				9279BFEC1F8F8FC400FA8DA9 /* Resource */,
 				9279BFE51F8F8F8000FA8DA9 /* Date */,
@@ -475,6 +503,15 @@
 				8057E8FE1F837AB6003DF83E /* Info.plist */,
 			);
 			path = MacMetaphysicsTests;
+			sourceTree = "<group>";
+		};
+		806C8CE81FFA276B001DCE23 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				806C8CE91FFA27BD001DCE23 /* TopTextFieldFormatter.h */,
+				806C8CEA1FFA27BD001DCE23 /* TopTextFieldFormatter.m */,
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 		809896A91F852E50008ECA77 /* AppDelegate */ = {
@@ -905,6 +942,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923165E31FE37B77007C6B27 /* BottomNormalTableViewHeader.xib in Resources */,
+				8015746D200B83C4006FE025 /* JiaZiCollectionViewCell.xib in Resources */,
 				92714F851FE2BBDD0078C41B /* BottomContentView.xib in Resources */,
 				9279BFF11F8F8FC400FA8DA9 /* SolarTerm.csv in Resources */,
 				8057E8EF1F837AB6003DF83E /* Assets.xcassets in Resources */,
@@ -915,6 +953,7 @@
 				806C31091FF5360400432737 /* SolarTermsNumberCell.xib in Resources */,
 				806C31041FF535EA00432737 /* SolarTermsMulLineCell.xib in Resources */,
 				9247E4591FED015800524A50 /* BottomCollectionViewItem.xib in Resources */,
+				80157472200B8D10006FE025 /* JiaZiCollectionViewController.xib in Resources */,
 				809896B51F852F37008ECA77 /* MainWindowViewController.xib in Resources */,
 				925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */,
 				80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */,
@@ -1003,6 +1042,7 @@
 				801D9AED1FF735A3007F5EBC /* SolarTermsCollectionView.m in Sources */,
 				806C31031FF535EA00432737 /* SolarTermsMulLineCell.m in Sources */,
 				9247E4541FECEB5C00524A50 /* BottomCollectionViewDataSource.m in Sources */,
+				8015746C200B83C4006FE025 /* JiaZiCollectionViewCell.m in Sources */,
 				803A062C1FF3DAC10023C892 /* SeparatorTableViewCell.m in Sources */,
 				9279C0131F8F919800FA8DA9 /* BottomViewData.m in Sources */,
 				809896B91F852F64008ECA77 /* MainViewController.m in Sources */,
@@ -1021,6 +1061,7 @@
 				9279C0321F8F91F400FA8DA9 /* NSString+Addition.m in Sources */,
 				923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */,
 				9279C02E1F8F91F400FA8DA9 /* NSArray+Addition.m in Sources */,
+				806C8CEB1FFA27BD001DCE23 /* TopTextFieldFormatter.m in Sources */,
 				9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */,
 				9279C0151F8F919800FA8DA9 /* FifteenYunData.m in Sources */,
 				925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */,
@@ -1034,6 +1075,7 @@
 				9279C0371F8F937900FA8DA9 /* UIConstantParm.m in Sources */,
 				80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */,
 				925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */,
+				80157471200B8D10006FE025 /* JiaZiCollectionViewController.m in Sources */,
 				9279C01C1F8F919800FA8DA9 /* RiZhuData.mm in Sources */,
 				9279BFEB1F8F8F8000FA8DA9 /* TTLunarCalendar.mm in Sources */,
 				9279C0191F8F919800FA8DA9 /* MiddleViewData.m in Sources */,

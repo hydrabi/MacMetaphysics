@@ -70,7 +70,7 @@
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VxL-1Q-s2t">
-                    <rect key="frame" x="49" y="33" width="8" height="17"/>
+                    <rect key="frame" x="49" y="23" width="8" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="Y3B-ac-CbJ">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -99,7 +99,7 @@
                 <constraint firstItem="vPV-hh-UUc" firstAttribute="leading" secondItem="mFN-lO-yWI" secondAttribute="leading" id="358-jP-Jjw"/>
                 <constraint firstItem="vPV-hh-UUc" firstAttribute="top" secondItem="Or0-hS-bKx" secondAttribute="bottom" constant="-10" id="5WP-Lv-nwd"/>
                 <constraint firstItem="UOl-sP-96j" firstAttribute="top" secondItem="XVk-UX-rq9" secondAttribute="bottom" id="5gI-Jp-iqn"/>
-                <constraint firstItem="VxL-1Q-s2t" firstAttribute="top" secondItem="6cV-lB-iME" secondAttribute="bottom" constant="-20" id="67i-wQ-5Zu"/>
+                <constraint firstItem="VxL-1Q-s2t" firstAttribute="top" secondItem="6cV-lB-iME" secondAttribute="bottom" constant="-10" id="67i-wQ-5Zu"/>
                 <constraint firstItem="6cV-lB-iME" firstAttribute="width" secondItem="UOl-sP-96j" secondAttribute="width" id="8ML-kR-PKC"/>
                 <constraint firstItem="6cV-lB-iME" firstAttribute="trailing" secondItem="vPV-hh-UUc" secondAttribute="trailing" id="BIy-T9-kGj"/>
                 <constraint firstAttribute="trailing" secondItem="vPV-hh-UUc" secondAttribute="trailing" id="Fte-VF-AX5"/>

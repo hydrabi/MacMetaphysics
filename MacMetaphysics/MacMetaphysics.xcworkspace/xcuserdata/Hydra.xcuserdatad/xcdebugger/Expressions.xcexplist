@@ -3,12 +3,29 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__41-[TopContentViewController bindViewModel]_block_invoke.282:TopContentViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[MainViewController resetDate]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "[format stringFromDate:[NSDate date]]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MiddleSubView reloadData]:MiddleSubView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "liuQinData.dayTopLiuQin">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TopContentViewController resetGregorianValue]:TopContentViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MiddleTableViewDataSource collectionView:itemForRepresentedObjectAtIndexPath:]:MiddleTableViewDataSource.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

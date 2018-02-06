@@ -15,12 +15,12 @@
 
 @implementation MiddleTableViewCell
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+-(void)awakeFromNib{
+    [super awakeFromNib];
     self.shenShaLabel.textColor = [NSColor blackColor];
     self.shenShaLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
     [self.shenShaLabel setBackgroundColor:[NSColor clearColor]];
 }
+
 
 @end

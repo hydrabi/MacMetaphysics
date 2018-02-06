@@ -9,5 +9,5 @@
 #import "BasicViewController.h"
 
 @interface JiaZiCollectionViewController : BasicViewController
-
+@property (nonatomic,strong)NSCollectionView *collectionView;
 @end

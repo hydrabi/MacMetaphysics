@@ -32,5 +32,11 @@
                 <constraint firstItem="zZY-p0-S0i" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="jgm-kU-cx3"/>
             </constraints>
         </customView>
+        <collectionViewItem id="ngi-2u-Z14" customClass="MiddleTableViewCell">
+            <connections>
+                <outlet property="shenShaLabel" destination="zZY-p0-S0i" id="AuY-D7-4UV"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="9XM-Hy-i33"/>
+            </connections>
+        </collectionViewItem>
     </objects>
 </document>
