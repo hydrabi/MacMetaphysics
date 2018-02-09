@@ -60,6 +60,8 @@
 		9247E4541FECEB5C00524A50 /* BottomCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9247E4531FECEB5C00524A50 /* BottomCollectionViewDataSource.m */; };
 		9247E4581FED015800524A50 /* BottomCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9247E4561FED015800524A50 /* BottomCollectionViewItem.m */; };
 		9247E4591FED015800524A50 /* BottomCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9247E4571FED015800524A50 /* BottomCollectionViewItem.xib */; };
+		9250F703202C57F500720712 /* ShuangZaoTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9250F701202C57F500720712 /* ShuangZaoTextView.m */; };
+		9250F704202C57F500720712 /* ShuangZaoTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9250F702202C57F500720712 /* ShuangZaoTextView.xib */; };
 		925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F01FDB9E1200B319DB /* MiddleContentView.m */; };
 		925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */; };
 		925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F51FDB9E5500B319DB /* MiddleSubView.m */; };
@@ -201,6 +203,9 @@
 		9247E4551FED015800524A50 /* BottomCollectionViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomCollectionViewItem.h; sourceTree = "<group>"; };
 		9247E4561FED015800524A50 /* BottomCollectionViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewItem.m; sourceTree = "<group>"; };
 		9247E4571FED015800524A50 /* BottomCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCollectionViewItem.xib; sourceTree = "<group>"; };
+		9250F700202C57F500720712 /* ShuangZaoTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShuangZaoTextView.h; sourceTree = "<group>"; };
+		9250F701202C57F500720712 /* ShuangZaoTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShuangZaoTextView.m; sourceTree = "<group>"; };
+		9250F702202C57F500720712 /* ShuangZaoTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShuangZaoTextView.xib; sourceTree = "<group>"; };
 		925CE6EF1FDB9E1200B319DB /* MiddleContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleContentView.h; sourceTree = "<group>"; };
 		925CE6F01FDB9E1200B319DB /* MiddleContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleContentView.m; sourceTree = "<group>"; };
 		925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleContentView.xib; sourceTree = "<group>"; };
@@ -357,6 +362,9 @@
 				8015746E200B8D10006FE025 /* JiaZiCollectionViewController.h */,
 				8015746F200B8D10006FE025 /* JiaZiCollectionViewController.m */,
 				80157470200B8D10006FE025 /* JiaZiCollectionViewController.xib */,
+				9250F700202C57F500720712 /* ShuangZaoTextView.h */,
+				9250F701202C57F500720712 /* ShuangZaoTextView.m */,
+				9250F702202C57F500720712 /* ShuangZaoTextView.xib */,
 			);
 			path = ShuangZaoTextView;
 			sourceTree = "<group>";
@@ -968,6 +976,7 @@
 				9279BFF11F8F8FC400FA8DA9 /* SolarTerm.csv in Resources */,
 				8057E8EF1F837AB6003DF83E /* Assets.xcassets in Resources */,
 				806C30FF1FF535D800432737 /* SolarTermsMonthCell.xib in Resources */,
+				9250F704202C57F500720712 /* ShuangZaoTextView.xib in Resources */,
 				806C31131FF5362300432737 /* SolarTermsThirdCell.xib in Resources */,
 				806C310E1FF5361400432737 /* SolarTermsSecondCell.xib in Resources */,
 				925CE7041FDBD86B00B319DB /* MiddleTableViewCell.xib in Resources */,
@@ -1077,6 +1086,7 @@
 				8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */,
 				9279C0301F8F91F400FA8DA9 /* NSLayoutConstraint+NUI.m in Sources */,
 				9279C01A1F8F919800FA8DA9 /* NaYinData.m in Sources */,
+				9250F703202C57F500720712 /* ShuangZaoTextView.m in Sources */,
 				806C30F91FF535C500432737 /* SolarTermsFirstCell.m in Sources */,
 				9279BFEA1F8F8F8000FA8DA9 /* lunar.mm in Sources */,
 				806C31121FF5362300432737 /* SolarTermsThirdCell.m in Sources */,
