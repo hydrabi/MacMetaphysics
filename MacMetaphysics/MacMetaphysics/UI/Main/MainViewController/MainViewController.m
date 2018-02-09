@@ -77,6 +77,9 @@
     self.solarTermsView  = [SolarTermsCollectionView createSolarTermsCollectionView];
     self.solarTermsView.hidden = YES;
     [self.view addSubview:self.solarTermsView];
+    
+    self.shuangZaoTextView = [ShuangZaoTextView addWithParentViewController:self];
+    self.shuangZaoTextView.view.hidden = YES;
 }
 
 -(void)makeConstraints{

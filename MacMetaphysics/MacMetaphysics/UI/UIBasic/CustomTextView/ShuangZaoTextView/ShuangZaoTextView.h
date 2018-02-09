@@ -34,5 +34,10 @@
  */
 @property (nonatomic,weak)IBOutlet NSButton *bottomNoteTextViewButton;
 
++(instancetype)addWithParentViewController:(NSViewController*)parentViewController;
 
+/**
+ 重置属性
+ */
+-(void)resetValue;
 @end

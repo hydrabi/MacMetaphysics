@@ -13,6 +13,7 @@
 #import "MiddleContentView.h"
 #import "BottomContentView.h"
 #import "SolarTermsCollectionView.h"
+#import "ShuangZaoTextView.h"
 @interface MainViewController : BasicViewController
 
 /**
@@ -63,4 +64,9 @@
 
 @property (nonatomic,weak)NSView *currentTextView;
 @property (nonatomic,strong)SolarTermsCollectionView *solarTermsView;
+
+/**
+ 双造视图
+ */
+@property (nonatomic,strong)ShuangZaoTextView *shuangZaoTextView;
 @end
