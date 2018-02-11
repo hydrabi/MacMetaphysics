@@ -12,5 +12,5 @@
 
 -(NSString*)getSpecificMenuTitleWithType:(LeftSideMenuType)type;
 -(LeftSideMenuType)getSpecificMenuTypeWithIndexPath:(NSIndexPath*)indexPath;
-
+-(void)selectMunuWithIndexPath:(NSIndexPath*)indexPath;
 @end

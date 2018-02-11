@@ -13,5 +13,5 @@
 
 @property (nonatomic,assign)MiddleSubViewType type;
 
-+(NSPopover*)presentViewControllerWithRect:(NSRect)rect view:(NSViewController<NSPopoverDelegate>*)viewController type:(MiddleSubViewType)type;
++(NSPopover*)presentViewControllerWithRect:(NSRect)rect view:(NSViewController*)viewController type:(MiddleSubViewType)type;
 @end

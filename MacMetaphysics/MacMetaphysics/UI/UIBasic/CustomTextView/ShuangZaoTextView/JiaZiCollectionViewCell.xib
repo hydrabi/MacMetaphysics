@@ -18,6 +18,12 @@
             <rect key="frame" x="0.0" y="0.0" width="131" height="29"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Rj8-5y-Yrx">
+                    <rect key="frame" x="0.0" y="26" width="131" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="TaP-PD-FWv"/>
+                    </constraints>
+                </box>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ij-e1-zYM">
                     <rect key="frame" x="-2" y="0.0" width="135" height="29"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="甲子" id="5Tb-vY-12B">
@@ -26,15 +32,45 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="bvJ-SC-Av3">
+                    <rect key="frame" x="0.0" y="-2" width="131" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="L3o-Id-VBs"/>
+                    </constraints>
+                </box>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="DH6-SX-rqG">
+                    <rect key="frame" x="-2" y="0.0" width="5" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="dyO-ya-T3b"/>
+                    </constraints>
+                </box>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="bVp-Dz-B2b">
+                    <rect key="frame" x="128" y="0.0" width="5" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="cA2-fo-hVA"/>
+                    </constraints>
+                </box>
             </subviews>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Rj8-5y-Yrx" secondAttribute="trailing" id="2hd-k4-HZM"/>
+                <constraint firstItem="Rj8-5y-Yrx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="7Lu-CR-m7m"/>
+                <constraint firstItem="Rj8-5y-Yrx" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="BNE-y1-Cqx"/>
                 <constraint firstAttribute="trailing" secondItem="4ij-e1-zYM" secondAttribute="trailing" id="FFT-2a-Ohh"/>
                 <constraint firstItem="4ij-e1-zYM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="OOa-xh-pVp"/>
+                <constraint firstItem="bVp-Dz-B2b" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="SMV-Fr-Qdy"/>
+                <constraint firstAttribute="bottom" secondItem="DH6-SX-rqG" secondAttribute="bottom" id="c09-yP-CIm"/>
+                <constraint firstItem="DH6-SX-rqG" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="eph-kq-hm3"/>
+                <constraint firstAttribute="bottom" secondItem="bvJ-SC-Av3" secondAttribute="bottom" id="fdn-YC-OZP"/>
                 <constraint firstItem="4ij-e1-zYM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="g0o-Fo-7cv"/>
+                <constraint firstAttribute="trailing" secondItem="bvJ-SC-Av3" secondAttribute="trailing" id="s9M-Wy-8Gs"/>
+                <constraint firstAttribute="bottom" secondItem="bVp-Dz-B2b" secondAttribute="bottom" id="vaG-d9-77u"/>
                 <constraint firstAttribute="bottom" secondItem="4ij-e1-zYM" secondAttribute="bottom" id="wo8-U1-gem"/>
+                <constraint firstItem="bvJ-SC-Av3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="yCA-RV-FUo"/>
+                <constraint firstAttribute="trailing" secondItem="bVp-Dz-B2b" secondAttribute="trailing" id="yL0-em-7bZ"/>
+                <constraint firstItem="DH6-SX-rqG" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="zRE-Ha-MPH"/>
             </constraints>
             <point key="canvasLocation" x="-60.5" y="57.5"/>
         </customView>
-        <collectionViewItem id="uW9-L3-w5I"/>
+        <collectionViewItem id="uW9-L3-w5I" customClass="JiaZiCollectionViewCell"/>
     </objects>
 </document>

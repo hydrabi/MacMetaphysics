@@ -20,7 +20,7 @@ static NSString *myCellReuseIdentifier = @"myCellReuseIdentifier";
 
 @implementation JiaZiCollectionViewController
 
-+(NSPopover*)presentViewControllerWithRect:(NSRect)rect view:(NSViewController<NSPopoverDelegate>*)viewController type:(MiddleSubViewType)type{
++(NSPopover*)presentViewControllerWithRect:(NSRect)rect view:(NSViewController*)viewController type:(MiddleSubViewType)type{
     JiaZiCollectionViewController *jiaZi = [[JiaZiCollectionViewController alloc] init];
     jiaZi.type = type;
     
@@ -50,8 +50,8 @@ static NSString *myCellReuseIdentifier = @"myCellReuseIdentifier";
     [super viewDidLoad];
     
     [self setUpCollecitonView];
-    [self layoutMySubView];
     [self registerNib];
+    [self layoutMySubView];
 }
 
 #pragma mark - collectionView
@@ -66,6 +66,9 @@ static NSString *myCellReuseIdentifier = @"myCellReuseIdentifier";
 
     self.collectionView                      = [[NSCollectionView alloc] init];
     self.collectionView.collectionViewLayout = flowLayout;
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.selectable = YES;
     [self.view addSubview:self.collectionView];
 }
 
@@ -129,5 +132,39 @@ static NSString *myCellReuseIdentifier = @"myCellReuseIdentifier";
     return cell;
 }
 
-
+-(void)collectionView:(NSCollectionView *)collectionView didSelectItemsAtIndexPaths:(NSSet<NSIndexPath *> *)indexPaths{
+    
+    if(indexPaths.count>0){
+        NSIndexPath *indexPath = [indexPaths anyObject];
+        
+        ShuangZaoData *data = [MainViewModel sharedInstance].shuangZaoData;
+        NSString *result = [MainViewModel sharedInstance].jiaZiArr[indexPath.item];
+        switch (self.type) {
+            case MiddleSubViewTypeYear:
+                data.year = result;
+                break;
+            case MiddleSubViewTypeMonth:
+            {
+                data.month = [NSArray getMonthGanZhiArrWithStems:[data.year getStems]][indexPath.item];
+            }
+                break;
+            case MiddleSubViewTypeDay:
+                data.day = result;
+                break;
+            case MiddleSubViewTypeHour:
+            {
+                NSInteger hour = indexPath.item * 2;
+                data.hour = [NSString ganZhiHourWithHour:hour
+                                                     day:data.day];
+            }
+                
+                break;
+            default:
+                break;
+        }
+        NSLog(@"%@",result);
+        
+    }
+    [collectionView deselectItemsAtIndexPaths:indexPaths];
+}
 @end

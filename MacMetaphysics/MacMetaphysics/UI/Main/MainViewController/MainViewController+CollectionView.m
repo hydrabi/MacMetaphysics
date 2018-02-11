@@ -104,6 +104,11 @@ static NSString *headIdentifier = @"headIdentifier";
 }
 
 - (void)collectionView:(NSCollectionView *)collectionView didSelectItemsAtIndexPaths:(NSSet<NSIndexPath *> *)indexPaths{
+    if(indexPaths.count>0){
+        NSIndexPath *indexPath = [indexPaths anyObject];
+        [[MainViewModel sharedInstance] selectMunuWithIndexPath:indexPath];
+    }
+    
     [collectionView deselectItemsAtIndexPaths:indexPaths];
 }
 

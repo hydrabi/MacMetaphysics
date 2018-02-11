@@ -178,14 +178,14 @@
 //        make.height.equalTo(normalTextViewHeight);
 //    }];
 //    
-//    [self.shuangZaoTextView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
-//        make.top.equalTo(self.view.top).offset(0);
-//        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-//        make.height.equalTo(topViewHeight);
-//    }];
-//    
+    [self.shuangZaoTextView.view makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
+        make.top.equalTo(self.view.top).offset(0);
+        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
+        make.height.equalTo(topViewHeight);
+    }];
+    
     [self.solarTermsView makeConstraints:^(MASConstraintMaker *make){
         @strongify(self)
         make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset-1);
@@ -267,12 +267,12 @@
       deliverOnMainThread]
      subscribeNext:^(id _){
          @strongify(self)
-//         if([mainViewModel.currentSelectTopSectionMenuTypeArr containsObject:@(LeftSideMenuTypeShuangZao)]){
-//             self.shuangZaoTextView.hidden = NO;
-//         }
-//         else{
-//             self.shuangZaoTextView.hidden = YES;
-//         }
+         if([mainViewModel.currentSelectTopSectionMenuTypeArr containsObject:@(LeftSideMenuTypeShuangZao)]){
+             self.shuangZaoTextView.view.hidden = NO;
+         }
+         else{
+             self.shuangZaoTextView.view.hidden = YES;
+         }
      }];
     
     //15运选中操作

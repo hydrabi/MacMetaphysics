@@ -10,6 +10,7 @@
 #import "UIConstantParameter.h"
 #import "NSView+Addition.h"
 #import "MainViewModel.h"
+#import "JiaZiCollectionViewController.h"
 
 @interface ShuangZaoTextView ()
 
@@ -119,6 +120,31 @@
      subscribeNext:^(id _){
          [main.bottomNoteTextViewOperationSig sendNext:nil];
      }];
+    
+    [[self.selectYearButton rac_signalForSelector:@selector(mouseDown:)] subscribeNext:^(id _){
+        @strongify(self)
+        [self selectButtonAction:self.selectYearButton];
+    }];
+    
+    [[self.selectMonthButton rac_signalForSelector:@selector(mouseDown:)] subscribeNext:^(id _){
+        @strongify(self)
+        
+        ShuangZaoData *data = [MainViewModel sharedInstance].shuangZaoData;
+        if(data.year.length==2){
+            [self selectButtonAction:self.selectMonthButton];
+        }
+        
+    }];
+    
+    [[self.selectDayButton rac_signalForSelector:@selector(mouseDown:)] subscribeNext:^(id _){
+        @strongify(self)
+        [self selectButtonAction:self.selectDayButton];
+    }];
+    
+    [[self.selectHourButton rac_signalForSelector:@selector(mouseDown:)] subscribeNext:^(id _){
+        @strongify(self)
+        [self selectButtonAction:self.selectHourButton];
+    }];
 }
 
 -(void)resetValue{
@@ -152,6 +178,12 @@
         }
     }
     
+}
+
+-(void)selectButtonAction:(NSButton*)sender{
+     [JiaZiCollectionViewController presentViewControllerWithRect:sender.frame
+                                                             view:self
+                                                             type:sender.tag];
 }
 
 @end
