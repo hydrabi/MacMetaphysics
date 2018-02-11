@@ -43,6 +43,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     self.myCollectionView.delegate = self;
     self.myCollectionView.dataSource = self;
     self.myCollectionView.backgroundViewScrollsWithContent = NO;
+    self.myCollectionView.translatesAutoresizingMaskIntoConstraints = YES;
     
     NSCollectionViewFlowLayout *flowLayout = [[NSCollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = NSMakeSize(tableViewWidth, tableViewCellHeight);
@@ -72,6 +73,8 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
         make.edges.equalTo(self.view);
     }];
     
+    [self.myCollectionView setBackgroundColors:@[[NSColor redColor]]];
+
 }
 
 -(void)reloadDataWithTag:(NSInteger)myTag{
@@ -96,6 +99,8 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 -(NSCollectionViewItem*)collectionView:(NSCollectionView *)collectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)indexPath{
     
     BottomTableViewCell *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
+    [cell.view setBackgroundColor:[NSColor yellowColor]];
+    
         MainViewModel *main = [MainViewModel sharedInstance];
         if(main.hadHiddenBottomTableView){
             if(collectionView.myTag >= main.hiddenBottomTableViewTag){

@@ -3,13 +3,27 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__41-[TopContentViewController bindViewModel]_block_invoke.282:TopContentViewController.m">
+         contextName = "-[MainViewController(CollectionView) collectionView:didSelectItemsAtIndexPaths:]:MainViewController+CollectionView.m">
       </ContextState>
       <ContextState
          contextName = "-[MainViewController resetDate]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "[format stringFromDate:[NSDate date]]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__34-[ShuangZaoTextView bindViewModel]_block_invoke.206:ShuangZaoTextView.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MiddleTableViewDataSource collectionView:itemForRepresentedObjectAtIndexPath:]:MiddleTableViewDataSource.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BottomCollectionViewItem collectionView:itemForRepresentedObjectAtIndexPath:]:BottomCollectionViewItem.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -22,10 +36,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[TopContentViewController resetGregorianValue]:TopContentViewController.m">
+         contextName = "__41-[TopContentViewController bindViewModel]_block_invoke.282:TopContentViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[MiddleTableViewDataSource collectionView:itemForRepresentedObjectAtIndexPath:]:MiddleTableViewDataSource.m">
+         contextName = "-[TopContentViewController resetGregorianValue]:TopContentViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

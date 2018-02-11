@@ -47,6 +47,7 @@ static NSString *columnIdentifier = @"columnIdentifier";
     self.scrollView = [[NSScrollView alloc] init];
     [self.scrollView setBorderType:NSNoBorder];
     [self.scrollView setHasHorizontalScroller:YES];
+    [self.scrollView setHasVerticalScroller:YES];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     self.scrollView.contentView.documentView = self.collectionView;
     [self.view addSubview:self.scrollView];

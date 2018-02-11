@@ -147,12 +147,7 @@
 //        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
 //        make.height.equalTo(bottomTextViewHeight);
 //    }];
-//    
-//    [self.dateLabel makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.trailing.equalTo(self.view.trailing).offset(@(-offset_16));
-//        make.bottom.equalTo(self.view.bottom).offset(0);
-//    }];
+//
 //    
 //    [self.daYunTextView makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)

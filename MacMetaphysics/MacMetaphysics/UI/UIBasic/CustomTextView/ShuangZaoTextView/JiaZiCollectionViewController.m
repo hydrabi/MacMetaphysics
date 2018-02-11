@@ -157,13 +157,11 @@ static NSString *myCellReuseIdentifier = @"myCellReuseIdentifier";
                 data.hour = [NSString ganZhiHourWithHour:hour
                                                      day:data.day];
             }
-                
                 break;
             default:
                 break;
         }
         NSLog(@"%@",result);
-        
     }
     [collectionView deselectItemsAtIndexPaths:indexPaths];
 }
