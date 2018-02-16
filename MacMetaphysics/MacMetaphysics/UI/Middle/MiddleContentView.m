@@ -29,7 +29,7 @@
 -(void)UIConfig{
     self.genderButton = [NSTextField textFieldWithString:@"乾"];
     [self.genderButton setTextColor:[NSColor blackColor]];
-    [self.genderButton setFont:[NSFont systemFontOfSize:titleFontSize_80]];
+    [self.genderButton setFont:[NSFont systemFontOfSize:titleFontSize_70]];
     self.genderButton.selectable = NO;
     self.genderButton.bordered = NO;
     [self.view addSubview:self.genderButton];

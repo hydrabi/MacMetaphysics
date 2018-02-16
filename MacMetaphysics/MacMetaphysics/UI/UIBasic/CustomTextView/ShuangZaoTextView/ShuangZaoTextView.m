@@ -34,10 +34,10 @@
 
 -(void)UIConfig{
     self.mainButton.font              = [NSFont systemFontOfSize:titleFontSize_50];
-    self.yearLabel.font               = [NSFont systemFontOfSize:titleFontSize_40];
-    self.monthLabel.font              = [NSFont systemFontOfSize:titleFontSize_40];
-    self.dayLabel.font                = [NSFont systemFontOfSize:titleFontSize_40];
-    self.hourLabel.font               = [NSFont systemFontOfSize:titleFontSize_40];
+    self.yearLabel.font               = [NSFont systemFontOfSize:titleFontSize_30];
+    self.monthLabel.font              = [NSFont systemFontOfSize:titleFontSize_30];
+    self.dayLabel.font                = [NSFont systemFontOfSize:titleFontSize_30];
+    self.hourLabel.font               = [NSFont systemFontOfSize:titleFontSize_30];
     self.selectYearButton.font        = [NSFont systemFontOfSize:titleFontSize_16];
     self.selectYearButton.tag         = MiddleSubViewTypeYear;
     self.selectMonthButton.font       = [NSFont systemFontOfSize:titleFontSize_16];
@@ -46,31 +46,31 @@
     self.selectDayButton.tag          = MiddleSubViewTypeDay;
     self.selectHourButton.font        = [NSFont systemFontOfSize:titleFontSize_16];
     self.selectHourButton.tag         = MiddleSubViewTypeHour;
-    self.daYunLabel1.font             = [NSFont systemFontOfSize:titleFontSize_24];
-    self.daYunLabel2.font             = [NSFont systemFontOfSize:titleFontSize_24];
-    self.daYunLabel3.font             = [NSFont systemFontOfSize:titleFontSize_24];
-    self.daYunLabel4.font             = [NSFont systemFontOfSize:titleFontSize_24];
-    self.daYunLabel5.font             = [NSFont systemFontOfSize:titleFontSize_24];
-    self.daYunLabel6.font             = [NSFont systemFontOfSize:titleFontSize_24];
-    self.daYunLabel7.font             = [NSFont systemFontOfSize:titleFontSize_24];
-    self.textField1.font              = [NSFont systemFontOfSize:titleFontSize_24];
-    self.textField2.font              = [NSFont systemFontOfSize:titleFontSize_24];
+    self.daYunLabel1.font             = [NSFont systemFontOfSize:titleFontSize_20];
+    self.daYunLabel2.font             = [NSFont systemFontOfSize:titleFontSize_20];
+    self.daYunLabel3.font             = [NSFont systemFontOfSize:titleFontSize_20];
+    self.daYunLabel4.font             = [NSFont systemFontOfSize:titleFontSize_20];
+    self.daYunLabel5.font             = [NSFont systemFontOfSize:titleFontSize_20];
+    self.daYunLabel6.font             = [NSFont systemFontOfSize:titleFontSize_20];
+    self.daYunLabel7.font             = [NSFont systemFontOfSize:titleFontSize_20];
+    self.textField1.font              = [NSFont systemFontOfSize:titleFontSize_20];
+    self.textField2.font              = [NSFont systemFontOfSize:titleFontSize_20];
 
     self.yearLabel.wantsLayer         = YES;
     self.yearLabel.layer.borderWidth  = 1.0f;
-    self.yearLabel.layer.borderColor  = [NSColor blackColor].CGColor;
+    self.yearLabel.layer.borderColor  = [NSColor lightGrayColor].CGColor;
 
     self.monthLabel.wantsLayer        = YES;
     self.monthLabel.layer.borderWidth = 1.0f;
-    self.monthLabel.layer.borderColor = [NSColor blackColor].CGColor;
+    self.monthLabel.layer.borderColor = [NSColor lightGrayColor].CGColor;
 
     self.dayLabel.wantsLayer          = YES;
     self.dayLabel.layer.borderWidth   = 1.0f;
-    self.dayLabel.layer.borderColor   = [NSColor blackColor].CGColor;
+    self.dayLabel.layer.borderColor   = [NSColor lightGrayColor].CGColor;
 
     self.hourLabel.wantsLayer         = YES;
     self.hourLabel.layer.borderWidth  = 1.0f;
-    self.hourLabel.layer.borderColor  = [NSColor blackColor].CGColor;
+    self.hourLabel.layer.borderColor  = [NSColor lightGrayColor].CGColor;
 
     [self.view setBackgroundColor:[NSColor whiteColor]];
     self.view.layer.borderColor       = [NSColor blackColor].CGColor;

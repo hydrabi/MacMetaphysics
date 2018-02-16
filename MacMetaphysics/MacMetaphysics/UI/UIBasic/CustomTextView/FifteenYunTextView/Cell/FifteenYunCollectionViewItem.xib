@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FifteenYunCollectionViewItem"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aE7-vJ-ZXJ">
+                    <rect key="frame" x="8" y="47" width="38" height="18"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2027" id="44s-vn-y0x">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kv5-76-os4">
+                    <rect key="frame" x="42" y="45" width="45" height="24"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="乙巳" id="bVb-xj-fCy">
+                        <font key="font" metaFont="system" size="20"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LWr-u1-SPI">
+                    <rect key="frame" x="83" y="47" width="33" height="18"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="辛亥" id="8ir-FQ-s77">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hp2-ID-qLp">
+                    <rect key="frame" x="112" y="47" width="9" height="18"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="Y7m-vZ-oMc">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hp2-ID-qLp" firstAttribute="leading" secondItem="LWr-u1-SPI" secondAttribute="trailing" id="0L3-WO-Dfa"/>
+                <constraint firstItem="LWr-u1-SPI" firstAttribute="leading" secondItem="kv5-76-os4" secondAttribute="trailing" id="NLK-pr-Xra"/>
+                <constraint firstItem="aE7-vJ-ZXJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="PPD-R9-gDC"/>
+                <constraint firstItem="LWr-u1-SPI" firstAttribute="bottom" secondItem="kv5-76-os4" secondAttribute="bottom" constant="-2" id="RVf-6n-90K"/>
+                <constraint firstItem="hp2-ID-qLp" firstAttribute="bottom" secondItem="LWr-u1-SPI" secondAttribute="bottom" id="h6a-Y8-L9R"/>
+                <constraint firstItem="kv5-76-os4" firstAttribute="bottom" secondItem="aE7-vJ-ZXJ" secondAttribute="bottom" constant="2" id="huD-bz-DVi"/>
+                <constraint firstItem="kv5-76-os4" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="q6y-n4-5Hu"/>
+                <constraint firstItem="kv5-76-os4" firstAttribute="leading" secondItem="aE7-vJ-ZXJ" secondAttribute="trailing" id="zYc-cB-LSZ"/>
+            </constraints>
+            <point key="canvasLocation" x="116" y="73.5"/>
+        </customView>
+        <collectionViewItem id="Sru-up-U2P" customClass="FifteenYunCollectionViewItem">
+            <connections>
+                <outlet property="liuNianLabel" destination="kv5-76-os4" id="X9y-BF-r71"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="FKk-Zl-G55"/>
+                <outlet property="xiaoYunLabel" destination="LWr-u1-SPI" id="rJP-oI-SSv"/>
+                <outlet property="yearLabel" destination="aE7-vJ-ZXJ" id="OWu-Pu-Tzv"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+</document>

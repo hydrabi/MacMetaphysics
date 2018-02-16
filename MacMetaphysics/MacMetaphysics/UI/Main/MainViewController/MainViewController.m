@@ -80,6 +80,11 @@
     
     self.shuangZaoTextView = [ShuangZaoTextView addWithParentViewController:self];
     self.shuangZaoTextView.view.hidden = YES;
+    
+    self.fifteenYunTextView = [[FifteenYunTextView alloc] init];
+    self.fifteenYunTextView.view.hidden = YES;
+    [self addChildViewController:self.fifteenYunTextView];
+    [self.view addSubview:self.fifteenYunTextView.view];
 }
 
 -(void)makeConstraints{
@@ -157,14 +162,14 @@
 //        make.height.equalTo(daYunTextViewHeight);
 //    }];
 //    
-//    [self.fifteenYunTextView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
-//        make.top.equalTo(self.bottomContentView.top).offset(tableViewHeaderHeight);
-//        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-//        make.height.equalTo(daYunSubTextViewHeight);
-//    }];
-//    
+    [self.fifteenYunTextView.view makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
+        make.top.equalTo(self.bottomContentView.view.top).offset(tableViewHeaderHeight - 10);
+        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
+        make.height.equalTo(daYunSubTextViewHeight);
+    }];
+//
 //    [self.normalTextView makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)
 //        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
@@ -275,12 +280,12 @@
       deliverOnMainThread]
      subscribeNext:^(id _){
          @strongify(self)
-//         if(mainViewModel.fifteenYunData.fifteenYunSelectedNumber != -1){
-//             [self resetCurrentTextView:self.fifteenYunTextView];
-//         }
-//         else{
-//             [self resetCurrentTextView:nil];
-//         }
+         if(mainViewModel.fifteenYunData.fifteenYunSelectedNumber != -1){
+             [self resetCurrentTextView:self.fifteenYunTextView.view];
+         }
+         else{
+             [self resetCurrentTextView:nil];
+         }
      }];
     
     //节气表选中操作

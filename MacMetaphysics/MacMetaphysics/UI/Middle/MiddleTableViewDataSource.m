@@ -12,7 +12,7 @@
 
 static NSString *cellIdentifier = @"cellIdentifier";
 static CGFloat collectionWidth = 53.0f;
-static CGFloat collectionHeight = 26.0f;
+static CGFloat collectionHeight = 24.0f;
 
 @interface MiddleTableViewDataSource()
 @property (nonatomic,weak)NSCollectionView *collectionView;
@@ -65,6 +65,7 @@ static CGFloat collectionHeight = 26.0f;
     if(shenShaArr.count>indexPath.item){
         cell.shenShaLabel.text = shenShaArr[indexPath.item];
     }
+    
     return cell;
 }
 

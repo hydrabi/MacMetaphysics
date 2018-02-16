@@ -11,6 +11,7 @@
 #import "NSString+Addition.h"
 #import "MainViewModel.h"
 #import "NSTextField+Addition.h"
+#import "GroupBottomXiaoYunView.h"
 
 static CGFloat alphaNumber = 0.3;
 
@@ -24,24 +25,58 @@ static CGFloat alphaNumber = 0.3;
 
 -(void)awakeFromNib{
     [super awakeFromNib];
-    self.mainTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_40];
-    self.topTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_24];
-    self.bottomNumberTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.mainTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.topTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_14];
+    self.bottomNumberTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_14];
     
     self.hideTableViewButton.textColor = [NSColor blackColor];
     self.hideTableViewButton.font = [NSFont systemFontOfSize:titleFontSize_14];
     self.hideTableViewButton.text = @"●";
     
-    
-    self.topTitleLabel.hidden = YES;
     self.translatesAutoresizingMaskIntoConstraints = NO;
 }
 
--(IBAction)hiddenAction:(id)sender{
+-(void)initialize{
+    @weakify(self)
+    
+    //隐藏按钮点击
+    [[self.hideTableViewButton rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+        @strongify(self)
+         if(self.tableViewTag == 0){
+             [self recoverAction];
+         }
+         else{
+             [self hiddenAction];
+         }
+     }];
+    
+    [[self.bottomNumberButton rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+        @strongify(self)
+         [self selectHeader];
+     }];
+    
+    [[self.ganButton rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self ganButtonClick];
+     }];
+    
+    [[self.zhiButton rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self zhiButtonClick];
+     }];
+}
+
+//非第一列头部隐藏按钮点击
+-(void)hiddenAction{
     [[MainViewModel sharedInstance] hiddenTableViewWithTag:self.tableViewTag];
 }
 
--(IBAction)selectHeader:(id)sender{
+//点击底部数字
+-(void)selectHeader{
     MainViewModel *main = [MainViewModel sharedInstance];
     if(main.hadHiddenBottomTableView){
         //不是隐藏的部分才可以点击数字显示底部大运窗口
@@ -55,7 +90,20 @@ static CGFloat alphaNumber = 0.3;
     
 }
 
+//第一纵列的头部不需要显示任何消息
+-(void)clearFirstHeader{
+    self.mainTitleLabel.text = @"";
+    self.topTitleLabel.text = @"";
+    self.bottomNumberTitleLabel.text = @"";
+}
+
 -(void)reloadData{
+    
+    if(self.tableViewTag == 0){
+        [self clearFirstHeader];
+        return;
+    }
+    
     MainViewModel *main = [MainViewModel sharedInstance];
     if(main.fifteenYunData.fifteenYunSelectedNumber == self.tableViewTag){
         [self.bottomNumberTitleLabel setBoldFont];
@@ -125,6 +173,12 @@ static CGFloat alphaNumber = 0.3;
                                             range:NSMakeRange(0, 1)];
                     self.mainTitleLabel.attributedStringValue = attributeString;
                 }
+                else{
+                    [attributeString addAttribute:NSBackgroundColorAttributeName
+                                            value:[NSColor whiteColor]
+                                            range:NSMakeRange(0, 1)];
+                    self.mainTitleLabel.attributedStringValue = attributeString;
+                }
                 
                 if(location.selectedBranch){
                     [attributeString addAttribute:NSBackgroundColorAttributeName
@@ -132,11 +186,15 @@ static CGFloat alphaNumber = 0.3;
                                             range:NSMakeRange(1, 1)];
                     self.mainTitleLabel.attributedStringValue = attributeString;
                 }
+                else{
+                    [attributeString addAttribute:NSBackgroundColorAttributeName
+                                            value:[NSColor whiteColor]
+                                            range:NSMakeRange(1, 1)];
+                    self.mainTitleLabel.attributedStringValue = attributeString;
+                }
             }
-            
         }
     }
-    
 }
 
 //重置起运数目
@@ -146,6 +204,26 @@ static CGFloat alphaNumber = 0.3;
     if(bottomData.canStart){
         self.bottomNumberTitleLabel.text = [NSString stringWithFormat:@"%ld",(self.tableViewTag - 1) * 10 + bottomData.qiYunShu] ;
     }
+}
+
+#pragma mark - 第一列头部点击事件
+//恢复操作
+-(void)recoverAction{
+    MainViewModel *mainViewModel = [MainViewModel sharedInstance];
+    //隐藏流年窗口
+    LiuNianData *liuNianData = mainViewModel.liuNianData;
+    [liuNianData.bottomLocationDic removeAllObjects];
+    liuNianData.firstLocation = nil;
+    liuNianData.secondLocation = nil;
+    mainViewModel.hadShowLiuNianTextView = NO;
+    //隐藏底部大运窗口
+    [mainViewModel selectTableViewHeaderWithTag:mainViewModel.fifteenYunData.fifteenYunSelectedNumber];
+    //清空15运
+    FifteenYunData *fifteenData = mainViewModel.fifteenYunData;
+    [fifteenData clearData];
+    
+    [(RACSubject*)mainViewModel.LiuNianTextViewOperationSig sendNext:nil];
+    [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
 }
 
 #pragma mark - 隐藏
@@ -158,17 +236,23 @@ static CGFloat alphaNumber = 0.3;
 }
 
 #pragma mark - 干支按钮点击
--(IBAction)ganButtonClick:(id)sender{
+-(void)ganButtonClick{
     MainViewModel *mainViewModel = [MainViewModel sharedInstance];
     FifteenYunData *fifteenData = mainViewModel.fifteenYunData;
     if(fifteenData.selectLocationArr.count>self.tableViewTag){
         DaYunTitleSelectLocation *location = fifteenData.selectLocationArr[self.tableViewTag];
         location.selectedGan = !location.selectedGan;
         [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
+        
+        NSLog(@"点中的干：%d",self.tableViewTag);
+        NSLog(@"实际的item：%d",[self.parentGroupView getRow]);
+        if(self.tableViewTag == 7){
+            NSLog(@"%@",self.mainTitleLabel.text);
+        }
     }
 }
 
--(IBAction)zhiButtonClick:(id)sender{
+-(void)zhiButtonClick{
     MainViewModel *mainViewModel = [MainViewModel sharedInstance];
     FifteenYunData *fifteenData = mainViewModel.fifteenYunData;
     if(fifteenData.selectLocationArr.count>self.tableViewTag){
@@ -176,7 +260,6 @@ static CGFloat alphaNumber = 0.3;
         location.selectedBranch = !location.selectedBranch;
         [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
     }
-    
 }
 
 @end

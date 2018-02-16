@@ -18,7 +18,7 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     self.shenShaLabel.textColor = [NSColor blackColor];
-    self.shenShaLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.shenShaLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
     [self.shenShaLabel setBackgroundColor:[NSColor clearColor]];
 }
 

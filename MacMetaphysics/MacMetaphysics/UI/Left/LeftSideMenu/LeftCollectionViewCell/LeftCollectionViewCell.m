@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     self.titleLabel.textColor = [NSColor blackColor];
-    self.titleLabel.font = [NSFont systemFontOfSize:titleFontSize_24];
+    self.titleLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor clearColor].CGColor;

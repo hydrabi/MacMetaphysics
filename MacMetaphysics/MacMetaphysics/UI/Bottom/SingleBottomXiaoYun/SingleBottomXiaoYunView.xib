@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="fIK-YK-vpF" customClass="SingleBottomXiaoYunView">
+            <rect key="frame" x="0.0" y="0.0" width="105" height="22"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wyh-zI-tuS">
+                    <rect key="frame" x="-2" y="4" width="32" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2017" id="guK-uV-UVO">
+                        <font key="font" metaFont="system" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="onn-nb-KNJ" customClass="CustomColorLabel">
+                    <rect key="frame" x="50" y="4" width="57" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="53" id="D6L-18-4Cn"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="丁酉" id="Qey-MV-PbY">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="wyh-zI-tuS" firstAttribute="bottom" secondItem="onn-nb-KNJ" secondAttribute="bottom" id="FMV-im-eLO"/>
+                <constraint firstItem="wyh-zI-tuS" firstAttribute="leading" secondItem="fIK-YK-vpF" secondAttribute="leading" id="cBV-ZC-Sfh"/>
+                <constraint firstAttribute="trailing" secondItem="onn-nb-KNJ" secondAttribute="trailing" id="g6N-m9-nF4"/>
+                <constraint firstAttribute="bottom" secondItem="onn-nb-KNJ" secondAttribute="bottom" constant="4" id="whs-tz-ea2"/>
+            </constraints>
+            <connections>
+                <outlet property="liuNianLabel" destination="onn-nb-KNJ" id="tKC-In-7fk"/>
+                <outlet property="yearLabel" destination="wyh-zI-tuS" id="pfU-gA-9Ts"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="95"/>
+        </customView>
+    </objects>
+</document>

@@ -32,21 +32,21 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView focusRingType="none" id="h1c-ED-sMB">
-            <rect key="frame" x="0.0" y="0.0" width="1266" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="1266" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="myp-lM-vl9">
-                    <rect key="frame" x="14" y="65" width="53" height="29"/>
+                    <rect key="frame" x="14" y="56" width="45" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="公历" id="CEQ-nr-YJC">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7yB-EC-XcR">
-                    <rect key="frame" x="73" y="60" width="90" height="40"/>
+                    <rect key="frame" x="65" y="53" width="90" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="6Ve-g9-EUW"/>
+                        <constraint firstAttribute="height" constant="30" id="6Ve-g9-EUW"/>
                         <constraint firstAttribute="width" constant="90" id="XQ3-SW-pZn"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="mTM-zN-tRw" customClass="VerticalCenterTextFieldCell">
@@ -56,17 +56,17 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-7O-sTx">
-                    <rect key="frame" x="169" y="65" width="29" height="29"/>
+                    <rect key="frame" x="161" y="56" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="年" id="rHm-9n-Chs">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Voo-xo-cDE">
-                    <rect key="frame" x="204" y="60" width="60" height="40"/>
+                    <rect key="frame" x="192" y="53" width="60" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="4ft-Jv-lLO"/>
+                        <constraint firstAttribute="height" constant="30" id="4ft-Jv-lLO"/>
                         <constraint firstAttribute="width" constant="60" id="s51-x7-AgG"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="gXC-Qg-Odl" customClass="VerticalCenterTextFieldCell">
@@ -76,17 +76,17 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-Kn-oeP">
-                    <rect key="frame" x="270" y="65" width="29" height="29"/>
+                    <rect key="frame" x="258" y="56" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="月" id="tNH-Fu-lT3">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hrP-k3-eKf">
-                    <rect key="frame" x="305" y="60" width="60" height="40"/>
+                    <rect key="frame" x="289" y="53" width="60" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="AVF-Ku-QJr"/>
+                        <constraint firstAttribute="height" constant="30" id="AVF-Ku-QJr"/>
                         <constraint firstAttribute="width" constant="60" id="s9O-nz-qXj"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="s29-tZ-Vgo" customClass="VerticalCenterTextFieldCell">
@@ -96,17 +96,17 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-Sj-VNv">
-                    <rect key="frame" x="371" y="65" width="29" height="29"/>
+                    <rect key="frame" x="355" y="56" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="日" id="LcH-Fc-00C">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-O3-X1i">
-                    <rect key="frame" x="406" y="60" width="60" height="40"/>
+                    <rect key="frame" x="386" y="53" width="60" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="FW4-IF-Vwc"/>
+                        <constraint firstAttribute="height" constant="30" id="FW4-IF-Vwc"/>
                         <constraint firstAttribute="width" constant="60" id="r96-fr-wqN"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="uH1-GS-qDo" customClass="VerticalCenterTextFieldCell">
@@ -116,22 +116,22 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wsz-nk-KCE">
-                    <rect key="frame" x="574" y="65" width="46" height="30"/>
+                    <rect key="frame" x="542" y="53" width="46" height="30"/>
                     <buttonCell key="cell" type="roundTextured" title="▼" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Ss2-YI-dPe">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="20"/>
                     </buttonCell>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-Sc-u1b">
-                    <rect key="frame" x="472" y="65" width="29" height="29"/>
+                    <rect key="frame" x="452" y="56" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="时" id="OYn-3F-qhW">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g5k-2z-Lhb">
-                    <rect key="frame" x="685" y="60" width="40" height="40"/>
+                    <rect key="frame" x="696" y="48" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="djv-D7-DMm"/>
                         <constraint firstAttribute="height" constant="40" id="n5v-Xf-CIi"/>
@@ -145,9 +145,9 @@
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eZG-ua-7kQ">
-                    <rect key="frame" x="733" y="60" width="180" height="40"/>
+                    <rect key="frame" x="744" y="53" width="180" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Eco-OB-ZeD"/>
+                        <constraint firstAttribute="height" constant="30" id="Eco-OB-ZeD"/>
                         <constraint firstAttribute="width" constant="180" id="tfp-cr-Ebc"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="gGn-YC-9DI">
@@ -157,7 +157,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NDK-YQ-DY1">
-                    <rect key="frame" x="923" y="60" width="180" height="40"/>
+                    <rect key="frame" x="934" y="53" width="180" height="30"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="cX9-8q-DYX">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -165,36 +165,36 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yF1-gM-7G2">
-                    <rect key="frame" x="1117" y="65" width="70" height="29"/>
+                    <rect key="frame" x="1128" y="56" width="59" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="胎元 -" id="827-D0-eih">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bQ5-yU-HkT">
-                    <rect key="frame" x="1199" y="65" width="53" height="29"/>
+                    <rect key="frame" x="1199" y="56" width="53" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="HA5-VX-08n"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="aVX-UP-AwL">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jV-e1-hke">
-                    <rect key="frame" x="14" y="16" width="53" height="29"/>
+                    <rect key="frame" x="14" y="12" width="45" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="农历" id="I1i-o2-JyY">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="taY-Hf-DaW">
-                    <rect key="frame" x="73" y="11" width="90" height="40"/>
+                    <rect key="frame" x="65" y="9" width="90" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="5N0-SH-XW4"/>
+                        <constraint firstAttribute="height" constant="30" id="5N0-SH-XW4"/>
                         <constraint firstAttribute="width" constant="90" id="SqA-7h-lbD"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="B70-bn-szV" customClass="VerticalCenterTextFieldCell">
@@ -204,18 +204,18 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OLv-u7-nQT">
-                    <rect key="frame" x="169" y="16" width="29" height="29"/>
+                    <rect key="frame" x="161" y="12" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="年" id="tBb-6h-WDU">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jLK-5N-59G">
-                    <rect key="frame" x="204" y="11" width="60" height="40"/>
+                    <rect key="frame" x="192" y="9" width="60" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="ENy-uk-0Eg"/>
-                        <constraint firstAttribute="height" constant="40" id="qbD-MS-FJN"/>
+                        <constraint firstAttribute="height" constant="30" id="qbD-MS-FJN"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="2Ca-BA-RnV" customClass="VerticalCenterTextFieldCell">
                         <font key="font" metaFont="system" size="20"/>
@@ -224,18 +224,18 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-fK-wmq">
-                    <rect key="frame" x="270" y="16" width="29" height="29"/>
+                    <rect key="frame" x="258" y="12" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="月" id="Tdb-WZ-IeB">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-gv-8Zt">
-                    <rect key="frame" x="305" y="11" width="60" height="40"/>
+                    <rect key="frame" x="289" y="9" width="60" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="9sv-iV-AP4"/>
-                        <constraint firstAttribute="height" constant="40" id="whS-oB-RsI"/>
+                        <constraint firstAttribute="height" constant="30" id="whS-oB-RsI"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="2Fd-Dg-Obq" customClass="VerticalCenterTextFieldCell">
                         <font key="font" metaFont="system" size="20"/>
@@ -244,17 +244,17 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-Ch-wHI">
-                    <rect key="frame" x="371" y="16" width="29" height="29"/>
+                    <rect key="frame" x="355" y="13" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="日" id="cVg-cO-lbd">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lnC-Vz-lpQ">
-                    <rect key="frame" x="406" y="11" width="60" height="40"/>
+                    <rect key="frame" x="386" y="9" width="60" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="YXf-sc-BUE"/>
+                        <constraint firstAttribute="height" constant="30" id="YXf-sc-BUE"/>
                         <constraint firstAttribute="width" constant="60" id="pxV-ep-9lF"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="BCv-oD-g4G" customClass="VerticalCenterTextFieldCell">
@@ -264,42 +264,42 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yT3-q0-pNx">
-                    <rect key="frame" x="472" y="16" width="29" height="29"/>
+                    <rect key="frame" x="452" y="12" width="25" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="时" id="LhS-Ie-SXa">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-EH-5S3">
-                    <rect key="frame" x="505" y="16" width="53" height="29"/>
+                    <rect key="frame" x="481" y="12" width="45" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="闰月" id="Fv6-Bx-G5i">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zeO-HM-Nb1">
-                    <rect key="frame" x="1117" y="16" width="70" height="29"/>
+                    <rect key="frame" x="1128" y="12" width="59" height="24"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="命宫 -" id="Fse-VK-L6B">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k9h-JR-tos">
-                    <rect key="frame" x="1199" y="16" width="53" height="29"/>
+                    <rect key="frame" x="1199" y="12" width="53" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="Cq7-rA-mjF"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="6S8-gV-XfL">
-                        <font key="font" metaFont="system" size="24"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gj7-Qd-c2s">
-                    <rect key="frame" x="574" y="16" width="46" height="30"/>
+                    <rect key="frame" x="542" y="9" width="46" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Ide-fD-rP8"/>
                         <constraint firstAttribute="width" constant="46" id="TTT-j7-3dD"/>
@@ -310,9 +310,9 @@
                     </buttonCell>
                 </button>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="emO-nt-rqk">
-                    <rect key="frame" x="733" y="11" width="370" height="40"/>
+                    <rect key="frame" x="744" y="9" width="370" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="HQf-f3-aah"/>
+                        <constraint firstAttribute="height" constant="30" id="HQf-f3-aah"/>
                         <constraint firstAttribute="width" constant="370" id="xSW-CK-5vW"/>
                     </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="qHU-FY-fGh">
@@ -322,7 +322,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6lq-HE-f5I">
-                    <rect key="frame" x="562" y="16" width="4" height="29"/>
+                    <rect key="frame" x="530" y="9" width="4" height="29"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="nfh-aB-w1r">
                         <font key="font" metaFont="system" size="24"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -392,7 +392,7 @@
                 <constraint firstItem="k9h-JR-tos" firstAttribute="leading" secondItem="zeO-HM-Nb1" secondAttribute="trailing" constant="16" id="wBr-RM-YhG"/>
                 <constraint firstItem="6lq-HE-f5I" firstAttribute="centerY" secondItem="c1t-EH-5S3" secondAttribute="centerY" id="x3f-Cr-vdp"/>
                 <constraint firstItem="taY-Hf-DaW" firstAttribute="leading" secondItem="2jV-e1-hke" secondAttribute="trailing" constant="8" id="x6b-NX-pzi"/>
-                <constraint firstItem="myp-lM-vl9" firstAttribute="top" secondItem="h1c-ED-sMB" secondAttribute="top" constant="16" id="y3f-Ys-9Bp"/>
+                <constraint firstItem="myp-lM-vl9" firstAttribute="top" secondItem="h1c-ED-sMB" secondAttribute="top" constant="10" id="y3f-Ys-9Bp"/>
                 <constraint firstItem="oEl-7O-sTx" firstAttribute="centerY" secondItem="myp-lM-vl9" secondAttribute="centerY" id="yCC-JH-Jog"/>
                 <constraint firstAttribute="trailing" secondItem="bQ5-yU-HkT" secondAttribute="trailing" constant="16" id="yHZ-JQ-TEf"/>
             </constraints>

@@ -8,4 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 @interface BottomContentView : NSViewController<NSTableViewDelegate,NSTableViewDataSource>
+@property (weak) IBOutlet NSCollectionView *bottomCollectionView;
+@property (weak) IBOutlet NSScrollView *scrollView;
+
 @end

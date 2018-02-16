@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="BottomCollectionViewItem">
+        <customObject id="-2" userLabel="File's Owner" customClass="FifteenYunTextView">
             <connections>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -16,11 +16,7 @@
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <point key="canvasLocation" x="185" y="144"/>
         </customView>
-        <collectionViewItem id="vMT-gy-eHf" customClass="BottomCollectionViewItem">
-            <connections>
-                <outlet property="view" destination="Hz6-mo-xeY" id="zdq-Ox-mhg"/>
-            </connections>
-        </collectionViewItem>
     </objects>
 </document>

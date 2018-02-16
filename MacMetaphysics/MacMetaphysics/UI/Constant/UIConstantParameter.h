@@ -79,18 +79,18 @@ typedef NS_ENUM(NSInteger,TopViewFormatterType){
 
 //1366 1024
 static const CGFloat screenWidth = 1366.0f;
-static const CGFloat screenHeight = 1024.0f;
+static const CGFloat screenHeight = 700.0f;
 static NSString *const iconFontName = @"17icon";
 
 static const CGFloat offset_16 = 16.0f;
 static const CGFloat contentViewOffset = 10.0f;         //左边菜单section之间的间距有用到
 static const CGFloat textViewTitleHeight = 40.0f;
 
-static const CGFloat topViewHeight = 110.0f;
+static const CGFloat topViewHeight = 90.0f;
 
 //左边菜单
 static const CGFloat leftSideTableViewWidth = 125.0f;
-static const CGFloat leftSideTableViewItemHeight = 45.0f;
+static const CGFloat leftSideTableViewItemHeight = 30.0f;
 static const NSString *leftSideTableViewWidth_key = @"leftSideTableViewWidth_key";
 static const NSString *leftVerLineOffset_key = @"leftVerLineOffset_key";
 static const CGFloat leftVerLineWidth = 2.0f;
@@ -98,8 +98,8 @@ static const CGFloat leftVerLineOffset = 10.0f;
 static const CGFloat rightContentWidth = screenWidth - leftSideTableViewWidth - leftVerLineOffset-2*leftVerLineWidth;//1229
 
 //中间年月日时柱
-static const CGFloat middleViewHeight = 220.0f;
-static const CGFloat middleSubViewHeight = 160.0f;
+static const CGFloat middleViewHeight = 190.0f;
+static const CGFloat middleSubViewHeight = 140.0f;
 static const CGFloat middleMainButtonWidthAndheight = 90.0f;
 static const CGFloat middleViewOffset = (rightContentWidth - middleMainButtonWidthAndheight - 4*210)/5;//56.0f
 static const NSString *middleSubViewHeight_key = @"middleSubViewHeight_key";
@@ -108,7 +108,7 @@ static const NSString *middleSubViewHeight_key = @"middleSubViewHeight_key";
 static const CGFloat dateLabelHeight = 25.0f;//日期标签占用30高度
 
 //底部整体
-static const CGFloat bottomTextViewHeight = topViewHeight;
+static const CGFloat bottomTextViewHeight = 60;
 static const CGFloat bottomViewHeight = screenHeight - topViewHeight - contentViewOffset - middleViewHeight - contentViewOffset - bottomTextViewHeight - dateLabelHeight - contentViewOffset;
 static const CGFloat scrollViewWidth = rightContentWidth;
 static const CGFloat scrollViewHeight = bottomViewHeight;
@@ -119,7 +119,7 @@ static const CGFloat tableViewFirstVerOffset = 16.0f;
 static const CGFloat tableViewOffset = 48.0f;
 static const CGFloat tableViewMiddleOffset = 10.0f;
 static const NSInteger tableViewCount = 15;
-static const CGFloat tableViewHeaderHeight = 115.0f;
+static const CGFloat tableViewHeaderHeight = 76.0f;
 static const CGFloat tableViewCellHeight = (bottomViewHeight - tableViewHeaderHeight - tableViewMiddleOffset)/10;
 
 //大运
@@ -129,11 +129,11 @@ static const CGFloat daYunTableCellHeight = (daYunTextViewHeight-textViewTitleHe
 static const CGFloat daYunTableViewWidth = 123.0f;
 
 //十五运
-static const CGFloat daYunSubTableViewWidth = 164.0f;
+static const CGFloat daYunSubTableViewWidth = 120.0f;
 static const CGFloat daYunSubTextViewHeight = daYunTextViewHeight;
 static const NSInteger daYunSubTableViewCount = 10;
 static const CGFloat daYunSubTableViewMiddleOffset = 10.0f;
-static const CGFloat daYunSubTitleViewHeight = 70.0f;
+static const CGFloat daYunSubTitleViewHeight = 60.0f;
 static const CGFloat daYunSubTableCellHeight = (daYunSubTextViewHeight-daYunSubTitleViewHeight - daYunSubTableViewMiddleOffset) / daYunSubTableViewCount;
 
 //另外13个textView
@@ -156,7 +156,7 @@ static const CGFloat datePickerWidth = 100.0f;
 static const CGFloat datePickerHeight = 30.0f;
 
 #pragma mark - 字体
-static const CGFloat titleFontSize_80 =  80.0f;
+static const CGFloat titleFontSize_70 =  70.0f;
 static const CGFloat titleFontSize_55 =  55.0f;
 static const CGFloat titleFontSize_50 =  50.0f;
 static const CGFloat titleFontSize_40 =  40.0f;
@@ -168,6 +168,7 @@ static const CGFloat titleFontSize_20 =  20.0f;
 static const CGFloat titleFontSize_18 =  18.0f;
 static const CGFloat titleFontSize_16 =  16.0f;
 static const CGFloat titleFontSize_14 =  14.0f;
+static const CGFloat titleFontSize_12 =  12.0f;
 
 //改变颜色key
 static NSString *notificationKey_changeColor = @"notificationKey_changeColor";

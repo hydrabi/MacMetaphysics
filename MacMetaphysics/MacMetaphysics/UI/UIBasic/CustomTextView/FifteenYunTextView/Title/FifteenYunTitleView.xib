@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="8ZE-E7-z9p" customClass="FifteenYunTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-Yr-PgS">
+                    <rect key="frame" x="131" y="17" width="95" height="31"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="戊辰 45" id="CJA-5U-A4s">
+                        <font key="font" metaFont="system" size="26"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fBt-fL-HfI">
+                    <rect key="frame" x="14" y="0.0" width="329" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" id="2qR-ob-5N3">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fBt-fL-HfI" firstAttribute="top" secondItem="rdl-Yr-PgS" secondAttribute="bottom" id="81F-d4-Zxe"/>
+                <constraint firstItem="rdl-Yr-PgS" firstAttribute="centerX" secondItem="8ZE-E7-z9p" secondAttribute="centerX" id="9wD-uW-f6G"/>
+                <constraint firstItem="fBt-fL-HfI" firstAttribute="leading" secondItem="8ZE-E7-z9p" secondAttribute="leading" constant="16" id="GQe-xQ-gSj"/>
+                <constraint firstAttribute="bottom" secondItem="fBt-fL-HfI" secondAttribute="bottom" id="HWC-hz-jim"/>
+                <constraint firstAttribute="trailing" secondItem="fBt-fL-HfI" secondAttribute="trailing" constant="16" id="O4I-Lf-veV"/>
+                <constraint firstItem="rdl-Yr-PgS" firstAttribute="top" secondItem="8ZE-E7-z9p" secondAttribute="top" constant="10" id="X9g-pJ-oMv"/>
+            </constraints>
+            <connections>
+                <outlet property="textField" destination="fBt-fL-HfI" id="hn9-wS-Yhj"/>
+                <outlet property="titleLabel" destination="rdl-Yr-PgS" id="jN4-o7-YoC"/>
+            </connections>
+            <point key="canvasLocation" x="198.5" y="97.5"/>
+        </customView>
+    </objects>
+</document>

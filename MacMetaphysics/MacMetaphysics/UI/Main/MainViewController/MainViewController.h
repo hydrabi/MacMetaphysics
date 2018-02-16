@@ -14,6 +14,8 @@
 #import "BottomContentView.h"
 #import "SolarTermsCollectionView.h"
 #import "ShuangZaoTextView.h"
+#import "FifteenYunTextView.h"
+
 @interface MainViewController : BasicViewController
 
 /**
@@ -69,4 +71,9 @@
  双造视图
  */
 @property (nonatomic,strong)ShuangZaoTextView *shuangZaoTextView;
+
+/**
+ 十五运
+ */
+@property (nonatomic,strong)FifteenYunTextView *fifteenYunTextView;
 @end
