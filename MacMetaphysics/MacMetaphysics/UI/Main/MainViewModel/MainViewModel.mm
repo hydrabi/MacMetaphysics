@@ -57,9 +57,6 @@
                              @(LeftSideMenuTypeCaiFu),
                              
                              @(LeftSideMenuTypeGuanSi),
-                             @(LeftSideMenuTypeJiBing),
-                             @(LeftSideMenuTypeCountQiYunUseHour),
-                             @(LeftSideMenuTypeVersion),
                              ]
                          ];
     
@@ -204,7 +201,7 @@
                                indexPath:indexPath];
     
     [(RACSubject*)self.LiuNianTextViewOperationSig sendNext:nil];
-    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
+//    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
 }
 
 #pragma mark - 选择底部大运的某一个，显示15运
@@ -217,7 +214,7 @@
         self.fifteenYunData.fifteenYunSelectedNumber = -1;
     }
     [(RACSubject*)self.fifteenYunTextViewOperationSig sendNext:nil];
-    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
+//    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
     [(RACSubject*)self.reloadLeftTableSig sendNext:nil];
 }
 

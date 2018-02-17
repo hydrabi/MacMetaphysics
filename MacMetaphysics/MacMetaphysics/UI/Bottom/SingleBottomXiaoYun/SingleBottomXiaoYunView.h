@@ -18,6 +18,7 @@
 @property (nonatomic,weak)IBOutlet NSTextField *yearLabel;
 @property (nonatomic,weak)IBOutlet CustomColorLabel *liuNianLabel;
 @property (nonatomic,weak)GroupBottomXiaoYunView *parentGroupView;
+@property (nonatomic,assign)NSInteger myTag;
 
 -(void)hideContent;
 -(void)showContent;

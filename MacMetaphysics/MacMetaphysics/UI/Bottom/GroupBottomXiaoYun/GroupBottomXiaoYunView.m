@@ -14,7 +14,7 @@
 #import "BottomNormalTableViewHeader.h"
 #import "BottomGroupCollectionViewItem.h"
 #import "MainViewController.h"
-
+#import "AppDelegate.h"
 @interface GroupBottomXiaoYunView()
 @property (nonatomic,assign)NSInteger myTag;
 @property (nonatomic,strong)BottomNormalTableViewHeader *headerView;
@@ -51,6 +51,20 @@
     [self resetValue];
 }
 
+-(void)mouseDown:(NSEvent *)event{
+    [super mouseDown:event];
+    NSPoint point = event.locationInWindow;
+    NSPoint convertPoint = [self convertPoint:point fromView:nil];
+    
+    for(NSInteger i = 0;i<self.subViewArr.count;i++){
+        SingleBottomXiaoYunView *singleView = self.subViewArr[i];
+        if(NSPointInRect(convertPoint, singleView.frame)){
+            [self singleViewClick:singleView];
+            break;
+        }
+    }
+}
+
 -(void)UIConfig{
     self.translatesAutoresizingMaskIntoConstraints = NO;
     [self setUpSubView];
@@ -76,10 +90,12 @@
         SingleBottomXiaoYunView *singleView = [SingleBottomXiaoYunView instanceBasicNibView];
         singleView.parentGroupView = self;
         singleView.hidden = YES;
+        singleView.myTag = i;
         [self.subViewArr addObject:singleView];
         [self addSubview:singleView];
     }
 }
+
 
 -(void)layoutMySubView{
     
@@ -164,6 +180,30 @@
     MainViewController *viewController = (MainViewController*)viewModel.viewController;
     NSInteger row = [viewController.bottomContentView.bottomCollectionView indexPathForItem:self.parentViewItem].item;
     return row;
+}
+
+-(void)singleViewClick:(SingleBottomXiaoYunView*)signleView{
+    if(signleView.liuNianLabel.text.length>0){
+        MainViewModel *main = [MainViewModel sharedInstance];
+        
+        NSInteger section = signleView.myTag <=4?0:1;
+        NSInteger item = signleView.myTag<=4?signleView.myTag:signleView.myTag-5;
+        
+        //隐藏的时候不能点击
+        if(main.hadHiddenBottomTableView){
+            if(self.myTag < main.hiddenBottomTableViewTag){
+                [[MainViewModel sharedInstance] selectTableViewTag:self.myTag
+                                                         indexPath:[NSIndexPath indexPathForItem:item inSection:section]];
+            }
+        }
+        //展示
+        else{
+            [[MainViewModel sharedInstance] selectTableViewTag:self.myTag
+                                                     indexPath:[NSIndexPath indexPathForItem:item inSection:section]];
+        }
+        
+        [self resetValue];
+    }
 }
 
 @end

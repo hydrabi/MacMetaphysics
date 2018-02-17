@@ -15,6 +15,8 @@
 #import "SolarTermsCollectionView.h"
 #import "ShuangZaoTextView.h"
 #import "FifteenYunTextView.h"
+#import "NormalTextView.h"
+#import "LiuNianTextView.h"
 
 @interface MainViewController : BasicViewController
 
@@ -76,4 +78,14 @@
  十五运
  */
 @property (nonatomic,strong)FifteenYunTextView *fifteenYunTextView;
+
+/**
+ 普通窗口
+ */
+@property (nonatomic,strong)NormalTextView *normalTextView;
+
+/**
+ 在双造中出现的底部空白textView,笔记的作用
+ */
+@property (nonatomic,strong)LiuNianTextView *liuNianTextView;
 @end

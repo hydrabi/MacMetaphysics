@@ -78,7 +78,7 @@ static NSString *headIdentifier = @"headIdentifier";
     LeftCollectionViewCell *cell = [collectionView makeItemWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     LeftSideMenuType type = [self.viewModel getSpecificMenuTypeWithIndexPath:indexPath];
-    cell.titleLabel.text = [self.viewModel getSpecificMenuTitleWithType:type];
+    [cell resetValueWithType:type];
     return cell;
 }
 

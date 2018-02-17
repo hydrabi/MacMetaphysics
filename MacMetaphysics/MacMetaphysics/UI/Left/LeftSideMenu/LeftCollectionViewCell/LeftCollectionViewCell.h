@@ -7,7 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "UIConstantParameter.h"
 @interface LeftCollectionViewCell : NSCollectionViewItem
 @property (weak) IBOutlet NSTextField *titleLabel;
+
+-(void)resetValueWithType:(LeftSideMenuType)type;
 @end

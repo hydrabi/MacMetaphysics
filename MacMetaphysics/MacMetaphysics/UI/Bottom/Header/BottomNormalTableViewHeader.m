@@ -242,13 +242,11 @@ static CGFloat alphaNumber = 0.3;
     if(fifteenData.selectLocationArr.count>self.tableViewTag){
         DaYunTitleSelectLocation *location = fifteenData.selectLocationArr[self.tableViewTag];
         location.selectedGan = !location.selectedGan;
-        [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
+//        [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
         
         NSLog(@"点中的干：%d",self.tableViewTag);
         NSLog(@"实际的item：%d",[self.parentGroupView getRow]);
-        if(self.tableViewTag == 7){
-            NSLog(@"%@",self.mainTitleLabel.text);
-        }
+        [self reloadData];
     }
 }
 
@@ -258,7 +256,8 @@ static CGFloat alphaNumber = 0.3;
     if(fifteenData.selectLocationArr.count>self.tableViewTag){
         DaYunTitleSelectLocation *location = fifteenData.selectLocationArr[self.tableViewTag];
         location.selectedBranch = !location.selectedBranch;
-        [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
+//        [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
+        [self reloadData];
     }
 }
 

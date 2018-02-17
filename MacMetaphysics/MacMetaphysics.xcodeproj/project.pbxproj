@@ -13,6 +13,8 @@
 		8015746D200B83C4006FE025 /* JiaZiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8015746B200B83C4006FE025 /* JiaZiCollectionViewCell.xib */; };
 		80157471200B8D10006FE025 /* JiaZiCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015746F200B8D10006FE025 /* JiaZiCollectionViewController.m */; };
 		80157472200B8D10006FE025 /* JiaZiCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80157470200B8D10006FE025 /* JiaZiCollectionViewController.xib */; };
+		801648E420386A32004AF608 /* LiuNianTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 801648E220386A32004AF608 /* LiuNianTextView.m */; };
+		801648E520386A32004AF608 /* LiuNianTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801648E320386A32004AF608 /* LiuNianTextView.xib */; };
 		801D671D20313AC800793050 /* BottomDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D671C20313AC800793050 /* BottomDataSource.m */; };
 		801D672020313EA400793050 /* SingleBottomXiaoYunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 801D671F20313EA400793050 /* SingleBottomXiaoYunView.m */; };
 		801D672320313FDE00793050 /* SingleBottomXiaoYunView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801D672220313FDE00793050 /* SingleBottomXiaoYunView.xib */; };
@@ -61,6 +63,8 @@
 		80B084121F8641D700449443 /* MainViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B084111F8641D700449443 /* MainViewController+CollectionView.m */; };
 		80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B084151F86817200449443 /* LeftCollectionViewCell.m */; };
 		80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B084161F86817200449443 /* LeftCollectionViewCell.xib */; };
+		80E1634D2037F42C009DFA19 /* NormalTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1634B2037F42C009DFA19 /* NormalTextView.m */; };
+		80E1634E2037F42C009DFA19 /* NormalTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E1634C2037F42C009DFA19 /* NormalTextView.xib */; };
 		80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */; };
 		80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */; };
 		9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9221E22B2029B993002CA146 /* NSPopover+Addition.m */; };
@@ -131,6 +135,9 @@
 		8015746E200B8D10006FE025 /* JiaZiCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiaZiCollectionViewController.h; sourceTree = "<group>"; };
 		8015746F200B8D10006FE025 /* JiaZiCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaZiCollectionViewController.m; sourceTree = "<group>"; };
 		80157470200B8D10006FE025 /* JiaZiCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiaZiCollectionViewController.xib; sourceTree = "<group>"; };
+		801648E120386A32004AF608 /* LiuNianTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiuNianTextView.h; sourceTree = "<group>"; };
+		801648E220386A32004AF608 /* LiuNianTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiuNianTextView.m; sourceTree = "<group>"; };
+		801648E320386A32004AF608 /* LiuNianTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiuNianTextView.xib; sourceTree = "<group>"; };
 		801D671B20313AC800793050 /* BottomDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomDataSource.h; sourceTree = "<group>"; };
 		801D671C20313AC800793050 /* BottomDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomDataSource.m; sourceTree = "<group>"; };
 		801D671E20313EA400793050 /* SingleBottomXiaoYunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleBottomXiaoYunView.h; sourceTree = "<group>"; };
@@ -211,6 +218,9 @@
 		80B084141F86817200449443 /* LeftCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftCollectionViewCell.h; sourceTree = "<group>"; };
 		80B084151F86817200449443 /* LeftCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftCollectionViewCell.m; sourceTree = "<group>"; };
 		80B084161F86817200449443 /* LeftCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftCollectionViewCell.xib; sourceTree = "<group>"; };
+		80E1634A2037F42C009DFA19 /* NormalTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalTextView.h; sourceTree = "<group>"; };
+		80E1634B2037F42C009DFA19 /* NormalTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalTextView.m; sourceTree = "<group>"; };
+		80E1634C2037F42C009DFA19 /* NormalTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalTextView.xib; sourceTree = "<group>"; };
 		80F470CD1FDCE1F500A71D77 /* CustomColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomColorLabel.h; sourceTree = "<group>"; };
 		80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomColorLabel.m; sourceTree = "<group>"; };
 		80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+LeftMenu.h"; sourceTree = "<group>"; };
@@ -388,6 +398,16 @@
 			path = ShuangZaoTextView;
 			sourceTree = "<group>";
 		};
+		801648E02038692B004AF608 /* LiuNianTextView */ = {
+			isa = PBXGroup;
+			children = (
+				801648E120386A32004AF608 /* LiuNianTextView.h */,
+				801648E220386A32004AF608 /* LiuNianTextView.m */,
+				801648E320386A32004AF608 /* LiuNianTextView.xib */,
+			);
+			path = LiuNianTextView;
+			sourceTree = "<group>";
+		};
 		801D671A20313A7F00793050 /* BottomDataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +480,8 @@
 		803A06241FF3D9E30023C892 /* CustomTextView */ = {
 			isa = PBXGroup;
 			children = (
+				801648E02038692B004AF608 /* LiuNianTextView */,
+				80E163492037F40F009DFA19 /* NormalTextView */,
 				805A5C0B2036CA69006FD57C /* FifteenYunTextView */,
 				80157465200B82A3006FE025 /* ShuangZaoTextView */,
 				801D9AF11FF7D5BA007F5EBC /* DatePickView */,
@@ -751,6 +773,16 @@
 				80B084161F86817200449443 /* LeftCollectionViewCell.xib */,
 			);
 			path = LeftCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		80E163492037F40F009DFA19 /* NormalTextView */ = {
+			isa = PBXGroup;
+			children = (
+				80E1634A2037F42C009DFA19 /* NormalTextView.h */,
+				80E1634B2037F42C009DFA19 /* NormalTextView.m */,
+				80E1634C2037F42C009DFA19 /* NormalTextView.xib */,
+			);
+			path = NormalTextView;
 			sourceTree = "<group>";
 		};
 		80F470CC1FDCE16700A71D77 /* CustomColorLabel */ = {
@@ -1089,6 +1121,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80E1634E2037F42C009DFA19 /* NormalTextView.xib in Resources */,
 				923165E31FE37B77007C6B27 /* BottomNormalTableViewHeader.xib in Resources */,
 				8015746D200B83C4006FE025 /* JiaZiCollectionViewCell.xib in Resources */,
 				92714F851FE2BBDD0078C41B /* BottomContentView.xib in Resources */,
@@ -1098,6 +1131,7 @@
 				8057E8EF1F837AB6003DF83E /* Assets.xcassets in Resources */,
 				806C30FF1FF535D800432737 /* SolarTermsMonthCell.xib in Resources */,
 				9250F704202C57F500720712 /* ShuangZaoTextView.xib in Resources */,
+				801648E520386A32004AF608 /* LiuNianTextView.xib in Resources */,
 				806C31131FF5362300432737 /* SolarTermsThirdCell.xib in Resources */,
 				806C310E1FF5361400432737 /* SolarTermsSecondCell.xib in Resources */,
 				801D672320313FDE00793050 /* SingleBottomXiaoYunView.xib in Resources */,
@@ -1224,6 +1258,7 @@
 				925CE7091FDBDA6500B319DB /* NSView+Addition.m in Sources */,
 				80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */,
 				801D6727203144D600793050 /* GroupBottomXiaoYunView.m in Sources */,
+				80E1634D2037F42C009DFA19 /* NormalTextView.m in Sources */,
 				806C310D1FF5361400432737 /* SolarTermsSecondCell.m in Sources */,
 				80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */,
 				92714F7F1FE2803F0078C41B /* VerticalCenterTextFieldCell.m in Sources */,
@@ -1240,6 +1275,7 @@
 				9279C0191F8F919800FA8DA9 /* MiddleViewData.m in Sources */,
 				9279C0161F8F919800FA8DA9 /* LiuNianData.m in Sources */,
 				801D671D20313AC800793050 /* BottomDataSource.m in Sources */,
+				801648E420386A32004AF608 /* LiuNianTextView.m in Sources */,
 				809896B01F852E51008ECA77 /* AppDelegate.m in Sources */,
 				9279C01B1F8F919800FA8DA9 /* ShenShaData.m in Sources */,
 				927170AC1FEB658100FDAB46 /* GALFlippedClipView.m in Sources */,

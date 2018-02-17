@@ -40,10 +40,14 @@ static CGFloat alphaNumber = 0.3;
 
 -(void)selectCell:(BOOL)select{
     if(select){
-        self.liuNianLabel.backgroundColor = [NSColor grayColor];
+        self.liuNianLabel.wantsLayer = YES;
+        self.liuNianLabel.layer.backgroundColor = [NSColor grayColor].CGColor;
     }
     else{
-        self.liuNianLabel.backgroundColor = [NSColor clearColor];
+        
+        self.liuNianLabel.wantsLayer = YES;
+        self.liuNianLabel.layer.backgroundColor = [NSColor clearColor].CGColor;
+
     }
 }
 

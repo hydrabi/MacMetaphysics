@@ -7,8 +7,9 @@
 //
 
 #import "LeftCollectionViewCell.h"
-#import "UIConstantParameter.h"
 
+#import "NSTextField+Addition.h"
+#import "MainViewModel.h"
 @interface LeftCollectionViewCell ()
 
 @end
@@ -23,6 +24,27 @@
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor clearColor].CGColor;
+}
+
+-(void)resetValueWithType:(LeftSideMenuType)type{
+    MainViewModel *main = [MainViewModel sharedInstance];
+    self.titleLabel.text = [main getSpecificMenuTitleWithType:type];
+    if(main.currentBottomSectionMenuType == type ||
+       [main.currentSelectTopSectionMenuTypeArr containsObject:@(type)]){
+        [self.titleLabel setBoldFont];
+    }
+    else{
+        [self.titleLabel setOriginalFont];
+    }
+    
+    if(type == LeftSideMenuTypeCountQiYunUseHour){
+        if(main.useHourCountQiYun){
+            [self.titleLabel setBoldFont];
+        }
+        else{
+            [self.titleLabel setOriginalFont];
+        }
+    }
 }
 
 @end

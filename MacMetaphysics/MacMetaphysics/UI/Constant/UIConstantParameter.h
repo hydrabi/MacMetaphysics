@@ -114,7 +114,7 @@ static const CGFloat scrollViewWidth = rightContentWidth;
 static const CGFloat scrollViewHeight = bottomViewHeight;
 
 //底部所有tableView的数据
-static const CGFloat tableViewWidth = 105.0f;
+static const CGFloat tableViewWidth = 70.0f;
 static const CGFloat tableViewFirstVerOffset = 16.0f;
 static const CGFloat tableViewOffset = 48.0f;
 static const CGFloat tableViewMiddleOffset = 10.0f;

@@ -55,6 +55,9 @@
     [self.view addSubview:self.bottomContentView.view];
     
     self.bottomNoteTextView = [[NSTextView alloc] init];
+//    self.bottomNoteTextView.wantsLayer = YES;
+//    self.bottomNoteTextView.layer.borderWidth = 1.0f;
+//    self.bottomNoteTextView.layer.borderColor = [NSColor blackColor].CGColor;
     [self.bottomNoteTextView setMinSize:NSMakeSize(1000, bottomTextViewHeight)];
     [self.view addSubview:self.bottomNoteTextView];
     
@@ -85,6 +88,16 @@
     self.fifteenYunTextView.view.hidden = YES;
     [self addChildViewController:self.fifteenYunTextView];
     [self.view addSubview:self.fifteenYunTextView.view];
+    
+    self.normalTextView = [[NormalTextView alloc] init];
+    self.normalTextView.view.hidden = YES;
+    [self addChildViewController:self.normalTextView];
+    [self.view addSubview:self.normalTextView.view];
+    
+    self.liuNianTextView = [[LiuNianTextView alloc] init];
+    [self addChildViewController:self.liuNianTextView];
+    self.liuNianTextView.view.hidden = YES;
+    [self.view addSubview:self.liuNianTextView.view];
 }
 
 -(void)makeConstraints{
@@ -144,14 +157,14 @@
         make.bottom.equalTo(self.view.bottom).offset(0);
         make.width.equalTo(300);
     }];
-//
-//    [self.liuNianTextView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
-//        make.top.equalTo(self.bottomContentView.bottom).offset(leftVerLineOffset);
-//        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-//        make.height.equalTo(bottomTextViewHeight);
-//    }];
+
+    [self.liuNianTextView.view makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
+        make.top.equalTo(self.bottomContentView.view.bottom).offset(leftVerLineOffset);
+        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
+        make.height.equalTo(bottomTextViewHeight);
+    }];
 //
 //    
 //    [self.daYunTextView makeConstraints:^(MASConstraintMaker *make){
@@ -169,15 +182,15 @@
         make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
         make.height.equalTo(daYunSubTextViewHeight);
     }];
-//
-//    [self.normalTextView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
-//        make.top.equalTo(self.bottomContentView.top).offset(tableViewHeaderHeight);
-//        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-//        make.height.equalTo(normalTextViewHeight);
-//    }];
-//    
+
+    [self.normalTextView.view makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.equalTo(self.secondVerLine.trailing).offset(0);
+        make.top.equalTo(self.bottomContentView.view.top).offset(tableViewHeaderHeight - 10);
+        make.trailing.equalTo(self.view.trailing).offset(0);
+        make.height.equalTo(normalTextViewHeight);
+    }];
+
     [self.shuangZaoTextView.view makeConstraints:^(MASConstraintMaker *make){
         @strongify(self)
         make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
@@ -193,14 +206,7 @@
         make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset+1));
         make.height.equalTo(bottomViewHeight);
     }];
-//
-//    [self.bottomNoteTextView makeConstraints:^(MASConstraintMaker *make){
-//        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
-//        make.top.equalTo(self.bottomContentView.bottom).offset(leftVerLineOffset);
-//        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-//        make.height.equalTo(bottomTextViewHeight);
-//    }];
+
 }
 
 -(void)resetCurrentTextView:(NSView*)view{
@@ -225,12 +231,12 @@
       deliverOnMainThread]
      subscribeNext:^(id _){
          @strongify(self)
-//         if([MainViewModel sharedInstance].hadShowLiuNianTextView){
-//             self.liuNianTextView.hidden = NO;
-//         }
-//         else{
-//             self.liuNianTextView.hidden = YES;
-//         }
+         if([MainViewModel sharedInstance].hadShowLiuNianTextView){
+             self.liuNianTextView.view.hidden = NO;
+         }
+         else{
+             self.liuNianTextView.view.hidden = YES;
+         }
      }];
     
     //左边菜单底部选项选中操作
@@ -254,8 +260,8 @@
                      //
                  default:
                  {
-//                     [self resetCurrentTextView:self.normalTextView];
-//                     [self.normalTextView reloadData];
+                     [self resetCurrentTextView:self.normalTextView.view];
+                     [self.normalTextView reloadData];
                  }
                      break;
              }
@@ -305,7 +311,7 @@
       deliverOnMainThread]
      subscribeNext:^(id _){
          @strongify(self)
-//         [self.leftSideMenuTabelView reloadData];
+         [self.leftSideMenuCollectionView reloadData];
      }];
     
     //在双造中出现的底部空白textView
