@@ -79,7 +79,7 @@ typedef NS_ENUM(NSInteger,TopViewFormatterType){
 
 //1366 1024
 static const CGFloat screenWidth = 1366.0f;
-static const CGFloat screenHeight = 700.0f;
+static const CGFloat screenHeight = 760.0f;
 static NSString *const iconFontName = @"17icon";
 
 static const CGFloat offset_16 = 16.0f;
@@ -108,7 +108,7 @@ static const NSString *middleSubViewHeight_key = @"middleSubViewHeight_key";
 static const CGFloat dateLabelHeight = 25.0f;//日期标签占用30高度
 
 //底部整体
-static const CGFloat bottomTextViewHeight = 60;
+static const CGFloat bottomTextViewHeight = 120;
 static const CGFloat bottomViewHeight = screenHeight - topViewHeight - contentViewOffset - middleViewHeight - contentViewOffset - bottomTextViewHeight - dateLabelHeight - contentViewOffset;
 static const CGFloat scrollViewWidth = rightContentWidth;
 static const CGFloat scrollViewHeight = bottomViewHeight;

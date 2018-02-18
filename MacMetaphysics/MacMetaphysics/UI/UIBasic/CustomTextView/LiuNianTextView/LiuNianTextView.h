@@ -11,4 +11,6 @@
 @interface LiuNianTextView : NSViewController
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 
+-(void)reloadData;
+
 @end

@@ -227,11 +227,12 @@
     @weakify(self)
     MainViewModel *mainViewModel = [MainViewModel sharedInstance];
     //流年底部textView操作
-    [[mainViewModel.LiuNianTextViewOperationSig
+    [[mainViewModel.leftMenuClickTextViewOperationSig
       deliverOnMainThread]
      subscribeNext:^(id _){
          @strongify(self)
-         if([MainViewModel sharedInstance].hadShowLiuNianTextView){
+         if([MainViewModel sharedInstance].currentBottomSectionMenuType != LeftSideMenuTypeEmpty){
+             [self.liuNianTextView reloadData];
              self.liuNianTextView.view.hidden = NO;
          }
          else{
@@ -260,8 +261,8 @@
                      //
                  default:
                  {
-                     [self resetCurrentTextView:self.normalTextView.view];
-                     [self.normalTextView reloadData];
+//                     [self resetCurrentTextView:self.normalTextView.view];
+//                     [self.normalTextView reloadData];
                  }
                      break;
              }

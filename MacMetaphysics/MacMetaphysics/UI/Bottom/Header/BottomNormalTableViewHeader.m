@@ -215,14 +215,13 @@ static CGFloat alphaNumber = 0.3;
     [liuNianData.bottomLocationDic removeAllObjects];
     liuNianData.firstLocation = nil;
     liuNianData.secondLocation = nil;
-    mainViewModel.hadShowLiuNianTextView = NO;
     //隐藏底部大运窗口
     [mainViewModel selectTableViewHeaderWithTag:mainViewModel.fifteenYunData.fifteenYunSelectedNumber];
     //清空15运
     FifteenYunData *fifteenData = mainViewModel.fifteenYunData;
     [fifteenData clearData];
     
-    [(RACSubject*)mainViewModel.LiuNianTextViewOperationSig sendNext:nil];
+//    [(RACSubject*)mainViewModel.LiuNianTextViewOperationSig sendNext:nil];
     [(RACSubject*)mainViewModel.reloadBottomTablesSig sendNext:nil];
 }
 

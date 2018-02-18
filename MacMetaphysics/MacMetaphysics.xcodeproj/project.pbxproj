@@ -53,6 +53,7 @@
 		806C8CEB1FFA27BD001DCE23 /* TopTextFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 806C8CEA1FFA27BD001DCE23 /* TopTextFieldFormatter.m */; };
 		8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8090BF861F8E6D6F00F0EB80 /* TopContentViewController.m */; };
 		8090BF891F8E6D6F00F0EB80 /* TopContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8090BF871F8E6D6F00F0EB80 /* TopContentViewController.xib */; };
+		8097BBC02039B1040081ACA9 /* LeftMenuBottomTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8097BBBF2039B1040081ACA9 /* LeftMenuBottomTextData.m */; };
 		809896B01F852E51008ECA77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809896AB1F852E50008ECA77 /* AppDelegate.m */; };
 		809896B41F852F37008ECA77 /* MainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809896B21F852F37008ECA77 /* MainWindowViewController.m */; };
 		809896B51F852F37008ECA77 /* MainWindowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 809896B31F852F37008ECA77 /* MainWindowViewController.xib */; };
@@ -201,6 +202,8 @@
 		8090BF851F8E6D6F00F0EB80 /* TopContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopContentViewController.h; sourceTree = "<group>"; };
 		8090BF861F8E6D6F00F0EB80 /* TopContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopContentViewController.m; sourceTree = "<group>"; };
 		8090BF871F8E6D6F00F0EB80 /* TopContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopContentViewController.xib; sourceTree = "<group>"; };
+		8097BBBE2039B1040081ACA9 /* LeftMenuBottomTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuBottomTextData.h; sourceTree = "<group>"; };
+		8097BBBF2039B1040081ACA9 /* LeftMenuBottomTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftMenuBottomTextData.m; sourceTree = "<group>"; };
 		809896AA1F852E50008ECA77 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		809896AB1F852E50008ECA77 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		809896B11F852F37008ECA77 /* MainWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowViewController.h; sourceTree = "<group>"; };
@@ -675,6 +678,15 @@
 			path = Formatter;
 			sourceTree = "<group>";
 		};
+		8097BBBD2039B0E30081ACA9 /* LeftMenuBottomTextData */ = {
+			isa = PBXGroup;
+			children = (
+				8097BBBE2039B1040081ACA9 /* LeftMenuBottomTextData.h */,
+				8097BBBF2039B1040081ACA9 /* LeftMenuBottomTextData.m */,
+			);
+			path = LeftMenuBottomTextData;
+			sourceTree = "<group>";
+		};
 		809896A91F852E50008ECA77 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,6 +933,7 @@
 		9279BFF21F8F919800FA8DA9 /* SubViewData */ = {
 			isa = PBXGroup;
 			children = (
+				8097BBBD2039B0E30081ACA9 /* LeftMenuBottomTextData */,
 				9279BFF31F8F919800FA8DA9 /* BottomViewData */,
 				9279BFF61F8F919800FA8DA9 /* CurrentDate */,
 				9279BFF91F8F919800FA8DA9 /* FifteenYunData */,
@@ -1283,6 +1296,7 @@
 				925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */,
 				9279C0341F8F91F400FA8DA9 /* NSTextField+Addition.m in Sources */,
 				9279C0311F8F91F400FA8DA9 /* NSNumber+Addition.m in Sources */,
+				8097BBC02039B1040081ACA9 /* LeftMenuBottomTextData.m in Sources */,
 				806C30FE1FF535D800432737 /* SolarTermsMonthCell.m in Sources */,
 				806C31081FF5360400432737 /* SolarTermsNumberCell.m in Sources */,
 				9279C01D1F8F919800FA8DA9 /* ShuangZaoData.m in Sources */,

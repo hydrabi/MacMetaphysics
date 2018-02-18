@@ -16,6 +16,7 @@
 #import "BottomViewData.h"
 #import "FifteenYunData.h"
 #import "LiuNianData.h"
+#import "LeftMenuBottomTextData.h"
 
 @interface MainViewModel : BasicViewModel
 //左边的菜单页面
@@ -53,10 +54,8 @@
 //隐藏或者显示的操作信号
 @property (nonatomic,strong)RACSignal *reloadBottomTablesSig;
 
-//底部正在隐藏textView
-@property (nonatomic,assign)BOOL hadShowLiuNianTextView;
-//隐藏或者显示最底部textView的操作信号
-@property (nonatomic,strong)RACSignal *LiuNianTextViewOperationSig;
+//隐藏或者显示最底部textView的操作信号 左边菜单点击时出现在底部
+@property (nonatomic,strong)RACSignal *leftMenuClickTextViewOperationSig;
 
 //隐藏或者显示15运的操作信号
 @property (nonatomic,strong)RACSignal *fifteenYunTextViewOperationSig;
@@ -78,6 +77,8 @@
 @property (nonatomic,strong)FifteenYunData *fifteenYunData;
 //流年数据
 @property (nonatomic,strong)LiuNianData *liuNianData;
+//左边菜单点击对应选项后出现在底部的textView 记录每个不同选项对应的数据
+@property (nonatomic,strong)LeftMenuBottomTextData *leftMenuBottomTextData;
 //1900~2100年节气精确到分的时间集合
 @property (nonatomic,strong)NSMutableDictionary *solarTermsTimeDic;
 

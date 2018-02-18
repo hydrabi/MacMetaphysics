@@ -8,7 +8,7 @@
 
 #import "LiuNianTextView.h"
 #import "UIConstantParameter.h"
-
+#import "MainViewModel.h"
 @interface LiuNianTextView ()
 
 @end
@@ -24,6 +24,16 @@
     self.view.layer.borderWidth = 1.0f;
     
     self.textView.font = [NSFont systemFontOfSize:titleFontSize_20];
+}
+
+-(void)reloadData{
+    LeftMenuBottomTextData *data = [MainViewModel sharedInstance].leftMenuBottomTextData;
+    NSString *tempString = [data getCurrentString];
+//    NSLog(@"");
+    self.textView.string = tempString;
+//    [self.textView becomeFirstResponder];
+//    [self.textView setNeedsLayout:YES];
+//    [self.textView layoutSubtreeIfNeeded];
 }
 
 @end

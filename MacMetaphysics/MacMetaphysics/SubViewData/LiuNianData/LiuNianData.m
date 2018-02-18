@@ -30,7 +30,6 @@
     BottomLocation *location = [[BottomLocation alloc] initWithTag:tag indexPath:indexPath];
     
     if([self.bottomLocationDic objectForKey:location.keyNumber] == nil){
-        mainViewModel.hadShowLiuNianTextView = YES;
         [self.bottomLocationDic setObject:location
                                                forKey:location.keyNumber];
         
@@ -38,7 +37,6 @@
     else{
         [self.bottomLocationDic removeObjectForKey:location.keyNumber];
         if(self.bottomLocationDic.count == 0){
-            mainViewModel.hadShowLiuNianTextView = NO;
         }
     }
     

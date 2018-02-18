@@ -77,6 +77,7 @@
     self.bottomData = [[BottomViewData alloc] init];
     self.fifteenYunData = [[FifteenYunData alloc] init];
     self.liuNianData = [[LiuNianData alloc] init];
+    self.leftMenuBottomTextData = [[LeftMenuBottomTextData alloc] init];
     self.lunar = new Lunar();
     
     self.solarTermsTimeDic = [AnalysisSolarTerm analysis];
@@ -88,7 +89,7 @@
     self.reloadBottomTablesSig = [[RACSubject subject]
                                   setNameWithFormat:@"tableViewHiddenOperationSig"];
     
-    self.LiuNianTextViewOperationSig = [[RACSubject subject] setNameWithFormat:@"bottomTextViewOperationSig"];
+    self.leftMenuClickTextViewOperationSig = [[RACSubject subject] setNameWithFormat:@"leftMenuClickTextViewOperationSig"];
     
     self.fifteenYunTextViewOperationSig = [[RACSubject subject] setNameWithFormat:@"fifteenYunTextViewOperationSig"];
     
@@ -200,8 +201,6 @@
     [self.liuNianData selectTableViewTag:tag
                                indexPath:indexPath];
     
-    [(RACSubject*)self.LiuNianTextViewOperationSig sendNext:nil];
-//    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
 }
 
 #pragma mark - 选择底部大运的某一个，显示15运
