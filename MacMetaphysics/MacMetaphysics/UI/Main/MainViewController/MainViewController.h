@@ -18,7 +18,7 @@
 #import "NormalTextView.h"
 #import "LiuNianTextView.h"
 
-@interface MainViewController : BasicViewController
+@interface MainViewController : BasicViewController<NSLayoutManagerDelegate>
 
 /**
  主要的viewModel
@@ -88,4 +88,10 @@
  在双造中出现的底部空白textView,笔记的作用
  */
 @property (nonatomic,strong)LiuNianTextView *liuNianTextView;
+
+@property (nonatomic,strong) NSBox *firHorline;
+@property (nonatomic,strong) NSBox *secondHorline;
+@property (nonatomic,strong) NSBox *firstBorderVerLine;
+@property (nonatomic,strong) NSBox *secondBorderVerLine;
+
 @end

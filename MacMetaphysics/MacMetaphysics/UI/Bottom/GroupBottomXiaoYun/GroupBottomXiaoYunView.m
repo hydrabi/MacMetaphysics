@@ -70,6 +70,8 @@
     [self setUpSubView];
     [self headerViewConfig];
     [self layoutMySubView];
+    
+//    [self setBackgroundColor:[NSColor redColor]];
 }
 
 -(void)headerViewConfig{

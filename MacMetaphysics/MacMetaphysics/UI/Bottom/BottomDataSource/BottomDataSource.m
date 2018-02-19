@@ -40,7 +40,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     flowLayout.scrollDirection = NSCollectionViewScrollDirectionHorizontal;
     flowLayout.sectionInset = NSEdgeInsetsMake(0,
                                                bottomCollectionViewEdgeInset,
-                                               0,
+                                               6,
                                                bottomCollectionViewEdgeInset);
     self.collectionView.collectionViewLayout = flowLayout;
     self.collectionView.delegate = self;

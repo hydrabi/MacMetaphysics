@@ -79,7 +79,7 @@ typedef NS_ENUM(NSInteger,TopViewFormatterType){
 
 //1366 1024
 static const CGFloat screenWidth = 1366.0f;
-static const CGFloat screenHeight = 760.0f;
+static const CGFloat screenHeight = 910.0f;
 static NSString *const iconFontName = @"17icon";
 
 static const CGFloat offset_16 = 16.0f;
@@ -108,7 +108,7 @@ static const NSString *middleSubViewHeight_key = @"middleSubViewHeight_key";
 static const CGFloat dateLabelHeight = 25.0f;//日期标签占用30高度
 
 //底部整体
-static const CGFloat bottomTextViewHeight = 120;
+static const CGFloat bottomTextViewHeight = 130;
 static const CGFloat bottomViewHeight = screenHeight - topViewHeight - contentViewOffset - middleViewHeight - contentViewOffset - bottomTextViewHeight - dateLabelHeight - contentViewOffset;
 static const CGFloat scrollViewWidth = rightContentWidth;
 static const CGFloat scrollViewHeight = bottomViewHeight;
@@ -119,12 +119,13 @@ static const CGFloat tableViewFirstVerOffset = 16.0f;
 static const CGFloat tableViewOffset = 48.0f;
 static const CGFloat tableViewMiddleOffset = 10.0f;
 static const NSInteger tableViewCount = 15;
-static const CGFloat tableViewHeaderHeight = 76.0f;
+static const CGFloat tableViewHeaderHeight = 96.0f;
 static const CGFloat tableViewCellHeight = (bottomViewHeight - tableViewHeaderHeight - tableViewMiddleOffset)/10;
 static const CGFloat bottomCollectionViewMinimumLineSpacing = 50.0f;
 static const CGFloat bottomCollectionViewEdgeInset = 20.0f;
+static const NSInteger bottomCollectionViewOneScreenRow = 8;
 //底部所有tableView的数据 70.0f
-static const CGFloat tableViewWidth = (screenWidth - (leftSideTableViewWidth + leftVerLineWidth+leftVerLineOffset+ leftVerLineWidth + bottomCollectionViewEdgeInset))/10 - bottomCollectionViewMinimumLineSpacing;
+static const CGFloat tableViewWidth = (screenWidth - (leftSideTableViewWidth + leftVerLineWidth+leftVerLineOffset+ leftVerLineWidth + bottomCollectionViewEdgeInset))/bottomCollectionViewOneScreenRow - bottomCollectionViewMinimumLineSpacing;
 
 //大运
 static const CGFloat daYunTextViewHeight = bottomViewHeight - tableViewHeaderHeight + bottomTextViewHeight+leftVerLineOffset;

@@ -25,12 +25,12 @@ static CGFloat alphaNumber = 0.3;
 
 -(void)awakeFromNib{
     [super awakeFromNib];
-    self.mainTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
-    self.topTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_14];
-    self.bottomNumberTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_14];
+    self.mainTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_30];
+    self.topTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.bottomNumberTitleLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
     
     self.hideTableViewButton.textColor = [NSColor blackColor];
-    self.hideTableViewButton.font = [NSFont systemFontOfSize:titleFontSize_14];
+    self.hideTableViewButton.font = [NSFont systemFontOfSize:titleFontSize_20];
     self.hideTableViewButton.text = @"●";
     
     self.translatesAutoresizingMaskIntoConstraints = NO;

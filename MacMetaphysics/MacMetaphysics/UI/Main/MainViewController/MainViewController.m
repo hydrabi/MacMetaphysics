@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "UIConstantParameter.h"
 #import "MainViewController+CollectionView.h"
+#import "NSView+Addition.h"
 
 @interface MainViewController ()
 
@@ -23,6 +24,7 @@
     [self UIConfig];
     [self makeConstraints];
     [self bindViewModel];
+    [self setUpBorderLine];
 }
 
 #pragma mark - UI
@@ -54,10 +56,16 @@
     [self addChildViewController:self.bottomContentView];
     [self.view addSubview:self.bottomContentView.view];
     
-    self.bottomNoteTextView = [[NSTextView alloc] init];
-//    self.bottomNoteTextView.wantsLayer = YES;
-//    self.bottomNoteTextView.layer.borderWidth = 1.0f;
-//    self.bottomNoteTextView.layer.borderColor = [NSColor blackColor].CGColor;
+    NSTextStorage *storage = [[NSTextStorage alloc] init];
+    NSLayoutManager *layout = [[NSLayoutManager alloc] init];
+    NSTextContainer *container = [NSTextContainer new];
+    [layout addTextContainer:container];
+    
+    layout.delegate = self;
+    [storage addLayoutManager:layout];
+    self.bottomNoteTextView = [[NSTextView alloc] initWithFrame:NSZeroRect
+                                                  textContainer:container];
+    self.bottomNoteTextView.font = [NSFont systemFontOfSize:titleFontSize_20];
     [self.bottomNoteTextView setMinSize:NSMakeSize(1000, bottomTextViewHeight)];
     [self.view addSubview:self.bottomNoteTextView];
     
@@ -98,6 +106,56 @@
     [self addChildViewController:self.liuNianTextView];
     self.liuNianTextView.view.hidden = YES;
     [self.view addSubview:self.liuNianTextView.view];
+    
+    
+}
+
+-(void)setUpBorderLine{
+    self.firHorline = [[NSBox alloc] init];
+    [self.firHorline setBoxType:NSBoxOldStyle];
+    [self.view addSubview:self.firHorline];
+    
+    self.secondHorline = [[NSBox alloc] init];
+    [self.secondHorline setBoxType:NSBoxOldStyle];
+    [self.view addSubview:self.secondHorline];
+    
+    self.firstBorderVerLine = [[NSBox alloc] init];
+    [self.firstBorderVerLine setBoxType:NSBoxOldStyle];
+    [self.view addSubview:self.firstBorderVerLine];
+    
+    self.secondBorderVerLine = [[NSBox alloc] init];
+    [self.secondBorderVerLine setBoxType:NSBoxOldStyle];
+    [self.view addSubview:self.secondBorderVerLine];
+    
+    [self.firHorline setBackgroundColor:[NSColor blackColor]];
+    [self.secondHorline setBackgroundColor:[NSColor blackColor]];
+    [self.firstBorderVerLine setBackgroundColor:[NSColor blackColor]];
+    [self.secondBorderVerLine setBackgroundColor:[NSColor blackColor]];
+    
+    @weakify(self)
+    [self.firHorline makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.trailing.top.equalTo(self.view).offset(0);
+        make.height.equalTo(2);
+    }];
+    
+    [self.secondHorline makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.trailing.bottom.equalTo(self.view).offset(0);
+        make.height.equalTo(2);
+    }];
+    
+    [self.firstBorderVerLine makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.leading.top.bottom.equalTo(self.view).offset(0);
+        make.width.equalTo(2);
+    }];
+    
+    [self.secondBorderVerLine makeConstraints:^(MASConstraintMaker *make){
+        @strongify(self)
+        make.trailing.top.bottom.equalTo(self.view).offset(0);
+        make.width.equalTo(2);
+    }];
 }
 
 -(void)makeConstraints{
@@ -320,6 +378,11 @@
         @strongify(self)
         self.bottomNoteTextView.hidden = !self.bottomNoteTextView.hidden;
     }];
+}
+
+#pragma mark - NSLayoutManagerDelegate
+-(CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(NSRect)rect{
+    return 6;
 }
 
 @end

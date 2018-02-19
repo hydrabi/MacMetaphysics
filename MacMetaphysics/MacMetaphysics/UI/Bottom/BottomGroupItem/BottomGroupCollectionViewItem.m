@@ -24,6 +24,7 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    
     self.groupView.parentViewItem = self;
 }
 

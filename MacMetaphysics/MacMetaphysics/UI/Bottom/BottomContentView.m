@@ -34,6 +34,8 @@ static NSString *columnIdentifier = @"columnIdentifier";
 //    [self collectionViewConfig];
     [self bottomCollectionViewConfig];
     [self bindViewModel];
+    
+//    [self.bottomCollectionView setBackgroundColor:[NSColor greenColor]];
 }
 
 -(void)viewDidAppear{

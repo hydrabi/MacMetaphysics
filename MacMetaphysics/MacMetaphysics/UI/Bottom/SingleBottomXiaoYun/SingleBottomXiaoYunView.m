@@ -21,8 +21,8 @@ static CGFloat alphaNumber = 0.3;
 
 -(void)awakeFromNib{
     
-    self.yearLabel.font = [NSFont systemFontOfSize:titleFontSize_12];
-    self.liuNianLabel.font = [NSFont systemFontOfSize:titleFontSize_16];
+    self.yearLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.liuNianLabel.font = [NSFont systemFontOfSize:titleFontSize_24];
     
 }
 
