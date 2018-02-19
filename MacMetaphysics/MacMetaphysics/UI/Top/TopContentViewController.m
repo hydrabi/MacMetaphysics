@@ -45,21 +45,25 @@
     self.gregorianDayTxt.delegate = self;
     [self.gregorianDayTxt setFormatter:formatterDay];
     
-    TopTextFieldFormatter *formatterHour = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeMonth];
+    TopTextFieldFormatter *formatterHour = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeHour];
     self.gregorianHourTxt.delegate = self;
     [self.gregorianHourTxt setFormatter:formatterHour];
     
+    TopTextFieldFormatter *luanrFormatterYear = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeYear];
     self.lunarYearTxt.delegate = self;
-    [self.lunarYearTxt setFormatter:formatterMonth];
+    [self.lunarYearTxt setFormatter:luanrFormatterYear];
     
+    TopTextFieldFormatter *lunarFormatterMonth = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeMonth];
     self.lunarMonthTxt.delegate = self;
-    [self.lunarMonthTxt setFormatter:formatterYear];
+    [self.lunarMonthTxt setFormatter:lunarFormatterMonth];
     
+    TopTextFieldFormatter *dayFormatterDay = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeDay];
     self.lunarDayTxt.delegate = self;
-    [self.lunarDayTxt setFormatter:formatterDay];
+    [self.lunarDayTxt setFormatter:dayFormatterDay];
     
+    TopTextFieldFormatter *lunarFormatterHour = [[TopTextFieldFormatter alloc] initWithType:TopViewFormatterTypeHour];
     self.lunarHourTxt.delegate = self;
-    [self.lunarHourTxt setFormatter:formatterHour];
+//    [self.lunarHourTxt setFormatter:lunarFormatterHour];
     
     self.firstTextField.font = [NSFont systemFontOfSize:titleFontSize_20];
     self.secondTextField.font = [NSFont systemFontOfSize:titleFontSize_20];

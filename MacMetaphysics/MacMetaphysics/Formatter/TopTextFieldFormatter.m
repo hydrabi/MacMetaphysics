@@ -49,7 +49,16 @@
             return NO;
         }
     }
-    
+    else if(self.formatterType == TopViewFormatterTypeHour){
+        //小时长度限制
+        if([*partialStringPtr length]>2){
+            return NO;
+        }
+        //月份天数大小限制
+        if([*partialStringPtr integerValue]>=24){
+            return NO;
+        }
+    }
     static NSCharacterSet *nonDecimalCharacters = nil;
     if (nonDecimalCharacters == nil) {
         nonDecimalCharacters = [[NSCharacterSet decimalDigitCharacterSet] invertedSet] ;

@@ -113,14 +113,18 @@ static const CGFloat bottomViewHeight = screenHeight - topViewHeight - contentVi
 static const CGFloat scrollViewWidth = rightContentWidth;
 static const CGFloat scrollViewHeight = bottomViewHeight;
 
-//底部所有tableView的数据
-static const CGFloat tableViewWidth = 70.0f;
+
+
 static const CGFloat tableViewFirstVerOffset = 16.0f;
 static const CGFloat tableViewOffset = 48.0f;
 static const CGFloat tableViewMiddleOffset = 10.0f;
 static const NSInteger tableViewCount = 15;
 static const CGFloat tableViewHeaderHeight = 76.0f;
 static const CGFloat tableViewCellHeight = (bottomViewHeight - tableViewHeaderHeight - tableViewMiddleOffset)/10;
+static const CGFloat bottomCollectionViewMinimumLineSpacing = 50.0f;
+static const CGFloat bottomCollectionViewEdgeInset = 20.0f;
+//底部所有tableView的数据 70.0f
+static const CGFloat tableViewWidth = (screenWidth - (leftSideTableViewWidth + leftVerLineWidth+leftVerLineOffset+ leftVerLineWidth + bottomCollectionViewEdgeInset))/10 - bottomCollectionViewMinimumLineSpacing;
 
 //大运
 static const CGFloat daYunTextViewHeight = bottomViewHeight - tableViewHeaderHeight + bottomTextViewHeight+leftVerLineOffset;

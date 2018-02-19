@@ -3,15 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[MainViewController resetDate]:MainViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[format stringFromDate:[NSDate date]]">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[BottomNormalTableViewHeader initialize]:BottomNormalTableViewHeader.m">
       </ContextState>
       <ContextState
-         contextName = "__34-[BottomContentView bindViewModel]_block_invoke:BottomContentView.m">
+         contextName = "-[BottomNormalTableViewHeader hiddenAction]:BottomNormalTableViewHeader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BottomContentView bottomCollectionViewConfig]:BottomContentView.m">
       </ContextState>
       <ContextState
          contextName = "-[MiddleSubView reloadData]:MiddleSubView.m">
@@ -20,9 +18,6 @@
                value = "liuQinData.dayTopLiuQin">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BottomContentView bottomCollectionViewConfig]:BottomContentView.m">
       </ContextState>
       <ContextState
          contextName = "-[BottomCollectionViewItem collectionView:itemForRepresentedObjectAtIndexPath:]:BottomCollectionViewItem.m">
@@ -41,10 +36,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[GroupBottomXiaoYunView mouseDown:]:GroupBottomXiaoYunView.m">
+         contextName = "-[GroupBottomXiaoYunView getRow]:GroupBottomXiaoYunView.m">
          <PersistentStrings>
             <PersistentString
-               value = "singleView.frame">
+               value = "[viewController.bottomContentView.bottomCollectionView indexPathForItem:self.parentViewItem]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TopContentViewController resetLunarValue]:TopContentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.date.lunarHour">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,21 +73,26 @@
          contextName = "-[TopContentViewController resetGregorianValue]:TopContentViewController.m">
       </ContextState>
       <ContextState
+         contextName = "-[GroupBottomXiaoYunView mouseDown:]:GroupBottomXiaoYunView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "singleView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[BottomNormalTableViewHeader resetDaYun]:BottomNormalTableViewHeader.m">
       </ContextState>
       <ContextState
-         contextName = "-[BottomNormalTableViewHeader initialize]:BottomNormalTableViewHeader.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[BottomNormalTableViewHeader hiddenAction]:BottomNormalTableViewHeader.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[GroupBottomXiaoYunView getRow]:GroupBottomXiaoYunView.m">
+         contextName = "-[MainViewController resetDate]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[viewController.bottomContentView.bottomCollectionView indexPathForItem:self.parentViewItem]">
+               value = "[format stringFromDate:[NSDate date]]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__34-[BottomContentView bindViewModel]_block_invoke:BottomContentView.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

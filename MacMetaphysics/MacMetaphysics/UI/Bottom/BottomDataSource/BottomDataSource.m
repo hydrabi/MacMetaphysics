@@ -36,9 +36,12 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     
     NSCollectionViewFlowLayout *flowLayout = [[NSCollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = NSMakeSize(tableViewWidth, scrollViewHeight);
-    flowLayout.minimumLineSpacing = 20.0f;
+    flowLayout.minimumLineSpacing = bottomCollectionViewMinimumLineSpacing;
     flowLayout.scrollDirection = NSCollectionViewScrollDirectionHorizontal;
-    flowLayout.sectionInset = NSEdgeInsetsMake(0, 20, 0, 20);
+    flowLayout.sectionInset = NSEdgeInsetsMake(0,
+                                               bottomCollectionViewEdgeInset,
+                                               0,
+                                               bottomCollectionViewEdgeInset);
     self.collectionView.collectionViewLayout = flowLayout;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
