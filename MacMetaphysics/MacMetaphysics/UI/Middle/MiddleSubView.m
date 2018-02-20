@@ -48,8 +48,8 @@
     
     self.topLeftLabel.font = [NSFont systemFontOfSize:titleFontSize_24];
     self.topRightLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
-    self.bottomLeftLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
-    self.bottomRightLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.bottomLeftLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
+    self.bottomRightLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
     
     self.topLeftLabel.alignment = NSTextAlignmentCenter;
 //        self.topLeftLabel.layer.borderWidth = 1.0f;

@@ -6,10 +6,13 @@
          contextName = "-[MiddleTableViewDataSource collectionView:itemForRepresentedObjectAtIndexPath:]:MiddleTableViewDataSource.m">
       </ContextState>
       <ContextState
-         contextName = "-[MainViewController resetDate]:MainViewController.m">
+         contextName = "__34-[ShuangZaoTextView bindViewModel]_block_invoke.206:ShuangZaoTextView.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DSCaptureSelectionController(CoreGraphics) preCGCapture]:DSCaptureSelectionController+CoreGraphics.m">
          <PersistentStrings>
             <PersistentString
-               value = "[format stringFromDate:[NSDate date]]">
+               value = "[NSScreen screens]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -34,10 +37,10 @@
                value = "self.lunarHourTxt.text">
             </PersistentString>
             <PersistentString
-               value = "self.lunarDayTxt.text">
+               value = "self.date.lunarHour">
             </PersistentString>
             <PersistentString
-               value = "self.date.lunarHour">
+               value = "self.lunarDayTxt.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -56,13 +59,13 @@
          contextName = "__34-[BottomContentView bindViewModel]_block_invoke:BottomContentView.m">
       </ContextState>
       <ContextState
+         contextName = "-[CurrentSelectDate resetLunarHourWithIncrease:]:CurrentSelectDate.m">
+      </ContextState>
+      <ContextState
          contextName = "__41-[TopContentViewController bindViewModel]_block_invoke.311:TopContentViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[MainViewController(CollectionView) collectionView:didSelectItemsAtIndexPaths:]:MainViewController+CollectionView.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CurrentSelectDate resetLunarHourWithIncrease:]:CurrentSelectDate.m">
       </ContextState>
       <ContextState
          contextName = "-[GroupBottomXiaoYunView mouseDown:]:GroupBottomXiaoYunView.m">
@@ -104,6 +107,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[MainViewController resetDate]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[format stringFromDate:[NSDate date]]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[BottomCollectionViewItem collectionView:itemForRepresentedObjectAtIndexPath:]:BottomCollectionViewItem.m">
          <PersistentStrings>
             <PersistentString
@@ -116,9 +127,6 @@
       </ContextState>
       <ContextState
          contextName = "-[BottomNormalTableViewHeader hiddenAction]:BottomNormalTableViewHeader.m">
-      </ContextState>
-      <ContextState
-         contextName = "__34-[ShuangZaoTextView bindViewModel]_block_invoke.206:ShuangZaoTextView.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

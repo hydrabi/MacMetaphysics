@@ -169,7 +169,7 @@ static CGFloat alphaNumber = 0.3;
                 if(location.selectedGan){
                     
                     [attributeString addAttribute:NSBackgroundColorAttributeName
-                                            value:[NSColor grayColor]
+                                            value:[NSColor lightGrayColor]
                                             range:NSMakeRange(0, 1)];
                     self.mainTitleLabel.attributedStringValue = attributeString;
                 }
@@ -182,7 +182,7 @@ static CGFloat alphaNumber = 0.3;
                 
                 if(location.selectedBranch){
                     [attributeString addAttribute:NSBackgroundColorAttributeName
-                                            value:[NSColor grayColor]
+                                            value:[NSColor lightGrayColor]
                                             range:NSMakeRange(1, 1)];
                     self.mainTitleLabel.attributedStringValue = attributeString;
                 }

@@ -115,13 +115,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
-            timestampString = "540782712.253057"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionWindow.m"
+            timestampString = "540807062.6744879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-displayCaptureData:"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-initWithScreen:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -131,13 +131,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
-            timestampString = "540782712.253836"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionController+CoreGraphics.m"
+            timestampString = "540807062.674619"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-displayCaptureData:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-postCGCapture:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -147,13 +147,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
-            timestampString = "540782712.254143"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionWindow.m"
+            timestampString = "540807062.675462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-displayCaptureData:"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-mouseUp:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -163,13 +163,125 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
-            timestampString = "540782823.983955"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionWindow.m"
+            timestampString = "540807062.675544"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-displayCaptureData:"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-keyDown:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionController+CoreGraphics.m"
+            timestampString = "540807062.675674"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "-preCGCapture"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionController+CoreGraphics.m"
+            timestampString = "540807062.6761971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-windowWillClose:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionController+System.m"
+            timestampString = "540806635.771122"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-preSysCapture"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionController+System.m"
+            timestampString = "540806635.771227"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-postSysCapture:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionWindow.m"
+            timestampString = "540807062.6768939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-mouseDown:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionWindow.m"
+            timestampString = "540807062.676954"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-mouseDragged:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/DSCapture/DSCaptureSelectionController+CoreGraphics.m"
+            timestampString = "540807062.677312"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-preCGCapture"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

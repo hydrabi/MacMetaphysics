@@ -22,64 +22,42 @@ static NSString * kFilePath = @"kFilePath";
 }
 
 -(void)initialize{
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEndCapture:) name:kNotifyCaptureEnd object:nil];
+
 }
 
 - (void)displayCaptureData: (DSCaptureData *) sender{
-    NSData *data = [sender dataAtIndex:0];
-    NSImage *image = [sender imageAtIndex:0];
-    NSUInteger count = [sender count];
     
-    NSOpenPanel *openDlg = [NSOpenPanel openPanel];
+    
+    NSSavePanel *openDlg = [NSSavePanel savePanel];
     openDlg.delegate = self;
-    openDlg.canChooseDirectories = YES;
-    [openDlg setCanChooseFiles:YES];
+//    openDlg.canChooseDirectories = YES;
+//    [openDlg setCanChooseFiles:YES];
     [openDlg setCanCreateDirectories:YES];
-    [openDlg setAllowsMultipleSelection:YES];
-    [openDlg setResolvesAliases:YES];
+//    [openDlg setAllowsMultipleSelection:YES];
+//    [openDlg setResolvesAliases:YES];
+//    [openDlg setNameFieldStringValue:@"Untitle.onecodego"];
+    [openDlg setMessage:@"设置图片名称"];
+    [openDlg setAllowsOtherFileTypes:YES];
+    [openDlg setAllowedFileTypes:@[@"png"]];
+    [openDlg setExtensionHidden:YES];
+    [openDlg setCanCreateDirectories:YES];
     
-    NSURL *url = openDlg.directoryURL;
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     AppDelegate *delegate = (AppDelegate*)[NSApplication sharedApplication].delegate;
     [openDlg beginSheetModalForWindow:delegate.mainWindowViewController.window
                     completionHandler:^(NSModalResponse response){
                         if(response == NSModalResponseOK) {
-                            NSArray *fileURLs = [openDlg URLs];
-//                            NSImage *image = [[NSImage alloc] initWithContentsOfURL:
-//                                              [fileURLs objectAtIndex:0]];
-//                            NSLog(@"%@", [fileURLs objectAtIndex:0]);
-//                            // Deal with the image.
-//                            [image release];
                             
-                            NSURL *url = fileURLs[0];
-                            
-                            //保存文件路径
-                            [defaults setObject:url.path forKey:kFilePath];
-                            
-                            [defaults synchronize];
+                            NSURL *url = [openDlg URL];
+                            NSData *data = [sender dataAtIndex:0];
+                            NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:data];
+                            NSDictionary *imageProps = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:0.9] forKey:NSImageCompressionFactor];
+                            data = [imageRep representationUsingType:NSJPEGFileType properties:imageProps];
+                            NSString *realPath = [[url path] stringByAppendingString:@""];
+                            [data writeToFile:realPath atomically:YES];
                         }
 
                     }];
     
-//    [openDlg beginWithCompletionHandler:^(NSModalResponse response){
-//        if(response == NSFileHandlingPanelOKButton){
-//            
-//            NSArray *fileURLs = [openDlg URLs];
-//            
-//            for(NSURL *url in fileURLs) {
-//                
-//                NSError *error;
-//                
-//                //保存文件路径
-//                [defaults setObject:url.path forKey:kFilePath];
-//                
-//                [defaults synchronize];
-//                
-//                
-//            }
-//        }
-//    }];
 }
 
 -(void)start{
