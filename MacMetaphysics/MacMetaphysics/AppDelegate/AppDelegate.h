@@ -15,6 +15,7 @@
  开始时打开的window窗口
  */
 @property (nonatomic,strong)MainWindowViewController *mainWindowViewController;
+@property (weak) IBOutlet NSMenu *MainMenu;
 
 @end
 

@@ -47,4 +47,9 @@
 -(void)countTaiYuan;
 //计算命宫
 -(void)countMingGong;
+
+//使用键盘上下键修改农历时间
+-(void)resetLunarHourWithIncrease:(BOOL)increase;
+//使用键盘上下键修改新历时间
+-(void)resetGregorianHourWithIncrease:(BOOL)increase;
 @end

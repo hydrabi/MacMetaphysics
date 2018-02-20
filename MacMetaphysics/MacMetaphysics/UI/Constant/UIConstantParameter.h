@@ -177,5 +177,6 @@ static const CGFloat titleFontSize_12 =  12.0f;
 
 //改变颜色key
 static NSString *notificationKey_changeColor = @"notificationKey_changeColor";
-
+//通知底部的大运小运重新加载 但不经过collectionView
+static NSString *notificationKey_groupBottomXiaoYunViewReload = @"notificationKey_groupBottomXiaoYunViewReload";
 #endif /* UIConstantParameter_h */

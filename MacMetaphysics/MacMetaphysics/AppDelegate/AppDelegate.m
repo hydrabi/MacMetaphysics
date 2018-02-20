@@ -7,18 +7,20 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ScreenShotManager.h"
 @interface AppDelegate ()
-
+@property (nonatomic,strong)ScreenShotManager *screenShotManager;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
+    self.screenShotManager = [[ScreenShotManager alloc] init];
+    
     self.mainWindowViewController = [[MainWindowViewController alloc] initWithWindowNibName:NSStringFromClass([MainWindowViewController class])];
     [self.mainWindowViewController.window makeKeyAndOrderFront:nil];
-    
+
 }
 
 
@@ -26,5 +28,8 @@
     // Insert code here to tear down your application
 }
 
+- (IBAction)screenShot:(id)sender {
+    [self.screenShotManager start];
+}
 
 @end

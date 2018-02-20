@@ -49,33 +49,6 @@ static NSString *columnIdentifier = @"columnIdentifier";
     [self.scrollView setHasHorizontalScroller:YES];
 }
 
-//-(void)collectionViewConfig{
-//    self.collectionView = [[NSCollectionView alloc] initWithFrame:NSMakeRect(0, 0, tableViewCount*tableViewWidth+(tableViewCount-1)*tableViewOffset, scrollViewHeight)];
-//
-//    self.scrollView = [[NSScrollView alloc] init];
-//    [self.scrollView setBorderType:NSNoBorder];
-//    [self.scrollView setHasHorizontalScroller:YES];
-//    [self.scrollView setHasVerticalScroller:YES];
-//    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-//    self.scrollView.contentView.documentView = self.collectionView;
-//    [self.view addSubview:self.scrollView];
-//
-//    [self.scrollView makeConstraints:^(MASConstraintMaker *make){
-//        make.edges.equalTo(self.view);
-//    }];
-//
-//    [self.scrollView setNeedsDisplay:YES];
-//    [self.scrollView setNeedsLayout:YES];
-//    [self.scrollView layoutSubtreeIfNeeded];
-//    [self.scrollView updateConstraints];
-//
-//    [self.collectionView setNeedsDisplay:YES];
-//    [self.collectionView setNeedsLayout:YES];
-//    [self.collectionView layoutSubtreeIfNeeded];
-//    [self.collectionView updateConstraints];
-//
-//}
-
 -(void)bindViewModel{
     @weakify(self)
     [[[MainViewModel sharedInstance].reloadBottomTablesSig

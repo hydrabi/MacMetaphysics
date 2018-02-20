@@ -32,6 +32,7 @@
     self = [super init];
     if(self){
         [self UIConfig];
+        [self bindViewModel];
     }
     return self;
 }
@@ -40,6 +41,7 @@
     self = [super initWithCoder:decoder];
     if(self){
         [self UIConfig];
+        [self bindViewModel];
     }
     return self;
 }
@@ -72,6 +74,17 @@
     [self layoutMySubView];
     
 //    [self setBackgroundColor:[NSColor redColor]];
+}
+
+-(void)bindViewModel{
+    @weakify(self)
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:notificationKey_groupBottomXiaoYunViewReload
+                                                           object:nil]
+     subscribeNext:^(id _){
+        @strongify(self)
+         [self resetValue];
+         [self.headerView reloadData];
+    }];
 }
 
 -(void)headerViewConfig{

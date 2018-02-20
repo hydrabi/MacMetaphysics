@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacMetaphysics/UI/UIBasic/CustomTextView/SolarTermsCollectionView/View/SolarTermsCollectionView.m"
-            timestampString = "536334976.772339"
+            timestampString = "540719249.694801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "309"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacMetaphysics/UI/Main/MainViewModel/MainViewModel.mm"
-            timestampString = "540656784.710832"
+            timestampString = "540737979.954573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "-getSpecificMenuTypeWithIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -67,13 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacMetaphysics/UI/UIBasic/CustomTextView/LiuNianTextView/LiuNianTextView.m"
-            timestampString = "540696806.810941"
+            filePath = "MacMetaphysics/Snip/Manager/ScreenShotManager.m"
+            timestampString = "540738341.905333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-reloadData"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-onEndCapture:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -83,13 +83,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacMetaphysics/UI/Top/TopContentViewController.m"
-            timestampString = "540701683.87018"
+            filePath = "MacMetaphysics/Snip/Other/SnipManager.m"
+            timestampString = "540738280.278885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
-            landmarkName = "-resetLunarValue"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-startCapture"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -99,13 +99,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacMetaphysics/UI/Top/TopContentViewController.m"
-            timestampString = "540701683.871171"
+            filePath = "MacMetaphysics/Snip/Manager/ScreenShotManager.m"
+            timestampString = "540738345.950858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-bindViewModel"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-start"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
+            timestampString = "540782712.253057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-displayCaptureData:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
+            timestampString = "540782712.253836"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-displayCaptureData:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
+            timestampString = "540782712.254143"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-displayCaptureData:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacMetaphysics/Manager/ScreenShotManager.m"
+            timestampString = "540782823.983955"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-displayCaptureData:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

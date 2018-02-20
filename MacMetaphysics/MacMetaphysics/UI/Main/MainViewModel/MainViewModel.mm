@@ -42,8 +42,6 @@
                              ],
                          
                          @[
-                             @(LeftSideMenuTypeDaYun),
-                             
                              @(LeftSideMenuTypeYongShen),
                              @(LeftSideMenuTypeGeJu),
                              @(LeftSideMenuTypeXiangMao),
@@ -192,7 +190,9 @@
     else{
         self.hadHiddenBottomTableView = !self.hadHiddenBottomTableView;
     }
-    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
+//    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey_groupBottomXiaoYunViewReload
+                                                        object:nil];
 }
 
 #pragma mark - 选择tableView的某一行

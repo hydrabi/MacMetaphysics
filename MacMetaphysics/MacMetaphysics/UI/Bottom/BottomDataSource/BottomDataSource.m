@@ -68,7 +68,6 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
 -(NSCollectionViewItem*)collectionView:(NSCollectionView *)collectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)indexPath{
 
     BottomGroupCollectionViewItem *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
-    
     [cell reloadDataWithTag:indexPath.item];
     return cell;
 }

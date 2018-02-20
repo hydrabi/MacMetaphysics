@@ -67,6 +67,17 @@
 		80E1634D2037F42C009DFA19 /* NormalTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1634B2037F42C009DFA19 /* NormalTextView.m */; };
 		80E1634E2037F42C009DFA19 /* NormalTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E1634C2037F42C009DFA19 /* NormalTextView.xib */; };
 		80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */; };
+		80F4858C203B0C7C007E7799 /* DSCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4857D203B0C7C007E7799 /* DSCapture.m */; };
+		80F4858D203B0C7C007E7799 /* DSCaptureFullController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4857E203B0C7C007E7799 /* DSCaptureFullController.m */; };
+		80F4858E203B0C7C007E7799 /* DSCaptureSelectionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48580203B0C7C007E7799 /* DSCaptureSelectionWindow.m */; };
+		80F4858F203B0C7C007E7799 /* DSCaptureSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48581203B0C7C007E7799 /* DSCaptureSelectionView.m */; };
+		80F48590203B0C7C007E7799 /* DSCaptureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48582203B0C7C007E7799 /* DSCaptureData.m */; };
+		80F48591203B0C7C007E7799 /* DSCaptureFullController+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48583203B0C7C007E7799 /* DSCaptureFullController+System.m */; };
+		80F48592203B0C7C007E7799 /* DSCaptureSelectionController+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48584203B0C7C007E7799 /* DSCaptureSelectionController+System.m */; };
+		80F48593203B0C7C007E7799 /* DSCaptureSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48585203B0C7C007E7799 /* DSCaptureSelectionController.m */; };
+		80F48594203B0C7C007E7799 /* DSCaptureSelectionController+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48588203B0C7C007E7799 /* DSCaptureSelectionController+CoreGraphics.m */; };
+		80F48595203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4858A203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m */; };
+		80F48599203B0E60007E7799 /* ScreenShotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48597203B0E60007E7799 /* ScreenShotManager.m */; };
 		80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */; };
 		9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9221E22B2029B993002CA146 /* NSPopover+Addition.m */; };
 		923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165DD1FE36962007C6B27 /* BasicNibView.m */; };
@@ -226,6 +237,25 @@
 		80E1634C2037F42C009DFA19 /* NormalTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalTextView.xib; sourceTree = "<group>"; };
 		80F470CD1FDCE1F500A71D77 /* CustomColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomColorLabel.h; sourceTree = "<group>"; };
 		80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomColorLabel.m; sourceTree = "<group>"; };
+		80F4857C203B0C7C007E7799 /* DSCaptureData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCaptureData.h; sourceTree = "<group>"; };
+		80F4857D203B0C7C007E7799 /* DSCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCapture.m; sourceTree = "<group>"; };
+		80F4857E203B0C7C007E7799 /* DSCaptureFullController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCaptureFullController.m; sourceTree = "<group>"; };
+		80F4857F203B0C7C007E7799 /* DSCaptureSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCaptureSelectionController.h; sourceTree = "<group>"; };
+		80F48580203B0C7C007E7799 /* DSCaptureSelectionWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCaptureSelectionWindow.m; sourceTree = "<group>"; };
+		80F48581203B0C7C007E7799 /* DSCaptureSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCaptureSelectionView.m; sourceTree = "<group>"; };
+		80F48582203B0C7C007E7799 /* DSCaptureData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCaptureData.m; sourceTree = "<group>"; };
+		80F48583203B0C7C007E7799 /* DSCaptureFullController+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSCaptureFullController+System.m"; sourceTree = "<group>"; };
+		80F48584203B0C7C007E7799 /* DSCaptureSelectionController+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSCaptureSelectionController+System.m"; sourceTree = "<group>"; };
+		80F48585203B0C7C007E7799 /* DSCaptureSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCaptureSelectionController.m; sourceTree = "<group>"; };
+		80F48586203B0C7C007E7799 /* DSCaptureFullController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCaptureFullController.h; sourceTree = "<group>"; };
+		80F48587203B0C7C007E7799 /* DSCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCapture.h; sourceTree = "<group>"; };
+		80F48588203B0C7C007E7799 /* DSCaptureSelectionController+CoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSCaptureSelectionController+CoreGraphics.m"; sourceTree = "<group>"; };
+		80F48589203B0C7C007E7799 /* DSCaptureSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCaptureSelectionView.h; sourceTree = "<group>"; };
+		80F4858A203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSCaptureFullController+CoreGraphics.m"; sourceTree = "<group>"; };
+		80F4858B203B0C7C007E7799 /* DSCaptureSelectionWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCaptureSelectionWindow.h; sourceTree = "<group>"; };
+		80F48597203B0E60007E7799 /* ScreenShotManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenShotManager.m; sourceTree = "<group>"; };
+		80F48598203B0E60007E7799 /* ScreenShotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenShotManager.h; sourceTree = "<group>"; };
+		80F4859A203B0F83007E7799 /* MacMetaphysics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacMetaphysics.entitlements; sourceTree = "<group>"; };
 		80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+LeftMenu.h"; sourceTree = "<group>"; };
 		80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainViewModel+LeftMenu.m"; sourceTree = "<group>"; };
 		9221E22A2029B993002CA146 /* NSPopover+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPopover+Addition.h"; sourceTree = "<group>"; };
@@ -577,6 +607,9 @@
 		8057E8E41F837AB6003DF83E /* MacMetaphysics */ = {
 			isa = PBXGroup;
 			children = (
+				80F4859A203B0F83007E7799 /* MacMetaphysics.entitlements */,
+				80F48596203B0E60007E7799 /* Manager */,
+				80F4857B203B0C7C007E7799 /* DSCapture */,
 				806C8CE81FFA276B001DCE23 /* Formatter */,
 				9279BFF21F8F919800FA8DA9 /* SubViewData */,
 				9279BFEC1F8F8FC400FA8DA9 /* Resource */,
@@ -804,6 +837,38 @@
 				80F470CE1FDCE1F500A71D77 /* CustomColorLabel.m */,
 			);
 			path = CustomColorLabel;
+			sourceTree = "<group>";
+		};
+		80F4857B203B0C7C007E7799 /* DSCapture */ = {
+			isa = PBXGroup;
+			children = (
+				80F4857C203B0C7C007E7799 /* DSCaptureData.h */,
+				80F4857D203B0C7C007E7799 /* DSCapture.m */,
+				80F4857E203B0C7C007E7799 /* DSCaptureFullController.m */,
+				80F4857F203B0C7C007E7799 /* DSCaptureSelectionController.h */,
+				80F48580203B0C7C007E7799 /* DSCaptureSelectionWindow.m */,
+				80F48581203B0C7C007E7799 /* DSCaptureSelectionView.m */,
+				80F48582203B0C7C007E7799 /* DSCaptureData.m */,
+				80F48583203B0C7C007E7799 /* DSCaptureFullController+System.m */,
+				80F48584203B0C7C007E7799 /* DSCaptureSelectionController+System.m */,
+				80F48585203B0C7C007E7799 /* DSCaptureSelectionController.m */,
+				80F48586203B0C7C007E7799 /* DSCaptureFullController.h */,
+				80F48587203B0C7C007E7799 /* DSCapture.h */,
+				80F48588203B0C7C007E7799 /* DSCaptureSelectionController+CoreGraphics.m */,
+				80F48589203B0C7C007E7799 /* DSCaptureSelectionView.h */,
+				80F4858A203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m */,
+				80F4858B203B0C7C007E7799 /* DSCaptureSelectionWindow.h */,
+			);
+			path = DSCapture;
+			sourceTree = "<group>";
+		};
+		80F48596203B0E60007E7799 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				80F48598203B0E60007E7799 /* ScreenShotManager.h */,
+				80F48597203B0E60007E7799 /* ScreenShotManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		9221E2262029A865002CA146 /* 注意 */ = {
@@ -1101,6 +1166,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4ZFX22UBQA;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					8057E8F71F837AB6003DF83E = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1234,13 +1304,16 @@
 				809896B41F852F37008ECA77 /* MainWindowViewController.m in Sources */,
 				801D9AF51FF7D5D6007F5EBC /* DatePickViewController.m in Sources */,
 				8007F4571F85BF2500198017 /* MainViewModel.mm in Sources */,
+				80F48593203B0C7C007E7799 /* DSCaptureSelectionController.m in Sources */,
 				8057E8EA1F837AB6003DF83E /* main.m in Sources */,
 				925CE7031FDBD86B00B319DB /* MiddleTableViewCell.m in Sources */,
 				9279C0171F8F919800FA8DA9 /* CangGanData.m in Sources */,
 				805A5C132036CC11006FD57C /* FifteenYunCollectionViewItem.m in Sources */,
 				801D9AED1FF735A3007F5EBC /* SolarTermsCollectionView.m in Sources */,
+				80F48595203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m in Sources */,
 				806C31031FF535EA00432737 /* SolarTermsMulLineCell.m in Sources */,
 				805A5C202036F2AD006FD57C /* FifteenYunTextView.m in Sources */,
+				80F48599203B0E60007E7799 /* ScreenShotManager.m in Sources */,
 				8015746C200B83C4006FE025 /* JiaZiCollectionViewCell.m in Sources */,
 				805A5C172036CF66006FD57C /* FifteenYunDataSource.m in Sources */,
 				803A062C1FF3DAC10023C892 /* SeparatorTableViewCell.m in Sources */,
@@ -1249,21 +1322,28 @@
 				923165E11FE37B55007C6B27 /* BottomNormalTableViewHeader.m in Sources */,
 				9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
+				80F48592203B0C7C007E7799 /* DSCaptureSelectionController+System.m in Sources */,
 				9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */,
 				801D9AF91FF7DE0F007F5EBC /* DatePickViewModel.m in Sources */,
 				92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */,
 				8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */,
 				9279C0301F8F91F400FA8DA9 /* NSLayoutConstraint+NUI.m in Sources */,
+				80F4858E203B0C7C007E7799 /* DSCaptureSelectionWindow.m in Sources */,
 				9279C01A1F8F919800FA8DA9 /* NaYinData.m in Sources */,
+				80F4858C203B0C7C007E7799 /* DSCapture.m in Sources */,
 				9250F703202C57F500720712 /* ShuangZaoTextView.m in Sources */,
+				80F4858D203B0C7C007E7799 /* DSCaptureFullController.m in Sources */,
 				806C30F91FF535C500432737 /* SolarTermsFirstCell.m in Sources */,
 				9279BFEA1F8F8F8000FA8DA9 /* lunar.mm in Sources */,
 				806C31121FF5362300432737 /* SolarTermsThirdCell.m in Sources */,
 				9279C0321F8F91F400FA8DA9 /* NSString+Addition.m in Sources */,
+				80F48591203B0C7C007E7799 /* DSCaptureFullController+System.m in Sources */,
 				923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */,
 				9279C02E1F8F91F400FA8DA9 /* NSArray+Addition.m in Sources */,
 				806C8CEB1FFA27BD001DCE23 /* TopTextFieldFormatter.m in Sources */,
 				9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */,
+				80F48594203B0C7C007E7799 /* DSCaptureSelectionController+CoreGraphics.m in Sources */,
+				80F48590203B0C7C007E7799 /* DSCaptureData.m in Sources */,
 				9279C0151F8F919800FA8DA9 /* FifteenYunData.m in Sources */,
 				925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */,
 				9279C01E1F8F919800FA8DA9 /* SubViewData.m in Sources */,
@@ -1291,6 +1371,7 @@
 				801648E420386A32004AF608 /* LiuNianTextView.m in Sources */,
 				809896B01F852E51008ECA77 /* AppDelegate.m in Sources */,
 				9279C01B1F8F919800FA8DA9 /* ShenShaData.m in Sources */,
+				80F4858F203B0C7C007E7799 /* DSCaptureSelectionView.m in Sources */,
 				927170AC1FEB658100FDAB46 /* GALFlippedClipView.m in Sources */,
 				809896C11F853474008ECA77 /* BasicViewController.m in Sources */,
 				925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */,
@@ -1430,6 +1511,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4ZFX22UBQA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MACMetaphysics/PrefixHeader.pch";
@@ -1441,8 +1524,9 @@
 					"-framework",
 					"\"Masonry\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.distribution.app.MacMetaphysics;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Acme.MacMetaphysics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1453,6 +1537,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4ZFX22UBQA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MACMetaphysics/PrefixHeader.pch";
@@ -1464,8 +1550,9 @@
 					"-framework",
 					"\"Masonry\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.distribution.app.MacMetaphysics;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Acme.MacMetaphysics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

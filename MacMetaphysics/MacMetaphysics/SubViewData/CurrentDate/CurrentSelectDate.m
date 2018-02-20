@@ -113,9 +113,42 @@
     
 }
 
--(void)solarToLunar{
-    
-    
+-(void)resetLunarHourWithIncrease:(BOOL)increase{
+    if(increase){
+        if(self.lunarHour.integerValue < 23){
+            self.lunarHour = @(self.lunarHour.integerValue + 1);
+        }
+        else{
+            self.lunarHour = @(0);
+        }
+    }
+    else{
+        if(self.lunarHour.integerValue > 0){
+            self.lunarHour = @(self.lunarHour.integerValue - 1);
+        }
+        else{
+            self.lunarHour = @(23);
+        }
+    }
+}
+
+-(void)resetGregorianHourWithIncrease:(BOOL)increase{
+    if(increase){
+        if(self.gregorianHour.integerValue < 23){
+            self.gregorianHour = @(self.gregorianHour.integerValue + 1);
+        }
+        else{
+            self.gregorianHour = @(0);
+        }
+    }
+    else{
+        if(self.gregorianHour.integerValue > 0){
+            self.gregorianHour = @(self.gregorianHour.integerValue - 1);
+        }
+        else{
+            self.gregorianHour = @(23);
+        }
+    }
 }
 
 @end

@@ -203,6 +203,7 @@
          }
      }];
     
+    
     [[[self rac_signalForSelector:@selector(popoverWillClose:)
                      fromProtocol:@protocol(NSPopoverDelegate)]
       deliverOnMainThread]
@@ -323,100 +324,33 @@
 
 #pragma mark - UITextFieldDelegate
 
+- (BOOL)control:(NSControl*)control textView:(NSTextView*)fieldEditor doCommandBySelector:(SEL)commandSelector
+{
+    CurrentSelectDate *date = [MainViewModel sharedInstance].selectedDate;
+    if (commandSelector == @selector(moveDown:)) {
+        if(control == self.lunarHourTxt){
+            [date resetLunarHourWithIncrease:NO];
+            [self shouldTransformToSolur];
+        }
+        else if(control == self.gregorianHourTxt){
+            [date resetGregorianHourWithIncrease:NO];
+            [self shouldTransformTolunar];
+        }
+        return NO;
 
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-//    if(textField == self.gregorianYearTxt ||
-//       textField == self.lunarYearTxt){
-//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-//                                                                        withString:string];
-//        if(completeStr.length>4){
-//            return NO;
-//        }
-//        if(string.length>0){
-//            unichar single = [string characterAtIndex:0];
-//            if(single >= '0' && single <= '9'){
-//                return YES;
-//            }
-//        }
-//        else{
-//            return YES;
-//        }
-//    }
-//    else if(textField == self.gregorianMonthTxt ||
-//            textField == self.lunarMonthTxt){
-//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-//                                                                        withString:string];
-//        if(completeStr.length>2){
-//            return NO;
-//        }
-//
-//        if([completeStr integerValue]>12){
-//            return NO;
-//        }
-//
-//        if(string.length>0){
-//            unichar single = [string characterAtIndex:0];
-//            if(single >= '0' && single <= '9'){
-//                return YES;
-//            }
-//        }
-//        else{
-//            return YES;
-//        }
-//    }
-//    else if(textField == self.gregorianDayTxt ||
-//            textField == self.lunarDayTxt){
-//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-//                                                                        withString:string];
-//        if(completeStr.length>2){
-//            return NO;
-//        }
-//
-//        if([completeStr integerValue]>31){
-//            return NO;
-//        }
-//
-//        if(string.length>0){
-//            unichar single = [string characterAtIndex:0];
-//            if(single >= '0' && single <= '9'){
-//                return YES;
-//            }
-//        }
-//        else{
-//            return YES;
-//        }
-//    }
-//    else if(textField == self.gregorianHourTxt ||
-//            textField == self.lunarHourTxt){
-//        NSString *completeStr = [textField.text stringByReplacingCharactersInRange:range
-//                                                                        withString:string];
-//        if(completeStr.length>2){
-//            return NO;
-//        }
-//
-//        if([completeStr integerValue]>=24){
-//            return NO;
-//        }
-//
-//        if(string.length>0){
-//            unichar single = [string characterAtIndex:0];
-//            if(single >= '0' && single <= '9'){
-//                return YES;
-//            }
-//        }
-//        else{
-//            return YES;
-//        }
-//    }
-//    return NO;
-//}
-//
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-//    [textField performSelector:@selector(selectAll:)
-//                    withObject:textField
-//                    afterDelay:0];
-//    [textField selectAll:self];
-//}
+    } else if(commandSelector == @selector(moveUp:)) {
+        if(control == self.lunarHourTxt){
+            [date resetLunarHourWithIncrease:YES];
+            [self shouldTransformToSolur];
+        }
+        else if(control == self.gregorianHourTxt){
+            [date resetGregorianHourWithIncrease:YES];
+            [self shouldTransformTolunar];
+        }
+        return NO;
+    }
+    return NO;
+}
+
 
 @end
