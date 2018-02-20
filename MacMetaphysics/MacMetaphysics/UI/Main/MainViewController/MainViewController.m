@@ -60,13 +60,14 @@
     NSLayoutManager *layout = [[NSLayoutManager alloc] init];
     NSTextContainer *container = [NSTextContainer new];
     [layout addTextContainer:container];
-    
     layout.delegate = self;
     [storage addLayoutManager:layout];
     self.bottomNoteTextView = [[NSTextView alloc] initWithFrame:NSZeroRect
                                                   textContainer:container];
     self.bottomNoteTextView.font = [NSFont systemFontOfSize:titleFontSize_20];
     [self.bottomNoteTextView setMinSize:NSMakeSize(1000, bottomTextViewHeight)];
+    [[self.bottomNoteTextView textContainer]setContainerSize:NSMakeSize(screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2, FLT_MAX)];
+    [[self.bottomNoteTextView textContainer]setWidthTracksTextView:YES];
     [self.view addSubview:self.bottomNoteTextView];
     
     self.dateLabel = [[NSTextField alloc] init];
@@ -382,7 +383,7 @@
 
 #pragma mark - NSLayoutManagerDelegate
 -(CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(NSRect)rect{
-    return 6;
+    return 5;
 }
 
 @end

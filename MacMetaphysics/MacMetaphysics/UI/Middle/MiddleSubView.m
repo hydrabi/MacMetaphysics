@@ -42,14 +42,14 @@
 -(void)UIConfig{
     
     self.horLine1Label.font = [NSFont systemFontOfSize:titleFontSize_50];
-    self.horLine2Label.font = [NSFont systemFontOfSize:titleFontSize_18];
-    self.horLine3Label.font = [NSFont systemFontOfSize:titleFontSize_18];
-    self.verLineLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
+    self.horLine2Label.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.horLine3Label.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.verLineLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
     
     self.topLeftLabel.font = [NSFont systemFontOfSize:titleFontSize_24];
-    self.topRightLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
-    self.bottomLeftLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
-    self.bottomRightLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
+    self.topRightLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.bottomLeftLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.bottomRightLabel.font = [NSFont systemFontOfSize:titleFontSize_20];
     
     self.topLeftLabel.alignment = NSTextAlignmentCenter;
 //        self.topLeftLabel.layer.borderWidth = 1.0f;

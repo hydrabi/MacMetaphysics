@@ -23,13 +23,13 @@
     LeftSideMenuType type = [MainViewModel sharedInstance].currentBottomSectionMenuType;
     MainViewController *viewController = (MainViewController*)[MainViewModel sharedInstance].viewController;
     if(type != LeftSideMenuTypeEmpty){
-        NSMutableString *tempString = viewController.liuNianTextView.textView.string.mutableCopy;
+        NSMutableString *tempString = viewController.liuNianTextView.myTextView.string.mutableCopy;
         if(tempString == nil){
             tempString = @"".mutableCopy;
         }
         
         self.bottomTextRecordDic[@(type)] = tempString;
-        viewController.liuNianTextView.textView.string = @"";
+        viewController.liuNianTextView.myTextView.string = @"";
     }
 
 }

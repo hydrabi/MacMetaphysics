@@ -40,7 +40,7 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     flowLayout.scrollDirection = NSCollectionViewScrollDirectionHorizontal;
     flowLayout.sectionInset = NSEdgeInsetsMake(0,
                                                bottomCollectionViewEdgeInset,
-                                               6,
+                                               10,
                                                bottomCollectionViewEdgeInset);
     self.collectionView.collectionViewLayout = flowLayout;
     self.collectionView.delegate = self;
@@ -70,11 +70,6 @@ static NSString *normalTableViewHeaderIdentifier = @"normalTableViewHeaderIdenti
     BottomGroupCollectionViewItem *cell = [collectionView makeItemWithIdentifier:myCellReuseIdentifier forIndexPath:indexPath];
     [cell reloadDataWithTag:indexPath.item];
     return cell;
-}
-
-- (NSView *)collectionView:(NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(NSCollectionViewSupplementaryElementKind)kind atIndexPath:(NSIndexPath *)indexPath{
-
-    return nil;
 }
 
 @end

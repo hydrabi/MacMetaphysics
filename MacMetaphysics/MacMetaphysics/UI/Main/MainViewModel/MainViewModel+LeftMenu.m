@@ -112,9 +112,8 @@
         case LeftSideMenuTypeGuanSi:         /**<官司-牢狱*/
         case LeftSideMenuTypeJiBing:         /**<疾病-灾祸*/
         {
-            if(self.currentBottomSectionMenuType != type){
-                
-//                [self.leftMenuBottomTextData resetData];
+            if(self.currentBottomSectionMenuType != type &&
+               self.currentBottomSectionMenuType == LeftSideMenuTypeEmpty){
                 
                 self.currentBottomSectionMenuType = type;
                 //将15运的选择tag置为notfound，并隐藏

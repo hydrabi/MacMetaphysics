@@ -31,11 +31,10 @@ static NSString *columnIdentifier = @"columnIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self collectionViewConfig];
     [self bottomCollectionViewConfig];
     [self bindViewModel];
     
-//    [self.bottomCollectionView setBackgroundColor:[NSColor greenColor]];
+
 }
 
 -(void)viewDidAppear{

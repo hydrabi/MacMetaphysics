@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface LiuNianTextView : NSViewController
-@property (unsafe_unretained) IBOutlet NSTextView *textView;
+@interface LiuNianTextView : NSViewController<NSLayoutManagerDelegate>
+@property (nonatomic,strong)NSTextView *myTextView;
 
 -(void)reloadData;
 

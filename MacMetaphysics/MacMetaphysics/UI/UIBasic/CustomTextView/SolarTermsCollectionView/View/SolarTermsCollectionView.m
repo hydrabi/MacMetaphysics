@@ -99,19 +99,19 @@ static NSString *monthCellIdentifier = @"monthCellIdentifier";
     CGFloat height = 0.0f;
     switch (section) {
         case 0:
-            height = 63.0f;
+            height = 53.0f;
             break;
         case 1:
-            height = 56.0f;
+            height = 40.0f;
             break;
         case 2:
-            height = 56.0f;
+            height = 40.0f;
             break;
         case 3:
-            height = 51.0f;
+            height = 40.0f;
             break;
         case 4:
-            height = 101.0f;
+            height = 80.0f;
             break;
         case 5:
             height = 51.0f;
