@@ -64,7 +64,7 @@
     [storage addLayoutManager:layout];
     self.bottomNoteTextView = [[NSTextView alloc] initWithFrame:NSZeroRect
                                                   textContainer:container];
-    self.bottomNoteTextView.font = [NSFont systemFontOfSize:titleFontSize_20];
+    self.bottomNoteTextView.font = [NSFont systemFontOfSize:titleFontSize_22];
     [self.bottomNoteTextView setMinSize:NSMakeSize(1000, bottomTextViewHeight)];
     [[self.bottomNoteTextView textContainer]setContainerSize:NSMakeSize(screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2, FLT_MAX)];
     [[self.bottomNoteTextView textContainer]setWidthTracksTextView:YES];

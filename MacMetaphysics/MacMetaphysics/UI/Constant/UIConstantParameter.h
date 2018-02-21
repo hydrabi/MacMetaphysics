@@ -168,6 +168,7 @@ static const CGFloat titleFontSize_40 =  40.0f;
 static const CGFloat titleFontSize_30 =  30.0f;
 static const CGFloat titleFontSize_26 =  26.0f;
 static const CGFloat titleFontSize_24 =  24.0f;
+static const CGFloat titleFontSize_22 =  22.0f;
 static const CGFloat titleFontSize_21 =  21.0f;
 static const CGFloat titleFontSize_20 =  20.0f;
 static const CGFloat titleFontSize_18 =  18.0f;
