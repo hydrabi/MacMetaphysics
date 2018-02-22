@@ -86,7 +86,7 @@
     
     [self.bottomMonthShenShaArr removeAllObjects];
     [self.bottomDayShenShaArr removeAllObjects];
-    [self.bottomDayShenShaArr removeAllObjects];
+    [self.bottomHourShenShaArr removeAllObjects];
 }
 
 -(void)resetGanZhiProperty{
@@ -1105,7 +1105,7 @@
     
 }
 
-//阴阳错差
+//阴阳差错
 //丙子、丙午、丁丑、丁未、戊寅、戊申、辛卯、辛酉、壬辰、壬戌、癸巳、癸亥。（日时柱查）  12日
 -(void)isIncludeYinYangCuoCha{
     NSArray *traverseConformArr = @[
@@ -1128,7 +1128,7 @@
                                   shenShaArr:self.bottomDayShenShaArr
                                   judgeBlock:^NSString*(NSString *stems,NSString *branches){
                                       if([traverseConform isEqualToString:[NSString stringWithFormat:@"%@%@",stems,branches]]){
-                                          return @"阴阳错差";
+                                          return @"阴阳差错";
                                       }
                                       return nil;
                                   }];
@@ -1137,7 +1137,7 @@
                                   shenShaArr:self.bottomHourShenShaArr
                                   judgeBlock:^NSString*(NSString *stems,NSString *branches){
                                       if([traverseConform isEqualToString:[NSString stringWithFormat:@"%@%@",stems,branches]]){
-                                          return @"阴阳错差";
+                                          return @"阴阳差错";
                                       }
                                       return nil;
                                   }];

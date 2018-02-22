@@ -23,8 +23,6 @@
     self.view.layer.borderColor = [NSColor blackColor].CGColor;
     self.view.layer.borderWidth = 1.0f;
     
-//    self.textView.font = [NSFont systemFontOfSize:titleFontSize_20];
-    
     [self setUpTextView];
 }
 
@@ -40,12 +38,12 @@
     [layout addTextContainer:container];
     layout.delegate = self;
     [storage addLayoutManager:layout];
-    self.myTextView = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2 , 1000)
+    self.myTextView = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2 - 14, 1000)
                                         textContainer:container];
     self.myTextView.font = [NSFont systemFontOfSize:titleFontSize_22];
     [self.myTextView setVerticallyResizable:YES];
-    [self.myTextView setMaxSize:NSMakeSize(screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2-100, FLT_MAX)];
-    [[self.myTextView textContainer]setContainerSize:NSMakeSize(screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2 + 80, FLT_MAX)];
+    [self.myTextView setMaxSize:NSMakeSize(screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2, FLT_MAX)];
+    [[self.myTextView textContainer]setContainerSize:NSMakeSize(screenWidth - leftSideTableViewWidth - leftVerLineWidth*2 - leftVerLineOffset*2 , FLT_MAX)];
     [[self.myTextView textContainer]setWidthTracksTextView:YES];
     
     [scrollview setDocumentView:self.myTextView];
