@@ -181,8 +181,11 @@
     else{
         self.firstDayOfTheMonth = self.leftTerm;
     }
+    
     TTLunarDate *lunarDate = [TTLunarCalendar convertFromGeneralDate:self.firstDayOfTheMonth];
-    self.indexOfTermsBranchName = [[MainViewModel sharedInstance].jiaZiArr indexOfObject:lunarDate.ganzhiDay];
+    if(lunarDate != NULL){
+        self.indexOfTermsBranchName = [[MainViewModel sharedInstance].jiaZiArr indexOfObject:lunarDate.ganzhiDay];
+    }
 }
 //又第一天获取之后的日期
 -(void)createDate{

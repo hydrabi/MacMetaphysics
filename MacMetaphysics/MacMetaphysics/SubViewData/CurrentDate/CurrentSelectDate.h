@@ -48,6 +48,19 @@
 //计算命宫
 -(void)countMingGong;
 
+#pragma mark - 年 1900-2100
+-(void)resetLunarYearWithIncrease:(BOOL)increase;
+-(void)resetGregorianYearWithIncrease:(BOOL)increase;
+
+#pragma mark - 月
+-(void)resetLunarMonthWithIncrease:(BOOL)increase;
+-(void)resetGregorianMonthWithIncrease:(BOOL)increase;
+
+#pragma mark - 日
+-(void)resetLunarDayWithIncrease:(BOOL)increase;
+-(void)resetGregorianDayWithIncrease:(BOOL)increase;
+
+#pragma mark - 时
 //使用键盘上下键修改农历时间
 -(void)resetLunarHourWithIncrease:(BOOL)increase;
 //使用键盘上下键修改新历时间

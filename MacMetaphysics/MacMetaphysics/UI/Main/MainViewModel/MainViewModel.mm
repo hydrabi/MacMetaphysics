@@ -212,7 +212,7 @@
     else{
         self.fifteenYunData.fifteenYunSelectedNumber = -1;
     }
-    [(RACSubject*)self.fifteenYunTextViewOperationSig sendNext:nil];
+//    [(RACSubject*)self.fifteenYunTextViewOperationSig sendNext:nil];
 //    [(RACSubject*)self.reloadBottomTablesSig sendNext:nil];
     [(RACSubject*)self.reloadLeftTableSig sendNext:nil];
 }

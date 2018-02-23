@@ -113,6 +113,137 @@
     
 }
 
+#pragma mark - 年 1900-2100
+-(void)resetLunarYearWithIncrease:(BOOL)increase{
+    if(increase){
+        if(self.lunarYear.integerValue < 2100){
+            if(self.lunarYear.integerValue < 1900){
+                self.lunarYear = @(1900);
+            }
+            else{
+                self.lunarYear = @(self.lunarYear.integerValue + 1);
+            }
+        }
+        else{
+            self.lunarYear = @(1900);
+        }
+    }
+    else{
+        if(self.lunarYear.integerValue > 1900){
+            self.lunarYear = @(self.lunarYear.integerValue - 1);
+        }
+        else{
+            self.lunarYear = @(2100);
+        }
+    }
+}
+
+-(void)resetGregorianYearWithIncrease:(BOOL)increase{
+    if(increase){
+        if(self.gregorianYear.integerValue < 2100){
+            if(self.gregorianYear.integerValue <1900){
+                self.gregorianYear = @(1900);
+            }
+            else{
+                self.gregorianYear = @(self.gregorianYear.integerValue + 1);
+            }
+            
+        }
+        else{
+            self.gregorianYear = @(1900);
+        }
+    }
+    else{
+        if(self.gregorianYear.integerValue > 1900){
+            self.gregorianYear = @(self.gregorianYear.integerValue - 1);
+        }
+        else{
+            self.gregorianYear = @(2100);
+        }
+    }
+}
+
+#pragma mark - 月
+-(void)resetLunarMonthWithIncrease:(BOOL)increase{
+    if(increase){
+        if(self.lunarMonth.integerValue < 12){
+            self.lunarMonth = @(self.lunarMonth.integerValue + 1);
+        }
+        else{
+            self.lunarMonth = @(1);
+        }
+    }
+    else{
+        if(self.lunarMonth.integerValue > 1){
+            self.lunarMonth = @(self.lunarMonth.integerValue - 1);
+        }
+        else{
+            self.lunarMonth = @(12);
+        }
+    }
+}
+
+-(void)resetGregorianMonthWithIncrease:(BOOL)increase{
+    if(increase){
+        if(self.gregorianMonth.integerValue < 12){
+            self.gregorianMonth = @(self.gregorianMonth.integerValue + 1);
+        }
+        else{
+            self.gregorianMonth = @(1);
+        }
+    }
+    else{
+        if(self.gregorianMonth.integerValue > 1){
+            self.gregorianMonth = @(self.gregorianMonth.integerValue - 1);
+        }
+        else{
+            self.gregorianMonth = @(12);
+        }
+    }
+}
+
+#pragma mark - 日
+-(void)resetLunarDayWithIncrease:(BOOL)increase{
+    if(increase){
+        //农历最多30日每月
+        if(self.lunarDay.integerValue < 30){
+            self.lunarDay = @(self.lunarDay.integerValue + 1);
+        }
+        else{
+            self.lunarDay = @(1);
+        }
+    }
+    else{
+        if(self.lunarDay.integerValue > 1){
+            self.lunarDay = @(self.lunarDay.integerValue - 1);
+        }
+        else{
+            self.lunarDay = @(30);
+        }
+    }
+}
+
+-(void)resetGregorianDayWithIncrease:(BOOL)increase{
+    if(increase){
+        //农历最多31日每月
+        if(self.gregorianDay.integerValue < 31){
+            self.gregorianDay = @(self.gregorianDay.integerValue + 1);
+        }
+        else{
+            self.gregorianDay = @(1);
+        }
+    }
+    else{
+        if(self.gregorianDay.integerValue > 1){
+            self.gregorianDay = @(self.gregorianDay.integerValue - 1);
+        }
+        else{
+            self.gregorianDay = @(31);
+        }
+    }
+}
+
+#pragma mark - 时
 -(void)resetLunarHourWithIncrease:(BOOL)increase{
     if(increase){
         if(self.lunarHour.integerValue < 23){

@@ -157,8 +157,12 @@
                                         day: (int32_t) day
 {
     LunarObj* obj = self.lunar->solar2lunar(year, month, day);
-    TTLunarDate* result = [[TTLunarDate alloc] initWithLunarObj:obj];
-    delete obj;
+    TTLunarDate* result = NULL;
+    if(obj != NULL){
+       result = [[TTLunarDate alloc] initWithLunarObj:obj];
+        delete obj;
+    }
+
     return result;
 }
 

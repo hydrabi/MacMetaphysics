@@ -11,6 +11,7 @@
 #import "CangGanData.h"
 #import "NaYinData.h"
 #import "ShenShaData.h"
+#import "MiddleSelectGanZhiData.h"
 #import "UIConstantParameter.h"
 @interface MiddleViewData : SubViewData
 
@@ -38,4 +39,9 @@
  神煞数据
  */
 @property (nonatomic,strong)ShenShaData *shenShaData;
+
+/**
+ 选中的干支情况
+ */
+@property (nonatomic,strong)MiddleSelectGanZhiData *selectGanZhiData;
 @end

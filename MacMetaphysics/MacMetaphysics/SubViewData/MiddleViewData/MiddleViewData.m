@@ -14,6 +14,7 @@
     self.cangGanData = [[CangGanData alloc] init];
     self.naYinData = [[NaYinData alloc] init];
     self.shenShaData = [[ShenShaData alloc] init];
+    self.selectGanZhiData = [[MiddleSelectGanZhiData alloc] init];
 }
 
 -(void)resetData{
@@ -21,5 +22,6 @@
     [self.liuQinData resetData];
     [self.naYinData resetData];
     [self.shenShaData resetData];
+    [self.selectGanZhiData clearData];
 }
 @end

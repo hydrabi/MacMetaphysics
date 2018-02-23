@@ -330,23 +330,64 @@
     if (commandSelector == @selector(moveDown:)) {
         if(control == self.lunarHourTxt){
             [date resetLunarHourWithIncrease:NO];
-            [self shouldTransformToSolur];
         }
+        else if(control == self.lunarDayTxt){
+            [date resetLunarDayWithIncrease:NO];
+        }
+        else if(control == self.lunarMonthTxt){
+            [date resetLunarMonthWithIncrease:NO];
+        }
+        else if(control == self.lunarYearTxt){
+            [date resetLunarYearWithIncrease:NO];
+        }
+        
         else if(control == self.gregorianHourTxt){
             [date resetGregorianHourWithIncrease:NO];
-            [self shouldTransformTolunar];
         }
+        else if(control == self.gregorianDayTxt){
+            [date resetGregorianDayWithIncrease:NO];
+        }
+        else if(control == self.gregorianMonthTxt){
+             [date resetGregorianMonthWithIncrease:NO];
+        }
+        else if(control == self.gregorianYearTxt){
+             [date resetGregorianYearWithIncrease:NO];
+        }
+        
+        [self shouldTransformTolunar];
         return NO;
 
     } else if(commandSelector == @selector(moveUp:)) {
         if(control == self.lunarHourTxt){
             [date resetLunarHourWithIncrease:YES];
-            [self shouldTransformToSolur];
         }
+        else if(control == self.lunarDayTxt){
+            [date resetLunarDayWithIncrease:YES];
+            
+        }
+        else if(control == self.lunarMonthTxt){
+            [date resetLunarMonthWithIncrease:YES];
+            
+        }
+        else if(control == self.lunarYearTxt){
+            [date resetLunarYearWithIncrease:YES];
+            
+        }
+        
         else if(control == self.gregorianHourTxt){
             [date resetGregorianHourWithIncrease:YES];
-            [self shouldTransformTolunar];
         }
+        else if(control == self.gregorianDayTxt){
+            [date resetGregorianDayWithIncrease:YES];
+        }
+        else if(control == self.gregorianMonthTxt){
+            [date resetGregorianMonthWithIncrease:YES];
+        }
+        else if(control == self.gregorianYearTxt){
+            [date resetGregorianYearWithIncrease:YES];
+        }
+        
+        [self shouldTransformTolunar];
         return NO;
     }
     return NO;

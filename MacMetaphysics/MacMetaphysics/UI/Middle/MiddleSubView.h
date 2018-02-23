@@ -24,6 +24,8 @@
 @property (nonatomic,weak)IBOutlet NSTextField *showFormButton;
 @property (nonatomic,weak)IBOutlet NSCollectionView *collectionView;
 @property (nonatomic,weak)IBOutlet NSView *innerView;
+@property (nonatomic,weak)IBOutlet NSTextField *ganButton;
+@property (nonatomic,weak)IBOutlet NSTextField *zhiButton;
 
 -(instancetype)initWithType:(MiddleSubViewType)type;
 

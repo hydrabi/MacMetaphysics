@@ -52,8 +52,6 @@
     self.bottomRightLabel.font = [NSFont systemFontOfSize:titleFontSize_18];
     
     self.topLeftLabel.alignment = NSTextAlignmentCenter;
-//        self.topLeftLabel.layer.borderWidth = 1.0f;
-//        self.topLeftLabel.layer.borderColor = [UIColor blackColor].CGColor;
     
     self.innerView.layer.borderWidth = 1.0f;
     self.innerView.layer.borderColor = [NSColor blackColor].CGColor;
@@ -68,6 +66,20 @@
      subscribeNext:^(id _){
          @strongify(self)
          [self showFormButtonAction];
+     }];
+    
+    [[self.ganButton
+      rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self ganButtonClick];
+     }];
+    
+    [[self.zhiButton
+      rac_signalForSelector:@selector(mouseDown:)]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self zhiButtonClick];
      }];
     
     self.view.wantsLayer = YES;
@@ -217,7 +229,64 @@
             break;
     }
     
+    [self resetGanZhiSelectSituation];
     [self.collectionView reloadData];
+}
+
+-(void)resetGanZhiSelectSituation{
+
+    MiddleSelectGanZhiData *ganZhiData = [MainViewModel sharedInstance].middleData.selectGanZhiData;
+    MiddleSelectGanZhiLocation *location = [ganZhiData getLocationWithType:self.type];
+    if(self.horLine1Label.text.length>0 &&
+       location){
+        NSMutableAttributedString *attributeString = nil;
+        if(self.horLine1Label.attributedStringValue.length>0){
+            attributeString = self.horLine1Label.attributedStringValue.mutableCopy;
+        }
+        else{
+            attributeString = [[NSMutableAttributedString alloc] initWithString:self.horLine1Label.text];
+        }
+        
+        if(location.selectedGan){
+            
+            [attributeString addAttribute:NSBackgroundColorAttributeName
+                                    value:[NSColor lightGrayColor]
+                                    range:NSMakeRange(0, 1)];
+            self.horLine1Label.attributedStringValue = attributeString;
+        }
+        else{
+            [attributeString addAttribute:NSBackgroundColorAttributeName
+                                    value:[NSColor whiteColor]
+                                    range:NSMakeRange(0, 1)];
+            self.horLine1Label.attributedStringValue = attributeString;
+        }
+        
+        if(location.selectedBranch){
+            [attributeString addAttribute:NSBackgroundColorAttributeName
+                                    value:[NSColor lightGrayColor]
+                                    range:NSMakeRange(1, 1)];
+            self.horLine1Label.attributedStringValue = attributeString;
+        }
+        else{
+            [attributeString addAttribute:NSBackgroundColorAttributeName
+                                    value:[NSColor whiteColor]
+                                    range:NSMakeRange(1, 1)];
+            self.horLine1Label.attributedStringValue = attributeString;
+        }
+    }
+}
+
+#pragma mark - 干支按钮点击
+-(void)ganButtonClick{
+    MiddleSelectGanZhiData *ganZhiData = [MainViewModel sharedInstance].middleData.selectGanZhiData;
+    [ganZhiData selectWithType:self.type isGan:YES];
+    [self reloadData];
+}
+
+-(void)zhiButtonClick{
+    MiddleSelectGanZhiData *ganZhiData = [MainViewModel sharedInstance].middleData.selectGanZhiData;
+    [ganZhiData selectWithType:self.type isGan:NO];
+    [self reloadData];
 }
 
 @end

@@ -83,6 +83,7 @@
 		923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165DD1FE36962007C6B27 /* BasicNibView.m */; };
 		923165E11FE37B55007C6B27 /* BottomNormalTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165E01FE37B55007C6B27 /* BottomNormalTableViewHeader.m */; };
 		923165E31FE37B77007C6B27 /* BottomNormalTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923165E21FE37B77007C6B27 /* BottomNormalTableViewHeader.xib */; };
+		923A01CE203FEB2C00053863 /* MiddleSelectGanZhiData.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A01CD203FEB2C00053863 /* MiddleSelectGanZhiData.m */; };
 		9250F703202C57F500720712 /* ShuangZaoTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9250F701202C57F500720712 /* ShuangZaoTextView.m */; };
 		9250F704202C57F500720712 /* ShuangZaoTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9250F702202C57F500720712 /* ShuangZaoTextView.xib */; };
 		925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F01FDB9E1200B319DB /* MiddleContentView.m */; };
@@ -265,6 +266,8 @@
 		923165DF1FE37B55007C6B27 /* BottomNormalTableViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomNormalTableViewHeader.h; sourceTree = "<group>"; };
 		923165E01FE37B55007C6B27 /* BottomNormalTableViewHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomNormalTableViewHeader.m; sourceTree = "<group>"; };
 		923165E21FE37B77007C6B27 /* BottomNormalTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomNormalTableViewHeader.xib; sourceTree = "<group>"; };
+		923A01CC203FEB2C00053863 /* MiddleSelectGanZhiData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleSelectGanZhiData.h; sourceTree = "<group>"; };
+		923A01CD203FEB2C00053863 /* MiddleSelectGanZhiData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleSelectGanZhiData.m; sourceTree = "<group>"; };
 		9250F700202C57F500720712 /* ShuangZaoTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShuangZaoTextView.h; sourceTree = "<group>"; };
 		9250F701202C57F500720712 /* ShuangZaoTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShuangZaoTextView.m; sourceTree = "<group>"; };
 		9250F702202C57F500720712 /* ShuangZaoTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShuangZaoTextView.xib; sourceTree = "<group>"; };
@@ -896,6 +899,16 @@
 			path = BasicView;
 			sourceTree = "<group>";
 		};
+		923A01CF203FF59500053863 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				92714F811FE2BBDD0078C41B /* BottomContentView.h */,
+				92714F821FE2BBDD0078C41B /* BottomContentView.m */,
+				92714F831FE2BBDD0078C41B /* BottomContentView.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		925CE6EE1FDB9B5800B319DB /* Middle */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,14 +957,12 @@
 		92714F801FE2BA1D0078C41B /* Bottom */ = {
 			isa = PBXGroup;
 			children = (
+				923A01CF203FF59500053863 /* Main */,
 				805A5C0A2036B06B006FD57C /* Header */,
 				801D672820317F4A00793050 /* BottomGroupItem */,
 				801D6724203140FF00793050 /* GroupBottomXiaoYun */,
 				801D672120313EAB00793050 /* SingleBottomXiaoYun */,
 				801D671A20313A7F00793050 /* BottomDataSource */,
-				92714F811FE2BBDD0078C41B /* BottomContentView.h */,
-				92714F821FE2BBDD0078C41B /* BottomContentView.m */,
-				92714F831FE2BBDD0078C41B /* BottomContentView.xib */,
 			);
 			path = Bottom;
 			sourceTree = "<group>";
@@ -1060,6 +1071,8 @@
 				9279C0071F8F919800FA8DA9 /* NaYinData.m */,
 				9279C0081F8F919800FA8DA9 /* ShenShaData.h */,
 				9279C0091F8F919800FA8DA9 /* ShenShaData.m */,
+				923A01CC203FEB2C00053863 /* MiddleSelectGanZhiData.h */,
+				923A01CD203FEB2C00053863 /* MiddleSelectGanZhiData.m */,
 			);
 			path = MiddleViewData;
 			sourceTree = "<group>";
@@ -1343,6 +1356,7 @@
 				806C8CEB1FFA27BD001DCE23 /* TopTextFieldFormatter.m in Sources */,
 				9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */,
 				80F48594203B0C7C007E7799 /* DSCaptureSelectionController+CoreGraphics.m in Sources */,
+				923A01CE203FEB2C00053863 /* MiddleSelectGanZhiData.m in Sources */,
 				80F48590203B0C7C007E7799 /* DSCaptureData.m in Sources */,
 				9279C0151F8F919800FA8DA9 /* FifteenYunData.m in Sources */,
 				925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */,

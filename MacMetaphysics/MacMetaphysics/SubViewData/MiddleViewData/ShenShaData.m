@@ -803,7 +803,7 @@
     [self shenShaSearchWithCheckType:SBTypeBranches
                         traverseType:SBTypeBranches
                         checkTypeArr:@[
-                                       @(MiddleSubViewTypeMonth),
+                                       @(MiddleSubViewTypeYear),
                                        ]
                 checkPrecnoditionArr:@[@"子",
                                        @"丑",
