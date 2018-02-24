@@ -150,7 +150,7 @@ static NSString *monthCellIdentifier = @"monthCellIdentifier";
         }
         NSInteger item = 0;
         //一共有31个格子，如果分隔天数加起来小于31天，则有最后一个空格代表空余天数
-        if(day<31){
+        if(day<riZhuData.solarDate.count){
             item = riZhuData.separatorDayArr.count+1;
         }
         //否则直接等于队列项数
@@ -160,19 +160,19 @@ static NSString *monthCellIdentifier = @"monthCellIdentifier";
         return item;
     }
     else if (section == 3){
-        return 31;
+        return riZhuData.solarDate.count;
     }
     else if (section == 4){
-        return 31;
+        return riZhuData.solarDate.count;
     }
     else if (section == 5){
         return 1;
     }
     else if (section == 6){
-        return 31;
+        return riZhuData.solarDate.count;
     }
     else if (section == 7){
-        return 31;
+        return riZhuData.solarDate.count;
     }
     
     return 1;
@@ -256,7 +256,7 @@ static NSString *monthCellIdentifier = @"monthCellIdentifier";
     else if(indexPath.section == 5){
         SolarTermsMonthCell *cell = [collectionView makeItemWithIdentifier:monthCellIdentifier
                                                                               forIndexPath:indexPath];
-        CGFloat cloumn = CGRectGetWidth(collectionView.frame)/31.0f;
+        CGFloat cloumn = CGRectGetWidth(collectionView.frame)/31;
         cell.leadingConstraint.constant = cloumn*riZhuData.monthLeadingConstraint;
         cell.titleLabel.text = [NSString stringWithFormat:@"%ld月",riZhuData.monthNumber];
         return cell;
@@ -305,11 +305,13 @@ static NSString *monthCellIdentifier = @"monthCellIdentifier";
 
 #pragma mark - UICollectionViewDelegate
 - (NSSize)collectionView:(NSCollectionView *)collectionView layout:(NSCollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    //每个格子的宽度（31列）
-    CGFloat cloumn = CGRectGetWidth(collectionView.frame)/31.0f;
+    
     //每行的高度
     CGFloat height = [self getHeightWithSection:indexPath.section];
     RiZhuData *riZhuData = [[MainViewModel sharedInstance] riZhuData];
+    //每个格子的宽度
+    CGFloat cloumn = CGRectGetWidth(collectionView.frame)/riZhuData.solarDate.count;
+    cloumn = floorf(cloumn);
     //第三行分隔日数
     NSArray *separatorDayArr = riZhuData.separatorDayArr;
     
@@ -333,7 +335,7 @@ static NSString *monthCellIdentifier = @"monthCellIdentifier";
         }
         //不足31天的剩余天数
         else{
-            NSInteger leftDay = 31 - totalDay;
+            NSInteger leftDay = riZhuData.solarDate.count - totalDay;
             return CGSizeMake(cloumn*leftDay, height);
         }
     }

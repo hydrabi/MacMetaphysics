@@ -10,6 +10,7 @@
 #import "NSString+Addition.h"
 #import "NSArray+Addition.h"
 #import "MainViewModel.h"
+#import "NSNumber+Addition.h"
 @implementation CurrentSelectDate
 
 -(NSDate*)getGregorianDate{
@@ -161,6 +162,8 @@
             self.gregorianYear = @(2100);
         }
     }
+    
+    [self adjustDayIfBeyondMaxDay];
 }
 
 #pragma mark - 月
@@ -190,6 +193,7 @@
         }
         else{
             self.gregorianMonth = @(1);
+            [self resetGregorianYearWithIncrease:YES];
         }
     }
     else{
@@ -198,8 +202,11 @@
         }
         else{
             self.gregorianMonth = @(12);
+            [self resetGregorianYearWithIncrease:NO];
         }
     }
+    
+    [self adjustDayIfBeyondMaxDay];
 }
 
 #pragma mark - 日
@@ -224,13 +231,24 @@
 }
 
 -(void)resetGregorianDayWithIncrease:(BOOL)increase{
+    NSInteger dayCount = 31;
+    
+    //如果新历月份和年份都不为空不为空
+    if(self.gregorianMonth &&
+       self.gregorianYear){
+        dayCount = [NSNumber getDayCountWithMonth:self.gregorianMonth.integerValue
+                                             year:self.gregorianYear.integerValue];
+    }
+    
     if(increase){
-        //农历最多31日每月
-        if(self.gregorianDay.integerValue < 31){
+        
+        //新历最多31日每月
+        if(self.gregorianDay.integerValue < dayCount){
             self.gregorianDay = @(self.gregorianDay.integerValue + 1);
         }
         else{
             self.gregorianDay = @(1);
+            [self resetGregorianMonthWithIncrease:YES];
         }
     }
     else{
@@ -238,7 +256,8 @@
             self.gregorianDay = @(self.gregorianDay.integerValue - 1);
         }
         else{
-            self.gregorianDay = @(31);
+            self.gregorianDay = @(dayCount);
+            [self resetGregorianMonthWithIncrease:NO];
         }
     }
 }
@@ -270,6 +289,7 @@
         }
         else{
             self.gregorianHour = @(0);
+            [self resetGregorianDayWithIncrease:YES];
         }
     }
     else{
@@ -278,7 +298,24 @@
         }
         else{
             self.gregorianHour = @(23);
+            [self resetGregorianDayWithIncrease:NO];
         }
+    }
+}
+
+#pragma mark - 调整月份，或者年份时，判断日数是否超过了最大值
+-(void)adjustDayIfBeyondMaxDay{
+    NSInteger dayCount = 31;
+    
+    //如果新历月份和年份都不为空不为空
+    if(self.gregorianMonth &&
+       self.gregorianYear){
+        dayCount = [NSNumber getDayCountWithMonth:self.gregorianMonth.integerValue
+                                             year:self.gregorianYear.integerValue];
+    }
+    
+    if(self.gregorianDay.integerValue > dayCount){
+        self.gregorianDay = @(dayCount);
     }
 }
 
