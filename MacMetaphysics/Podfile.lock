@@ -1,4 +1,7 @@
 PODS:
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
   - Masonry (1.0.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -9,13 +12,15 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
+  - MagicalRecord
   - Masonry (= 1.0.2)
   - ReactiveCocoa (= 2.5)
 
 SPEC CHECKSUMS:
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
-PODFILE CHECKSUM: 644012ac2e58628e478487c5a5a362a529adfa8e
+PODFILE CHECKSUM: 511a3e8efadf398b8816786559dae621e9eadc7e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

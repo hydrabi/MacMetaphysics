@@ -97,6 +97,8 @@
 		92714F7F1FE2803F0078C41B /* VerticalCenterTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92714F7D1FE2803E0078C41B /* VerticalCenterTextFieldCell.m */; };
 		92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92714F821FE2BBDD0078C41B /* BottomContentView.m */; };
 		92714F851FE2BBDD0078C41B /* BottomContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92714F831FE2BBDD0078C41B /* BottomContentView.xib */; };
+		9271605A205A9BAE00F26D21 /* BasicEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 92716059205A9BAE00F26D21 /* BasicEventHandler.m */; };
+		9271605E205A9CFB00F26D21 /* RecordEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271605D205A9CFB00F26D21 /* RecordEventHandler.m */; };
 		927170AC1FEB658100FDAB46 /* GALFlippedClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927170AB1FEB658100FDAB46 /* GALFlippedClipView.m */; };
 		9279BFEA1F8F8F8000FA8DA9 /* lunar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFE71F8F8F8000FA8DA9 /* lunar.mm */; };
 		9279BFEB1F8F8F8000FA8DA9 /* TTLunarCalendar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9279BFE91F8F8F8000FA8DA9 /* TTLunarCalendar.mm */; };
@@ -123,6 +125,8 @@
 		9279C0341F8F91F400FA8DA9 /* NSTextField+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279C02D1F8F91F400FA8DA9 /* NSTextField+Addition.m */; };
 		9279C0371F8F937900FA8DA9 /* UIConstantParm.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0361F8F937900FA8DA9 /* UIConstantParm.m */; };
 		9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0381F8F951300FA8DA9 /* BottomLocation.m */; };
+		92A4CD36205921EE008A06A5 /* Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A4CD34205921EE008A06A5 /* Record.xcdatamodeld */; };
+		92A4CD4020592BF0008A06A5 /* Record+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A4CD3C20592BF0008A06A5 /* Record+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,6 +293,10 @@
 		92714F811FE2BBDD0078C41B /* BottomContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomContentView.h; sourceTree = "<group>"; };
 		92714F821FE2BBDD0078C41B /* BottomContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomContentView.m; sourceTree = "<group>"; };
 		92714F831FE2BBDD0078C41B /* BottomContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomContentView.xib; sourceTree = "<group>"; };
+		92716058205A9BAE00F26D21 /* BasicEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicEventHandler.h; sourceTree = "<group>"; };
+		92716059205A9BAE00F26D21 /* BasicEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicEventHandler.m; sourceTree = "<group>"; };
+		9271605C205A9CFB00F26D21 /* RecordEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordEventHandler.h; sourceTree = "<group>"; };
+		9271605D205A9CFB00F26D21 /* RecordEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordEventHandler.m; sourceTree = "<group>"; };
 		927170AA1FEB658100FDAB46 /* GALFlippedClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GALFlippedClipView.h; sourceTree = "<group>"; };
 		927170AB1FEB658100FDAB46 /* GALFlippedClipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GALFlippedClipView.m; sourceTree = "<group>"; };
 		9279BFE61F8F8F8000FA8DA9 /* lunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lunar.h; sourceTree = "<group>"; };
@@ -340,6 +348,11 @@
 		9279C0361F8F937900FA8DA9 /* UIConstantParm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstantParm.m; sourceTree = "<group>"; };
 		9279C0381F8F951300FA8DA9 /* BottomLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomLocation.m; sourceTree = "<group>"; };
 		9279C0391F8F951300FA8DA9 /* BottomLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomLocation.h; sourceTree = "<group>"; };
+		92A4CD35205921EE008A06A5 /* Record.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Record.xcdatamodel; sourceTree = "<group>"; };
+		92A4CD3C20592BF0008A06A5 /* Record+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataProperties.m"; sourceTree = "<group>"; };
+		92A4CD3F20592BF0008A06A5 /* Record+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataProperties.h"; sourceTree = "<group>"; };
+		92A4CD4220592E3F008A06A5 /* Record+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataClass.m"; sourceTree = "<group>"; };
+		92A4CD4320592E3F008A06A5 /* Record+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataClass.h"; sourceTree = "<group>"; };
 		9B3071BE0CEAC92C92C5AA33 /* Pods-MacMetaphysics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacMetaphysics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacMetaphysics/Pods-MacMetaphysics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -610,6 +623,7 @@
 		8057E8E41F837AB6003DF83E /* MacMetaphysics */ = {
 			isa = PBXGroup;
 			children = (
+				92A4CD33205921D1008A06A5 /* CoreData */,
 				80F4859A203B0F83007E7799 /* MacMetaphysics.entitlements */,
 				80F48596203B0E60007E7799 /* Manager */,
 				80F4857B203B0C7C007E7799 /* DSCapture */,
@@ -750,6 +764,7 @@
 		809896AD1F852E50008ECA77 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				92716056205A9AF800F26D21 /* MainEventHandler */,
 				8007F4541F85BF0100198017 /* MainViewModel */,
 				809896AE1F852E50008ECA77 /* MainViewController */,
 				809896AF1F852E50008ECA77 /* MainWindowViewController */,
@@ -967,6 +982,33 @@
 			path = Bottom;
 			sourceTree = "<group>";
 		};
+		92716056205A9AF800F26D21 /* MainEventHandler */ = {
+			isa = PBXGroup;
+			children = (
+				9271605B205A9CDB00F26D21 /* RecordEventHandler */,
+				92716057205A9B6B00F26D21 /* BasicEventHandler */,
+			);
+			path = MainEventHandler;
+			sourceTree = "<group>";
+		};
+		92716057205A9B6B00F26D21 /* BasicEventHandler */ = {
+			isa = PBXGroup;
+			children = (
+				92716058205A9BAE00F26D21 /* BasicEventHandler.h */,
+				92716059205A9BAE00F26D21 /* BasicEventHandler.m */,
+			);
+			path = BasicEventHandler;
+			sourceTree = "<group>";
+		};
+		9271605B205A9CDB00F26D21 /* RecordEventHandler */ = {
+			isa = PBXGroup;
+			children = (
+				9271605C205A9CFB00F26D21 /* RecordEventHandler.h */,
+				9271605D205A9CFB00F26D21 /* RecordEventHandler.m */,
+			);
+			path = RecordEventHandler;
+			sourceTree = "<group>";
+		};
 		927170A81FEB655300FDAB46 /* NibView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1125,6 +1167,26 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		92A4CD33205921D1008A06A5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				92A4CD3720592A93008A06A5 /* Model */,
+				92A4CD34205921EE008A06A5 /* Record.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		92A4CD3720592A93008A06A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92A4CD4320592E3F008A06A5 /* Record+CoreDataClass.h */,
+				92A4CD4220592E3F008A06A5 /* Record+CoreDataClass.m */,
+				92A4CD3F20592BF0008A06A5 /* Record+CoreDataProperties.h */,
+				92A4CD3C20592BF0008A06A5 /* Record+CoreDataProperties.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1271,7 +1333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D41B3ADB37FDE2930FFB0DFB /* [CP] Embed Pods Frameworks */ = {
@@ -1365,6 +1427,7 @@
 				925CE7091FDBDA6500B319DB /* NSView+Addition.m in Sources */,
 				80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */,
 				801D6727203144D600793050 /* GroupBottomXiaoYunView.m in Sources */,
+				92A4CD4020592BF0008A06A5 /* Record+CoreDataProperties.m in Sources */,
 				80E1634D2037F42C009DFA19 /* NormalTextView.m in Sources */,
 				806C310D1FF5361400432737 /* SolarTermsSecondCell.m in Sources */,
 				80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */,
@@ -1374,7 +1437,9 @@
 				80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */,
 				801D673120318E5200793050 /* CustomCollectionView.m in Sources */,
 				925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */,
+				9271605A205A9BAE00F26D21 /* BasicEventHandler.m in Sources */,
 				801D672C20317F8200793050 /* BottomGroupCollectionViewItem.m in Sources */,
+				9271605E205A9CFB00F26D21 /* RecordEventHandler.m in Sources */,
 				801D672020313EA400793050 /* SingleBottomXiaoYunView.m in Sources */,
 				80157471200B8D10006FE025 /* JiaZiCollectionViewController.m in Sources */,
 				9279C01C1F8F919800FA8DA9 /* RiZhuData.mm in Sources */,
@@ -1389,6 +1454,7 @@
 				927170AC1FEB658100FDAB46 /* GALFlippedClipView.m in Sources */,
 				809896C11F853474008ECA77 /* BasicViewController.m in Sources */,
 				925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */,
+				92A4CD36205921EE008A06A5 /* Record.xcdatamodeld in Sources */,
 				9279C0341F8F91F400FA8DA9 /* NSTextField+Addition.m in Sources */,
 				9279C0311F8F91F400FA8DA9 /* NSNumber+Addition.m in Sources */,
 				8097BBC02039B1040081ACA9 /* LeftMenuBottomTextData.m in Sources */,
@@ -1631,6 +1697,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		92A4CD34205921EE008A06A5 /* Record.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				92A4CD35205921EE008A06A5 /* Record.xcdatamodel */,
+			);
+			currentVersion = 92A4CD35205921EE008A06A5 /* Record.xcdatamodel */;
+			path = Record.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8057E8DA1F837AB6003DF83E /* Project object */;
 }
