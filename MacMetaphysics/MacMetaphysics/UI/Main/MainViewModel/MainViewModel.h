@@ -17,6 +17,8 @@
 #import "FifteenYunData.h"
 #import "LiuNianData.h"
 #import "LeftMenuBottomTextData.h"
+#import "RecordEventHandler.h"
+
 
 @interface MainViewModel : BasicViewModel
 //左边的菜单页面
@@ -81,6 +83,9 @@
 @property (nonatomic,strong)LeftMenuBottomTextData *leftMenuBottomTextData;
 //1900~2100年节气精确到分的时间集合
 @property (nonatomic,strong)NSMutableDictionary *solarTermsTimeDic;
+
+@property (nonatomic, strong) RecordEventHandler * recordEventHandler; 
+
 
 +(instancetype)sharedInstance;
 -(NSString*)getSpecificMenuTitleWithType:(LeftSideMenuType)type;

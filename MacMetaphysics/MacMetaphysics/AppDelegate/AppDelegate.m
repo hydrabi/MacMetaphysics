@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ScreenShotManager.h"
+#import <MagicalRecord/MagicalRecord.h>
+
 @interface AppDelegate ()
 @property (nonatomic,strong)ScreenShotManager *screenShotManager;
 @end
@@ -17,6 +19,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
     self.screenShotManager = [[ScreenShotManager alloc] init];
+    [MagicalRecord setupCoreDataStack];
     
     self.mainWindowViewController = [[MainWindowViewController alloc] initWithWindowNibName:NSStringFromClass([MainWindowViewController class])];
     [self.mainWindowViewController.window makeKeyAndOrderFront:nil];

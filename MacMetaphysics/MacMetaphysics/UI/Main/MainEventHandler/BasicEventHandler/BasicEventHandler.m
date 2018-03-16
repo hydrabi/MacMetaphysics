@@ -7,6 +7,8 @@
 //
 
 #import "BasicEventHandler.h"
+#import "MainViewModel.h"
+#import "MainViewController.h"
 
 @implementation BasicEventHandler
 

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MainViewModel.h"
-#import "MainViewController.h"
+@class MainViewModel;
+@class MainViewController;
 
 @interface BasicEventHandler : NSObject
 

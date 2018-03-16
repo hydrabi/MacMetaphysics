@@ -81,6 +81,7 @@
     self.solarTermsTimeDic = [AnalysisSolarTerm analysis];
     
     [self bindOperation];
+    self.recordEventHandler = [[RecordEventHandler alloc] initWithViewModel:self];
 }
 
 -(void)bindOperation{
