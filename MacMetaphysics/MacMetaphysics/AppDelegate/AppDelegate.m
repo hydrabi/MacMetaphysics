@@ -31,8 +31,14 @@
     // Insert code here to tear down your application
 }
 
+//截图
 - (IBAction)screenShot:(id)sender {
     [self.screenShotManager start];
+}
+
+//保存记录
+- (IBAction)saveRecord:(id)sender {
+    
 }
 
 @end

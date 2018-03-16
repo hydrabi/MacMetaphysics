@@ -64,7 +64,11 @@
                                                 <action selector="screenShot:" target="Voe-Tx-rLC" id="M1R-KW-5uX"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="保存" keyEquivalent="h" id="F2y-Vb-U4y"/>
+                                        <menuItem title="保存" keyEquivalent="h" id="F2y-Vb-U4y">
+                                            <connections>
+                                                <action selector="saveRecord:" target="Voe-Tx-rLC" id="Ttk-Di-eUB"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
                                             <connections>
                                                 <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
