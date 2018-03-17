@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ScreenShotManager.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "SaveWindowController.h"
 
 @interface AppDelegate ()
 @property (nonatomic,strong)ScreenShotManager *screenShotManager;
@@ -38,7 +39,7 @@
 
 //保存记录
 - (IBAction)saveRecord:(id)sender {
-    
+    [SaveWindowController showSaveModelViewController];
 }
 
 @end

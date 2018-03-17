@@ -86,6 +86,11 @@
 		923A01CE203FEB2C00053863 /* MiddleSelectGanZhiData.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A01CD203FEB2C00053863 /* MiddleSelectGanZhiData.m */; };
 		9250F703202C57F500720712 /* ShuangZaoTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9250F701202C57F500720712 /* ShuangZaoTextView.m */; };
 		9250F704202C57F500720712 /* ShuangZaoTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9250F702202C57F500720712 /* ShuangZaoTextView.xib */; };
+		925C5204205CF29800294FD5 /* SaveWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925C5202205CF29800294FD5 /* SaveWindowController.m */; };
+		925C5205205CF29800294FD5 /* SaveWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925C5203205CF29800294FD5 /* SaveWindowController.xib */; };
+		925C5209205CF31600294FD5 /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925C5207205CF31600294FD5 /* SaveViewController.m */; };
+		925C520A205CF31600294FD5 /* SaveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925C5208205CF31600294FD5 /* SaveViewController.xib */; };
+		925C5210205CF3D200294FD5 /* SaveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 925C520F205CF3D200294FD5 /* SaveViewModel.m */; };
 		925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F01FDB9E1200B319DB /* MiddleContentView.m */; };
 		925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */; };
 		925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE6F51FDB9E5500B319DB /* MiddleSubView.m */; };
@@ -275,6 +280,14 @@
 		9250F700202C57F500720712 /* ShuangZaoTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShuangZaoTextView.h; sourceTree = "<group>"; };
 		9250F701202C57F500720712 /* ShuangZaoTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShuangZaoTextView.m; sourceTree = "<group>"; };
 		9250F702202C57F500720712 /* ShuangZaoTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShuangZaoTextView.xib; sourceTree = "<group>"; };
+		925C5201205CF29800294FD5 /* SaveWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveWindowController.h; sourceTree = "<group>"; };
+		925C5202205CF29800294FD5 /* SaveWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveWindowController.m; sourceTree = "<group>"; };
+		925C5203205CF29800294FD5 /* SaveWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveWindowController.xib; sourceTree = "<group>"; };
+		925C5206205CF31600294FD5 /* SaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveViewController.h; sourceTree = "<group>"; };
+		925C5207205CF31600294FD5 /* SaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveViewController.m; sourceTree = "<group>"; };
+		925C5208205CF31600294FD5 /* SaveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveViewController.xib; sourceTree = "<group>"; };
+		925C520E205CF3D200294FD5 /* SaveViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveViewModel.h; sourceTree = "<group>"; };
+		925C520F205CF3D200294FD5 /* SaveViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveViewModel.m; sourceTree = "<group>"; };
 		925CE6EF1FDB9E1200B319DB /* MiddleContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleContentView.h; sourceTree = "<group>"; };
 		925CE6F01FDB9E1200B319DB /* MiddleContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleContentView.m; sourceTree = "<group>"; };
 		925CE6F11FDB9E1200B319DB /* MiddleContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleContentView.xib; sourceTree = "<group>"; };
@@ -749,6 +762,7 @@
 		809896AC1F852E50008ECA77 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				925C5200205CF22000294FD5 /* Save */,
 				92714F801FE2BA1D0078C41B /* Bottom */,
 				925CE7051FDBDA0200B319DB /* Category */,
 				925CE6EE1FDB9B5800B319DB /* Middle */,
@@ -922,6 +936,45 @@
 				92714F831FE2BBDD0078C41B /* BottomContentView.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		925C5200205CF22000294FD5 /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				925C520D205CF3B600294FD5 /* ViewModel */,
+				925C520C205CF3AA00294FD5 /* ViewController */,
+				925C520B205CF3A000294FD5 /* Window */,
+			);
+			path = Save;
+			sourceTree = "<group>";
+		};
+		925C520B205CF3A000294FD5 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				925C5201205CF29800294FD5 /* SaveWindowController.h */,
+				925C5202205CF29800294FD5 /* SaveWindowController.m */,
+				925C5203205CF29800294FD5 /* SaveWindowController.xib */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		925C520C205CF3AA00294FD5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				925C5206205CF31600294FD5 /* SaveViewController.h */,
+				925C5207205CF31600294FD5 /* SaveViewController.m */,
+				925C5208205CF31600294FD5 /* SaveViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		925C520D205CF3B600294FD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				925C520E205CF3D200294FD5 /* SaveViewModel.h */,
+				925C520F205CF3D200294FD5 /* SaveViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		925CE6EE1FDB9B5800B319DB /* Middle */ = {
@@ -1291,10 +1344,12 @@
 				9250F704202C57F500720712 /* ShuangZaoTextView.xib in Resources */,
 				801648E520386A32004AF608 /* LiuNianTextView.xib in Resources */,
 				806C31131FF5362300432737 /* SolarTermsThirdCell.xib in Resources */,
+				925C5205205CF29800294FD5 /* SaveWindowController.xib in Resources */,
 				806C310E1FF5361400432737 /* SolarTermsSecondCell.xib in Resources */,
 				801D672320313FDE00793050 /* SingleBottomXiaoYunView.xib in Resources */,
 				925CE7041FDBD86B00B319DB /* MiddleTableViewCell.xib in Resources */,
 				806C31091FF5360400432737 /* SolarTermsNumberCell.xib in Resources */,
+				925C520A205CF31600294FD5 /* SaveViewController.xib in Resources */,
 				806C31041FF535EA00432737 /* SolarTermsMulLineCell.xib in Resources */,
 				80157472200B8D10006FE025 /* JiaZiCollectionViewController.xib in Resources */,
 				809896B51F852F37008ECA77 /* MainWindowViewController.xib in Resources */,
@@ -1395,6 +1450,7 @@
 				9279C0131F8F919800FA8DA9 /* BottomViewData.m in Sources */,
 				809896B91F852F64008ECA77 /* MainViewController.m in Sources */,
 				923165E11FE37B55007C6B27 /* BottomNormalTableViewHeader.m in Sources */,
+				925C5204205CF29800294FD5 /* SaveWindowController.m in Sources */,
 				9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
 				80F48592203B0C7C007E7799 /* DSCaptureSelectionController+System.m in Sources */,
@@ -1441,6 +1497,7 @@
 				801D672C20317F8200793050 /* BottomGroupCollectionViewItem.m in Sources */,
 				9271605E205A9CFB00F26D21 /* RecordEventHandler.m in Sources */,
 				801D672020313EA400793050 /* SingleBottomXiaoYunView.m in Sources */,
+				925C5210205CF3D200294FD5 /* SaveViewModel.m in Sources */,
 				80157471200B8D10006FE025 /* JiaZiCollectionViewController.m in Sources */,
 				9279C01C1F8F919800FA8DA9 /* RiZhuData.mm in Sources */,
 				9279BFEB1F8F8F8000FA8DA9 /* TTLunarCalendar.mm in Sources */,
@@ -1455,6 +1512,7 @@
 				809896C11F853474008ECA77 /* BasicViewController.m in Sources */,
 				925CE6F21FDB9E1200B319DB /* MiddleContentView.m in Sources */,
 				92A4CD36205921EE008A06A5 /* Record.xcdatamodeld in Sources */,
+				925C5209205CF31600294FD5 /* SaveViewController.m in Sources */,
 				9279C0341F8F91F400FA8DA9 /* NSTextField+Addition.m in Sources */,
 				9279C0311F8F91F400FA8DA9 /* NSNumber+Addition.m in Sources */,
 				8097BBC02039B1040081ACA9 /* LeftMenuBottomTextData.m in Sources */,

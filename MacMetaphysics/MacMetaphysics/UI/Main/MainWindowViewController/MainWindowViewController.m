@@ -20,6 +20,15 @@
     
     MainViewModel *viewModel = [MainViewModel sharedInstance];
     MainViewController *viewController = [[MainViewController alloc] initWithViewModel:viewModel];
+    
+    //设置初始位置
+    NSScreen *screen = self.window.screen;
+    CGFloat offsetFromLeftOfScreen = 0.0f;
+    CGFloat offsetFromTopOfScreen = 20.0f;
+    CGRect screenRect = NSRectToCGRect(screen.visibleFrame);
+    CGFloat newOriginY = CGRectGetMaxY(screenRect) - self.window.frame.size.height - offsetFromTopOfScreen;
+    [self.window setFrameOrigin:NSMakePoint(offsetFromLeftOfScreen, newOriginY)];
+    
     self.contentViewController = viewController;
 }
 
