@@ -10,6 +10,7 @@
 #import "ScreenShotManager.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "SaveWindowController.h"
+#import "MainViewModel.h"
 
 @interface AppDelegate ()
 @property (nonatomic,strong)ScreenShotManager *screenShotManager;
@@ -37,9 +38,14 @@
     [self.screenShotManager start];
 }
 
+//查找记录
+- (IBAction)findRecord:(id)sender {
+    [SaveWindowController showSaveModelViewController];
+}
+
 //保存记录
 - (IBAction)saveRecord:(id)sender {
-    [SaveWindowController showSaveModelViewController];
+    [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecord];
 }
 
 @end

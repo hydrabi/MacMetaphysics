@@ -10,4 +10,9 @@
 
 @interface RecordEventHandler : BasicEventHandler
 
+/**
+ 保存当前记录
+ */
+-(void)saveCurrentRecord;
+
 @end

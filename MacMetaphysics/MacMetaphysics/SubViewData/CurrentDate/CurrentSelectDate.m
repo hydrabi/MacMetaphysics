@@ -319,4 +319,25 @@
     }
 }
 
+#pragma mark - 清空
+-(void)clearData{
+    [super clearData];
+    
+    _gregorianYear = nil;
+    _gregorianMonth = nil;
+    _gregorianDay = nil;
+    self.gregorianHour = nil;
+    
+    _isLeapMonth = nil;
+    _lunarYear = nil;
+    _lunarMonth = nil;
+    _lunarDay = nil;
+    self.lunarHour = nil;
+    
+    _ganZhiYear = nil;
+    _ganZhiMonth = nil;
+    _ganZhiDay = nil;
+    self.ganZhiHour = nil;
+}
+
 @end
