@@ -176,6 +176,24 @@ static const CGFloat titleFontSize_16 =  16.0f;
 static const CGFloat titleFontSize_14 =  14.0f;
 static const CGFloat titleFontSize_12 =  12.0f;
 
+#pragma mark - 记录
+static NSString* const saveTableViewKeyCloumnIdentifier = @"saveTableViewKeyCloumnIdentifier";
+static const NSString *saveTableViewNameCloumnIdentifier = @"saveTableViewNameCloumnIdentifier";
+static const NSString *saveTableViewGregorianCloumnIdentifier = @"saveTableViewGregorianCloumnIdentifier";
+static const NSString *saveTableViewLunarCloumnIdentifier = @"saveTableViewLunarCloumnIdentifier";
+static const NSString *saveTableViewGanZhiCloumnIdentifier = @"saveTableViewGanZhiCloumnIdentifier";
+static const NSString *saveTableViewNoteCloumnIdentifier = @"saveTableViewNoteCloumnIdentifier";
+static const NSString *saveTableViewDateCloumnIdentifier = @"saveTableViewDateCloumnIdentifier";
+
+static const NSString *saveTableViewKeyHeaderTitle = @"编号";
+static const NSString *saveTableViewNameHeaderTitle = @"姓名";
+static const NSString *saveTableViewGregorianHeaderTitle = @"公历";
+static const NSString *saveTableViewLunarHeaderTitle = @"农历";
+static const NSString *saveTableViewGanZhiHeaderTitle = @"四柱";
+static const NSString *saveTableViewNoteHeaderTitle = @"笔记";
+static const NSString *saveTableViewDateHeaderTitle = @"日期";
+
+
 //改变颜色key
 static NSString *notificationKey_changeColor = @"notificationKey_changeColor";
 //通知底部的大运小运重新加载 但不经过collectionView

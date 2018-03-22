@@ -45,7 +45,8 @@
 
 //保存记录
 - (IBAction)saveRecord:(id)sender {
-    [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecord];
+    [[MainViewModel sharedInstance].recordEventHandler deleteAllRecord];
+//    [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecord];
 }
 
 @end

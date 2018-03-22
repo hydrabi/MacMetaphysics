@@ -14,4 +14,19 @@
  */
 @interface SaveViewController : BasicViewController
 
+/**
+ 编号输入框
+ */
+@property (weak) IBOutlet NSTextField *keyInputTextView;
+
+/**
+ 按编号查找按钮
+ */
+@property (weak) IBOutlet NSButton *keySearchButton;
+
+/**
+ 展示记录的tableView
+ */
+@property (weak) IBOutlet NSTableView *recordTableView;
+
 @end

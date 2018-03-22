@@ -79,6 +79,7 @@
 		80F48595203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4858A203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m */; };
 		80F48599203B0E60007E7799 /* ScreenShotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48597203B0E60007E7799 /* ScreenShotManager.m */; };
 		80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */; };
+		921F48132063BD8D009A90AB /* SaveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 921F48122063BD8D009A90AB /* SaveTableViewDataSource.m */; };
 		9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9221E22B2029B993002CA146 /* NSPopover+Addition.m */; };
 		923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165DD1FE36962007C6B27 /* BasicNibView.m */; };
 		923165E11FE37B55007C6B27 /* BottomNormalTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165E01FE37B55007C6B27 /* BottomNormalTableViewHeader.m */; };
@@ -268,6 +269,8 @@
 		80F4859A203B0F83007E7799 /* MacMetaphysics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacMetaphysics.entitlements; sourceTree = "<group>"; };
 		80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+LeftMenu.h"; sourceTree = "<group>"; };
 		80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainViewModel+LeftMenu.m"; sourceTree = "<group>"; };
+		921F48112063BD8D009A90AB /* SaveTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveTableViewDataSource.h; sourceTree = "<group>"; };
+		921F48122063BD8D009A90AB /* SaveTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveTableViewDataSource.m; sourceTree = "<group>"; };
 		9221E22A2029B993002CA146 /* NSPopover+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPopover+Addition.h"; sourceTree = "<group>"; };
 		9221E22B2029B993002CA146 /* NSPopover+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSPopover+Addition.m"; sourceTree = "<group>"; };
 		923165DC1FE36962007C6B27 /* BasicNibView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicNibView.h; sourceTree = "<group>"; };
@@ -903,6 +906,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		921F480E2063BD1A009A90AB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				921F48112063BD8D009A90AB /* SaveTableViewDataSource.h */,
+				921F48122063BD8D009A90AB /* SaveTableViewDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		9221E2262029A865002CA146 /* 注意 */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +953,7 @@
 		925C5200205CF22000294FD5 /* Save */ = {
 			isa = PBXGroup;
 			children = (
+				921F480E2063BD1A009A90AB /* DataSource */,
 				925C520D205CF3B600294FD5 /* ViewModel */,
 				925C520C205CF3AA00294FD5 /* ViewController */,
 				925C520B205CF3A000294FD5 /* Window */,
@@ -1454,6 +1467,7 @@
 				9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */,
 				9279C0181F8F919800FA8DA9 /* LiuQinData.m in Sources */,
 				80F48592203B0C7C007E7799 /* DSCaptureSelectionController+System.m in Sources */,
+				921F48132063BD8D009A90AB /* SaveTableViewDataSource.m in Sources */,
 				9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */,
 				801D9AF91FF7DE0F007F5EBC /* DatePickViewModel.m in Sources */,
 				92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */,

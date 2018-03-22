@@ -22,11 +22,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *ganZhiMonth;
 @property (nullable, nonatomic, copy) NSString *ganZhiDay;
 @property (nullable, nonatomic, copy) NSString *ganZhiHour;
+
+@property (nullable, nonatomic, copy) NSDate *date;
+
 @property (nonatomic) int16_t gregorianYear;
 @property (nonatomic) int16_t gregorianMonth;
 @property (nonatomic) int16_t gregorianDay;
 @property (nonatomic) int16_t gregorianHour;
-
+@property (nonatomic) int16_t lunarYear;
+@property (nonatomic) int16_t lunarMonth;
+@property (nonatomic) int16_t lunarDay;
+@property (nonatomic) int16_t lunarHour;
 @end
 
 NS_ASSUME_NONNULL_END

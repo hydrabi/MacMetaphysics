@@ -25,5 +25,9 @@
 @dynamic gregorianMonth;
 @dynamic gregorianDay;
 @dynamic gregorianHour;
+@dynamic lunarYear;
+@dynamic lunarMonth;
+@dynamic lunarDay;
+@dynamic lunarHour;
 
 @end

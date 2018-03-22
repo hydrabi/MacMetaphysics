@@ -15,4 +15,9 @@
  */
 -(void)saveCurrentRecord;
 
+/**
+ 删除所有记录
+ */
+-(void)deleteAllRecord;
+
 @end

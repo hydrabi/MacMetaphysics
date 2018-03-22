@@ -12,13 +12,6 @@
 #import "MainViewController.h"
 @implementation RecordEventHandler
 
--(void)fetchAll{
-    NSArray *recordArr = [Record MR_findAll];
-    for(Record *record in recordArr){
-        NSLog(@"%@,%@,%@",record.key,record.name,record.other);
-    }
-    NSLog(@"");
-}
 
 -(void)saveCurrentRecord{
     BOOL canSave = YES;
@@ -81,6 +74,38 @@
         canSave = NO;
     }
     
+    //农历年
+    if(selectDate.lunarYear){
+        record.lunarYear = selectDate.lunarYear.integerValue;
+    }
+    else{
+        canSave = NO;
+    }
+    
+    //农历月
+    if(selectDate.lunarMonth){
+        record.lunarMonth = selectDate.lunarMonth.integerValue;
+    }
+    else{
+        canSave = NO;
+    }
+    
+    //农历日
+    if(selectDate.lunarDay){
+        record.lunarDay = selectDate.lunarDay.integerValue;
+    }
+    else{
+        canSave = NO;
+    }
+    
+    //农历时
+    if(selectDate.lunarHour){
+        record.lunarHour = selectDate.lunarHour.integerValue;
+    }
+    else{
+        canSave = NO;
+    }
+    
     //干支年
     if(selectDate.ganZhiYear){
         record.ganZhiYear = selectDate.ganZhiYear;
@@ -114,6 +139,9 @@
     }
     
     if(canSave){
+        
+        record.date = [NSDate date];
+        
         // 保存修改到当前上下文中.
         [defaultContext MR_saveToPersistentStoreAndWait];
         
@@ -129,6 +157,21 @@
 
 -(void)clearAllData{
     [self.viewModel.selectedDate clearData];
+}
+
+//删除所有记录
+-(void)deleteAllRecord{
+    NSManagedObjectContext *defaultContext = [NSManagedObjectContext MR_defaultContext];
+    [Record MR_truncateAllInContext:defaultContext];
+    [self fetchAll];
+}
+
+-(void)fetchAll{
+    NSArray *recordArr = [Record MR_findAll];
+    for(Record *record in recordArr){
+        NSLog(@"%@,%@,%@",record.key,record.name,record.other);
+    }
+    NSLog(@"");
 }
 
 @end

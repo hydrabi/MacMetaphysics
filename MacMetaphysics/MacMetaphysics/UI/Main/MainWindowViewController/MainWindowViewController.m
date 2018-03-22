@@ -27,7 +27,7 @@
     CGFloat offsetFromTopOfScreen = 20.0f;
     CGRect screenRect = NSRectToCGRect(screen.visibleFrame);
     CGFloat newOriginY = CGRectGetMaxY(screenRect) - self.window.frame.size.height - offsetFromTopOfScreen;
-    [self.window setFrameOrigin:NSMakePoint(offsetFromLeftOfScreen, newOriginY)];
+//    [self.window setFrame:<#(NSRect)#> display:<#(BOOL)#>];
     
     self.contentViewController = viewController;
 }
