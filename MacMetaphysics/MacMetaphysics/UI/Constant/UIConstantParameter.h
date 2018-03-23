@@ -177,21 +177,21 @@ static const CGFloat titleFontSize_14 =  14.0f;
 static const CGFloat titleFontSize_12 =  12.0f;
 
 #pragma mark - 记录
-static NSString* const saveTableViewKeyCloumnIdentifier = @"saveTableViewKeyCloumnIdentifier";
-static const NSString *saveTableViewNameCloumnIdentifier = @"saveTableViewNameCloumnIdentifier";
-static const NSString *saveTableViewGregorianCloumnIdentifier = @"saveTableViewGregorianCloumnIdentifier";
-static const NSString *saveTableViewLunarCloumnIdentifier = @"saveTableViewLunarCloumnIdentifier";
-static const NSString *saveTableViewGanZhiCloumnIdentifier = @"saveTableViewGanZhiCloumnIdentifier";
-static const NSString *saveTableViewNoteCloumnIdentifier = @"saveTableViewNoteCloumnIdentifier";
-static const NSString *saveTableViewDateCloumnIdentifier = @"saveTableViewDateCloumnIdentifier";
+static NSString* const saveTableViewKeyCloumnIdentifier       = @"saveTableViewKeyCloumnIdentifier";
+static NSString* const saveTableViewNameCloumnIdentifier      = @"saveTableViewNameCloumnIdentifier";
+static NSString* const saveTableViewGregorianCloumnIdentifier = @"saveTableViewGregorianCloumnIdentifier";
+static NSString* const saveTableViewLunarCloumnIdentifier     = @"saveTableViewLunarCloumnIdentifier";
+static NSString* const saveTableViewGanZhiCloumnIdentifier    = @"saveTableViewGanZhiCloumnIdentifier";
+static NSString* const saveTableViewNoteCloumnIdentifier      = @"saveTableViewNoteCloumnIdentifier";
+static NSString* const saveTableViewDateCloumnIdentifier      = @"saveTableViewDateCloumnIdentifier";
 
-static const NSString *saveTableViewKeyHeaderTitle = @"编号";
-static const NSString *saveTableViewNameHeaderTitle = @"姓名";
-static const NSString *saveTableViewGregorianHeaderTitle = @"公历";
-static const NSString *saveTableViewLunarHeaderTitle = @"农历";
-static const NSString *saveTableViewGanZhiHeaderTitle = @"四柱";
-static const NSString *saveTableViewNoteHeaderTitle = @"笔记";
-static const NSString *saveTableViewDateHeaderTitle = @"日期";
+static NSString* const saveTableViewKeyHeaderTitle            = @"编号";
+static NSString* const saveTableViewNameHeaderTitle           = @"姓名";
+static NSString* const saveTableViewGregorianHeaderTitle      = @"公历";
+static NSString* const saveTableViewLunarHeaderTitle          = @"农历";
+static NSString* const saveTableViewGanZhiHeaderTitle         = @"四柱";
+static NSString* const saveTableViewNoteHeaderTitle           = @"笔记";
+static NSString* const saveTableViewDateHeaderTitle           = @"日期";
 
 
 //改变颜色key

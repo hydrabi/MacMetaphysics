@@ -8,11 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BasicViewController.h"
+#import "SaveTableViewDataSource.h"
+#import "SaveViewModel.h"
 
 /**
  用于保存出生日期等信息
  */
 @interface SaveViewController : BasicViewController
+
+@property (weak, nonatomic)SaveViewModel * viewModel;
 
 /**
  编号输入框
@@ -29,4 +33,8 @@
  */
 @property (weak) IBOutlet NSTableView *recordTableView;
 
+/**
+ tableView数据源
+ */
+@property (nonatomic, strong) SaveTableViewDataSource * tableViewDataSource;
 @end
