@@ -10,11 +10,14 @@
 #import "SaveViewModel.h"
 #import "SaveViewController.h"
 #import "UIConstantParameter.h"
+#import "MainViewModel.h"
+#import "Record+CoreDataProperties.h"
 
 @interface SaveTableViewDataSource()
 @property (weak, nonatomic)SaveViewModel * viewModel;
 @property (weak, nonatomic)SaveViewController * viewController;
 @property (weak, nonatomic)NSTableView * tableView;
+@property (weak, nonatomic)NSArray *recordArr;
 @end
 
 @implementation SaveTableViewDataSource
@@ -29,6 +32,7 @@
         _tableView.dataSource = self;
 
         [self setUpTableView];
+        [self reloadRecord];
     }
     return self;
 }
@@ -44,51 +48,84 @@
         [self.tableView removeTableColumn:column];
     }
     
-    NSTableColumn *column1 = [[NSTableColumn alloc] initWithIdentifier:saveTableViewKeyCloumnIdentifier];
-    id cell1 = [column1 dataCell];
-    [cell1 setFont:[NSFont systemFontOfSize:titleFontSize_20]];
-    column1.title = saveTableViewKeyHeaderTitle;
-    [self.tableView addTableColumn:column1];
+    NSArray *identifierArr = @[saveTableViewKeyCloumnIdentifier,
+                               saveTableViewNameCloumnIdentifier,
+                               saveTableViewGregorianCloumnIdentifier,
+                               saveTableViewLunarCloumnIdentifier,
+                               saveTableViewGanZhiCloumnIdentifier,
+                               saveTableViewNoteCloumnIdentifier,
+                               saveTableViewDateCloumnIdentifier];
     
-    NSTableColumn *column2 = [[NSTableColumn alloc] initWithIdentifier:saveTableViewNameCloumnIdentifier];
-    column2.title = saveTableViewNameHeaderTitle;
-    [self.tableView addTableColumn:column2];
+    NSArray *nameArr = @[saveTableViewKeyHeaderTitle,
+                         saveTableViewNameHeaderTitle,
+                         saveTableViewGregorianHeaderTitle,
+                         saveTableViewLunarHeaderTitle,
+                         saveTableViewGanZhiHeaderTitle,
+                         saveTableViewNoteHeaderTitle,
+                         saveTableViewDateHeaderTitle];
     
-    NSTableColumn *column3 = [[NSTableColumn alloc] initWithIdentifier:saveTableViewGregorianCloumnIdentifier];
-    column3.title = saveTableViewGregorianHeaderTitle;
-    [self.tableView addTableColumn:column3];
+    for(NSInteger i = 0;i<identifierArr.count;i++){
+        NSString *identifier = identifierArr[i];
+        NSString *title = nameArr[i];
+        
+        NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:identifier];
+        id cell = [column dataCell];
+        [cell setFont:[NSFont systemFontOfSize:titleFontSize_20]];
+        column.title = title;
+        [self.tableView addTableColumn:column];
+    }
     
-    NSTableColumn *column4 = [[NSTableColumn alloc] initWithIdentifier:saveTableViewLunarCloumnIdentifier];
-    column4.title = saveTableViewLunarHeaderTitle;
-    [self.tableView addTableColumn:column4];
-    
-    NSTableColumn *column5 = [[NSTableColumn alloc] initWithIdentifier:saveTableViewGanZhiCloumnIdentifier];
-    column5.title = saveTableViewGanZhiHeaderTitle;
-    [self.tableView addTableColumn:column5];
-    
-    NSTableColumn *column6 = [[NSTableColumn alloc] initWithIdentifier:saveTableViewNoteCloumnIdentifier];
-    column6.title = saveTableViewNoteHeaderTitle;
-    [self.tableView addTableColumn:column6];
-    
-    NSTableColumn *column7 = [[NSTableColumn alloc] initWithIdentifier:saveTableViewDateCloumnIdentifier];
-    column7.title = saveTableViewDateHeaderTitle;
-    [self.tableView addTableColumn:column7];
 }
+
+-(void)reloadRecord{
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler fetchAll];
+    [self.tableView reloadData];
+}
+
+#pragma mark - NSTableViewDelegate,NSTableViewDataSource
 
 -(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
     return 30.0f;
 }
 
-//- (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row{
-//    NSTableCellView *cell = [tableView makeViewWithIdentifier:<#(nonnull NSUserInterfaceItemIdentifier)#> owner:<#(nullable id)#>]
-//}
-
 -(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
-    return @"content";
+    
+    Record *record = self.recordArr[row];
+    
+    //姓名
+    if([tableColumn.identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
+        return record.name;
+    }
+    //编号
+    else if([tableColumn.identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
+        return record.key;
+    }
+    //公历
+    else if([tableColumn.identifier isEqualToString:saveTableViewGregorianCloumnIdentifier]){
+        
+    }
+    //农历
+    else if([tableColumn.identifier isEqualToString:saveTableViewLunarCloumnIdentifier]){
+        
+    }
+    //干支
+    else if([tableColumn.identifier isEqualToString:saveTableViewGanZhiCloumnIdentifier]){
+        
+    }
+    //笔记
+    else if([tableColumn.identifier isEqualToString:saveTableViewNoteCloumnIdentifier]){
+        
+    }
+    //日期
+    else if([tableColumn.identifier isEqualToString:saveTableViewDateCloumnIdentifier]){
+        
+    }
+    
+    return @"";
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
-    return 6;
+    return self.recordArr.count;
 }
 
 @end

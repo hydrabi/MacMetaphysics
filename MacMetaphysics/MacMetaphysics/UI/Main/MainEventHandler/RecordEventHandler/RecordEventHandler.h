@@ -20,4 +20,10 @@
  */
 -(void)deleteAllRecord;
 
+/**
+ 获取所有记录
+
+ @return 所有记录组成的队列
+ */
+-(NSArray*)fetchAll;
 @end

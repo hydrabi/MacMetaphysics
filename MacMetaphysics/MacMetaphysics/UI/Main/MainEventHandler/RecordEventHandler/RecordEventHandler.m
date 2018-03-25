@@ -147,7 +147,6 @@
         
         //提示成功 并清空当前界面
         
-        [self fetchAll];
     }
     else{
         //提示
@@ -166,12 +165,9 @@
     [self fetchAll];
 }
 
--(void)fetchAll{
+-(NSArray*)fetchAll{
     NSArray *recordArr = [Record MR_findAll];
-    for(Record *record in recordArr){
-        NSLog(@"%@,%@,%@",record.key,record.name,record.other);
-    }
-    NSLog(@"");
+    return recordArr;
 }
 
 @end
