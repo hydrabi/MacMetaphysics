@@ -79,6 +79,8 @@
 		80F48595203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4858A203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m */; };
 		80F48599203B0E60007E7799 /* ScreenShotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F48597203B0E60007E7799 /* ScreenShotManager.m */; };
 		80FA9D2C1F87816A0027B67A /* MainViewModel+LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */; };
+		92092A202068878500FCF86F /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 92092A1F2068878500FCF86F /* NSDate+Addition.m */; };
+		92092A242068A15A00FCF86F /* NSAlert+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 92092A232068A15A00FCF86F /* NSAlert+Addition.m */; };
 		921F48132063BD8D009A90AB /* SaveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 921F48122063BD8D009A90AB /* SaveTableViewDataSource.m */; };
 		9221E22C2029B993002CA146 /* NSPopover+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9221E22B2029B993002CA146 /* NSPopover+Addition.m */; };
 		923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923165DD1FE36962007C6B27 /* BasicNibView.m */; };
@@ -269,6 +271,10 @@
 		80F4859A203B0F83007E7799 /* MacMetaphysics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacMetaphysics.entitlements; sourceTree = "<group>"; };
 		80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+LeftMenu.h"; sourceTree = "<group>"; };
 		80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainViewModel+LeftMenu.m"; sourceTree = "<group>"; };
+		92092A1E2068878500FCF86F /* NSDate+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
+		92092A1F2068878500FCF86F /* NSDate+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
+		92092A222068A15A00FCF86F /* NSAlert+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+Addition.h"; sourceTree = "<group>"; };
+		92092A232068A15A00FCF86F /* NSAlert+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+Addition.m"; sourceTree = "<group>"; };
 		921F48112063BD8D009A90AB /* SaveTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveTableViewDataSource.h; sourceTree = "<group>"; };
 		921F48122063BD8D009A90AB /* SaveTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveTableViewDataSource.m; sourceTree = "<group>"; };
 		9221E22A2029B993002CA146 /* NSPopover+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPopover+Addition.h"; sourceTree = "<group>"; };
@@ -906,6 +912,24 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		92092A1D2068876C00FCF86F /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				92092A1E2068878500FCF86F /* NSDate+Addition.h */,
+				92092A1F2068878500FCF86F /* NSDate+Addition.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		92092A212068A13000FCF86F /* NSAlert */ = {
+			isa = PBXGroup;
+			children = (
+				92092A222068A15A00FCF86F /* NSAlert+Addition.h */,
+				92092A232068A15A00FCF86F /* NSAlert+Addition.m */,
+			);
+			path = NSAlert;
+			sourceTree = "<group>";
+		};
 		921F480E2063BD1A009A90AB /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1020,6 +1044,8 @@
 		925CE7051FDBDA0200B319DB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				92092A212068A13000FCF86F /* NSAlert */,
+				92092A1D2068876C00FCF86F /* NSDate */,
 				9221E2292029B970002CA146 /* NSPopover */,
 				925CE7061FDBDA0B00B319DB /* NSView */,
 			);
@@ -1443,6 +1469,7 @@
 			files = (
 				9279C02F1F8F91F400FA8DA9 /* NSDictionary+Addition.m in Sources */,
 				9279C0331F8F91F400FA8DA9 /* NSColor+Addition.m in Sources */,
+				92092A202068878500FCF86F /* NSDate+Addition.m in Sources */,
 				809896C51F853495008ECA77 /* BasicViewModel.m in Sources */,
 				809896B41F852F37008ECA77 /* MainWindowViewController.m in Sources */,
 				801D9AF51FF7D5D6007F5EBC /* DatePickViewController.m in Sources */,
@@ -1532,6 +1559,7 @@
 				8097BBC02039B1040081ACA9 /* LeftMenuBottomTextData.m in Sources */,
 				806C30FE1FF535D800432737 /* SolarTermsMonthCell.m in Sources */,
 				806C31081FF5360400432737 /* SolarTermsNumberCell.m in Sources */,
+				92092A242068A15A00FCF86F /* NSAlert+Addition.m in Sources */,
 				9279C01D1F8F919800FA8DA9 /* ShuangZaoData.m in Sources */,
 				9279C0141F8F919800FA8DA9 /* CurrentSelectDate.m in Sources */,
 			);

@@ -7,7 +7,7 @@
 //
 
 #import "BasicEventHandler.h"
-
+@class Record;
 @interface RecordEventHandler : BasicEventHandler
 
 /**
@@ -19,6 +19,13 @@
  删除所有记录
  */
 -(void)deleteAllRecord;
+
+/**
+ 删除指定的记录
+
+ @param recordArr 需要删除的记录
+ */
+-(void)deleteRecords:(NSArray<Record*>*)recordArr;
 
 /**
  获取所有记录

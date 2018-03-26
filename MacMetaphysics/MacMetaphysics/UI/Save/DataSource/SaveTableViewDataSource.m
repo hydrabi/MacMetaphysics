@@ -12,12 +12,14 @@
 #import "UIConstantParameter.h"
 #import "MainViewModel.h"
 #import "Record+CoreDataProperties.h"
+#import <DateTools/DateTools.h>
+#import "NSDate+Addition.h"
+#import "NSString+Addition.h"
 
 @interface SaveTableViewDataSource()
 @property (weak, nonatomic)SaveViewModel * viewModel;
 @property (weak, nonatomic)SaveViewController * viewController;
 @property (weak, nonatomic)NSTableView * tableView;
-@property (weak, nonatomic)NSArray *recordArr;
 @end
 
 @implementation SaveTableViewDataSource
@@ -72,9 +74,47 @@
         id cell = [column dataCell];
         [cell setFont:[NSFont systemFontOfSize:titleFontSize_20]];
         column.title = title;
+        column.minWidth = [self getMinWidthWithIdentifier:identifier];
+        column.editable = NO;
         [self.tableView addTableColumn:column];
     }
     
+}
+
+-(CGFloat)getMinWidthWithIdentifier:(NSString*)identifier{
+    CGFloat minWidth = 100.0f;
+    
+    //编号
+    if([identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
+        minWidth = 130.0f;
+    }
+    //姓名
+    else if([identifier isEqualToString:saveTableViewNameCloumnIdentifier]){
+        minWidth = 90.0f;
+    }
+    //公历
+    else if([identifier isEqualToString:saveTableViewGregorianCloumnIdentifier]){
+        minWidth = 180.0f;
+        
+    }
+    //农历
+    else if([identifier isEqualToString:saveTableViewLunarCloumnIdentifier]){
+        minWidth = 220.0f;
+    }
+    //干支
+    else if([identifier isEqualToString:saveTableViewGanZhiCloumnIdentifier]){
+        minWidth = 280.0f;
+    }
+    //笔记
+    else if([identifier isEqualToString:saveTableViewNoteCloumnIdentifier]){
+        minWidth = 400.0f;
+    }
+    //日期
+    else if([identifier isEqualToString:saveTableViewDateCloumnIdentifier]){
+        minWidth = 120.0f;
+    }
+    
+    return minWidth;
 }
 
 -(void)reloadRecord{
@@ -92,33 +132,51 @@
     
     Record *record = self.recordArr[row];
     
-    //姓名
-    if([tableColumn.identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
-        return record.name;
-    }
     //编号
-    else if([tableColumn.identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
+    if([tableColumn.identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
         return record.key;
+    }
+    //姓名
+    else if([tableColumn.identifier isEqualToString:saveTableViewNameCloumnIdentifier]){
+        return record.name;
     }
     //公历
     else if([tableColumn.identifier isEqualToString:saveTableViewGregorianCloumnIdentifier]){
+        NSDate *gDate = [NSDate dateWithYear:record.gregorianYear
+                       month:record.gregorianMonth
+                         day:record.gregorianDay
+                        hour:record.gregorianHour
+                      minute:0
+                      second:0];
+        return [gDate toStringWithFormat:@"yyyy-MM-dd HH:mm"];
         
     }
     //农历
     else if([tableColumn.identifier isEqualToString:saveTableViewLunarCloumnIdentifier]){
-        
+        NSString *shiChen = [NSString shiChenWithTime:record.lunarHour];
+        NSString *result = [NSString stringWithFormat:@"%d年 %d月 %d日 %@时",
+                            record.lunarYear,
+                            record.lunarMonth,
+                            record.lunarDay,
+                            shiChen];
+        return result;
     }
     //干支
     else if([tableColumn.identifier isEqualToString:saveTableViewGanZhiCloumnIdentifier]){
-        
+        NSString *result = [NSString stringWithFormat:@"%@年 %@月 %@日 %@时",
+                            record.ganZhiYear,
+                            record.ganZhiMonth,
+                            record.ganZhiDay,
+                            record.ganZhiHour];
+        return result;
     }
     //笔记
     else if([tableColumn.identifier isEqualToString:saveTableViewNoteCloumnIdentifier]){
-        
+        return record.other;
     }
     //日期
     else if([tableColumn.identifier isEqualToString:saveTableViewDateCloumnIdentifier]){
-        
+        return [record.date toStringWithFormat:@"yyyy-MM-dd"];
     }
     
     return @"";

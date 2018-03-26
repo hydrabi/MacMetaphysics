@@ -165,6 +165,17 @@
     [self fetchAll];
 }
 
+//删除指定的记录
+-(void)deleteRecords:(NSArray<Record*>*)recordArr{
+    for(Record *record in recordArr){
+        [record MR_deleteEntity];
+    }
+    
+    NSManagedObjectContext *defaultContext = [NSManagedObjectContext MR_defaultContext];
+    // 保存修改到当前上下文中.
+    [defaultContext MR_saveToPersistentStoreAndWait];
+}
+
 -(NSArray*)fetchAll{
     NSArray *recordArr = [Record MR_findAll];
     return recordArr;

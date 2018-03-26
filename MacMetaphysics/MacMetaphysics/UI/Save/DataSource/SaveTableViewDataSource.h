@@ -16,6 +16,11 @@
 @interface SaveTableViewDataSource : NSObject<NSTableViewDelegate,NSTableViewDataSource>
 
 /**
+ 数据队列
+ */
+@property (copy, nonatomic)NSArray *recordArr;
+
+/**
  初始化的同时带上viewModel
 
  @param viewModel viewModel
@@ -23,5 +28,10 @@
  @return 处理保存数据页面的tableView的数据源实例
  */
 -(instancetype)initWithViewModel:(SaveViewModel*)viewModel viewController:(SaveViewController*)viewController;
+
+/**
+ 重新加载数据
+ */
+-(void)reloadRecord;
 
 @end

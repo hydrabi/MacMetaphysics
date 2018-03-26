@@ -5,6 +5,7 @@ def shared_pods
     pod 'Masonry', '1.0.2'
     pod 'ReactiveCocoa', '2.5'
     pod 'MagicalRecord'
+    pod 'DateTools'
 end
 
 target 'MacMetaphysics' do

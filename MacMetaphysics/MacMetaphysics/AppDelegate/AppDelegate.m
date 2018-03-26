@@ -31,6 +31,7 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+    [MagicalRecord cleanUp];
 }
 
 //截图
@@ -45,8 +46,7 @@
 
 //保存记录
 - (IBAction)saveRecord:(id)sender {
-    [[MainViewModel sharedInstance].recordEventHandler deleteAllRecord];
-//    [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecord];
+    [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecord];
 }
 
 @end
