@@ -7,6 +7,7 @@
 //
 
 #import "SubViewData.h"
+#import "Record+CoreDataProperties.h"
 
 @interface CurrentSelectDate : SubViewData
 @property (nonatomic,strong)NSNumber *gregorianYear;
@@ -65,4 +66,7 @@
 -(void)resetLunarHourWithIncrease:(BOOL)increase;
 //使用键盘上下键修改新历时间
 -(void)resetGregorianHourWithIncrease:(BOOL)increase;
+
+#pragma mark - 读取记录
+-(void)readRecord:(Record*)record;
 @end

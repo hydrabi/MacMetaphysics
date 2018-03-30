@@ -6,6 +6,7 @@ def shared_pods
     pod 'ReactiveCocoa', '2.5'
     pod 'MagicalRecord'
     pod 'DateTools'
+    pod 'MLHudAlert', git: 'https://github.com/MacLabs/MLHudAlert.git'
 end
 
 target 'MacMetaphysics' do

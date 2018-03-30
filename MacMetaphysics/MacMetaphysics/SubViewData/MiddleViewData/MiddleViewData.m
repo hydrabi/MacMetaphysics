@@ -24,4 +24,12 @@
     [self.shenShaData resetData];
     [self.selectGanZhiData clearData];
 }
+
+-(void)clearData{
+    [self.cangGanData clearData];
+    [self.liuQinData clearData];
+    [self.naYinData clearData];
+    [self.shenShaData clearData];
+    [self.selectGanZhiData clearData];
+}
 @end

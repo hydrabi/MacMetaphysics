@@ -121,6 +121,18 @@
              [self.genderButton setStringValue:@"乾"];
          }
      }];
+    
+    //接收到清空通知
+    [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:notificationKey_clearAllData
+                                                            object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(id _){
+        @strongify(self)
+         [self.yearSubView clearData];
+         [self.monthSubView clearData];
+         [self.daySubView clearData];
+         [self.hourSubView clearData];
+    }];
 }
 
 @end

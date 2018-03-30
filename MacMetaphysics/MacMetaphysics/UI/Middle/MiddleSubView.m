@@ -150,6 +150,8 @@
         default:
             break;
     }
+    
+    [self.collectionView reloadData];
 }
 
 -(void)reloadData{

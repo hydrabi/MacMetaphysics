@@ -33,4 +33,29 @@
  @return 所有记录组成的队列
  */
 -(NSArray*)fetchAll;
+
+/**
+ 根据特定的条件查找记录
+
+ @param predicate 正则表达式（需要查找的条件）
+ @return 根据特定的条件返回的记录
+ */
+-(NSArray*)fetchWithPredicate:(NSPredicate*)predicate;
+
+/**
+ 根据日期排序
+
+ @param recordArr 记录队列
+ @return 已排序的记录队列
+ */
+-(NSArray*)sortByDateWithRecordArr:(NSArray<Record*>*)recordArr;
+
+#pragma mark - 读取记录
+
+/**
+ 读取记录（包括填充key，姓名，笔记等）
+
+ @param record 需要读取的记录
+ */
+-(void)readRecord:(Record*)record;
 @end

@@ -11,6 +11,7 @@
 #import "NSArray+Addition.h"
 #import "MainViewModel.h"
 #import "NSNumber+Addition.h"
+
 @implementation CurrentSelectDate
 
 -(NSDate*)getGregorianDate{
@@ -326,18 +327,26 @@
     _gregorianYear = nil;
     _gregorianMonth = nil;
     _gregorianDay = nil;
-    self.gregorianHour = nil;
+    _gregorianHour = nil;
     
     _isLeapMonth = nil;
     _lunarYear = nil;
     _lunarMonth = nil;
     _lunarDay = nil;
-    self.lunarHour = nil;
+    _lunarHour = nil;
     
     _ganZhiYear = nil;
     _ganZhiMonth = nil;
     _ganZhiDay = nil;
-    self.ganZhiHour = nil;
+    _ganZhiHour = nil;
+}
+
+#pragma mark - 读取记录
+-(void)readRecord:(Record*)record{
+    _gregorianYear = @(record.gregorianYear);
+    _gregorianMonth = @(record.gregorianMonth);
+    _gregorianDay = @(record.gregorianDay);
+    _gregorianHour = @(record.gregorianHour);
 }
 
 @end

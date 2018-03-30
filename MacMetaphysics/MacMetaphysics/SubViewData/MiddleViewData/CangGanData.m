@@ -42,4 +42,11 @@
     self.hourCangGan = [self getCangGanWithGanZhi:current.ganZhiHour];
 }
 
+-(void)clearData{
+    _yearCangGan = @"";
+    _monthCangGan = @"";
+    _dayCangGan = @"";
+    _hourCangGan = @"";
+}
+
 @end

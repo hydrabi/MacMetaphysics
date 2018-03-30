@@ -70,9 +70,20 @@ static NSString *columnIdentifier = @"columnIdentifier";
      }];
     
     [quankunSignal subscribeNext:^(id _){
+        @strongify(self)
         [[MainViewModel sharedInstance].bottomData resetData];
         [self.bottomCollectionView reloadData];
     }];
+    
+    //接收到清空数据的通知
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:notificationKey_clearAllData
+       object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self.bottomCollectionView reloadData];
+     }];
 }
 
 @end

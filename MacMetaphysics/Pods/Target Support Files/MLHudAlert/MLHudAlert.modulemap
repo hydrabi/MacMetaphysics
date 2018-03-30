@@ -1,0 +1,6 @@
+framework module MLHudAlert {
+  umbrella header "MLHudAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}

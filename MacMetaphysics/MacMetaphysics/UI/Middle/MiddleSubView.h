@@ -34,4 +34,9 @@
  */
 -(void)reloadData;
 
+/**
+ 清空数据
+ */
+-(void)clearData;
+
 @end

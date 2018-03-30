@@ -93,6 +93,16 @@ static NSString *monthCellIdentifier = @"monthCellIdentifier";
          @strongify(self)
          [self.collectionView reloadData];
      }];
+    
+    //接收到清空数据的通知
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:notificationKey_clearAllData
+       object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(id _){
+         @strongify(self)
+         [self.collectionView reloadData];
+     }];
 }
 
 -(CGFloat)getHeightWithSection:(NSInteger)section{

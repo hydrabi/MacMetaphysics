@@ -28,6 +28,11 @@
     [self countFirstIndexOfMonthInJiziArr];
 }
 
+-(void)clearData{
+    self.qiYunShu = -1;
+    self.canStart = NO;
+}
+
 #pragma mark - 起运数目
 -(void)countTimeOffset{
     MainViewModel *mainViewModel = [MainViewModel sharedInstance];

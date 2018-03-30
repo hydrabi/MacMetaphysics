@@ -198,4 +198,6 @@ static NSString* const saveTableViewDateHeaderTitle           = @"日期";
 static NSString *notificationKey_changeColor = @"notificationKey_changeColor";
 //通知底部的大运小运重新加载 但不经过collectionView
 static NSString *notificationKey_groupBottomXiaoYunViewReload = @"notificationKey_groupBottomXiaoYunViewReload";
+//保存后清空所有内容
+static NSString *notificationKey_clearAllData = @"notificationKey_clearAllData";
 #endif /* UIConstantParameter_h */

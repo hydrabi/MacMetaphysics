@@ -76,6 +76,7 @@
     self.dateLabel.textColor = [NSColor blackColor];
     self.dateLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.dateLabel.alignment = NSTextAlignmentRight;
+    self.dateLabel.editable = NO;
     [self.view addSubview:self.dateLabel];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1

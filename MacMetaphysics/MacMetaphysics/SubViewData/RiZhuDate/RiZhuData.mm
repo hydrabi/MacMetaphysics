@@ -22,6 +22,27 @@
     self.lunarDate = @[].mutableCopy;
 }
 
+-(void)clearData{
+    _currentSolarYear = 0;
+    [_allTermsDateArr removeAllObjects];
+    [_lastYearAllTermsDateArr removeAllObjects];
+    [_nextYearAllTermsDateArr removeAllObjects];
+    _monthName = @"";
+    _leftTerm = nil;
+    _rightTerm = nil;
+    _leftTermName = @"";
+    _rightTermName = @"";
+    _currentTermName = @"";
+    _separatorDayArr = nil;
+    _separatorDayNameArr = nil;
+    _indexOfTermsBranchName = 0;
+    _firstDayOfTheMonth = nil;
+    _monthNumber = 0;
+    _indexOfCurrentDay = 0;
+    [_solarDate removeAllObjects];
+    [_lunarDate removeAllObjects];
+}
+
 -(void)resetTermWithYear:(NSInteger)year{
     self.currentSolarYear = year;
     [self.allTermsDateArr removeAllObjects];

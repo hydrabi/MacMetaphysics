@@ -125,7 +125,7 @@ static CGFloat alphaNumber = 0.3;
         [self showContent];
     }
     
-    
+    [self clearFirstHeader];
     [self resetDaYun];
     [self resetLiuQin];
     [self resetQinYunNumber];

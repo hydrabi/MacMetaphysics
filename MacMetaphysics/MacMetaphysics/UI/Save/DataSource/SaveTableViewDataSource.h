@@ -34,4 +34,16 @@
  */
 -(void)reloadRecord;
 
+/**
+ 根据条件查找
+
+ @param predicate 正则表达式
+ */
+-(void)reloadRecordWithPredicate:(NSPredicate*)predicate;
+
+/**
+ 双击操作
+ */
+- (void)doubleClickAction;
+
 @end

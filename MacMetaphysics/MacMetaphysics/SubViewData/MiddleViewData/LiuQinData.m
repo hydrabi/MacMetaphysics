@@ -66,4 +66,15 @@
                                                      cangGan:cangGanData.hourCangGan];
 }
 
+-(void)clearData{
+    _yearTopLiuQin     = @"";
+    _yearBottomLiuQin  = @"";
+    _monthTopLiuQin    = @"";
+    _monthBottomLiuQin = @"";
+    _dayTopLiuQin      = @"";
+    _dayBottomLiuQin   = @"";
+    _hourTopLiuQin     = @"";
+    _hourBottomLiuQin  = @"";
+}
+
 @end

@@ -36,4 +36,11 @@
     self.dayNaYin = self.naYinDic[current.ganZhiDay];
     self.hourNaYin = self.naYinDic[current.ganZhiHour];
 }
+
+-(void)clearData{
+    _yearNaYin  = @"";
+    _monthNaYin = @"";
+    _dayNaYin   = @"";
+    _hourNaYin  = @"";
+}
 @end

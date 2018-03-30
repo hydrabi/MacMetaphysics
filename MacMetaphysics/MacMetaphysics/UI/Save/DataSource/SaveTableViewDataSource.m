@@ -15,11 +15,14 @@
 #import <DateTools/DateTools.h>
 #import "NSDate+Addition.h"
 #import "NSString+Addition.h"
+#import "RecordExtraModel.h"
+#import "SWQueueOperation.h"
 
 @interface SaveTableViewDataSource()
 @property (weak, nonatomic)SaveViewModel * viewModel;
 @property (weak, nonatomic)SaveViewController * viewController;
 @property (weak, nonatomic)NSTableView * tableView;
+@property (nonatomic, strong) NSMutableArray<RecordExtraModel*> * recordExtraModelArr;
 @end
 
 @implementation SaveTableViewDataSource
@@ -32,6 +35,7 @@
         _tableView            = viewController.recordTableView;
         _tableView.delegate   = self;
         _tableView.dataSource = self;
+        _recordExtraModelArr  = @[].mutableCopy;
 
         [self setUpTableView];
         [self reloadRecord];
@@ -41,8 +45,10 @@
 
 -(void)setUpTableView{
     [self tableViewColumnConfig];
+    
+//    //双击操作
+//    [self.tableView setDoubleAction:@selector(tableViewDoubleClickAction:)];
 }
-
 
 -(void)tableViewColumnConfig{
     //将原有的column清空掉
@@ -103,7 +109,7 @@
     }
     //干支
     else if([identifier isEqualToString:saveTableViewGanZhiCloumnIdentifier]){
-        minWidth = 280.0f;
+        minWidth = 300.0f;
     }
     //笔记
     else if([identifier isEqualToString:saveTableViewNoteCloumnIdentifier]){
@@ -119,8 +125,54 @@
 
 -(void)reloadRecord{
     self.recordArr = [[MainViewModel sharedInstance].recordEventHandler fetchAll];
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler sortByDateWithRecordArr:self.recordArr];
+    [self reloadExtraOperation];
     [self.tableView reloadData];
 }
+
+-(void)reloadRecordWithPredicate:(NSPredicate*)predicate{
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler fetchWithPredicate:predicate];
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler sortByDateWithRecordArr:self.recordArr];
+    [self reloadExtraOperation];
+    [self.tableView reloadData];
+}
+
+-(void)reloadExtraOperation{
+    [self.recordExtraModelArr removeAllObjects];
+    @weakify(self)
+    [SWQueueOperation getGloblQueueWithBlock:^{
+        @strongify(self)
+        for(Record *record in self.recordArr){
+            RecordExtraModel *model = [[RecordExtraModel alloc] init];
+            model.fullSiZhuString = [NSString stringWithFormat:@"%@年 %@月 %@日 %@时",
+                                     record.ganZhiYear,
+                                     record.ganZhiMonth,
+                                     record.ganZhiDay,
+                                     record.ganZhiHour];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ganZhiYear == %@ AND ganZhiMonth == %@ AND ganZhiDay == %@ AND ganZhiHour == %@",
+                                      record.ganZhiYear,
+                                      record.ganZhiMonth,
+                                      record.ganZhiDay,
+                                      record.ganZhiHour];
+            
+            NSArray *timesArr = [self.recordArr filteredArrayUsingPredicate:predicate];
+            model.siZhuAppearTimes = timesArr.count;
+            [self.recordExtraModelArr addObject:model];
+        }
+        
+        [SWQueueOperation getMainQueueWithBlock:^{
+            [self.tableView reloadData];
+        }];
+    }];
+    
+}
+
+- (void)doubleClickAction{
+    NSInteger row = [self.tableView clickedRow];
+    Record *record = self.recordArr[row];
+    [[MainViewModel sharedInstance].recordEventHandler readRecord:record];
+}
+
 
 #pragma mark - NSTableViewDelegate,NSTableViewDataSource
 
@@ -159,6 +211,7 @@
                             record.lunarMonth,
                             record.lunarDay,
                             shiChen];
+        
         return result;
     }
     //干支
@@ -168,6 +221,12 @@
                             record.ganZhiMonth,
                             record.ganZhiDay,
                             record.ganZhiHour];
+        
+        if(self.recordExtraModelArr.count>row){
+            RecordExtraModel *model = self.recordExtraModelArr[row];
+            result = [result stringByAppendingString:[NSString stringWithFormat:@" (%lu)",(unsigned long)model.siZhuAppearTimes]];
+        }
+        
         return result;
     }
     //笔记
@@ -185,5 +244,9 @@
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
     return self.recordArr.count;
 }
+
+//- (BOOL)tableView:(NSTableView *)tableView shouldSelectTableColumn:(nullable NSTableColumn *)tableColumn{
+//    return NO;
+//}
 
 @end

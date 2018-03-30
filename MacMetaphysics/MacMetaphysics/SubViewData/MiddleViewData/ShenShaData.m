@@ -76,6 +76,15 @@
     [self isIncludeLuoXingTaoHua];
 }
 
+-(void)clearData{
+    [self removeAll];
+    
+    self.ganZhiYear = @"";
+    self.ganZhiMonth = @"";
+    self.ganZhiDay = @"";
+    self.ganZhiHour = @"";
+}
+
 -(void)removeAll{
     [self.yearShenShaArr removeAllObjects];
     [self.monthShenShaArr removeAllObjects];

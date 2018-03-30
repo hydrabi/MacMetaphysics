@@ -50,7 +50,6 @@
 		806C310E1FF5361400432737 /* SolarTermsSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806C310C1FF5361400432737 /* SolarTermsSecondCell.xib */; };
 		806C31121FF5362300432737 /* SolarTermsThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 806C31101FF5362300432737 /* SolarTermsThirdCell.m */; };
 		806C31131FF5362300432737 /* SolarTermsThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806C31111FF5362300432737 /* SolarTermsThirdCell.xib */; };
-		806C8CEB1FFA27BD001DCE23 /* TopTextFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 806C8CEA1FFA27BD001DCE23 /* TopTextFieldFormatter.m */; };
 		8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8090BF861F8E6D6F00F0EB80 /* TopContentViewController.m */; };
 		8090BF891F8E6D6F00F0EB80 /* TopContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8090BF871F8E6D6F00F0EB80 /* TopContentViewController.xib */; };
 		8097BBC02039B1040081ACA9 /* LeftMenuBottomTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8097BBBF2039B1040081ACA9 /* LeftMenuBottomTextData.m */; };
@@ -102,6 +101,7 @@
 		925CE7041FDBD86B00B319DB /* MiddleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925CE7021FDBD86B00B319DB /* MiddleTableViewCell.xib */; };
 		925CE7091FDBDA6500B319DB /* NSView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE7081FDBDA6500B319DB /* NSView+Addition.m */; };
 		925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 925CE70B1FDBDC5C00B319DB /* MiddleTableViewDataSource.m */; };
+		9260AC0E206CA22A00E71CFF /* BackUpMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9260AC0D206CA22A00E71CFF /* BackUpMananger.m */; };
 		92714F7F1FE2803F0078C41B /* VerticalCenterTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92714F7D1FE2803E0078C41B /* VerticalCenterTextFieldCell.m */; };
 		92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92714F821FE2BBDD0078C41B /* BottomContentView.m */; };
 		92714F851FE2BBDD0078C41B /* BottomContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92714F831FE2BBDD0078C41B /* BottomContentView.xib */; };
@@ -133,8 +133,21 @@
 		9279C0341F8F91F400FA8DA9 /* NSTextField+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279C02D1F8F91F400FA8DA9 /* NSTextField+Addition.m */; };
 		9279C0371F8F937900FA8DA9 /* UIConstantParm.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0361F8F937900FA8DA9 /* UIConstantParm.m */; };
 		9279C03A1F8F951300FA8DA9 /* BottomLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0381F8F951300FA8DA9 /* BottomLocation.m */; };
+		927AA6E12069E24B000A35E4 /* SWQueueOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 927AA6E02069E24B000A35E4 /* SWQueueOperation.m */; };
+		927AA6E52069E2C3000A35E4 /* TopTextFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 927AA6E42069E2C2000A35E4 /* TopTextFieldFormatter.m */; };
+		927AA6E92069E31D000A35E4 /* RecordExtraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 927AA6E82069E31D000A35E4 /* RecordExtraModel.m */; };
+		927AA6EC2069EC1B000A35E4 /* TopContentViewController+Clear.m in Sources */ = {isa = PBXBuildFile; fileRef = 927AA6EB2069EC1B000A35E4 /* TopContentViewController+Clear.m */; };
+		927AA6F6206A4B81000A35E4 /* FNHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 927AA6EF206A4B80000A35E4 /* FNHUD.m */; };
+		927AA6F7206A4B81000A35E4 /* yy_hud_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 927AA6F0206A4B80000A35E4 /* yy_hud_fail.png */; };
+		927AA6F8206A4B81000A35E4 /* yy_hud_fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927AA6F1206A4B80000A35E4 /* yy_hud_fail@2x.png */; };
+		927AA6F9206A4B81000A35E4 /* yy_hud_fail@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927AA6F2206A4B80000A35E4 /* yy_hud_fail@3x.png */; };
+		927AA6FA206A4B81000A35E4 /* yy_hud_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 927AA6F3206A4B80000A35E4 /* yy_hud_success.png */; };
+		927AA6FB206A4B81000A35E4 /* yy_hud_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927AA6F4206A4B80000A35E4 /* yy_hud_success@2x.png */; };
+		927AA6FC206A4B81000A35E4 /* yy_hud_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927AA6F5206A4B80000A35E4 /* yy_hud_success@3x.png */; };
 		92A4CD36205921EE008A06A5 /* Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A4CD34205921EE008A06A5 /* Record.xcdatamodeld */; };
 		92A4CD4020592BF0008A06A5 /* Record+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A4CD3C20592BF0008A06A5 /* Record+CoreDataProperties.m */; };
+		92B8C87D206DDF1B0038AE60 /* MainViewModel+Record.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B8C87C206DDF1B0038AE60 /* MainViewModel+Record.m */; };
+		92B8C883206DEEB80038AE60 /* TopContentViewController+Record.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B8C882206DEEB80038AE60 /* TopContentViewController+Record.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,8 +234,6 @@
 		806C310F1FF5362300432737 /* SolarTermsThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolarTermsThirdCell.h; sourceTree = "<group>"; };
 		806C31101FF5362300432737 /* SolarTermsThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SolarTermsThirdCell.m; sourceTree = "<group>"; };
 		806C31111FF5362300432737 /* SolarTermsThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SolarTermsThirdCell.xib; sourceTree = "<group>"; };
-		806C8CE91FFA27BD001DCE23 /* TopTextFieldFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopTextFieldFormatter.h; sourceTree = "<group>"; };
-		806C8CEA1FFA27BD001DCE23 /* TopTextFieldFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopTextFieldFormatter.m; sourceTree = "<group>"; };
 		8090BF851F8E6D6F00F0EB80 /* TopContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopContentViewController.h; sourceTree = "<group>"; };
 		8090BF861F8E6D6F00F0EB80 /* TopContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopContentViewController.m; sourceTree = "<group>"; };
 		8090BF871F8E6D6F00F0EB80 /* TopContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopContentViewController.xib; sourceTree = "<group>"; };
@@ -310,6 +321,8 @@
 		925CE7081FDBDA6500B319DB /* NSView+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+Addition.m"; sourceTree = "<group>"; };
 		925CE70A1FDBDC5C00B319DB /* MiddleTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleTableViewDataSource.h; sourceTree = "<group>"; };
 		925CE70B1FDBDC5C00B319DB /* MiddleTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleTableViewDataSource.m; sourceTree = "<group>"; };
+		9260AC0C206CA22A00E71CFF /* BackUpMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackUpMananger.h; sourceTree = "<group>"; };
+		9260AC0D206CA22A00E71CFF /* BackUpMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackUpMananger.m; sourceTree = "<group>"; };
 		92714F7D1FE2803E0078C41B /* VerticalCenterTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalCenterTextFieldCell.m; sourceTree = "<group>"; };
 		92714F7E1FE2803E0078C41B /* VerticalCenterTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalCenterTextFieldCell.h; sourceTree = "<group>"; };
 		92714F811FE2BBDD0078C41B /* BottomContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomContentView.h; sourceTree = "<group>"; };
@@ -370,11 +383,31 @@
 		9279C0361F8F937900FA8DA9 /* UIConstantParm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstantParm.m; sourceTree = "<group>"; };
 		9279C0381F8F951300FA8DA9 /* BottomLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomLocation.m; sourceTree = "<group>"; };
 		9279C0391F8F951300FA8DA9 /* BottomLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomLocation.h; sourceTree = "<group>"; };
+		927AA6DF2069E24B000A35E4 /* SWQueueOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQueueOperation.h; sourceTree = "<group>"; };
+		927AA6E02069E24B000A35E4 /* SWQueueOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQueueOperation.m; sourceTree = "<group>"; };
+		927AA6E32069E2C2000A35E4 /* TopTextFieldFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTextFieldFormatter.h; sourceTree = "<group>"; };
+		927AA6E42069E2C2000A35E4 /* TopTextFieldFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTextFieldFormatter.m; sourceTree = "<group>"; };
+		927AA6E72069E31D000A35E4 /* RecordExtraModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordExtraModel.h; sourceTree = "<group>"; };
+		927AA6E82069E31D000A35E4 /* RecordExtraModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordExtraModel.m; sourceTree = "<group>"; };
+		927AA6EA2069EC1B000A35E4 /* TopContentViewController+Clear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TopContentViewController+Clear.h"; sourceTree = "<group>"; };
+		927AA6EB2069EC1B000A35E4 /* TopContentViewController+Clear.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TopContentViewController+Clear.m"; sourceTree = "<group>"; };
+		927AA6EE206A4B80000A35E4 /* FNHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNHUD.h; sourceTree = "<group>"; };
+		927AA6EF206A4B80000A35E4 /* FNHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNHUD.m; sourceTree = "<group>"; };
+		927AA6F0206A4B80000A35E4 /* yy_hud_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yy_hud_fail.png; sourceTree = "<group>"; };
+		927AA6F1206A4B80000A35E4 /* yy_hud_fail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yy_hud_fail@2x.png"; sourceTree = "<group>"; };
+		927AA6F2206A4B80000A35E4 /* yy_hud_fail@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yy_hud_fail@3x.png"; sourceTree = "<group>"; };
+		927AA6F3206A4B80000A35E4 /* yy_hud_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yy_hud_success.png; sourceTree = "<group>"; };
+		927AA6F4206A4B80000A35E4 /* yy_hud_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yy_hud_success@2x.png"; sourceTree = "<group>"; };
+		927AA6F5206A4B80000A35E4 /* yy_hud_success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yy_hud_success@3x.png"; sourceTree = "<group>"; };
 		92A4CD35205921EE008A06A5 /* Record.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Record.xcdatamodel; sourceTree = "<group>"; };
 		92A4CD3C20592BF0008A06A5 /* Record+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataProperties.m"; sourceTree = "<group>"; };
 		92A4CD3F20592BF0008A06A5 /* Record+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataProperties.h"; sourceTree = "<group>"; };
 		92A4CD4220592E3F008A06A5 /* Record+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataClass.m"; sourceTree = "<group>"; };
 		92A4CD4320592E3F008A06A5 /* Record+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataClass.h"; sourceTree = "<group>"; };
+		92B8C87B206DDF1B0038AE60 /* MainViewModel+Record.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainViewModel+Record.h"; sourceTree = "<group>"; };
+		92B8C87C206DDF1B0038AE60 /* MainViewModel+Record.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainViewModel+Record.m"; sourceTree = "<group>"; };
+		92B8C881206DEEB80038AE60 /* TopContentViewController+Record.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TopContentViewController+Record.h"; sourceTree = "<group>"; };
+		92B8C882206DEEB80038AE60 /* TopContentViewController+Record.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TopContentViewController+Record.m"; sourceTree = "<group>"; };
 		9B3071BE0CEAC92C92C5AA33 /* Pods-MacMetaphysics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacMetaphysics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacMetaphysics/Pods-MacMetaphysics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -423,6 +456,8 @@
 				8007F4561F85BF2500198017 /* MainViewModel.mm */,
 				80FA9D2A1F87816A0027B67A /* MainViewModel+LeftMenu.h */,
 				80FA9D2B1F87816A0027B67A /* MainViewModel+LeftMenu.m */,
+				92B8C87B206DDF1B0038AE60 /* MainViewModel+Record.h */,
+				92B8C87C206DDF1B0038AE60 /* MainViewModel+Record.m */,
 			);
 			path = MainViewModel;
 			sourceTree = "<group>";
@@ -544,6 +579,10 @@
 				8090BF851F8E6D6F00F0EB80 /* TopContentViewController.h */,
 				8090BF861F8E6D6F00F0EB80 /* TopContentViewController.m */,
 				8090BF871F8E6D6F00F0EB80 /* TopContentViewController.xib */,
+				927AA6EA2069EC1B000A35E4 /* TopContentViewController+Clear.h */,
+				927AA6EB2069EC1B000A35E4 /* TopContentViewController+Clear.m */,
+				92B8C881206DEEB80038AE60 /* TopContentViewController+Record.h */,
+				92B8C882206DEEB80038AE60 /* TopContentViewController+Record.m */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -645,11 +684,11 @@
 		8057E8E41F837AB6003DF83E /* MacMetaphysics */ = {
 			isa = PBXGroup;
 			children = (
+				927AA6DD2069E24B000A35E4 /* Tool */,
 				92A4CD33205921D1008A06A5 /* CoreData */,
 				80F4859A203B0F83007E7799 /* MacMetaphysics.entitlements */,
 				80F48596203B0E60007E7799 /* Manager */,
 				80F4857B203B0C7C007E7799 /* DSCapture */,
-				806C8CE81FFA276B001DCE23 /* Formatter */,
 				9279BFF21F8F919800FA8DA9 /* SubViewData */,
 				9279BFEC1F8F8FC400FA8DA9 /* Resource */,
 				9279BFE51F8F8F8000FA8DA9 /* Date */,
@@ -739,15 +778,6 @@
 				805A5C162036CF66006FD57C /* FifteenYunDataSource.m */,
 			);
 			path = DataSource;
-			sourceTree = "<group>";
-		};
-		806C8CE81FFA276B001DCE23 /* Formatter */ = {
-			isa = PBXGroup;
-			children = (
-				806C8CE91FFA27BD001DCE23 /* TopTextFieldFormatter.h */,
-				806C8CEA1FFA27BD001DCE23 /* TopTextFieldFormatter.m */,
-			);
-			path = Formatter;
 			sourceTree = "<group>";
 		};
 		8097BBBD2039B0E30081ACA9 /* LeftMenuBottomTextData */ = {
@@ -906,8 +936,8 @@
 		80F48596203B0E60007E7799 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				80F48598203B0E60007E7799 /* ScreenShotManager.h */,
-				80F48597203B0E60007E7799 /* ScreenShotManager.m */,
+				9260AC0B206CA1F600E71CFF /* BackUp */,
+				9260AC0A206CA1E700E71CFF /* ScreenShot */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -977,6 +1007,7 @@
 		925C5200205CF22000294FD5 /* Save */ = {
 			isa = PBXGroup;
 			children = (
+				927AA6E62069E2F4000A35E4 /* Model */,
 				921F480E2063BD1A009A90AB /* DataSource */,
 				925C520D205CF3B600294FD5 /* ViewModel */,
 				925C520C205CF3AA00294FD5 /* ViewController */,
@@ -1059,6 +1090,24 @@
 				925CE7081FDBDA6500B319DB /* NSView+Addition.m */,
 			);
 			path = NSView;
+			sourceTree = "<group>";
+		};
+		9260AC0A206CA1E700E71CFF /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				80F48598203B0E60007E7799 /* ScreenShotManager.h */,
+				80F48597203B0E60007E7799 /* ScreenShotManager.m */,
+			);
+			path = ScreenShot;
+			sourceTree = "<group>";
+		};
+		9260AC0B206CA1F600E71CFF /* BackUp */ = {
+			isa = PBXGroup;
+			children = (
+				9260AC0C206CA22A00E71CFF /* BackUpMananger.h */,
+				9260AC0D206CA22A00E71CFF /* BackUpMananger.m */,
+			);
+			path = BackUp;
 			sourceTree = "<group>";
 		};
 		92714F801FE2BA1D0078C41B /* Bottom */ = {
@@ -1259,6 +1308,58 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		927AA6DD2069E24B000A35E4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				927AA6ED206A4B80000A35E4 /* HUDControl */,
+				927AA6E22069E2C2000A35E4 /* Formatter */,
+				927AA6DE2069E24B000A35E4 /* QueueOperation */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		927AA6DE2069E24B000A35E4 /* QueueOperation */ = {
+			isa = PBXGroup;
+			children = (
+				927AA6DF2069E24B000A35E4 /* SWQueueOperation.h */,
+				927AA6E02069E24B000A35E4 /* SWQueueOperation.m */,
+			);
+			path = QueueOperation;
+			sourceTree = "<group>";
+		};
+		927AA6E22069E2C2000A35E4 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				927AA6E32069E2C2000A35E4 /* TopTextFieldFormatter.h */,
+				927AA6E42069E2C2000A35E4 /* TopTextFieldFormatter.m */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		927AA6E62069E2F4000A35E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				927AA6E72069E31D000A35E4 /* RecordExtraModel.h */,
+				927AA6E82069E31D000A35E4 /* RecordExtraModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		927AA6ED206A4B80000A35E4 /* HUDControl */ = {
+			isa = PBXGroup;
+			children = (
+				927AA6EE206A4B80000A35E4 /* FNHUD.h */,
+				927AA6EF206A4B80000A35E4 /* FNHUD.m */,
+				927AA6F0206A4B80000A35E4 /* yy_hud_fail.png */,
+				927AA6F1206A4B80000A35E4 /* yy_hud_fail@2x.png */,
+				927AA6F2206A4B80000A35E4 /* yy_hud_fail@3x.png */,
+				927AA6F3206A4B80000A35E4 /* yy_hud_success.png */,
+				927AA6F4206A4B80000A35E4 /* yy_hud_success@2x.png */,
+				927AA6F5206A4B80000A35E4 /* yy_hud_success@3x.png */,
+			);
+			path = HUDControl;
+			sourceTree = "<group>";
+		};
 		92A4CD33205921D1008A06A5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1376,16 +1477,21 @@
 				8015746D200B83C4006FE025 /* JiaZiCollectionViewCell.xib in Resources */,
 				92714F851FE2BBDD0078C41B /* BottomContentView.xib in Resources */,
 				805A5C142036CC11006FD57C /* FifteenYunCollectionViewItem.xib in Resources */,
+				927AA6FC206A4B81000A35E4 /* yy_hud_success@3x.png in Resources */,
 				805A5C1C2036EFB1006FD57C /* FifteenYunTitleView.xib in Resources */,
 				9279BFF11F8F8FC400FA8DA9 /* SolarTerm.csv in Resources */,
+				927AA6FA206A4B81000A35E4 /* yy_hud_success.png in Resources */,
 				8057E8EF1F837AB6003DF83E /* Assets.xcassets in Resources */,
 				806C30FF1FF535D800432737 /* SolarTermsMonthCell.xib in Resources */,
 				9250F704202C57F500720712 /* ShuangZaoTextView.xib in Resources */,
 				801648E520386A32004AF608 /* LiuNianTextView.xib in Resources */,
+				927AA6F9206A4B81000A35E4 /* yy_hud_fail@3x.png in Resources */,
 				806C31131FF5362300432737 /* SolarTermsThirdCell.xib in Resources */,
 				925C5205205CF29800294FD5 /* SaveWindowController.xib in Resources */,
 				806C310E1FF5361400432737 /* SolarTermsSecondCell.xib in Resources */,
+				927AA6FB206A4B81000A35E4 /* yy_hud_success@2x.png in Resources */,
 				801D672320313FDE00793050 /* SingleBottomXiaoYunView.xib in Resources */,
+				927AA6F7206A4B81000A35E4 /* yy_hud_fail.png in Resources */,
 				925CE7041FDBD86B00B319DB /* MiddleTableViewCell.xib in Resources */,
 				806C31091FF5360400432737 /* SolarTermsNumberCell.xib in Resources */,
 				925C520A205CF31600294FD5 /* SaveViewController.xib in Resources */,
@@ -1394,6 +1500,7 @@
 				809896B51F852F37008ECA77 /* MainWindowViewController.xib in Resources */,
 				925CE6F31FDB9E1200B319DB /* MiddleContentView.xib in Resources */,
 				801D672D20317F8200793050 /* BottomGroupCollectionViewItem.xib in Resources */,
+				927AA6F8206A4B81000A35E4 /* yy_hud_fail@2x.png in Resources */,
 				80B084181F86817200449443 /* LeftCollectionViewCell.xib in Resources */,
 				8057E8F21F837AB6003DF83E /* Main.storyboard in Resources */,
 				8090BF891F8E6D6F00F0EB80 /* TopContentViewController.xib in Resources */,
@@ -1478,9 +1585,13 @@
 				8057E8EA1F837AB6003DF83E /* main.m in Sources */,
 				925CE7031FDBD86B00B319DB /* MiddleTableViewCell.m in Sources */,
 				9279C0171F8F919800FA8DA9 /* CangGanData.m in Sources */,
+				92B8C883206DEEB80038AE60 /* TopContentViewController+Record.m in Sources */,
 				805A5C132036CC11006FD57C /* FifteenYunCollectionViewItem.m in Sources */,
 				801D9AED1FF735A3007F5EBC /* SolarTermsCollectionView.m in Sources */,
+				927AA6E12069E24B000A35E4 /* SWQueueOperation.m in Sources */,
+				92B8C87D206DDF1B0038AE60 /* MainViewModel+Record.m in Sources */,
 				80F48595203B0C7C007E7799 /* DSCaptureFullController+CoreGraphics.m in Sources */,
+				927AA6F6206A4B81000A35E4 /* FNHUD.m in Sources */,
 				806C31031FF535EA00432737 /* SolarTermsMulLineCell.m in Sources */,
 				805A5C202036F2AD006FD57C /* FifteenYunTextView.m in Sources */,
 				80F48599203B0E60007E7799 /* ScreenShotManager.m in Sources */,
@@ -1500,6 +1611,7 @@
 				92714F841FE2BBDD0078C41B /* BottomContentView.m in Sources */,
 				8090BF881F8E6D6F00F0EB80 /* TopContentViewController.m in Sources */,
 				9279C0301F8F91F400FA8DA9 /* NSLayoutConstraint+NUI.m in Sources */,
+				927AA6E52069E2C3000A35E4 /* TopTextFieldFormatter.m in Sources */,
 				80F4858E203B0C7C007E7799 /* DSCaptureSelectionWindow.m in Sources */,
 				9279C01A1F8F919800FA8DA9 /* NaYinData.m in Sources */,
 				80F4858C203B0C7C007E7799 /* DSCapture.m in Sources */,
@@ -1512,7 +1624,6 @@
 				80F48591203B0C7C007E7799 /* DSCaptureFullController+System.m in Sources */,
 				923165DE1FE36962007C6B27 /* BasicNibView.m in Sources */,
 				9279C02E1F8F91F400FA8DA9 /* NSArray+Addition.m in Sources */,
-				806C8CEB1FFA27BD001DCE23 /* TopTextFieldFormatter.m in Sources */,
 				9279BFF01F8F8FC400FA8DA9 /* AnalysisSolarTerm.m in Sources */,
 				80F48594203B0C7C007E7799 /* DSCaptureSelectionController+CoreGraphics.m in Sources */,
 				923A01CE203FEB2C00053863 /* MiddleSelectGanZhiData.m in Sources */,
@@ -1520,6 +1631,7 @@
 				9279C0151F8F919800FA8DA9 /* FifteenYunData.m in Sources */,
 				925CE70C1FDBDC5C00B319DB /* MiddleTableViewDataSource.m in Sources */,
 				9279C01E1F8F919800FA8DA9 /* SubViewData.m in Sources */,
+				927AA6EC2069EC1B000A35E4 /* TopContentViewController+Clear.m in Sources */,
 				80B084121F8641D700449443 /* MainViewController+CollectionView.m in Sources */,
 				925CE7091FDBDA6500B319DB /* NSView+Addition.m in Sources */,
 				80F470CF1FDCE1F500A71D77 /* CustomColorLabel.m in Sources */,
@@ -1534,6 +1646,7 @@
 				80B084171F86817200449443 /* LeftCollectionViewCell.m in Sources */,
 				801D673120318E5200793050 /* CustomCollectionView.m in Sources */,
 				925CE6F71FDB9E5500B319DB /* MiddleSubView.m in Sources */,
+				9260AC0E206CA22A00E71CFF /* BackUpMananger.m in Sources */,
 				9271605A205A9BAE00F26D21 /* BasicEventHandler.m in Sources */,
 				801D672C20317F8200793050 /* BottomGroupCollectionViewItem.m in Sources */,
 				9271605E205A9CFB00F26D21 /* RecordEventHandler.m in Sources */,
@@ -1558,6 +1671,7 @@
 				9279C0311F8F91F400FA8DA9 /* NSNumber+Addition.m in Sources */,
 				8097BBC02039B1040081ACA9 /* LeftMenuBottomTextData.m in Sources */,
 				806C30FE1FF535D800432737 /* SolarTermsMonthCell.m in Sources */,
+				927AA6E92069E31D000A35E4 /* RecordExtraModel.m in Sources */,
 				806C31081FF5360400432737 /* SolarTermsNumberCell.m in Sources */,
 				92092A242068A15A00FCF86F /* NSAlert+Addition.m in Sources */,
 				9279C01D1F8F919800FA8DA9 /* ShuangZaoData.m in Sources */,

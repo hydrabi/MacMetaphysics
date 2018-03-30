@@ -25,8 +25,13 @@
 //     }];
 //}
 
+-(void)clearData{
+    [self.bottomLocationDic removeAllObjects];
+    self.firstLocation = nil;
+    self.secondLocation = nil;
+}
+
 -(void)selectTableViewTag:(NSInteger)tag indexPath:(NSIndexPath*)indexPath{
-    MainViewModel *mainViewModel = [MainViewModel sharedInstance];
     BottomLocation *location = [[BottomLocation alloc] initWithTag:tag indexPath:indexPath];
     
     if([self.bottomLocationDic objectForKey:location.keyNumber] == nil){

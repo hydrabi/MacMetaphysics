@@ -10,8 +10,13 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "Record+CoreDataProperties.h"
 #import "MainViewController.h"
+#import "AppDelegate.h"
+#import "FNHUD.h"
+#import "TopContentViewController+Record.h"
+
 @implementation RecordEventHandler
 
+#pragma mark - 增加记录
 
 -(void)saveCurrentRecord{
     BOOL canSave = YES;
@@ -145,18 +150,35 @@
         // 保存修改到当前上下文中.
         [defaultContext MR_saveToPersistentStoreAndWait];
         
-        //提示成功 并清空当前界面
-        
+        //清空数据
+        [self clearAllData];
+        //提示成功 通知清空当前界面
+        [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey_clearAllData
+                                                            object:nil];
+        [FNHUD showSuccess:@"保存成功" inView:self.viewModel.viewController.view];
     }
     else{
+        
+        //删除
+        [record MR_deleteEntity];
         //提示
+        [FNHUD showError:@"有属性未填写，无法保存" inView:self.viewModel.viewController.view];
     }
     
 }
 
+//清空数据
 -(void)clearAllData{
     [self.viewModel.selectedDate clearData];
+    [self.viewModel.middleData clearData];
+    [self.viewModel.shuangZaoData clearData];
+    [self.viewModel.riZhuData clearData];
+    [self.viewModel.bottomData clearData];
+    [self.viewModel.fifteenYunData clearData];
+    [self.viewModel.liuNianData clearData];
 }
+
+#pragma mark - 删除
 
 //删除所有记录
 -(void)deleteAllRecord{
@@ -176,9 +198,37 @@
     [defaultContext MR_saveToPersistentStoreAndWait];
 }
 
+#pragma mark - 查找
+
 -(NSArray*)fetchAll{
     NSArray *recordArr = [Record MR_findAll];
     return recordArr;
+}
+
+-(NSArray*)fetchWithPredicate:(NSPredicate*)predicate{
+    NSArray *recordArr = [Record MR_findAllWithPredicate:predicate];
+    return recordArr;
+}
+
+#pragma mark - 排序
+
+-(NSArray*)sortByDateWithRecordArr:(NSArray<Record*>*)recordArr{
+    if(recordArr.count>0){
+        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+        NSArray *sortArr = [recordArr sortedArrayUsingDescriptors:@[descriptor]];
+        return sortArr;
+    }
+    return recordArr;
+}
+
+#pragma mark - 读取记录
+-(void)readRecord:(Record*)record{
+    [self.viewModel.selectedDate readRecord:record];
+    MainViewController *viewController = (MainViewController*)self.viewModel.viewController;
+    TopContentViewController *topContentView = viewController.topContentView;
+    [topContentView resetGregorianValue];
+    [topContentView shouldTransformTolunar];
+    [topContentView fillTextViewWithRecord:record];
 }
 
 @end

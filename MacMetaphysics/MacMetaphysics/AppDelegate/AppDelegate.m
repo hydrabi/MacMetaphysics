@@ -11,6 +11,8 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "SaveWindowController.h"
 #import "MainViewModel.h"
+#import "FNHUD.h"
+#import "BackUpMananger.h"
 
 @interface AppDelegate ()
 @property (nonatomic,strong)ScreenShotManager *screenShotManager;
@@ -21,11 +23,12 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
     self.screenShotManager = [[ScreenShotManager alloc] init];
+    
     [MagicalRecord setupCoreDataStack];
+    [FNHUD setup];
     
     self.mainWindowViewController = [[MainWindowViewController alloc] initWithWindowNibName:NSStringFromClass([MainWindowViewController class])];
     [self.mainWindowViewController.window makeKeyAndOrderFront:nil];
-
 }
 
 
@@ -47,6 +50,12 @@
 //保存记录
 - (IBAction)saveRecord:(id)sender {
     [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecord];
+}
+
+//备份操作
+- (IBAction)backUp:(id)sender {
+    BackUpMananger *backUpManager = [[BackUpMananger alloc] init];
+    [backUpManager showSavePath];
 }
 
 @end

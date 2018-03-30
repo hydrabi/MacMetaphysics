@@ -24,6 +24,9 @@
     [self bindViewModel];
     [self setUpTableViewDataSource];
     [self setUpTableViewMenu];
+    
+    //绑定双击事件
+    [self.recordTableView setDoubleAction:@selector(doubleClick:)];
 }
 
 -(void)bindViewModel{
@@ -31,13 +34,27 @@
     [[self.keySearchButton rac_signalForSelector:@selector(mouseDown:)]
      subscribeNext:^(id _){
         @strongify(self)
-         
+         [self keySearchButtonClick];
     }];
 }
 
 -(void)setUpTableViewDataSource{
     self.tableViewDataSource = [[SaveTableViewDataSource alloc] initWithViewModel:self.viewModel
                                                                    viewController:self];
+}
+
+#pragma mark - 方法点击
+-(void)keySearchButtonClick{
+    NSString *keySearchString = self.keyInputTextView.stringValue;
+    //有输入搜索条件 查找搜索条件对应的记录
+    if(keySearchString.length > 0){
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key CONTAINS[cd] %@",keySearchString];
+        [self.tableViewDataSource reloadRecordWithPredicate:predicate];
+    }
+    //无输入，查找所有记录
+    else{
+        [self.tableViewDataSource reloadRecord];
+    }
 }
 
 #pragma mark - Menu
@@ -66,6 +83,11 @@
         [[MainViewModel sharedInstance].recordEventHandler deleteRecords:tempArr];
         [self.tableViewDataSource reloadRecord];
     }
+}
+
+- (void)doubleClick:(id)sender {
+    [self.tableViewDataSource doubleClickAction];
+    [[NSApplication sharedApplication] stopModal];
 }
 
 #pragma mark - NSMenuDelegate

@@ -397,4 +397,9 @@
     [self selectTableViewHeaderWithTag:-1];
 }
 
+#pragma mark - Window
+-(NSWindow*)getMainWindow{
+    return self.viewController.view.window;
+}
+
 @end

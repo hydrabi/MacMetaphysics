@@ -11,8 +11,11 @@
 @interface TopContentViewController : NSViewController<NSTextFieldDelegate,NSPopoverDelegate>
 
 @property (nonatomic,weak)IBOutlet NSButton *hideButton;
+//名称
 @property (nonatomic,weak)IBOutlet NSTextField *firstTextField;
+//索引
 @property (nonatomic,weak)IBOutlet NSTextField *secondTextField;
+//笔记
 @property (nonatomic,weak)IBOutlet NSTextField *thirdTextField;
 //农历选择按钮
 @property (nonatomic,weak)IBOutlet NSButton *lunarCalendarSelectedButton;
@@ -43,4 +46,12 @@
 //命宫
 @property (nonatomic,weak)IBOutlet NSTextField *mingGongLabel;
 
+//重置公历
+-(void)resetGregorianValue;
+//重置农历
+-(void)resetLunarValue;
+//是否足够条件需要转换为农历
+-(void)shouldTransformTolunar;
+//是否足够条件需要转换为新历
+-(void)shouldTransformToSolur;
 @end

@@ -142,4 +142,6 @@
  */
 -(NSMutableArray*)getTremWithYear:(int32_t)year;
 
+-(NSWindow*)getMainWindow;
+
 @end

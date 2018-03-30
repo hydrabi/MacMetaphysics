@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[TopContentViewController resetGregorianValue]:TopContentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.date.gregorianYear stringValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

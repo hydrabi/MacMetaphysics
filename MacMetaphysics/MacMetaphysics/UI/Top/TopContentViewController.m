@@ -13,6 +13,8 @@
 #import "DatePickViewModel.h"
 #import "NSString+Addition.h"
 #import "TopTextFieldFormatter.h"
+#import "TopContentViewController+Clear.h"
+
 @interface TopContentViewController ()
 @property (nonatomic,weak)CurrentSelectDate *date;
 //弹出框
@@ -242,6 +244,16 @@
          @strongify(self)
          [self lunarCalendarSelecteAction:self.lunarCalendarSelectedButton];
      }];
+    
+    //接收到清空数据的通知
+    [[[[NSNotificationCenter defaultCenter]
+       rac_addObserverForName:notificationKey_clearAllData
+       object:nil]
+      takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(id _){
+        @strongify(self)
+         [self clearContent];
+    }];
 }
 
 //是否足够条件需要转换为农历

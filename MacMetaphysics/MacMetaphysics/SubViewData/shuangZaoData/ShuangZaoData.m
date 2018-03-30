@@ -42,4 +42,14 @@
 //    self.text2 = @"";
 }
 
+-(void)clearData{
+    self.mainTitle = @"";
+    self.year = @"";
+    self.month = @"";
+    self.day = @"";
+    self.hour = @"";
+    self.text1 = @"";
+    self.text2 = @"";
+}
+
 @end
