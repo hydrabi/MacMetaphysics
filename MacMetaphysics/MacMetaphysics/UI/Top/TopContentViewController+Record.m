@@ -11,9 +11,9 @@
 @implementation TopContentViewController (Record)
 
 -(void)fillTextViewWithRecord:(Record*)record{
-    self.firstTextField.text = record.name;
-    self.secondTextField.text = record.key;
-    self.thirdTextField.text = record.other?:@"";
+    self.firstTextField.text = record.name?:@"";
+    self.secondTextField.text = record.other?:@"";
+    self.thirdTextField.text = record.key?:@"";
 }
 
 @end

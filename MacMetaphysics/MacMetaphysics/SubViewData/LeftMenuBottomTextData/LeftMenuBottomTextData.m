@@ -34,6 +34,10 @@
 
 }
 
+-(void)clearData{
+    [self.bottomTextRecordDic removeAllObjects];
+}
+
 -(NSString*)getCurrentString{
     LeftSideMenuType type = [MainViewModel sharedInstance].currentBottomSectionMenuType;
     NSString *result = self.bottomTextRecordDic[@(type)];

@@ -59,7 +59,6 @@
     NSArray *identifierArr = @[saveTableViewKeyCloumnIdentifier,
                                saveTableViewNameCloumnIdentifier,
                                saveTableViewGregorianCloumnIdentifier,
-                               saveTableViewLunarCloumnIdentifier,
                                saveTableViewGanZhiCloumnIdentifier,
                                saveTableViewNoteCloumnIdentifier,
                                saveTableViewDateCloumnIdentifier];
@@ -67,7 +66,6 @@
     NSArray *nameArr = @[saveTableViewKeyHeaderTitle,
                          saveTableViewNameHeaderTitle,
                          saveTableViewGregorianHeaderTitle,
-                         saveTableViewLunarHeaderTitle,
                          saveTableViewGanZhiHeaderTitle,
                          saveTableViewNoteHeaderTitle,
                          saveTableViewDateHeaderTitle];
@@ -92,7 +90,7 @@
     
     //编号
     if([identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
-        minWidth = 130.0f;
+        minWidth = 200.0f;
     }
     //姓名
     else if([identifier isEqualToString:saveTableViewNameCloumnIdentifier]){

@@ -19,9 +19,27 @@
 #pragma mark - 增加记录
 
 -(void)saveCurrentRecord{
+    NSManagedObjectContext *defaultContext = [NSManagedObjectContext MR_defaultContext];
+    Record *record = nil;
+    
+    //判断当前的key对应是否已经存在记录
+    NSArray *currentKeyRecord = [self fetchCurrentKeyRecord];
+    //有 替换内容
+    if(currentKeyRecord.count>0){
+        record = currentKeyRecord[0];
+    }
+    //没有 新增record
+    else{
+        record = [Record MR_createEntityInContext:defaultContext];
+    }
+    
+    [self saveWithRecord:record];
+}
+
+-(void)saveWithRecord:(Record*)record{
+    
     BOOL canSave = YES;
     NSManagedObjectContext *defaultContext = [NSManagedObjectContext MR_defaultContext];
-    Record *record = [Record MR_createEntityInContext:defaultContext];
     MainViewController *viewController = (MainViewController*)self.viewModel.viewController;
     TopContentViewController *topContentView = viewController.topContentView;
     CurrentSelectDate *selectDate = self.viewModel.selectedDate;
@@ -30,21 +48,18 @@
     if(topContentView.firstTextField.stringValue.length > 0){
         record.name = topContentView.firstTextField.stringValue;
     }
-    else{
-        canSave = NO;
-    }
     
     //索引
-    if(topContentView.secondTextField.stringValue.length > 0){
-        record.key = topContentView.secondTextField.stringValue;
+    if(topContentView.thirdTextField.stringValue.length > 0){
+        record.key = topContentView.thirdTextField.stringValue;
     }
     else{
         canSave = NO;
     }
     
     //笔记
-    if(topContentView.thirdTextField.stringValue.length > 0){
-        record.other = topContentView.thirdTextField.stringValue;
+    if(topContentView.secondTextField.stringValue.length > 0){
+        record.other = topContentView.secondTextField.stringValue;
     }
     
     //新历年
@@ -164,18 +179,23 @@
         //提示
         [FNHUD showError:@"有属性未填写，无法保存" inView:self.viewModel.viewController.view];
     }
-    
 }
 
 //清空数据
 -(void)clearAllData{
     [self.viewModel.selectedDate clearData];
     [self.viewModel.middleData clearData];
-    [self.viewModel.shuangZaoData clearData];
+//    [self.viewModel.shuangZaoData clearData];
     [self.viewModel.riZhuData clearData];
     [self.viewModel.bottomData clearData];
     [self.viewModel.fifteenYunData clearData];
     [self.viewModel.liuNianData clearData];
+    [self.viewModel.leftMenuBottomTextData clearData];
+    
+    //清空底部，左边的textView
+    self.viewModel.currentBottomSectionMenuType = LeftSideMenuTypeEmpty;
+    [(RACSubject*)self.viewModel.leftMenuClickTextViewOperationSig sendNext:nil];
+    [(RACSubject*)self.viewModel.currentBottomTextViewOperationSig sendNext:nil];
 }
 
 #pragma mark - 删除
@@ -210,6 +230,20 @@
     return recordArr;
 }
 
+//判断当前的key数据库是否已经有记录
+-(NSArray*)fetchCurrentKeyRecord{
+    
+    MainViewController *viewController = (MainViewController*)self.viewModel.viewController;
+    TopContentViewController *topContentView = viewController.topContentView;
+    CurrentSelectDate *selectDate = self.viewModel.selectedDate;
+    
+    NSString *key = topContentView.thirdTextField.stringValue;
+    NSString *upperKey = [key uppercaseString];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key == %@",upperKey];
+    
+    NSArray *recordArr = [Record MR_findAllWithPredicate:predicate];
+    return recordArr;
+}
 #pragma mark - 排序
 
 -(NSArray*)sortByDateWithRecordArr:(NSArray<Record*>*)recordArr{

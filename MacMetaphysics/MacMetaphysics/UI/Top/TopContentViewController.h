@@ -13,9 +13,9 @@
 @property (nonatomic,weak)IBOutlet NSButton *hideButton;
 //名称
 @property (nonatomic,weak)IBOutlet NSTextField *firstTextField;
-//索引
-@property (nonatomic,weak)IBOutlet NSTextField *secondTextField;
 //笔记
+@property (nonatomic,weak)IBOutlet NSTextField *secondTextField;
+//索引
 @property (nonatomic,weak)IBOutlet NSTextField *thirdTextField;
 //农历选择按钮
 @property (nonatomic,weak)IBOutlet NSButton *lunarCalendarSelectedButton;

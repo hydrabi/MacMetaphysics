@@ -161,13 +161,20 @@
 }
 
 -(NSString*)getStems{
-    NSAssert(self.length == 2, @"干支长度不为2");
-    return [self substringWithRange:NSMakeRange(0, 1)];
+//    NSAssert(self.length == 2, @"干支长度不为2");
+    if(self.length == 2){
+        return [self substringWithRange:NSMakeRange(0, 1)];
+    }
+    
+    return @"";
 }
 
 -(NSString*)getBranches{
-    NSAssert(self.length == 2, @"干支长度不为2");
-    return [self substringWithRange:NSMakeRange(1, 1)];
+//    NSAssert(self.length == 2, @"干支长度不为2");
+    if(self.length == 2){
+        return [self substringWithRange:NSMakeRange(1, 1)];
+    }
+    return @"";
 }
 
 -(BOOL)isStemsYang{

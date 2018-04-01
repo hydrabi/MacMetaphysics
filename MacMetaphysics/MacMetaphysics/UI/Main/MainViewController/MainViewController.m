@@ -309,24 +309,6 @@
          if(mainViewModel.currentBottomSectionMenuType == LeftSideMenuTypeEmpty){
              [self resetCurrentTextView:nil];
          }
-         else{
-             
-             switch (mainViewModel.currentBottomSectionMenuType) {
-                     //                 case LeftSideMenuTypeDaYun:
-                     //                 {
-                     //                     [self resetCurrentTextView:self.daYunTextView];
-                     //                     [self.daYunTextView reloadData];
-                     //                 }
-                     //                     break;
-                     //
-                 default:
-                 {
-//                     [self resetCurrentTextView:self.normalTextView.view];
-//                     [self.normalTextView reloadData];
-                 }
-                     break;
-             }
-         }
      }];
     
     //左边菜单上边部分选中
@@ -380,6 +362,7 @@
         @strongify(self)
         self.bottomNoteTextView.hidden = !self.bottomNoteTextView.hidden;
     }];
+    
 }
 
 #pragma mark - NSLayoutManagerDelegate
