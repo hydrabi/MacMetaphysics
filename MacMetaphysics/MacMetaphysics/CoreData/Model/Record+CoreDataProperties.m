@@ -29,5 +29,6 @@
 @dynamic lunarMonth;
 @dynamic lunarDay;
 @dynamic lunarHour;
+@dynamic leftMenuTextDic;
 
 @end

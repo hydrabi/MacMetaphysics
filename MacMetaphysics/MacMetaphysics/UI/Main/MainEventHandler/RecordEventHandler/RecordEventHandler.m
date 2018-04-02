@@ -158,6 +158,11 @@
         canSave = NO;
     }
     
+    //保存左边菜单textView字典
+    if(self.viewModel.leftMenuBottomTextData.bottomTextRecordDic){
+        record.leftMenuTextDic = self.viewModel.leftMenuBottomTextData.bottomTextRecordDic;
+    }
+    
     if(canSave){
         
         record.date = [NSDate date];
@@ -258,11 +263,17 @@
 #pragma mark - 读取记录
 -(void)readRecord:(Record*)record{
     [self.viewModel.selectedDate readRecord:record];
+    [self.viewModel.leftMenuBottomTextData readRecord:record];
     MainViewController *viewController = (MainViewController*)self.viewModel.viewController;
     TopContentViewController *topContentView = viewController.topContentView;
     [topContentView resetGregorianValue];
     [topContentView shouldTransformTolunar];
     [topContentView fillTextViewWithRecord:record];
+    
+    //清空底部，左边的textView
+    self.viewModel.currentBottomSectionMenuType = LeftSideMenuTypeEmpty;
+    [(RACSubject*)self.viewModel.leftMenuClickTextViewOperationSig sendNext:nil];
+    [(RACSubject*)self.viewModel.currentBottomTextViewOperationSig sendNext:nil];
 }
 
 @end

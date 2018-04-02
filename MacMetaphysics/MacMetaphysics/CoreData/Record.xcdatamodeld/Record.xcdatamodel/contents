@@ -11,6 +11,7 @@
         <attribute name="gregorianMonth" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="gregorianYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leftMenuTextDic" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="lunarDay" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lunarHour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lunarMonth" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -19,6 +20,6 @@
         <attribute name="other" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Record" positionX="-63" positionY="-18" width="128" height="285"/>
+        <element name="Record" positionX="-63" positionY="-18" width="128" height="300"/>
     </elements>
 </model>

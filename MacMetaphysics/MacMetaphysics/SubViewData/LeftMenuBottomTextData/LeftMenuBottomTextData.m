@@ -31,7 +31,6 @@
         self.bottomTextRecordDic[@(type)] = tempString;
         viewController.liuNianTextView.myTextView.string = @"";
     }
-
 }
 
 -(void)clearData{
@@ -45,6 +44,11 @@
         result = @"";
     }
     return result;
+}
+
+-(void)readRecord:(Record*)record{
+    self.bottomTextRecordDic = record.leftMenuTextDic.mutableCopy;
+    NSLog(@"%@",self.bottomTextRecordDic);
 }
 
 @end

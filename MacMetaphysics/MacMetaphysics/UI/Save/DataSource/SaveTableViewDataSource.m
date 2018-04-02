@@ -98,7 +98,7 @@
     }
     //公历
     else if([identifier isEqualToString:saveTableViewGregorianCloumnIdentifier]){
-        minWidth = 180.0f;
+        minWidth = 190.0f;
         
     }
     //农历
