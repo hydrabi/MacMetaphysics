@@ -47,8 +47,9 @@
 }
 
 -(void)readRecord:(Record*)record{
-    self.bottomTextRecordDic = record.leftMenuTextDic.mutableCopy;
-    NSLog(@"%@",self.bottomTextRecordDic);
+    if(record.leftMenuTextDic){
+        self.bottomTextRecordDic = record.leftMenuTextDic.mutableCopy;
+    }
 }
 
 @end
