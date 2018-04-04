@@ -163,6 +163,8 @@
         record.leftMenuTextDic = self.viewModel.leftMenuBottomTextData.bottomTextRecordDic;
     }
     
+    record.universeType = self.viewModel.middleData.universeType;
+    
     if(canSave){
         
         record.date = [NSDate date];
@@ -264,11 +266,19 @@
 -(void)readRecord:(Record*)record{
     [self.viewModel.selectedDate readRecord:record];
     [self.viewModel.leftMenuBottomTextData readRecord:record];
+    
     MainViewController *viewController = (MainViewController*)self.viewModel.viewController;
+    
+    //上方contentView
     TopContentViewController *topContentView = viewController.topContentView;
     [topContentView resetGregorianValue];
     [topContentView shouldTransformTolunar];
     [topContentView fillTextViewWithRecord:record];
+    
+    //中间contentView
+    MiddleContentView *middleContentView = viewController.middleContentView;
+    [middleContentView setGenderButtonWithType:record.universeType];
+    
     
     //清空底部，左边的textView
     self.viewModel.currentBottomSectionMenuType = LeftSideMenuTypeEmpty;

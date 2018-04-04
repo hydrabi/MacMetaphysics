@@ -8,7 +8,7 @@
 
 #import "MiddleContentView.h"
 #import "MiddleSubView.h"
-#import "UIConstantParameter.h"
+
 @interface MiddleContentView ()
 //乾坤
 @property (nonatomic,strong)NSTextField *genderButton;
@@ -133,6 +133,18 @@
          [self.daySubView clearData];
          [self.hourSubView clearData];
     }];
+}
+
+-(void)setGenderButtonWithType:(UniverseType)type{
+    MiddleViewData *middleData = [[MainViewModel sharedInstance] middleData];
+    if(type == UniverseTypeQian){
+        middleData.universeType = type;
+        [self.genderButton setStringValue:@"乾"];
+    }
+    else{
+        middleData.universeType = type;
+        [self.genderButton setStringValue:@"坤"];
+    }
 }
 
 @end

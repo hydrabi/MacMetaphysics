@@ -7,7 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "UIConstantParameter.h"
 
 @interface MiddleContentView : NSViewController
+
+/**
+ 设置乾坤按钮的类型
+
+ @param type 乾坤的枚举类型
+ */
+-(void)setGenderButtonWithType:(UniverseType)type;
 
 @end

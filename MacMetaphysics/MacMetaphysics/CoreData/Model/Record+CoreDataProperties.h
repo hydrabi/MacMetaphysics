@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int16_t lunarHour;
 
 @property (nullable, nonatomic, copy)NSDictionary *leftMenuTextDic;
-
+@property (nonatomic) int16_t universeType;
 @end
 
 NS_ASSUME_NONNULL_END
