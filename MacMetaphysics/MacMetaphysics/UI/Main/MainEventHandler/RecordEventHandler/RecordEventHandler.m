@@ -242,11 +242,10 @@
     
     MainViewController *viewController = (MainViewController*)self.viewModel.viewController;
     TopContentViewController *topContentView = viewController.topContentView;
-    CurrentSelectDate *selectDate = self.viewModel.selectedDate;
     
     NSString *key = topContentView.thirdTextField.stringValue;
-    NSString *upperKey = [key uppercaseString];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key == %@",upperKey];
+//    NSString *upperKey = [key uppercaseString];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key == %@",key];
     
     NSArray *recordArr = [Record MR_findAllWithPredicate:predicate];
     return recordArr;

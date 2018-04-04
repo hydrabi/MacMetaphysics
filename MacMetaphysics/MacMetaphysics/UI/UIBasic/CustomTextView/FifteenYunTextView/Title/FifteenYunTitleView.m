@@ -26,7 +26,7 @@
 -(void)reloadData{
     MainViewModel *mainViewModel = [MainViewModel sharedInstance];
     BottomViewData *bottomData = mainViewModel.bottomData;
-    if(bottomData.canStart){
+    if(bottomData.canStart && mainViewModel.fifteenYunData.fifteenYunSelectedNumber >=0){
         NSString *ganZhi = [bottomData getDaYunWithTableIndex:mainViewModel.fifteenYunData.fifteenYunSelectedNumber];
         NSString *qiYun = [NSString stringWithFormat:@"%ld",(mainViewModel.fifteenYunData.fifteenYunSelectedNumber - 1) * 10 + bottomData.qiYunShu] ;
         self.titleLabel.text = [NSString stringWithFormat:@"%@ %@",ganZhi,qiYun];

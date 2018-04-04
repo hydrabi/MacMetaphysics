@@ -234,6 +234,7 @@
                             ganZhi:(NSString*)ganZhiYear
                        yueZhuIndex:(NSInteger)yueZhuIndex
 {
+    
     if(type == UniverseTypeQian){
         //男 阳顺阴逆
         if([[ganZhiYear getBranches] isBranchesYang]){

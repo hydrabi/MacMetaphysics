@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[RecordEventHandler saveWithRecord:]:RecordEventHandler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.viewModel.leftMenuBottomTextData.bottomTextRecordDic">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
