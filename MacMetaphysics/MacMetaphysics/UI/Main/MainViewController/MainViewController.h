@@ -67,6 +67,10 @@
 @property (nonatomic,strong)NSTimer *timer;
 
 @property (nonatomic,weak)NSView *currentTextView;
+
+/**
+ 节气视图
+ */
 @property (nonatomic,strong)SolarTermsCollectionView *solarTermsView;
 
 /**

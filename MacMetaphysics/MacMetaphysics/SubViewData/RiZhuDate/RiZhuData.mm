@@ -43,6 +43,7 @@
     [_lunarDate removeAllObjects];
 }
 
+//取该年节气
 -(void)resetTermWithYear:(NSInteger)year{
     self.currentSolarYear = year;
     [self.allTermsDateArr removeAllObjects];
@@ -208,6 +209,7 @@
         self.indexOfTermsBranchName = [[MainViewModel sharedInstance].jiaZiArr indexOfObject:lunarDate.ganzhiDay];
     }
 }
+
 //又第一天获取之后的日期
 -(void)createDate{
     [self.solarDate removeAllObjects];

@@ -14,6 +14,7 @@
 #import "NSArray+Addition.h"
 #import "BasicViewController.h"
 #import <Cocoa/Cocoa.h>
+#import <DateTools/DateTools.h>
 
 @interface MainViewModel()
 @property (nonatomic, assign) Lunar*     lunar;
@@ -389,6 +390,8 @@
     [self.riZhuData resetTermWithYear:self.selectedDate.gregorianYear.integerValue];
     self.selectedDate.currentTermName = self.riZhuData.currentTermName;
     
+    [self adjustGanZhi];
+    
     [self.selectedDate countTaiYuan];
     [self.selectedDate countMingGong];
     [self.middleData resetData];
@@ -400,6 +403,78 @@
 #pragma mark - Window
 -(NSWindow*)getMainWindow{
     return self.viewController.view.window;
+}
+
+#pragma mark - 调整
+-(void)adjustGanZhi{
+    //先判断是否是第一年地第一个节气 跨年有一种可能 小寒-立春
+    
+    NSDate *currentDate = [[MainViewModel sharedInstance].selectedDate getGregorianDate];
+    RiZhuData *rizhuData = [MainViewModel sharedInstance].riZhuData;
+    
+    if([self.riZhuData.leftTermName isEqualToString:@"立春"]){
+        NSDate *firstDateOfYear = rizhuData.leftTerm;
+        //如果比一年节气中地第一天晚，年的干支该取该年第一天的下一天
+        if([currentDate isLaterThan:firstDateOfYear]){
+            
+            //一年节气中地第一天的下一天
+            NSDate *nextDayOfFirstDateOfYear = [firstDateOfYear dateByAddingDays:1];
+            //取下一天的农历日期，干支情况等
+            TTLunarDate *lunarDate = [TTLunarCalendar convertFromGeneralDate:nextDayOfFirstDateOfYear];
+            if(lunarDate != NULL){
+                //将下一天的年干支付给当前的干支
+                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
+            }
+            
+        }
+    }
+    else if([self.riZhuData.rightTermName isEqualToString:@"立春"]){
+        NSDate *firstDateOfYear = rizhuData.rightTerm;
+        //如果比一年节气中地第一天早，年的干支该取该年第一天的上一天
+        if([currentDate isEarlierThan:firstDateOfYear]){
+            //一年节气中地第一天的上一天
+            NSDate *lastDayOfFirstDateOfYear = [firstDateOfYear dateBySubtractingDays:1];
+            //取上一天的农历日期，干支情况等
+            TTLunarDate *lunarDate = [TTLunarCalendar convertFromGeneralDate:lastDayOfFirstDateOfYear];
+            if(lunarDate != NULL){
+                //将上一天的年干支付给当前的干支
+                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
+            }
+        }
+    }
+    
+    //左边节气的第一天对比
+    if([currentDate isSameDay:rizhuData.leftTerm]){
+        //晚于第一日
+        if([currentDate isLaterThan:rizhuData.leftTerm]){
+            //右边节气的第一日
+            NSDate *firstDateOfMonth = rizhuData.leftTerm;
+            //取下一个月的第一日
+            NSDate *firstDayOfTheLastMonth = [firstDateOfMonth dateByAddingDays:1];
+            //取下一天的农历日期，干支情况等
+            TTLunarDate *lunarDate = [TTLunarCalendar convertFromGeneralDate:firstDayOfTheLastMonth];
+            if(lunarDate != NULL){
+                //将下一天的月干支赋给当前的干支
+                [MainViewModel sharedInstance].selectedDate.ganZhiMonth = lunarDate.ganzhiMonth;
+            }
+        }
+    }
+    //右边节气的第一天对比
+    else if([currentDate isSameDay:rizhuData.rightTerm]){
+        
+        if([currentDate isEarlierThan:rizhuData.rightTerm]){
+            //取上一月的月干支
+            NSDate *firstDateOfMonth = rizhuData.rightTerm;
+            //上一个月的最后一日
+            NSDate *lastDayOfTheLastMonth = [firstDateOfMonth dateBySubtractingDays:1];
+            //取上一天的农历日期，干支情况等
+            TTLunarDate *lunarDate = [TTLunarCalendar convertFromGeneralDate:lastDayOfTheLastMonth];
+            if(lunarDate != NULL){
+                //将上一天的月干支付给当前的干支
+                [MainViewModel sharedInstance].selectedDate.ganZhiMonth = lunarDate.ganzhiMonth;
+            }
+        }
+    }
 }
 
 @end

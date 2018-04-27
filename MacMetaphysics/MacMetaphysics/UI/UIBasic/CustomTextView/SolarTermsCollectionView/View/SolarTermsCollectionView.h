@@ -13,6 +13,9 @@
 @property (nonatomic,weak)SolarTermsCollectionView *collectionView;
 @end
 
+/**
+ 节气视图
+ */
 @interface SolarTermsCollectionView : NSCollectionView
 @property (nonatomic,strong)SolarTermsCollectionViewDataSource *myDataSource;
 +(SolarTermsCollectionView*)createSolarTermsCollectionView;
