@@ -443,14 +443,15 @@
         }
     }
     
-    //左边节气的第一天对比
-    if([currentDate isSameDay:rizhuData.leftTerm]){
+    //左边节气的第一天对比 原来不止是和月令交接的那一天 连前一天的月柱都不对.
+    if([currentDate isSameDay:rizhuData.leftTerm] ||
+       [currentDate daysLaterThan:rizhuData.rightTerm] <= 2){
         //晚于第一日
         if([currentDate isLaterThan:rizhuData.leftTerm]){
             //右边节气的第一日
             NSDate *firstDateOfMonth = rizhuData.leftTerm;
-            //取下一个月的第一日
-            NSDate *firstDayOfTheLastMonth = [firstDateOfMonth dateByAddingDays:1];
+            //取下一个月的第一日 （取第二日比较保险）
+            NSDate *firstDayOfTheLastMonth = [firstDateOfMonth dateByAddingDays:2];
             //取下一天的农历日期，干支情况等
             TTLunarDate *lunarDate = [TTLunarCalendar convertFromGeneralDate:firstDayOfTheLastMonth];
             if(lunarDate != NULL){
@@ -460,13 +461,14 @@
         }
     }
     //右边节气的第一天对比
-    else if([currentDate isSameDay:rizhuData.rightTerm]){
+    else if([currentDate isSameDay:rizhuData.rightTerm] ||
+            [currentDate daysEarlierThan:rizhuData.rightTerm] <= 2){
         
         if([currentDate isEarlierThan:rizhuData.rightTerm]){
             //取上一月的月干支
             NSDate *firstDateOfMonth = rizhuData.rightTerm;
-            //上一个月的最后一日
-            NSDate *lastDayOfTheLastMonth = [firstDateOfMonth dateBySubtractingDays:1];
+            //上一个月的最后一日 （取前两日比较保险）
+            NSDate *lastDayOfTheLastMonth = [firstDateOfMonth dateBySubtractingDays:2];
             //取上一天的农历日期，干支情况等
             TTLunarDate *lunarDate = [TTLunarCalendar convertFromGeneralDate:lastDayOfTheLastMonth];
             if(lunarDate != NULL){
