@@ -32,6 +32,11 @@
 @property (nonatomic,strong)NSMutableArray *nextYearAllTermsDateArr;
 
 /**
+ 实际指向的节气日期
+ */
+@property (nonatomic,strong)NSMutableArray *realAllTermsDateArr;
+
+/**
  干支月
  */
 @property (nonatomic,strong)NSString *monthName;

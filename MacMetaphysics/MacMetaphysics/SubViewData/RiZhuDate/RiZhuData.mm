@@ -126,6 +126,8 @@
                     self.indexOfTermsBranchName = [[MainViewModel sharedInstance].jiaZiArr indexOfObject:ganZhiDay];
                     //子月
                     self.monthName = [monthNames objectAtIndex:monthNames.count-1];
+                    
+                    self.realAllTermsDateArr = self.lastYearAllTermsDateArr;
                 }
             }
             else{
@@ -136,6 +138,8 @@
                 self.monthName = [monthNames objectAtIndex:(NSInteger)((i-2)/2)];
                 self.separatorDayArr = [NSArray separatorDayWithMonth:(NSInteger)((i-2)/2)];
                 self.separatorDayNameArr = [NSArray separatorDayNameWithMonth:(NSInteger)((i-2)/2)];
+                
+                self.realAllTermsDateArr = self.allTermsDateArr;
             }
             [self getFirstDay];
             [self createDate];
@@ -163,6 +167,8 @@
                     [self getFirstDay];
                     [self createDate];
                     [self getCurrentSolarTerms];
+                    
+                    self.realAllTermsDateArr = self.nextYearAllTermsDateArr;
                 }
             }
         }

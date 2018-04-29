@@ -412,56 +412,60 @@
     NSDate *currentDate = [[MainViewModel sharedInstance].selectedDate getGregorianDate];
     RiZhuData *rizhuData = [MainViewModel sharedInstance].riZhuData;
     
-    TTLunarDate *lunarDate = nil;
+//    TTLunarDate *lunarDate = nil;
     
-    if([self.riZhuData.leftTermName isEqualToString:@"立春"]){
-        NSDate *firstDateOfYear = rizhuData.leftTerm;
-        //如果比一年节气中地第一天晚，年的干支该取该年第一天的下一天
-        if([currentDate isLaterThan:firstDateOfYear]){
-            
-            //一年节气中地第一天的下一天
-            NSDate *nextDayOfFirstDateOfYear = [firstDateOfYear dateByAddingDays:1];
-            //取下一天的农历日期，干支情况等
-            lunarDate = [TTLunarCalendar convertFromGeneralDate:nextDayOfFirstDateOfYear];
-            if(lunarDate != NULL){
-                //将下一天的年干支付给当前的干支
-                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
-            }
-            
+//    if([self.riZhuData.leftTermName isEqualToString:@"立春"]){
+//        NSDate *firstDateOfYear = rizhuData.leftTerm;
+//        //如果比一年节气中地第一天晚，年的干支该取该年第一天的下一天
+//        if([currentDate isLaterThan:firstDateOfYear]){
+//
+//            //一年节气中地第一天的下一天
+//            NSDate *nextDayOfFirstDateOfYear = [firstDateOfYear dateByAddingDays:1];
+//            //取下一天的农历日期，干支情况等
+//            lunarDate = [TTLunarCalendar convertFromGeneralDate:nextDayOfFirstDateOfYear];
+//            if(lunarDate != NULL){
+//                //将下一天的年干支付给当前的干支
+//                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
+//            }
+//
+//        }
+//    }
+//    else if([self.riZhuData.rightTermName isEqualToString:@"立春"]){
+//        NSDate *firstDateOfYear = rizhuData.rightTerm;
+//        //如果比一年节气中地第一天早，年的干支该取该年第一天的上一天
+//        if([currentDate isEarlierThan:firstDateOfYear]){
+//            //一年节气中地第一天的上一天
+//            NSDate *lastDayOfFirstDateOfYear = [firstDateOfYear dateBySubtractingDays:1];
+//            //取上一天的农历日期，干支情况等
+//            lunarDate = [TTLunarCalendar convertFromGeneralDate:lastDayOfFirstDateOfYear];
+//            if(lunarDate != NULL){
+//                //将上一天的年干支付给当前的干支
+//                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
+//            }
+//        }
+//    }
+    
+    //获取立春日期
+    if(rizhuData.realAllTermsDateArr.count > 2){
+        NSDate *lichunDate = rizhuData.realAllTermsDateArr[2];
+        int selectLunarYear = 0;
+        //早于该年的立春 取上一年
+        if([currentDate isEarlierThan:lichunDate]){
+            selectLunarYear = (int)(lichunDate.year - 1);
+        }
+        else{
+            selectLunarYear = (int)lichunDate.year;
+        }
+        
+        TTLunarDate *middleYearLunarDate = [TTLunarCalendar convertFromLunarDateYear:selectLunarYear
+                                                                               month:6
+                                                                                 day:1
+                                                                              isLeap:selectedDate.isLeapMonth.boolValue];
+        if(middleYearLunarDate){
+            [MainViewModel sharedInstance].selectedDate.ganZhiYear = middleYearLunarDate.ganzhiYear;
         }
     }
-    else if([self.riZhuData.rightTermName isEqualToString:@"立春"]){
-        NSDate *firstDateOfYear = rizhuData.rightTerm;
-        //如果比一年节气中地第一天早，年的干支该取该年第一天的上一天
-        if([currentDate isEarlierThan:firstDateOfYear]){
-            //一年节气中地第一天的上一天
-            NSDate *lastDayOfFirstDateOfYear = [firstDateOfYear dateBySubtractingDays:1];
-            //取上一天的农历日期，干支情况等
-            lunarDate = [TTLunarCalendar convertFromGeneralDate:lastDayOfFirstDateOfYear];
-            if(lunarDate != NULL){
-                //将上一天的年干支付给当前的干支
-                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
-            }
-        }
-    }
     
-    //修正年份的干支有可能出错的问题 去每年的中间部分 比如农历6月1日 该日的年干支肯定不会出错
-    int lunarYear = 0;
-    //如果有上面修正的年份 取这些年份 否者直接使用原先获取的年份
-    if(lunarDate){
-        lunarYear = lunarDate.lunarYear;
-    }
-    else{
-        lunarYear = (int)selectedDate.lunarYear.integerValue;
-    }
-    
-    TTLunarDate *middleYearLunarDate = [TTLunarCalendar convertFromLunarDateYear:lunarYear
-                                                                           month:6
-                                                                             day:1
-                                                                          isLeap:selectedDate.isLeapMonth.boolValue];
-    if(middleYearLunarDate){
-        [MainViewModel sharedInstance].selectedDate.ganZhiYear = middleYearLunarDate.ganzhiYear;
-    }
     
     //左边节气的第一天对比 原来不止是和月令交接的那一天 连前一天的月柱都不对.
     if([currentDate isSameDay:rizhuData.leftTerm] ||
