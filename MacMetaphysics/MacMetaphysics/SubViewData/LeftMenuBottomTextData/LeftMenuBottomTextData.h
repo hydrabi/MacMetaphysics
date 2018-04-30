@@ -19,12 +19,12 @@
  */
 @property (nonatomic,strong)NSMutableDictionary *bottomTextRecordDic;
 
-/**
- 获取当前枚举对应的数据
-
- @return 字符串
- */
--(NSString*)getCurrentString;
+///**
+// 获取当前枚举对应的数据
+//
+// @return 字符串
+// */
+//-(NSString*)getCurrentString;
 
 
 /**

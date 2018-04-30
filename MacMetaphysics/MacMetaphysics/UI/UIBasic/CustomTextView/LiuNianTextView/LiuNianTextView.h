@@ -11,6 +11,6 @@
 @interface LiuNianTextView : NSViewController<NSLayoutManagerDelegate>
 @property (nonatomic,strong)NSTextView *myTextView;
 
--(void)reloadData;
+//-(void)reloadData;
 
 @end

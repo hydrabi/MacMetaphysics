@@ -30,7 +30,7 @@
 //是否使用小时来计算起运
 @property (nonatomic,assign)BOOL useHourCountQiYun;
 //底部textView操作信号
-@property (nonatomic,strong)RACSignal *currentBottomTextViewOperationSig;
+//@property (nonatomic,strong)RACSignal *currentBottomTextViewOperationSig;
 //左边菜单选中上面部分的操作信号
 @property (nonatomic,strong)RACSignal *leftMenuTopSelectedOperationSig;
 //节气显示与否

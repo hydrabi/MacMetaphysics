@@ -18,7 +18,7 @@
 /**
  数据队列
  */
-@property (copy, nonatomic)NSArray *recordArr;
+@property (strong, nonatomic)NSMutableArray *recordArr;
 
 /**
  初始化的同时带上viewModel
@@ -45,5 +45,10 @@
  双击操作
  */
 - (void)doubleClickAction;
+
+/**
+ 排序后刷新
+ */
+-(void)reloadAfterSortToTop;
 
 @end

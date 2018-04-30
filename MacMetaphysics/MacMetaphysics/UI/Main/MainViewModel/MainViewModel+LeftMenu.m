@@ -112,20 +112,18 @@
         case LeftSideMenuTypeGuanSi:         /**<官司-牢狱*/
         case LeftSideMenuTypeJiBing:         /**<疾病-灾祸*/
         {
-            if(self.currentBottomSectionMenuType != type &&
-               self.currentBottomSectionMenuType == LeftSideMenuTypeEmpty){
+            if(self.currentBottomSectionMenuType != type){
                 
                 self.currentBottomSectionMenuType = type;
                 //将15运的选择tag置为notfound，并隐藏
                 self.fifteenYunData.fifteenYunSelectedNumber = -1;
             }
             else{
-                [self.leftMenuBottomTextData resetData];
                 self.currentBottomSectionMenuType = LeftSideMenuTypeEmpty;
             }
             
             [(RACSubject*)self.leftMenuClickTextViewOperationSig sendNext:nil];
-            [(RACSubject*)self.currentBottomTextViewOperationSig sendNext:nil];
+//            [(RACSubject*)self.currentBottomTextViewOperationSig sendNext:nil];
         }
             break;
         case LeftSideMenuTypeShuangZao:

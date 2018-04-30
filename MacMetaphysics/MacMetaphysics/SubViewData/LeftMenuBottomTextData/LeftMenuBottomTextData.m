@@ -17,34 +17,19 @@
     self.bottomTextRecordDic = @{}.mutableCopy;
 }
 
--(void)resetData{
-    [super resetData];
-    
-    LeftSideMenuType type = [MainViewModel sharedInstance].currentBottomSectionMenuType;
-    MainViewController *viewController = (MainViewController*)[MainViewModel sharedInstance].viewController;
-    if(type != LeftSideMenuTypeEmpty){
-        NSMutableString *tempString = viewController.liuNianTextView.myTextView.string.mutableCopy;
-        if(tempString == nil){
-            tempString = @"".mutableCopy;
-        }
-        
-        self.bottomTextRecordDic[@(type)] = tempString;
-        viewController.liuNianTextView.myTextView.string = @"";
-    }
-}
 
 -(void)clearData{
     [self.bottomTextRecordDic removeAllObjects];
 }
 
--(NSString*)getCurrentString{
-    LeftSideMenuType type = [MainViewModel sharedInstance].currentBottomSectionMenuType;
-    NSString *result = self.bottomTextRecordDic[@(type)];
-    if(result == nil){
-        result = @"";
-    }
-    return result;
-}
+//-(NSString*)getCurrentString{
+//    LeftSideMenuType type = [MainViewModel sharedInstance].currentBottomSectionMenuType;
+//    NSString *result = self.bottomTextRecordDic[@(type)];
+//    if(result == nil){
+//        result = @"";
+//    }
+//    return result;
+//}
 
 -(void)readRecord:(Record*)record{
     if(record.leftMenuTextDic){

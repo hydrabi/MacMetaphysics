@@ -122,15 +122,20 @@
 }
 
 -(void)reloadRecord{
-    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler fetchAll];
-    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler sortByDateWithRecordArr:self.recordArr];
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler fetchAll].mutableCopy;
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler sortByDateWithRecordArr:self.recordArr].mutableCopy;
     [self reloadExtraOperation];
     [self.tableView reloadData];
 }
 
 -(void)reloadRecordWithPredicate:(NSPredicate*)predicate{
-    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler fetchWithPredicate:predicate];
-    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler sortByDateWithRecordArr:self.recordArr];
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler fetchWithPredicate:predicate].mutableCopy;
+    self.recordArr = [[MainViewModel sharedInstance].recordEventHandler sortByDateWithRecordArr:self.recordArr].mutableCopy;
+    [self reloadExtraOperation];
+    [self.tableView reloadData];
+}
+
+-(void)reloadAfterSortToTop{
     [self reloadExtraOperation];
     [self.tableView reloadData];
 }

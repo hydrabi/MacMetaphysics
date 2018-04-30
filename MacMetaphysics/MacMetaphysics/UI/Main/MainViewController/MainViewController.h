@@ -88,10 +88,79 @@
  */
 @property (nonatomic,strong)NormalTextView *normalTextView;
 
+///**
+// 在双造中出现的底部空白textView,笔记的作用
+// */
+//@property (nonatomic,strong)LiuNianTextView *liuNianTextView;
+
+#pragma mark - 左边用神到官司共11个textView
+
 /**
- 在双造中出现的底部空白textView,笔记的作用
+ 用神textView
  */
-@property (nonatomic,strong)LiuNianTextView *liuNianTextView;
+@property (nonatomic,strong)LiuNianTextView *yongShenTextView;
+
+/**
+ 格局textView
+ */
+@property (nonatomic,strong)LiuNianTextView *geJuTextView;
+
+/**
+ 相貌textView
+ */
+@property (nonatomic,strong)LiuNianTextView *xiangMaoTextView;
+
+/**
+ 文凭textView
+ */
+@property (nonatomic,strong)LiuNianTextView *wenPingTextView;
+
+/**
+ 父母textView
+ */
+@property (nonatomic,strong)LiuNianTextView *fuMuTextView;
+
+/**
+ 兄弟textView
+ */
+@property (nonatomic,strong)LiuNianTextView *xiongDiTextView;
+
+/**
+ 子女textView
+ */
+@property (nonatomic,strong)LiuNianTextView *ziNvTextView;
+
+/**
+ 婚姻textView
+ */
+@property (nonatomic,strong)LiuNianTextView *hunYinTextView;
+
+/**
+ 官贵textView
+ */
+@property (nonatomic,strong)LiuNianTextView *guanGuiTextView;
+
+/**
+ 财富textView
+ */
+@property (nonatomic,strong)LiuNianTextView *caiFuTextView;
+
+/**
+ 官司textView
+ */
+@property (nonatomic,strong)LiuNianTextView *guanSiTextView;
+
+/**
+ 当前底部的textView
+ */
+@property (nonatomic,strong)LiuNianTextView *currentBottomTextView;
+
+/**
+ 底部的textView集合
+ */
+@property (nonatomic,strong)NSMutableArray *bottomTextViewArr;
+
+#pragma mark - 分界线
 
 @property (nonatomic,strong) NSBox *firHorline;
 @property (nonatomic,strong) NSBox *secondHorline;

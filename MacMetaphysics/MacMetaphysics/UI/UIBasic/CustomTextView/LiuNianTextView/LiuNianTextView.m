@@ -55,12 +55,6 @@
     
 }
 
--(void)reloadData{
-    LeftMenuBottomTextData *data = [MainViewModel sharedInstance].leftMenuBottomTextData;
-    NSString *tempString = [data getCurrentString];
-    self.myTextView.string = tempString;
-}
-
 #pragma mark - NSLayoutManagerDelegate
 -(CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(NSRect)rect{
     return 4;

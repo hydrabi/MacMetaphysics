@@ -14,10 +14,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BottomNormalTableViewHeader hiddenAction]:BottomNormalTableViewHeader.m">
+         contextName = "-[BottomNormalTableViewHeader ganButtonClick]:BottomNormalTableViewHeader.m">
       </ContextState>
       <ContextState
          contextName = "-[CurrentSelectDate resetGregorianHourWithIncrease:]:CurrentSelectDate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController(LeftTextView) showBottomTextViewWithType:]:MainViewController+LeftTextView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentBottomTextView">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[CustomCollectionView setFrameSize:]:CustomCollectionView.m">
@@ -37,10 +45,10 @@
                value = "self.lunarHourTxt.text">
             </PersistentString>
             <PersistentString
-               value = "self.lunarDayTxt.text">
+               value = "self.date.lunarHour">
             </PersistentString>
             <PersistentString
-               value = "self.date.lunarHour">
+               value = "self.lunarDayTxt.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -76,15 +84,15 @@
          contextName = "-[MainViewController(CollectionView) collectionView:didSelectItemsAtIndexPaths:]:MainViewController+CollectionView.m">
       </ContextState>
       <ContextState
-         contextName = "-[BottomNormalTableViewHeader resetDaYun]:BottomNormalTableViewHeader.m">
-      </ContextState>
-      <ContextState
          contextName = "-[GroupBottomXiaoYunView mouseDown:]:GroupBottomXiaoYunView.m">
          <PersistentStrings>
             <PersistentString
                value = "singleView.frame">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BottomNormalTableViewHeader resetDaYun]:BottomNormalTableViewHeader.m">
       </ContextState>
       <ContextState
          contextName = "-[TopContentViewController control:textView:doCommandBySelector:]:TopContentViewController.m">
@@ -126,15 +134,15 @@
          contextName = "__34-[ShuangZaoTextView bindViewModel]_block_invoke.206:ShuangZaoTextView.m">
       </ContextState>
       <ContextState
+         contextName = "-[BottomNormalTableViewHeader hiddenAction]:BottomNormalTableViewHeader.m">
+      </ContextState>
+      <ContextState
          contextName = "-[BottomCollectionViewItem collectionView:itemForRepresentedObjectAtIndexPath:]:BottomCollectionViewItem.m">
          <PersistentStrings>
             <PersistentString
                value = "cell.frame">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BottomNormalTableViewHeader ganButtonClick]:BottomNormalTableViewHeader.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

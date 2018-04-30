@@ -10,6 +10,7 @@
 #import "UIConstantParameter.h"
 #import "MainViewController+CollectionView.h"
 #import "NSView+Addition.h"
+#import "MainViewController+LeftTextView.h"
 
 @interface MainViewController ()
 
@@ -23,6 +24,7 @@
     [super viewDidLoad];
     [self UIConfig];
     [self makeConstraints];
+    [self leftTextViewConfig];
     [self bindViewModel];
     [self setUpBorderLine];
 }
@@ -104,11 +106,10 @@
     [self addChildViewController:self.normalTextView];
     [self.view addSubview:self.normalTextView.view];
     
-    self.liuNianTextView = [[LiuNianTextView alloc] init];
-    [self addChildViewController:self.liuNianTextView];
-    self.liuNianTextView.view.hidden = YES;
-    [self.view addSubview:self.liuNianTextView.view];
-    
+//    self.liuNianTextView = [[LiuNianTextView alloc] init];
+//    [self addChildViewController:self.liuNianTextView];
+//    self.liuNianTextView.view.hidden = YES;
+//    [self.view addSubview:self.liuNianTextView.view];
     
 }
 
@@ -218,23 +219,14 @@
         make.width.equalTo(300);
     }];
 
-    [self.liuNianTextView.view makeConstraints:^(MASConstraintMaker *make){
-        @strongify(self)
-        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
-        make.top.equalTo(self.bottomContentView.view.bottom).offset(leftVerLineOffset);
-        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-        make.height.equalTo(bottomTextViewHeight);
-    }];
-//
-//    
-//    [self.daYunTextView makeConstraints:^(MASConstraintMaker *make){
+//    [self.liuNianTextView.view makeConstraints:^(MASConstraintMaker *make){
 //        @strongify(self)
-//        make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
-//        make.top.equalTo(self.bottomContentView.top).offset(tableViewHeaderHeight);
+//        make.leading.equalTo(self.secondVerLine.trailing).offset(@(leftVerLineOffset));
+//        make.top.equalTo(self.bottomContentView.view.bottom).offset(leftVerLineOffset);
 //        make.trailing.equalTo(self.view.trailing).offset(@(-leftVerLineOffset));
-//        make.height.equalTo(daYunTextViewHeight);
+//        make.height.equalTo(bottomTextViewHeight);
 //    }];
-//    
+  
     [self.fifteenYunTextView.view makeConstraints:^(MASConstraintMaker *make){
         @strongify(self)
         make.leading.equalTo(self.secondVerLine.trailing).offset(leftVerLineOffset);
@@ -287,18 +279,18 @@
     @weakify(self)
     MainViewModel *mainViewModel = [MainViewModel sharedInstance];
     //流年底部textView操作
-    [[mainViewModel.leftMenuClickTextViewOperationSig
-      deliverOnMainThread]
-     subscribeNext:^(id _){
-         @strongify(self)
-         if([MainViewModel sharedInstance].currentBottomSectionMenuType != LeftSideMenuTypeEmpty){
-             [self.liuNianTextView reloadData];
-             self.liuNianTextView.view.hidden = NO;
-         }
-         else{
-             self.liuNianTextView.view.hidden = YES;
-         }
-     }];
+//    [[mainViewModel.leftMenuClickTextViewOperationSig
+//      deliverOnMainThread]
+//     subscribeNext:^(id _){
+//         @strongify(self)
+//         if([MainViewModel sharedInstance].currentBottomSectionMenuType != LeftSideMenuTypeEmpty){
+//             [self.liuNianTextView reloadData];
+//             self.liuNianTextView.view.hidden = NO;
+//         }
+//         else{
+//             self.liuNianTextView.view.hidden = YES;
+//         }
+//     }];
     
     //左边菜单底部选项选中操作
     [[[RACObserve(mainViewModel, currentBottomSectionMenuType)

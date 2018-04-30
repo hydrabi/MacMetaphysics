@@ -12,6 +12,7 @@
 
 @interface SaveViewController ()<NSMenuDelegate>
 @property (strong, nonatomic)NSMenuItem * deleteItem;
+@property (strong, nonatomic)NSMenuItem * sortToTopItem;
 @end
 
 @implementation SaveViewController
@@ -61,10 +62,17 @@
 -(void)setUpTableViewMenu{
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Menu"];
     menu.delegate = self;
+    
     NSMenuItem *item1 = [[NSMenuItem alloc] initWithTitle:@"删除"
                                                    action:@selector(deleteItemClick) keyEquivalent:@""];
     [menu addItem:item1];
     self.deleteItem = item1;
+    
+    NSMenuItem *item2 = [[NSMenuItem alloc] initWithTitle:@"相同四柱置顶"
+                                                   action:@selector(sortSiZhuToTop) keyEquivalent:@""];
+    [menu addItem:item2];
+    self.sortToTopItem = item2;
+    
     [self.recordTableView setMenu:menu];
 }
 
@@ -85,6 +93,35 @@
     }
 }
 
+//置顶排序
+-(void)sortSiZhuToTop{
+    
+    NSIndexSet *indexSet = self.recordTableView.selectedRowIndexes;
+    NSMutableArray *tempArr = @[].mutableCopy;
+    [indexSet enumerateIndexesUsingBlock:^(NSUInteger index,BOOL *stop){
+        if(self.tableViewDataSource.recordArr.count>index){
+            Record *record = self.tableViewDataSource.recordArr[index];
+            [tempArr addObject:record];
+        }
+    }];
+    
+    if(tempArr.count>0){
+        Record *record = tempArr[0];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ganZhiYear == %@ AND ganZhiMonth == %@ AND ganZhiDay == %@ AND ganZhiHour == %@",
+                                  record.ganZhiYear,
+                                  record.ganZhiMonth,
+                                  record.ganZhiDay,
+                                  record.ganZhiHour];
+        
+        NSArray *timesArr = [self.tableViewDataSource.recordArr filteredArrayUsingPredicate:predicate];
+        
+        [self.tableViewDataSource.recordArr removeObjectsInArray:timesArr];
+        [self.tableViewDataSource.recordArr insertObjects:timesArr
+                                                atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, timesArr.count)]];
+        [self.tableViewDataSource reloadAfterSortToTop];
+    }
+}
+
 - (void)doubleClick:(id)sender {
     [self.tableViewDataSource doubleClickAction];
     [[NSApplication sharedApplication] stopModal];
@@ -99,10 +136,18 @@
         if(menu.itemArray.count > 0){
             [menu removeItem:self.deleteItem];
         }
+        
+        if(menu.itemArray.count > 0){
+            [menu removeItem:self.sortToTopItem];
+        }
     }
     else{
         if(menu.itemArray.count == 0){
             [menu addItem:self.deleteItem];
+        }
+        
+        if(menu.itemArray.count == 1){
+            [menu addItem:self.sortToTopItem];
         }
     }
 }
@@ -115,7 +160,7 @@
     else{
         //没选中的话不出现删除的菜单
         if(self.recordTableView.numberOfSelectedRows > 0){
-            return 1;
+            return 2;
         }
         
     }

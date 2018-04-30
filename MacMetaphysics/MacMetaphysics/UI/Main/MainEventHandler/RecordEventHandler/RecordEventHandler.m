@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "FNHUD.h"
 #import "TopContentViewController+Record.h"
+#import "MainViewController+LeftTextView.h"
 
 @implementation RecordEventHandler
 
@@ -160,6 +161,7 @@
     
     //保存左边菜单textView字典
     if(self.viewModel.leftMenuBottomTextData.bottomTextRecordDic){
+        [viewController saveLeftTextRecordData];
         record.leftMenuTextDic = self.viewModel.leftMenuBottomTextData.bottomTextRecordDic;
     }
     
@@ -192,17 +194,19 @@
 -(void)clearAllData{
     [self.viewModel.selectedDate clearData];
     [self.viewModel.middleData clearData];
-//    [self.viewModel.shuangZaoData clearData];
     [self.viewModel.riZhuData clearData];
     [self.viewModel.bottomData clearData];
     [self.viewModel.fifteenYunData clearData];
     [self.viewModel.liuNianData clearData];
+    
     [self.viewModel.leftMenuBottomTextData clearData];
+    MainViewController *viewController = (MainViewController*)self.viewModel.viewController;
+    [viewController clearAllTextView];
     
     //清空底部，左边的textView
     self.viewModel.currentBottomSectionMenuType = LeftSideMenuTypeEmpty;
     [(RACSubject*)self.viewModel.leftMenuClickTextViewOperationSig sendNext:nil];
-    [(RACSubject*)self.viewModel.currentBottomTextViewOperationSig sendNext:nil];
+//    [(RACSubject*)self.viewModel.currentBottomTextViewOperationSig sendNext:nil];
 }
 
 #pragma mark - 删除
@@ -278,11 +282,13 @@
     MiddleContentView *middleContentView = viewController.middleContentView;
     [middleContentView setGenderButtonWithType:record.universeType];
     
+    //底部
+    [viewController readLeftTextRecordData];
     
     //清空底部，左边的textView
     self.viewModel.currentBottomSectionMenuType = LeftSideMenuTypeEmpty;
     [(RACSubject*)self.viewModel.leftMenuClickTextViewOperationSig sendNext:nil];
-    [(RACSubject*)self.viewModel.currentBottomTextViewOperationSig sendNext:nil];
+//    [(RACSubject*)self.viewModel.currentBottomTextViewOperationSig sendNext:nil];
 }
 
 @end

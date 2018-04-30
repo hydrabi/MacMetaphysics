@@ -93,7 +93,7 @@
     
     self.fifteenYunTextViewOperationSig = [[RACSubject subject] setNameWithFormat:@"fifteenYunTextViewOperationSig"];
     
-    self.currentBottomTextViewOperationSig = [[RACSubject subject] setNameWithFormat:@"currentBottomTextViewOperationSig"];
+//    self.currentBottomTextViewOperationSig = [[RACSubject subject] setNameWithFormat:@"currentBottomTextViewOperationSig"];
     
     self.reloadLeftTableSig = [[RACSubject subject]
                                setNameWithFormat:@"reloadLeftTableSig"];
@@ -412,38 +412,6 @@
     NSDate *currentDate = [[MainViewModel sharedInstance].selectedDate getGregorianDate];
     RiZhuData *rizhuData = [MainViewModel sharedInstance].riZhuData;
     
-//    TTLunarDate *lunarDate = nil;
-    
-//    if([self.riZhuData.leftTermName isEqualToString:@"立春"]){
-//        NSDate *firstDateOfYear = rizhuData.leftTerm;
-//        //如果比一年节气中地第一天晚，年的干支该取该年第一天的下一天
-//        if([currentDate isLaterThan:firstDateOfYear]){
-//
-//            //一年节气中地第一天的下一天
-//            NSDate *nextDayOfFirstDateOfYear = [firstDateOfYear dateByAddingDays:1];
-//            //取下一天的农历日期，干支情况等
-//            lunarDate = [TTLunarCalendar convertFromGeneralDate:nextDayOfFirstDateOfYear];
-//            if(lunarDate != NULL){
-//                //将下一天的年干支付给当前的干支
-//                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
-//            }
-//
-//        }
-//    }
-//    else if([self.riZhuData.rightTermName isEqualToString:@"立春"]){
-//        NSDate *firstDateOfYear = rizhuData.rightTerm;
-//        //如果比一年节气中地第一天早，年的干支该取该年第一天的上一天
-//        if([currentDate isEarlierThan:firstDateOfYear]){
-//            //一年节气中地第一天的上一天
-//            NSDate *lastDayOfFirstDateOfYear = [firstDateOfYear dateBySubtractingDays:1];
-//            //取上一天的农历日期，干支情况等
-//            lunarDate = [TTLunarCalendar convertFromGeneralDate:lastDayOfFirstDateOfYear];
-//            if(lunarDate != NULL){
-//                //将上一天的年干支付给当前的干支
-//                [MainViewModel sharedInstance].selectedDate.ganZhiYear = lunarDate.ganzhiYear;
-//            }
-//        }
-//    }
     
     //获取立春日期
     if(rizhuData.realAllTermsDateArr.count > 2){
