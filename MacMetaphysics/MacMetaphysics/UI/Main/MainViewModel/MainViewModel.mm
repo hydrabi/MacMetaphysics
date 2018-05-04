@@ -425,10 +425,26 @@
             selectLunarYear = (int)lichunDate.year;
         }
         
+        bool isleap = NO;
+        NSArray *temp = [TTLunarCalendar lunarMonthListWithYear:selectLunarYear];
+        //有闰月
+        if(temp.count > 12){
+            for(NSInteger i = 0;i<temp.count;i++){
+                NSString *tempString = temp[i];
+                if([tempString containsString:@"闰"]){
+                    //即润月为6月
+                    if(i == 6){
+                        isleap = YES;
+                        break;
+                    }
+                }
+            }
+        }
+        
         TTLunarDate *middleYearLunarDate = [TTLunarCalendar convertFromLunarDateYear:selectLunarYear
                                                                                month:6
                                                                                  day:1
-                                                                              isLeap:selectedDate.isLeapMonth.boolValue];
+                                                                              isLeap:isleap];
         if(middleYearLunarDate){
             [MainViewModel sharedInstance].selectedDate.ganZhiYear = middleYearLunarDate.ganzhiYear;
         }
