@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,6 +78,11 @@
                                         <menuItem title="备份" keyEquivalent="b" id="aFv-NS-in8">
                                             <connections>
                                                 <action selector="backUp:" target="Voe-Tx-rLC" id="8Nu-2b-gx9"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="删除点击读取的就记录" keyEquivalent="c" id="9Ou-wX-dxs">
+                                            <connections>
+                                                <action selector="deleteClickRecord:" target="Voe-Tx-rLC" id="SNu-iD-tue"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">

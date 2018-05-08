@@ -14,12 +14,13 @@
 #import "FNHUD.h"
 #import "TopContentViewController+Record.h"
 #import "MainViewController+LeftTextView.h"
+#import "NSAlert+Addition.h"
 
 @implementation RecordEventHandler
 
 #pragma mark - 增加记录
 
--(void)saveCurrentRecord{
+-(void)saveCurrentRecordWithCompletion:(void(^)(BOOL success))completion{
     NSManagedObjectContext *defaultContext = [NSManagedObjectContext MR_defaultContext];
     Record *record = nil;
     
@@ -28,16 +29,29 @@
     //有 替换内容
     if(currentKeyRecord.count>0){
         record = currentKeyRecord[0];
+        
+        [NSAlert showAlertWithMessage:@"是否覆盖旧的记录？" Informative:@"选择确定覆盖旧的记录，取消放弃保存" complete:^(NSModalResponse resultCode){
+            if(resultCode == 1000){
+                if(completion){
+                    completion([self saveWithRecord:record]);
+                }
+                else{
+                    completion(NO);
+                }
+            }
+        }];
     }
     //没有 新增record
     else{
         record = [Record MR_createEntityInContext:defaultContext];
+        if(completion){
+            completion([self saveWithRecord:record]);
+        }
     }
     
-    [self saveWithRecord:record];
 }
 
--(void)saveWithRecord:(Record*)record{
+-(BOOL)saveWithRecord:(Record*)record{
     
     BOOL canSave = YES;
     NSManagedObjectContext *defaultContext = [NSManagedObjectContext MR_defaultContext];
@@ -188,6 +202,8 @@
         //提示
         [FNHUD showError:@"有属性未填写，无法保存" inView:self.viewModel.viewController.view];
     }
+    
+    return canSave;
 }
 
 //清空数据

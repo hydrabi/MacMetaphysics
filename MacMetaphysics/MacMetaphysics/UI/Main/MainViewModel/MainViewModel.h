@@ -84,8 +84,9 @@
 //1900~2100年节气精确到分的时间集合
 @property (nonatomic,strong)NSMutableDictionary *solarTermsTimeDic;
 
-@property (nonatomic, strong) RecordEventHandler * recordEventHandler; 
-
+@property (nonatomic, strong) RecordEventHandler * recordEventHandler;
+//从搜索中点击进来的记录 保存时询问是否删除
+@property (nonatomic, strong) Record *clickFromRecord;
 
 +(instancetype)sharedInstance;
 -(NSString*)getSpecificMenuTitleWithType:(LeftSideMenuType)type;

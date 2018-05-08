@@ -9,6 +9,8 @@
 #import "MainWindowViewController.h"
 #import "MainViewController.h"
 #import "MainViewModel.h"
+#import "NSAlert+Addition.h"
+
 @interface MainWindowViewController ()
 
 @end
@@ -34,6 +36,24 @@
 
 - (void)windowWillClose:(NSNotification *)notification{
     [[NSApplication sharedApplication] terminate:nil];
+}
+
+- (BOOL)windowShouldClose:(NSWindow *)sender{
+    BOOL result = NO;
+    [NSAlert showAlertWithMessage:@"是否需要保存？"
+                      Informative:@"选择确定后保存并关闭，选择取消直接关闭"
+                         complete:^(NSModalResponse result){
+                             if(result == 1000){
+                                 [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecordWithCompletion:^(BOOL success){
+                                     [[NSApplication sharedApplication] terminate:nil];
+                                 }];
+                             }
+                             else{
+                                 [[NSApplication sharedApplication] terminate:nil];
+                             }
+                         }];
+    
+    return result;
 }
 
 @end

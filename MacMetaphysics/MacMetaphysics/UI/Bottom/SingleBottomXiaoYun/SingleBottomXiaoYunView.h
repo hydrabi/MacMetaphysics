@@ -16,7 +16,7 @@
 @interface SingleBottomXiaoYunView : BasicNibView
 
 @property (nonatomic,weak)IBOutlet NSTextField *yearLabel;
-@property (nonatomic,weak)IBOutlet CustomColorLabel *liuNianLabel;
+@property (nonatomic,weak)IBOutlet NSTextField *liuNianLabel;
 @property (nonatomic,weak)GroupBottomXiaoYunView *parentGroupView;
 @property (nonatomic,assign)NSInteger myTag;
 

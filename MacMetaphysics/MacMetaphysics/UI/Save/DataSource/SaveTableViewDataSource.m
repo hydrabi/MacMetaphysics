@@ -59,6 +59,7 @@
     NSArray *identifierArr = @[saveTableViewKeyCloumnIdentifier,
                                saveTableViewNameCloumnIdentifier,
                                saveTableViewGregorianCloumnIdentifier,
+                               saveTableViewQianKunCloumnIdentifier,
                                saveTableViewGanZhiCloumnIdentifier,
                                saveTableViewNoteCloumnIdentifier,
                                saveTableViewDateCloumnIdentifier];
@@ -66,6 +67,7 @@
     NSArray *nameArr = @[saveTableViewKeyHeaderTitle,
                          saveTableViewNameHeaderTitle,
                          saveTableViewGregorianHeaderTitle,
+                         saveTableViewQianKunHeaderTitle,
                          saveTableViewGanZhiHeaderTitle,
                          saveTableViewNoteHeaderTitle,
                          saveTableViewDateHeaderTitle];
@@ -90,28 +92,31 @@
     
     //编号
     if([identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
-        minWidth = 200.0f;
+        minWidth = 300.0f;
     }
     //姓名
     else if([identifier isEqualToString:saveTableViewNameCloumnIdentifier]){
-        minWidth = 90.0f;
+        minWidth = 150.0f;
     }
     //公历
     else if([identifier isEqualToString:saveTableViewGregorianCloumnIdentifier]){
         minWidth = 190.0f;
-        
     }
     //农历
     else if([identifier isEqualToString:saveTableViewLunarCloumnIdentifier]){
         minWidth = 220.0f;
     }
+    //乾坤
+    else if([identifier isEqualToString:saveTableViewQianKunCloumnIdentifier]){
+        minWidth = 10.0f;
+    }
     //干支
     else if([identifier isEqualToString:saveTableViewGanZhiCloumnIdentifier]){
-        minWidth = 300.0f;
+        minWidth = 250.0f;
     }
     //笔记
     else if([identifier isEqualToString:saveTableViewNoteCloumnIdentifier]){
-        minWidth = 400.0f;
+        minWidth = 130.0f;
     }
     //日期
     else if([identifier isEqualToString:saveTableViewDateCloumnIdentifier]){
@@ -174,6 +179,9 @@
     NSInteger row = [self.tableView clickedRow];
     Record *record = self.recordArr[row];
     [[MainViewModel sharedInstance].recordEventHandler readRecord:record];
+    
+    //点击进来时讲改记录保存下来
+    [MainViewModel sharedInstance].clickFromRecord = record;
 }
 
 
@@ -203,7 +211,7 @@
                         hour:record.gregorianHour
                       minute:0
                       second:0];
-        return [gDate toStringWithFormat:@"yyyy-MM-dd HH:mm"];
+        return [gDate toStringWithFormat:@"yyyy-MM-dd HH"];
         
     }
     //农历
@@ -217,9 +225,18 @@
         
         return result;
     }
+    //乾坤
+    else if([tableColumn.identifier isEqualToString:saveTableViewQianKunCloumnIdentifier]){
+        if(record.universeType == UniverseTypeQian){
+            return @"乾";
+        }
+        else{
+            return @"坤";
+        }
+    }
     //干支
     else if([tableColumn.identifier isEqualToString:saveTableViewGanZhiCloumnIdentifier]){
-        NSString *result = [NSString stringWithFormat:@"%@年 %@月 %@日 %@时",
+        NSString *result = [NSString stringWithFormat:@"%@ %@ %@ %@",
                             record.ganZhiYear,
                             record.ganZhiMonth,
                             record.ganZhiDay,
@@ -251,5 +268,6 @@
 //- (BOOL)tableView:(NSTableView *)tableView shouldSelectTableColumn:(nullable NSTableColumn *)tableColumn{
 //    return NO;
 //}
+
 
 @end

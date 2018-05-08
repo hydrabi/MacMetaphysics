@@ -13,7 +13,7 @@
 /**
  保存当前记录
  */
--(void)saveCurrentRecord;
+-(void)saveCurrentRecordWithCompletion:(void(^)(BOOL success))completion;
 
 /**
  删除所有记录

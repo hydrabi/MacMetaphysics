@@ -14,6 +14,8 @@
 #import "FNHUD.h"
 #import "BackUpMananger.h"
 
+#import "BasicViewController.h"
+
 @interface AppDelegate ()
 @property (nonatomic,strong)ScreenShotManager *screenShotManager;
 @end
@@ -49,13 +51,29 @@
 
 //保存记录
 - (IBAction)saveRecord:(id)sender {
-    [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecord];
+    [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecordWithCompletion:^(BOOL success){
+        
+    }];
 }
 
 //备份操作
 - (IBAction)backUp:(id)sender {
     BackUpMananger *backUpManager = [[BackUpMananger alloc] init];
     [backUpManager showSavePath];
+}
+
+//删除点击进入的记录
+- (IBAction)deleteClickRecord:(id)sender {
+    MainViewModel *viewModel = [MainViewModel sharedInstance];
+    
+    if(viewModel.clickFromRecord){
+        [viewModel.recordEventHandler deleteRecords:@[viewModel.clickFromRecord]];
+        [FNHUD showSuccess:@"删除成功" inView:viewModel.viewController.view];
+        [MainViewModel sharedInstance].clickFromRecord = nil;
+    }
+    else{
+        [FNHUD showSuccess:@"没有可删除的记录" inView:viewModel.viewController.view];
+    }
 }
 
 @end

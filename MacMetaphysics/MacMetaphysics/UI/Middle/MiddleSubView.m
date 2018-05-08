@@ -86,8 +86,6 @@
     self.view.layer.borderWidth = 1.0f;
     self.view.layer.borderColor = [NSColor blackColor].CGColor;
     
-    self.verLineLabel.useTheSameColor = YES;
-    
     [self clearData];
 }
 
