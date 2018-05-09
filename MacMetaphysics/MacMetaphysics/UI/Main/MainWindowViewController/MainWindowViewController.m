@@ -40,16 +40,15 @@
 
 - (BOOL)windowShouldClose:(NSWindow *)sender{
     BOOL result = NO;
-    [NSAlert showAlertWithMessage:@"是否需要保存？"
-                      Informative:@"选择确定后保存并关闭，选择取消直接关闭"
+    [NSAlert showAlertWithMessage:@"是否关闭？"
+                      Informative:@"选择确定后关闭，选择取消不关闭"
                          complete:^(NSModalResponse result){
                              if(result == 1000){
-                                 [[MainViewModel sharedInstance].recordEventHandler saveCurrentRecordWithCompletion:^(BOOL success){
                                      [[NSApplication sharedApplication] terminate:nil];
-                                 }];
+
                              }
                              else{
-                                 [[NSApplication sharedApplication] terminate:nil];
+
                              }
                          }];
     

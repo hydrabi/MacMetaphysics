@@ -88,7 +88,7 @@
 }
 
 -(CGFloat)getMinWidthWithIdentifier:(NSString*)identifier{
-    CGFloat minWidth = 100.0f;
+    CGFloat minWidth = 10.0f;
     
     //编号
     if([identifier isEqualToString:saveTableViewKeyCloumnIdentifier]){
