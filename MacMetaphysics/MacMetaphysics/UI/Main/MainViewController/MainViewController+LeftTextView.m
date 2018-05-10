@@ -71,6 +71,11 @@
     self.guanSiTextView.view.hidden = YES;
     [self.view addSubview:self.guanSiTextView.view];
     
+    self.jiBingTextView = [[LiuNianTextView alloc] init];
+    [self addChildViewController:self.jiBingTextView];
+    self.jiBingTextView.view.hidden = YES;
+    [self.view addSubview:self.jiBingTextView.view];
+    
     self.bottomTextViewArr = @[].mutableCopy;
     [self.bottomTextViewArr addObject:self.yongShenTextView];
     [self.bottomTextViewArr addObject:self.geJuTextView];
@@ -83,6 +88,7 @@
     [self.bottomTextViewArr addObject:self.guanGuiTextView];
     [self.bottomTextViewArr addObject:self.caiFuTextView];
     [self.bottomTextViewArr addObject:self.guanSiTextView];
+    [self.bottomTextViewArr addObject:self.jiBingTextView];
     
     @weakify(self)
     for(LiuNianTextView *view in self.bottomTextViewArr){
@@ -137,7 +143,7 @@
 //读取记录
 -(void)readLeftTextRecordData{
     LeftMenuBottomTextData *data = [MainViewModel sharedInstance].leftMenuBottomTextData;
-    for(LeftSideMenuType type = LeftSideMenuTypeYongShen;type <= LeftSideMenuTypeGuanSi;type++){
+    for(LeftSideMenuType type = LeftSideMenuTypeYongShen;type <= LeftSideMenuTypeJiBing;type++){
         NSString *result = data.bottomTextRecordDic[@(type)];
         if(result == nil){
             result = @"";
@@ -152,7 +158,7 @@
     LeftMenuBottomTextData *data = [MainViewModel sharedInstance].leftMenuBottomTextData;
     [data.bottomTextRecordDic removeAllObjects];
     
-    for(LeftSideMenuType type = LeftSideMenuTypeYongShen;type <= LeftSideMenuTypeGuanSi;type++){
+    for(LeftSideMenuType type = LeftSideMenuTypeYongShen;type <= LeftSideMenuTypeJiBing;type++){
         LiuNianTextView *view = [self getSpecificBottomTextViewWithType:type];
         NSString *tempString = view.myTextView.string;
         if(tempString == nil){

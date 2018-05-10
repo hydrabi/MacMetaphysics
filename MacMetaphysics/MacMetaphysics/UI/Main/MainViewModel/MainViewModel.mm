@@ -56,6 +56,7 @@
                              @(LeftSideMenuTypeCaiFu),
                              
                              @(LeftSideMenuTypeGuanSi),
+                             @(LeftSideMenuTypeJiBing),
                              ]
                          ];
     

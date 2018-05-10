@@ -151,6 +151,11 @@
 @property (nonatomic,strong)LiuNianTextView *guanSiTextView;
 
 /**
+ 疾病灾祸textView
+ */
+@property (nonatomic,strong)LiuNianTextView *jiBingTextView;
+
+/**
  当前底部的textView
  */
 @property (nonatomic,strong)LiuNianTextView *currentBottomTextView;
