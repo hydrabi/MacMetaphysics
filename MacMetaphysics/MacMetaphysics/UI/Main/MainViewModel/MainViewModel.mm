@@ -488,4 +488,36 @@
     }
 }
 
+#pragma mark - 流年使用
+-(NSString*)getLunarYearGanZhi{
+    
+    if(!self.selectedDate.lunarYear){
+        return @"";
+    }
+    
+    bool isleap = NO;
+    int lunarYear = (int)self.selectedDate.lunarYear.integerValue;
+    NSArray *temp = [TTLunarCalendar lunarMonthListWithYear:lunarYear];
+    //有闰月
+    if(temp.count > 12){
+        for(NSInteger i = 0;i<temp.count;i++){
+            NSString *tempString = temp[i];
+            if([tempString containsString:@"闰"]){
+                //即润月为6月
+                if(i == 6){
+                    isleap = YES;
+                    break;
+                }
+            }
+        }
+    }
+    
+    TTLunarDate *middleYearLunarDate = [TTLunarCalendar convertFromLunarDateYear:lunarYear
+                                                                           month:6
+                                                                             day:1
+                                                                          isLeap:isleap];
+    
+    return middleYearLunarDate.ganzhiYear;
+}
+
 @end

@@ -145,4 +145,8 @@
 
 -(NSWindow*)getMainWindow;
 
+#pragma mark - 流年使用
+//获取不涉及月份影响的农历年份干支
+-(NSString*)getLunarYearGanZhi;
+
 @end

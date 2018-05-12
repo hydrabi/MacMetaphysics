@@ -9,6 +9,7 @@
 #import "BottomViewData.h"
 #import "MainViewModel.h"
 #import "NSString+Addition.h"
+
 @implementation BottomViewData
 
 -(void)initialize{
@@ -291,7 +292,8 @@
     CurrentSelectDate *selectData = mainViewModle.selectedDate;
     MiddleViewData *middleData = mainViewModle.middleData;
     
-    NSString *ganZhiYear = selectData.ganZhiYear;
+    NSString *lunarGanZhiYear = [[MainViewModel sharedInstance] getLunarYearGanZhi];
+   
     NSArray *jiaZiArr = mainViewModle.jiaZiArr;
     
     NSString *liuNian = @"";
@@ -305,7 +307,7 @@
         if(realIndex >= firstLineTableViewShow){
             if(middleData.universeType == UniverseTypeQian){
                 //男 阳顺阴逆
-                if([[ganZhiYear getBranches] isBranchesYang]){
+                if([[lunarGanZhiYear getBranches] isBranchesYang]){
                     liuNian = [self getLiuNianPositiveOrderWithIndexOffset:indexOffset];
                     xiaoYun = [self getXiaoYunPositiveOrderWithIndexOffset:indexOffset];
                 }
@@ -316,7 +318,7 @@
             }
             else{
                 //女 阳逆阴顺
-                if([[ganZhiYear getBranches] isBranchesYang]){
+                if([[lunarGanZhiYear getBranches] isBranchesYang]){
                     liuNian = [self getLiuNianPositiveOrderWithIndexOffset:indexOffset];
                     xiaoYun = [self getXiaoYunReversedOrderWithIndexOffset:indexOffset];
                 }
@@ -326,8 +328,8 @@
                 }
             }
             
-            if(selectData.gregorianYear.integerValue >0){
-                year = [NSString stringWithFormat:@"%ld",selectData.gregorianYear.integerValue + indexOffset] ;
+            if(selectData.lunarYear.integerValue >0){
+                year = [NSString stringWithFormat:@"%ld",selectData.lunarYear.integerValue + indexOffset] ;
             }
         }
     }
@@ -370,7 +372,8 @@
     MainViewModel *mainViewModle = [MainViewModel sharedInstance];
     CurrentSelectDate *selectData = mainViewModle.selectedDate;
     NSArray *jiaZiArr = mainViewModle.jiaZiArr;
-    NSInteger ganZhiYearIndex = [jiaZiArr indexOfObject:selectData.ganZhiYear];
+    NSString *lunarGanZhiYear = [[MainViewModel sharedInstance] getLunarYearGanZhi];
+    NSInteger ganZhiYearIndex = [jiaZiArr indexOfObject:lunarGanZhiYear];
     
     NSInteger locationIndex = indexOffset + ganZhiYearIndex;
     //超出60，引用余数
